@@ -1,0 +1,25 @@
+Zombie_Corrupto:
+  Type: ZOMBIE
+  Display: '§2Zombie Corrupto'
+  Health: 40
+  Damage: 9
+  Armor: 4
+  Drops:
+    - minecraft:rotten_flesh 3-6 100
+    - minecraft:carrot 1-2 25
+    - minecraft:potato 1-2 25
+    - minecraft:iron_ingot 1-2 10
+    - TOKEN_MISION 1 100
+  Skills:
+    - effect:particles{p=block_dust;minecraft:rotten_flesh;a=10;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
+    - potion{type=POISON;duration=80;level=2} @LivingEntitiesInRadius{r=3} ~onAttack
+  Options:
+    PreventOtherDrops: true
+    AlwaysShowName: true
+    Despawn: false
+  SpawnOverride:
+    Type: ZOMBIE
+    Priority: 1
+    ReplaceType: true
+    Conditions:
+      - always

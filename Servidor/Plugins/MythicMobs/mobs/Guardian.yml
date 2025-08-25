@@ -1,0 +1,26 @@
+Guardian_Marino:
+  Type: GUARDIAN
+  Display: '§bGuardián Marino'
+  Health: 45
+  Damage: 15
+  Armor: 2
+  Drops:
+    - minecraft:dark_prismarine 1-2 30
+    - minecraft:prismarine 1-3 30
+    - minecraft:prismarine_bricks 1-2 20
+    - minecraft:prismarine_shard 3-5 100
+    - minecraft:cod 1-2 80
+    - TOKEN_MISION 6 100
+  Skills:
+    - effect:particles{p=water_splash;a=15;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
+    - damage{d=8} @LivingEntitiesInRadius{r=3} ~onAttack
+  Options:
+    PreventOtherDrops: true
+    AlwaysShowName: true
+    Despawn: false
+  SpawnOverride:
+    Type: GUARDIAN
+    Priority: 1
+    ReplaceType: true
+    Conditions:
+      - always

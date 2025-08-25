@@ -1,0 +1,24 @@
+CaveSpider_Toxica:
+  Type: CAVE_SPIDER
+  Display: '§aTenta Culos'
+  Health: 35
+  Damage: 7
+  Armor: 2
+  Drops:
+    - minecraft:string 2-4 100
+    - TOKEN_MISION 2 100
+  Skills:
+    - effect:particles{p=spell_mob;a=20;hs=0.5;vs=1;s=0.2;y=1;color=00FF00} @Self ~onTimer:20
+    - potion{type=POISON;duration=100;level=2} @LivingEntitiesInRadius{r=3} ~onAttack
+    - summon{type=WEB;amount=1;chance=100} @PlayersInRadius{r=2} ~onAttack
+    - message{m="¡El veneno de la cueva te consume!"} @PlayersInRadius{r=10} ~onDeath
+  Options:
+    PreventOtherDrops: true
+    AlwaysShowName: true
+    Despawn: false
+  SpawnOverride:
+    Type: CAVE_SPIDER
+    Priority: 1
+    ReplaceType: true
+    Conditions:
+      - always

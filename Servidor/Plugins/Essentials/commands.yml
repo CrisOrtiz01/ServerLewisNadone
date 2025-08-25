@@ -1,0 +1,199 @@
+############################################################
+# +------------------------------------------------------+ #
+# |          EssentialsX Commands Configuration          | #
+# |           ServerLewisNadone - Comandos               | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Este archivo contiene aliases temáticos para comandos de Minecraft
+# Adaptados a la temática RPG y el lore del servidor
+
+# =================================================================
+# COMANDOS DE JUGADORES
+# =================================================================
+
+# Comandos básicos con nombres temáticos
+napoles: spawn
+pueblo: warp napoles
+comercio: warp mercado
+santuario: warp highgarden
+monedero: balance
+guia: help
+rumores: rules
+mercaderes: warps
+socorro: helpop
+
+# Comandos para encontrar a los NPCs
+cazadora: warp erika
+guardiana: warp marta
+sanadora: warp sae
+mensajera: warp lia
+acrobata: warp icaro
+minero: warp paul
+curandera: warp helena
+alcalde: warp alcalde
+chef: warp bruno
+
+# Comandos para áreas de recursos
+madera: warp bosque
+piedra: warp cantera
+pesca: warp lago
+cultivos: warp granjas
+cueva: warp minas
+nether: warp portal_nether
+end: warp portal_end
+mercado: warp comercio
+
+# Comandos para misiones específicas
+carrera1: warp carrera_basica
+carrera2: warp carrera_avanzada
+carrera3: warp carrera_experta
+salto1: warp parkour_basico
+salto2: warp parkour_avanzado
+salto3: warp parkour_experto
+salto4: warp parkour_maestro
+curas: warp curacion_prueba
+
+# Comandos para mensaje privados temáticos
+susurrar: tell
+mensaje: msg
+carta: mail
+anuncio: broadcast
+grito: me
+
+# Comandos de exploración y aventura
+expedicion: rtp
+refugio: sethome
+campamento: home
+brujula: compass
+mapa: tppos
+tesoro: enderchest
+descanso: afk
+
+# Comandos de supervivencia y utilidad
+energia: feed
+tiempo: time
+clima: weather
+reparar: repair
+tienda: worth
+valor: price
+kit: kit
+recetas: recipes
+encantamientos: enchant
+sabiduria: exp
+
+# Comandos sociales temáticos
+clan: f
+territorio: lands
+grupo: tpa
+invitar: tpahere
+aliar: friend
+duelo: duel
+
+# =================================================================
+# COMANDOS DE ADMINISTRACIÓN
+# =================================================================
+
+# Comandos para staff con nombres temáticos
+vision: gamemode spectator
+construir: gamemode creative
+supervivencia: gamemode survival
+aventura: gamemode adventure
+sanacion: heal
+alimentar: feed
+dia: time day
+noche: time night
+sol: weather clear
+lluvia: weather rain
+tormenta: weather thunder
+invocar: summon
+rayo: lightning
+reparar: repair
+volar: fly
+diagnostico: lag
+limpieza: clearlag
+
+# Comandos para manejar jugadores
+expulsar: kick
+destierro: ban
+perdonar: unban
+silenciar: mute
+permitir: unmute
+observar: vanish
+convocar: tphere
+advertir: warn
+historial: history
+investigar: invsee
+
+# Comandos para gestionar el mundo
+proteger: region
+construir: worldedit
+cambiar: world
+limpiar: killall
+restaurar: rollback
+bloque: give
+estructura: schematic
+copiar: copy
+pegar: paste
+
+# Comandos para eventos especiales
+evento_iniciar: event start
+evento_detener: event stop
+evento_premio: event reward
+celebracion: firework
+invasion: mobspawn
+jefe: bossspawn
+lluvia_items: dropparty
+arena: pvp
+
+# =================================================================
+# COMANDOS DE SISTEMA
+# =================================================================
+
+# Estos comandos solo estarán disponibles para administradores
+reiniciar: restart
+detener: stop
+recargar: reload
+actualizacion: update
+memoria: gc
+rendimiento: tps
+plugin: plugman
+backup: saveall
+consola: console
+config: essentials reload
+
+# =================================================================
+# COMANDOS DE PERSONAJES HISTÓRICOS
+# =================================================================
+
+# Comandos relacionados con los fundadores del pueblo
+thorgar: warp estatua_thorgar
+lyria: warp estatua_lyria
+fundadores: warp templo_fundadores
+historia: warp museo
+reliquia: warp sala_reliquias
+biblioteca: warp pergaminos
+
+# =================================================================
+# COMANDOS DE EVENTOS ESPECIALES
+# =================================================================
+
+# Eventos del servidor basados en el lore
+solsticio: warp festival_solsticio
+cosecha: warp festival_cosecha
+batalla: warp memorial_batalla
+dragones: warp altar_dragones
+titanes: warp ruinas_titanes
+espiritus: warp bosque_espiritus
+ancestros: warp altar_ancestros
+
+# =================================================================
+# NOTAS DE COMANDO
+# =================================================================
+
+# 1. Los aliases permiten a los jugadores usar comandos con nombres temáticos
+# 2. Los comandos de administración requieren permisos específicos
+# 3. Los comandos de sistema solo son accesibles para OP y administradores
+# 4. Se recomienda usar estos comandos en las guías para jugadores
+# 5. Los comandos pueden ser expandidos según el crecimiento del servidor
+# 6. Los comandos relacionados con el lore mejoran la inmersión del jugador

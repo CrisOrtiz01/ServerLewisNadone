@@ -1,0 +1,1728 @@
+############################################################
+# +------------------------------------------------------+ #
+# |           EssentialsX Items Configuration            | #
+# |             ServerLewisNadone - Objetos              | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Este archivo contiene la configuración de los ítems personalizados para el servidor
+# Cada ítem está configurado para mantener el balance del juego y la temática RPG
+# Se ha simplificado la estructura de NBT tags para garantizar compatibilidad con Aternos
+
+############################################################
+#                  ÍNDICE DE CATEGORÍAS                    #
+############################################################
+# 1. ÍTEMS DE MISIÓN - Tokens y objetos para quest
+# 2. EQUIPO DE NPCs - Armas y herramientas legendarias
+# 3. SISTEMA DE POCIONES
+#    3.1 Pociones de Fuerza (10 niveles)
+#    3.2 Pociones de Resistencia (3 niveles)
+#    3.3 Pociones de Salud Extra (5 niveles)
+#    3.4 Pociones de Velocidad (3 niveles)
+#    3.5 Pociones de Salto (3 niveles)
+#    3.6 Pociones de Prisa Minera (10 niveles)
+#    3.7 Pociones de Regeneración (3 niveles)
+#    3.8 Pociones de Héroe (5 niveles)
+#    3.9 Pociones de Saturación (2 niveles)
+# 4. AMULETOS Y RELIQUIAS - Ítems de protección especial
+# 5. ARTEFACTOS DE LOS FUNDADORES - Ítems legendarios
+# 6. TROFEOS DE JEFES - Recompensas por derrotar bosses
+# 7. CONSUMIBLES ESPECIALES - Ítems de un solo uso
+# 8. ÍTEMS DE EVENTO - Tokens y objetos de eventos especiales
+# 9. PERGAMINOS Y COLECCIONABLES - Ítems de lore
+
+############################################################
+# 1. ÍTEMS DE MISIÓN                                       #
+############################################################
+# Objetos básicos requeridos para completar misiones
+# y monedas utilizadas en la economía del servidor
+
+# Token de Misión - Moneda principal para completar misiones
+TOKEN_MISION:
+  material: PRISMARINE_SHARD
+  displayname: "&eToken de Misión"
+  lore:
+    - "&7Canjea este token por recompensas especiales."
+    - "&bBrilla con energía misteriosa."
+  enchantments:
+    - "MENDING:1"
+  flags:
+    - "HIDE_ENCHANTS"
+    - "HIDE_UNBREAKABLE"
+  unbreakable: true
+
+# Esmeralda Real - Moneda para comercio con NPCs mercaderes
+ESMERALDA_REAL:
+  material: EMERALD
+  displayname: "&aEsmeralda Real"
+  lore:
+    - "&2Moneda oficial del pueblo de Nápoles."
+    - "&aBrilla con un resplandor ancestral."
+    - "&7Aceptada por todos los comerciantes."
+    - "&dHerencia de la antigua monarquía."
+  enchantments:
+    - "FORTUNE:1"
+  flags:
+    - "HIDE_ENCHANTS"
+    - "HIDE_UNBREAKABLE"
+  unbreakable: true
+
+# Meta de Carrera - Necesario para misiones de velocidad
+META_CARRERA:
+  material: PAPER
+  displayname: "&bMeta de Carrera"
+  lore:
+    - "&7Certifica que has cruzado la meta"
+    - "&7en una carrera especial."
+    - "&b¡Demuestra tu velocidad y habilidad!"
+  flags:
+    - "HIDE_UNBREAKABLE"
+  unbreakable: true
+
+# Meta de Parkour - Necesario para misiones de salto
+META_PARKOUR:
+  material: PAPER
+  displayname: "&aMeta de Parkour"
+  lore:
+    - "&7Certifica que has superado un"
+    - "&7desafiante reto de parkour."
+    - "&a¡Tu destreza y agilidad quedan"
+    - "&amarcadas en este papel!"
+  flags:
+    - "HIDE_UNBREAKABLE"
+  unbreakable: true
+
+# Meta de Curación - Necesario para misiones de regeneración
+META_CURACION:
+  material: PAPER
+  displayname: "&dMeta de Curación"
+  lore:
+    - "&7Certifica que has completado"
+    - "&7un reto de curación."
+    - "&d¡Tu habilidad para sanar ha"
+    - "&dsido reconocida!"
+  flags:
+    - "HIDE_UNBREAKABLE"
+  unbreakable: true
+
+# Calavera Maldita - Usada para invocar al WITHER_SUPREMO_V1
+CALAVERA_MALDITA:
+  material: WITHER_SKELETON_SKULL
+  displayname: "&8Calavera Maldita"
+  lore:
+    - "&7Una calavera imbuida con energía oscura."
+    - "&8Puede usarse para invocar entidades terribles."
+    - "&4Se siente caliente al tacto, como si"
+    - "&4contuviera el fuego del Nether."
+  enchantments:
+    - "FIRE_ASPECT:1"
+  flags:
+    - "HIDE_ENCHANTS"
+
+############################################################
+# 2. EQUIPO DE NPCs                                        #
+############################################################
+# Armas y herramientas legendarias asociadas a los NPCs principales
+# Estos ítems representan el poder de cada personaje y su especialidad
+
+# Hacha del Carcinero - Drop especial del PiglinBrute_Carcinero
+HACHA_DEL_CARCINERO:
+  material: DIAMOND_AXE
+  displayname: "&6Hacha del Carcinero"
+  lore:
+    - "&cUna hacha brutal, forjada en el"
+    - "&cfuego eterno del Nether."
+    - "&eSe dice que devora el alma"
+    - "&ede sus víctimas."
+    - "&6Solo los elegidos pueden controlar"
+    - "&6su sed de sangre."
+    - "&dObjeto legendario: Su poder es"
+    - "&dtemido en todos los reinos."
+  enchantments:
+    - "SHARPNESS:5"  # Reducido de 7 a 5 para mayor compatibilidad
+    - "FIRE_ASPECT:2"
+    - "LOOTING:3"
+    - "FORTUNE:3"
+    - "UNBREAKING:3"
+    - "MENDING:1"
+  flags:
+    - "HIDE_ENCHANTS"
+    - "HIDE_UNBREAKABLE"
+  unbreakable: true
+
+# Arco de Erika - Arco legendario de la cazadora
+ARCO_DE_ERIKA:
+  material: BOW
+  displayname: "&cArco de Erika"
+  lore:
+    - "&7Forjado por la propia Erika"
+    - "&7para cazar las criaturas más peligrosas."
+    - "&cJamás falla a un blanco inmóvil."
+  enchantments:
+    - "POWER:5"  # Reducido de 8 a 5 para mayor compatibilidad
+    - "INFINITY:1"
+    - "UNBREAKING:3"
+    - "MENDING:1"
+  flags:
+    - "HIDE_UNBREAKABLE"
+  unbreakable: true
+
+# Escudo de Marta - Escudo legendario de la guardiana
+ESCUDO_DE_MARTA:
+  material: SHIELD
+  displayname: "&7Escudo de Marta"
+  lore:
+    - "&7Ha protegido el pueblo durante generaciones."
+    - "&7La voluntad de Marta fortalece su resistencia."
+  enchantments:
+    - "DURABILITY:3"  # Reducido de 5 a 3 para mayor compatibilidad
+    - "MENDING:1"
+  flags:
+    - "HIDE_ENCHANTS"
+    - "HIDE_UNBREAKABLE"
+  unbreakable: true
+
+# Túnica de Sae - Armadura legendaria de la sanadora
+TUNICA_DE_SAE:
+  material: LEATHER_CHESTPLATE
+  displayname: "&4Túnica de Sae"
+  lore:
+    - "&7Imbuida con las energías curativas"
+    - "&7de la sanadora del pueblo."
+    - "&4Otorga protección y vitalidad a quien la porta."
+  color: 16711680
+  enchantments:
+    - "PROTECTION:4"
+    - "THORNS:2"
+    - "MENDING:1"
+  flags:
+    - "HIDE_ENCHANTS"
+    - "HIDE_UNBREAKABLE"
+  unbreakable: true
+
+# Botas de Lia - Botas legendarias de la mensajera
+BOTAS_DE_LIA:
+  material: LEATHER_BOOTS
+  displayname: "&bBotas de Lia"
+  lore:
+    - "&7Con estas botas, Lia puede"
+    - "&7entregar mensajes a través del reino"
+    - "&7antes de que caiga el sol."
+    - "&bLa velocidad del viento está en cada paso."
+  color: 8912896
+  enchantments:
+    - "PROTECTION:3"
+    - "FEATHER_FALLING:4"
+    - "DEPTH_STRIDER:3"
+    - "MENDING:1"
+  flags:
+    - "HIDE_ENCHANTS"
+    - "HIDE_UNBREAKABLE"
+  unbreakable: true
+
+# Pico de Paúl - Pico legendario del minero
+PICO_DE_PAUL:
+  material: DIAMOND_PICKAXE
+  displayname: "&6Pico de Paúl"
+  lore:
+    - "&7Ha extraído los materiales más raros"
+    - "&7de las profundidades más oscuras."
+    - "&6Sus golpes resuenan con el latido de la tierra."
+  enchantments:
+    - "EFFICIENCY:5"
+    - "FORTUNE:3"
+    - "UNBREAKING:3"
+    - "MENDING:1"
+  flags:
+    - "HIDE_ENCHANTS"
+    - "HIDE_UNBREAKABLE"
+  unbreakable: true
+
+# Tótem de Helena - Tótem especial de la curandera
+TOTEM_DE_HELENA:
+  material: TOTEM_OF_UNDYING
+  displayname: "&dTótem de Helena"
+  lore:
+    - "&7Creado por Helena con sus"
+    - "&7conocimientos ancestrales."
+    - "&dCanaliza el poder de la curación"
+    - "&dy la regeneración vital."
+  enchantments:
+    - "MENDING:1"
+  flags:
+    - "HIDE_ENCHANTS"
+    - "HIDE_UNBREAKABLE"
+  unbreakable: true
+
+# Espada del Alcalde - Espada legendaria del líder
+ESPADA_DEL_ALCALDE:
+  material: DIAMOND_SWORD
+  displayname: "&9Espada del Alcalde Tomas"
+  lore:
+    - "&7El arma que usó el Alcalde Tomas"
+    - "&7para defender el pueblo durante la"
+    - "&7Gran Batalla de los Saqueadores."
+    - "&9Su filo brilla con honor y justicia."
+  enchantments:
+    - "SHARPNESS:5"
+    - "SWEEPING:3"
+    - "UNBREAKING:3"
+    - "MENDING:1"
+  flags:
+    - "HIDE_ENCHANTS"
+    - "HIDE_UNBREAKABLE"
+  unbreakable: true
+
+# Sartén de Bruno - Arma legendaria del chef
+SARTEN_DE_BRUNO:
+  material: IRON_HOE
+  displayname: "&eSartén de Bruno"
+  lore:
+    - "&7La legendaria sartén con la que Bruno"
+    - "&7ha preparado banquetes para reyes."
+    - "&eImbuida con la esencia de la nutrición."
+  enchantments:
+    - "SHARPNESS:3"
+    - "FIRE_ASPECT:1"
+    - "UNBREAKING:3"
+    - "MENDING:1"
+  flags:
+    - "HIDE_ENCHANTS"
+    - "HIDE_UNBREAKABLE"
+  unbreakable: true
+
+############################################################
+# 3. SISTEMA DE POCIONES                                   #
+############################################################
+# Pociones que otorgan efectos permanentes como recompensa por misiones
+# Todas utilizan un sistema optimizado para compatibilidad con Aternos
+
+############################################################
+# 3.1 POCIONES DE FUERZA (10 NIVELES)                      #
+############################################################
+# Otorgadas por Erika la Cazadora
+
+POCION_PERMANENTE_FUERZA_1:
+  material: POTION
+  displayname: "&cPoción de Fuerza Permanente I"
+  lore:
+    - "&7Un brebaje místico otorgado por Erika la Cazadora."
+    - "&eAl beberlo, obtendrás fuerza permanente."
+    - "&cEfecto: Fuerza I (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 1 de 10"
+  color: 16711680  # Rojo intenso
+  enchantments:
+    - "LUCK:1"  # Encantamiento decorativo para indicar nivel
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "strength"
+    effect-level: 1
+    effect-duration: -1  # Permanente
+    effect-giver: "erika"
+
+POCION_PERMANENTE_FUERZA_2:
+  material: POTION
+  displayname: "&cPoción de Fuerza Permanente II"
+  lore:
+    - "&7Un brebaje místico otorgado por Erika la Cazadora."
+    - "&eAl beberlo, obtendrás mayor fuerza permanente."
+    - "&cEfecto: Fuerza II (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 2 de 10"
+  color: 16711680  # Rojo intenso
+  enchantments:
+    - "LUCK:2"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "strength"
+    effect-level: 2
+    effect-duration: -1
+    effect-giver: "erika"
+
+POCION_PERMANENTE_FUERZA_3:
+  material: POTION
+  displayname: "&cPoción de Fuerza Permanente III"
+  lore:
+    - "&7Un brebaje místico otorgado por Erika la Cazadora."
+    - "&eAl beberlo, obtendrás mayor fuerza permanente."
+    - "&cEfecto: Fuerza III (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 3 de 10"
+  color: 16711680  # Rojo intenso
+  enchantments:
+    - "LUCK:3"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "strength"
+    effect-level: 3
+    effect-duration: -1
+    effect-giver: "erika"
+
+POCION_PERMANENTE_FUERZA_4:
+  material: POTION
+  displayname: "&cPoción de Fuerza Permanente IV"
+  lore:
+    - "&7Un brebaje místico otorgado por Erika la Cazadora."
+    - "&eAl beberlo, obtendrás mayor fuerza permanente."
+    - "&cEfecto: Fuerza IV (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 4 de 10"
+  color: 16711680  # Rojo intenso
+  enchantments:
+    - "LUCK:4"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "strength"
+    effect-level: 4
+    effect-duration: -1
+    effect-giver: "erika"
+
+POCION_PERMANENTE_FUERZA_5:
+  material: POTION
+  displayname: "&cPoción de Fuerza Permanente V"
+  lore:
+    - "&7Un brebaje místico otorgado por Erika la Cazadora."
+    - "&eAl beberlo, obtendrás mayor fuerza permanente."
+    - "&cEfecto: Fuerza V (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 5 de 10"
+  color: 16711680  # Rojo intenso
+  enchantments:
+    - "LUCK:5"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "strength"
+    effect-level: 5
+    effect-duration: -1
+    effect-giver: "erika"
+
+POCION_PERMANENTE_FUERZA_6:
+  material: POTION
+  displayname: "&cPoción de Fuerza Permanente VI"
+  lore:
+    - "&7Un brebaje místico otorgado por Erika la Cazadora."
+    - "&eAl beberlo, obtendrás mayor fuerza permanente."
+    - "&cEfecto: Fuerza VI (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 6 de 10"
+  color: 16711680  # Rojo intenso
+  enchantments:
+    - "LUCK:5"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  glow: true  # Efecto visual adicional para niveles superiores
+  custom-effects:
+    effect-type: "strength"
+    effect-level: 6
+    effect-duration: -1
+    effect-giver: "erika"
+
+POCION_PERMANENTE_FUERZA_7:
+  material: POTION
+  displayname: "&cPoción de Fuerza Permanente VII"
+  lore:
+    - "&7Un brebaje místico otorgado por Erika la Cazadora."
+    - "&eAl beberlo, obtendrás mayor fuerza permanente."
+    - "&cEfecto: Fuerza VII (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 7 de 10"
+  color: 16711680  # Rojo intenso
+  enchantments:
+    - "LUCK:5"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  glow: true
+  custom-effects:
+    effect-type: "strength"
+    effect-level: 7
+    effect-duration: -1
+    effect-giver: "erika"
+
+POCION_PERMANENTE_FUERZA_8:
+  material: POTION
+  displayname: "&cPoción de Fuerza Permanente VIII"
+  lore:
+    - "&7Un brebaje místico otorgado por Erika la Cazadora."
+    - "&eAl beberlo, obtendrás mayor fuerza permanente."
+    - "&cEfecto: Fuerza VIII (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 8 de 10"
+  color: 16711680  # Rojo intenso
+  enchantments:
+    - "LUCK:5"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  glow: true
+  custom-effects:
+    effect-type: "strength"
+    effect-level: 8
+    effect-duration: -1
+    effect-giver: "erika"
+
+POCION_PERMANENTE_FUERZA_9:
+  material: POTION
+  displayname: "&cPoción de Fuerza Permanente IX"
+  lore:
+    - "&7Un brebaje místico otorgado por Erika la Cazadora."
+    - "&eAl beberlo, obtendrás mayor fuerza permanente."
+    - "&cEfecto: Fuerza IX (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 9 de 10"
+  color: 16711680  # Rojo intenso
+  enchantments:
+    - "LUCK:5"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  glow: true
+  custom-effects:
+    effect-type: "strength"
+    effect-level: 9
+    effect-duration: -1
+    effect-giver: "erika"
+
+POCION_PERMANENTE_FUERZA_10:
+  material: POTION
+  displayname: "&cPoción de Fuerza Permanente X"
+  lore:
+    - "&7Un brebaje místico otorgado por Erika la Cazadora."
+    - "&eAl beberlo, obtendrás fuerza suprema permanente."
+    - "&cEfecto: Fuerza X (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel MÁXIMO"
+  color: 16711680  # Rojo intenso
+  enchantments:
+    - "LUCK:5"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  glow: true
+  custom-effects:
+    effect-type: "strength"
+    effect-level: 10
+    effect-duration: -1
+    effect-giver: "erika"
+    is-maximum: true
+
+############################################################
+# 3.2 POCIONES DE RESISTENCIA (3 NIVELES)                  #
+############################################################
+# Otorgadas por Marta, La Guardiana
+
+POCION_PERMANENTE_RESISTENCIA_1:
+  material: POTION
+  displayname: "&7Poción de Resistencia Permanente I"
+  lore:
+    - "&7Un brebaje místico otorgado por Marta, La Guardiana."
+    - "&eAl beberlo, obtendrás resistencia permanente."
+    - "&7Efecto: Resistencia I (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 1 de 3"
+  color: 12895428  # Gris
+  enchantments:
+    - "LUCK:1"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "resistance"
+    effect-level: 1
+    effect-duration: -1
+    effect-giver: "marta"
+
+POCION_PERMANENTE_RESISTENCIA_2:
+  material: POTION
+  displayname: "&7Poción de Resistencia Permanente II"
+  lore:
+    - "&7Un brebaje místico otorgado por Marta, La Guardiana."
+    - "&eAl beberlo, obtendrás mayor resistencia permanente."
+    - "&7Efecto: Resistencia II (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 2 de 3"
+  color: 12895428  # Gris
+  enchantments:
+    - "LUCK:2"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "resistance"
+    effect-level: 2
+    effect-duration: -1
+    effect-giver: "marta"
+
+POCION_PERMANENTE_RESISTENCIA_3:
+  material: POTION
+  displayname: "&7Poción de Resistencia Permanente III"
+  lore:
+    - "&7Un brebaje místico otorgado por Marta, La Guardiana."
+    - "&eAl beberlo, obtendrás resistencia suprema permanente."
+    - "&7Efecto: Resistencia III (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel MÁXIMO"
+  color: 12895428  # Gris
+  enchantments:
+    - "LUCK:3"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  glow: true
+  custom-effects:
+    effect-type: "resistance"
+    effect-level: 3
+    effect-duration: -1
+    effect-giver: "marta"
+    is-maximum: true
+
+############################################################
+# 3.3 POCIONES DE SALUD EXTRA (5 NIVELES)                  #
+############################################################
+# Otorgadas por Sae, la Sanadora
+
+POCION_PERMANENTE_SALUD_1:
+  material: POTION
+  displayname: "&4Poción de Salud Extra Permanente I"
+  lore:
+    - "&7Un brebaje místico otorgado por Sae, la Sanadora."
+    - "&eAl beberlo, obtendrás salud extra permanente."
+    - "&4Efecto: Salud Extra I (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 1 de 5"
+  color: 16711680  # Rojo
+  enchantments:
+    - "LUCK:1"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "health"
+    effect-level: 1
+    effect-duration: -1
+    effect-giver: "sae"
+
+POCION_PERMANENTE_SALUD_2:
+  material: POTION
+  displayname: "&4Poción de Salud Extra Permanente II"
+  lore:
+    - "&7Un brebaje místico otorgado por Sae, la Sanadora."
+    - "&eAl beberlo, obtendrás mayor salud extra permanente."
+    - "&4Efecto: Salud Extra II (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 2 de 5"
+  color: 16711680  # Rojo
+  enchantments:
+    - "LUCK:2"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "health"
+    effect-level: 2
+    effect-duration: -1
+    effect-giver: "sae"
+
+POCION_PERMANENTE_SALUD_3:
+  material: POTION
+  displayname: "&4Poción de Salud Extra Permanente III"
+  lore:
+    - "&7Un brebaje místico otorgado por Sae, la Sanadora."
+    - "&eAl beberlo, obtendrás mayor salud extra permanente."
+    - "&4Efecto: Salud Extra III (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 3 de 5"
+  color: 16711680  # Rojo
+  enchantments:
+    - "LUCK:3"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "health"
+    effect-level: 3
+    effect-duration: -1
+    effect-giver: "sae"
+
+POCION_PERMANENTE_SALUD_4:
+  material: POTION
+  displayname: "&4Poción de Salud Extra Permanente IV"
+  lore:
+    - "&7Un brebaje místico otorgado por Sae, la Sanadora."
+    - "&eAl beberlo, obtendrás mayor salud extra permanente."
+    - "&4Efecto: Salud Extra IV (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 4 de 5"
+  color: 16711680  # Rojo
+  enchantments:
+    - "LUCK:4"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "health"
+    effect-level: 4
+    effect-duration: -1
+    effect-giver: "sae"
+
+POCION_PERMANENTE_SALUD_5:
+  material: POTION
+  displayname: "&4Poción de Salud Extra Permanente V"
+  lore:
+    - "&7Un brebaje místico otorgado por Sae, la Sanadora."
+    - "&eAl beberlo, obtendrás salud suprema extra permanente."
+    - "&4Efecto: Salud Extra V (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel MÁXIMO"
+  color: 16711680  # Rojo
+  enchantments:
+    - "LUCK:5"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  glow: true
+  custom-effects:
+    effect-type: "health"
+    effect-level: 5
+    effect-duration: -1
+    effect-giver: "sae"
+    is-maximum: true
+
+############################################################
+# 3.4 POCIONES DE VELOCIDAD (3 NIVELES)                    #
+############################################################
+# Otorgadas por Lia, la Mensajera
+
+POCION_PERMANENTE_VELOCIDAD_1:
+  material: POTION
+  displayname: "&ePoción de Velocidad Permanente I"
+  lore:
+    - "&7Un brebaje místico otorgado por Lia, la Mensajera."
+    - "&eAl beberlo, obtendrás velocidad permanente."
+    - "&eEfecto: Velocidad I (permanente)"
+    - "&8Solo funciona una vez."
+  color: 16755200  # Amarillo
+  enchantments:
+    - "LUCK:1"
+  flags:
+    - HIDE_POTION_EFFECTS
+    - HIDE_ENCHANTS
+  custom-effects:
+    effect-type: "speed"
+    effect-level: 1
+    effect-duration: -1
+    effect-giver: "lia"
+
+POCION_PERMANENTE_VELOCIDAD_2:
+  material: POTION
+  displayname: "&ePoción de Velocidad Permanente II"
+  lore:
+    - "&7Un brebaje místico otorgado por Lia, la Mensajera."
+    - "&eAl beberlo, obtendrás mayor velocidad permanente."
+    - "&eEfecto: Velocidad II (permanente)"
+    - "&8Solo funciona una vez."
+  color: 16755200  # Amarillo
+  enchantments:
+    - "LUCK:2"
+  flags:
+    - HIDE_POTION_EFFECTS
+    - HIDE_ENCHANTS
+  custom-effects:
+    effect-type: "speed"
+    effect-level: 2
+    effect-duration: -1
+    effect-giver: "lia"
+
+POCION_PERMANENTE_VELOCIDAD_3:
+  material: POTION
+  displayname: "&ePoción de Velocidad Permanente III"
+  lore:
+    - "&7Un brebaje místico otorgado por Lia, la Mensajera."
+    - "&eAl beberlo, obtendrás mayor velocidad permanente."
+    - "&eEfecto: Velocidad III (permanente)"
+    - "&8Solo funciona una vez."
+  color: 16755200  # Amarillo
+  enchantments:
+    - "LUCK:3"
+  flags:
+    - HIDE_POTION_EFFECTS
+    - HIDE_ENCHANTS
+  custom-effects:
+    effect-type: "speed"
+    effect-level: 3
+    effect-duration: -1
+    effect-giver: "lia"
+
+############################################################
+# 3.5 POCIONES DE SALTO (3 NIVELES)                        #
+############################################################
+# Otorgadas por Ícaro, el Acróbata
+
+POCION_PERMANENTE_SALTO_1:
+  material: POTION
+  displayname: "&9Poción de Salto Permanente I"
+  lore:
+    - "&7Un brebaje místico otorgado por Ícaro, el Acróbata."
+    - "&eAl beberlo, obtendrás salto permanente."
+    - "&eEfecto: Salto I (permanente)"
+    - "&8Solo funciona una vez."
+  color: 10526880  # Verde esmeralda
+  enchantments:
+    - "LUCK:1"
+  flags:
+    - HIDE_POTION_EFFECTS
+    - HIDE_ENCHANTS
+  custom-effects:
+    effect-type: "jump"
+    effect-level: 1
+    effect-duration: -1
+    effect-giver: "icaro"
+
+POCION_PERMANENTE_SALTO_2:
+  material: POTION
+  displayname: "&9Poción de Salto Permanente II"
+  lore:
+    - "&7Un brebaje místico otorgado por Ícaro, el Acróbata."
+    - "&eAl beberlo, obtendrás mayor salto permanente."
+    - "&eEfecto: Salto II (permanente)"
+    - "&8Solo funciona una vez."
+  color: 10526880  # Verde esmeralda
+  enchantments:
+    - "LUCK:2"
+  flags:
+    - HIDE_POTION_EFFECTS
+    - HIDE_ENCHANTS
+  custom-effects:
+    effect-type: "jump"
+    effect-level: 2
+    effect-duration: -1
+    effect-giver: "icaro"
+
+POCION_PERMANENTE_SALTO_3:
+  material: POTION
+  displayname: "&9Poción de Salto Permanente III"
+  lore:
+    - "&7Un brebaje místico otorgado por Ícaro, el Acróbata."
+    - "&eAl beberlo, obtendrás mayor salto permanente."
+    - "&eEfecto: Salto III (permanente)"
+    - "&8Solo funciona una vez."
+  color: 10526880  # Verde esmeralda
+  enchantments:
+    - "LUCK:3"
+  flags:
+    - HIDE_POTION_EFFECTS
+    - HIDE_ENCHANTS
+  custom-effects:
+    effect-type: "jump"
+    effect-level: 3
+    effect-duration: -1
+    effect-giver: "icaro"
+
+############################################################
+# 3.6 POCIONES DE PRISA MINERA (10 NIVELES)                #
+############################################################
+# Otorgadas por Paúl, el Minero
+
+POCION_PERMANENTE_MINERIA_1:
+  material: POTION
+  displayname: "&6Poción de Prisa Minera Permanente I"
+  lore:
+    - "&7Un brebaje místico otorgado por Paúl, el Minero."
+    - "&eAl beberlo, obtendrás prisa minera permanente."
+    - "&6Efecto: Prisa Minera I (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 1 de 10"
+  color: 16755200  # Amarillo-naranja
+  enchantments:
+    - "LUCK:1"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "haste"
+    effect-level: 1
+    effect-duration: -1
+    effect-giver: "paul"
+
+POCION_PERMANENTE_MINERIA_2:
+  material: POTION
+  displayname: "&6Poción de Prisa Minera Permanente II"
+  lore:
+    - "&7Un brebaje místico otorgado por Paúl, el Minero."
+    - "&eAl beberlo, obtendrás mayor prisa minera permanente."
+    - "&6Efecto: Prisa Minera II (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 2 de 10"
+  color: 16755200  # Amarillo-naranja
+  enchantments:
+    - "LUCK:2"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "haste"
+    effect-level: 2
+    effect-duration: -1
+    effect-giver: "paul"
+
+POCION_PERMANENTE_MINERIA_3:
+  material: POTION
+  displayname: "&6Poción de Prisa Minera Permanente III"
+  lore:
+    - "&7Un brebaje místico otorgado por Paúl, el Minero."
+    - "&eAl beberlo, obtendrás mayor prisa minera permanente."
+    - "&6Efecto: Prisa Minera III (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 3 de 10"
+  color: 16755200  # Amarillo-naranja
+  enchantments:
+    - "LUCK:3"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "haste"
+    effect-level: 3
+    effect-duration: -1
+    effect-giver: "paul"
+
+POCION_PERMANENTE_MINERIA_4:
+  material: POTION
+  displayname: "&6Poción de Prisa Minera Permanente IV"
+  lore:
+    - "&7Un brebaje místico otorgado por Paúl, el Minero."
+    - "&eAl beberlo, obtendrás mayor prisa minera permanente."
+    - "&6Efecto: Prisa Minera IV (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 4 de 10"
+  color: 16755200  # Amarillo-naranja
+  enchantments:
+    - "LUCK:4"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "haste"
+    effect-level: 4
+    effect-duration: -1
+    effect-giver: "paul"
+
+POCION_PERMANENTE_MINERIA_5:
+  material: POTION
+  displayname: "&6Poción de Prisa Minera Permanente V"
+  lore:
+    - "&7Un brebaje místico otorgado por Paúl, el Minero."
+    - "&eAl beberlo, obtendrás mayor prisa minera permanente."
+    - "&6Efecto: Prisa Minera V (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 5 de 10"
+  color: 16755200  # Amarillo-naranja
+  enchantments:
+    - "LUCK:5"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "haste"
+    effect-level: 5
+    effect-duration: -1
+    effect-giver: "paul"
+
+POCION_PERMANENTE_MINERIA_6:
+  material: POTION
+  displayname: "&6Poción de Prisa Minera Permanente VI"
+  lore:
+    - "&7Un brebaje místico otorgado por Paúl, el Minero."
+    - "&eAl beberlo, obtendrás mayor prisa minera permanente."
+    - "&6Efecto: Prisa Minera VI (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 6 de 10"
+  color: 16755200  # Amarillo-naranja
+  enchantments:
+    - "LUCK:5"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  glow: true  # Efectos visuales adicionales para niveles superiores
+  custom-effects:
+    effect-type: "haste"
+    effect-level: 6
+    effect-duration: -1
+    effect-giver: "paul"
+
+POCION_PERMANENTE_MINERIA_7:
+  material: POTION
+  displayname: "&6Poción de Prisa Minera Permanente VII"
+  lore:
+    - "&7Un brebaje místico otorgado por Paúl, el Minero."
+    - "&eAl beberlo, obtendrás mayor prisa minera permanente."
+    - "&6Efecto: Prisa Minera VII (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 7 de 10"
+  color: 16755200  # Amarillo-naranja
+  enchantments:
+    - "LUCK:5"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  glow: true
+  custom-effects:
+    effect-type: "haste"
+    effect-level: 7
+    effect-duration: -1
+    effect-giver: "paul"
+
+POCION_PERMANENTE_MINERIA_8:
+  material: POTION
+  displayname: "&6Poción de Prisa Minera Permanente VIII"
+  lore:
+    - "&7Un brebaje místico otorgado por Paúl, el Minero."
+    - "&eAl beberlo, obtendrás mayor prisa minera permanente."
+    - "&6Efecto: Prisa Minera VIII (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 8 de 10"
+  color: 16755200  # Amarillo-naranja
+  enchantments:
+    - "LUCK:5"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  glow: true
+  custom-effects:
+    effect-type: "haste"
+    effect-level: 8
+    effect-duration: -1
+    effect-giver: "paul"
+
+POCION_PERMANENTE_MINERIA_9:
+  material: POTION
+  displayname: "&6Poción de Prisa Minera Permanente IX"
+  lore:
+    - "&7Un brebaje místico otorgado por Paúl, el Minero."
+    - "&eAl beberlo, obtendrás mayor prisa minera permanente."
+    - "&6Efecto: Prisa Minera IX (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 9 de 10"
+  color: 16755200  # Amarillo-naranja
+  enchantments:
+    - "LUCK:5"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  glow: true
+  custom-effects:
+    effect-type: "haste"
+    effect-level: 9
+    effect-duration: -1
+    effect-giver: "paul"
+
+POCION_PERMANENTE_MINERIA_10:
+  material: POTION
+  displayname: "&6Poción de Prisa Minera Permanente X"
+  lore:
+    - "&7Un brebaje místico otorgado por Paúl, el Minero."
+    - "&eAl beberlo, obtendrás prisa minera suprema permanente."
+    - "&6Efecto: Prisa Minera X (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel MÁXIMO"
+  color: 16755200  # Amarillo-naranja
+  enchantments:
+    - "LUCK:5"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  glow: true
+  custom-effects:
+    effect-type: "haste"
+    effect-level: 10
+    effect-duration: -1
+    effect-giver: "paul"
+    is-maximum: true
+
+############################################################
+# 3.7 POCIONES DE REGENERACIÓN (3 NIVELES)                 #
+############################################################
+# Otorgadas por Helena, la Curandera
+
+POCION_PERMANENTE_REGENERACION_1:
+  material: POTION
+  displayname: "&aPoción de Regeneración Permanente I"
+  lore:
+    - "&7Un brebaje místico otorgado por Helena, la Curandera."
+    - "&eAl beberlo, comenzarás a regenerar salud permanentemente."
+    - "&aEfecto: Regeneración I (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 1 de 3"
+  color: 65280  # Verde
+  enchantments:
+    - "LUCK:1"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "regeneration"
+    effect-level: 1
+    effect-duration: -1
+    effect-giver: "helena"
+
+POCION_PERMANENTE_REGENERACION_2:
+  material: POTION
+  displayname: "&aPoción de Regeneración Permanente II"
+  lore:
+    - "&7Un brebaje místico otorgado por Helena, la Curandera."
+    - "&eAl beberlo, experimentarás una rápida regeneración de salud."
+    - "&aEfecto: Regeneración II (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 2 de 3"
+  color: 65280  # Verde
+  enchantments:
+    - "LUCK:2"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "regeneration"
+    effect-level: 2
+    effect-duration: -1
+    effect-giver: "helena"
+
+POCION_PERMANENTE_REGENERACION_3:
+  material: POTION
+  displayname: "&aPoción de Regeneración Permanente III"
+  lore:
+    - "&7Un brebaje místico otorgado por Helena, la Curandera."
+    - "&eAl beberlo, recibirás una oleada de energía curativa."
+    - "&aEfecto: Regeneración III (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel MÁXIMO"
+  color: 65280  # Verde
+  enchantments:
+    - "LUCK:3"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  glow: true
+  custom-effects:
+    effect-type: "regeneration"
+    effect-level: 3
+    effect-duration: -1
+    effect-giver: "helena"
+    is-maximum: true
+
+############################################################
+# 3.8 POCIONES DE HÉROE (5 NIVELES)                        #
+############################################################
+# Otorgadas por el Alcalde Tomas
+
+POCION_PERMANENTE_HEROE_1:
+  material: POTION
+  displayname: "&9Poción de Héroe de Villa Permanente I"
+  lore:
+    - "&7Un brebaje místico otorgado por el Alcalde Tomas."
+    - "&eAl beberlo, obtendrás el estado de Héroe permanente."
+    - "&9Efecto: Héroe de Villa I (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 1 de 5"
+  color: 3355647  # Azul
+  enchantments:
+    - "LUCK:1"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "hero"
+    effect-level: 1
+    effect-duration: -1
+    effect-giver: "tomas"
+
+POCION_PERMANENTE_HEROE_2:
+  material: POTION
+  displayname: "&9Poción de Héroe de Villa Permanente II"
+  lore:
+    - "&7Un brebaje místico otorgado por el Alcalde Tomas."
+    - "&eAl beberlo, obtendrás mayor estatus de Héroe permanente."
+    - "&9Efecto: Héroe de Villa II (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 2 de 5"
+  color: 3355647  # Azul
+  enchantments:
+    - "LUCK:2"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "hero"
+    effect-level: 2
+    effect-duration: -1
+    effect-giver: "tomas"
+
+POCION_PERMANENTE_HEROE_3:
+  material: POTION
+  displayname: "&9Poción de Héroe de Villa Permanente III"
+  lore:
+    - "&7Un brebaje místico otorgado por el Alcalde Tomas."
+    - "&eAl beberlo, obtendrás mayor estatus de Héroe permanente."
+    - "&9Efecto: Héroe de Villa III (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 3 de 5"
+  color: 3355647  # Azul
+  enchantments:
+    - "LUCK:3"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "hero"
+    effect-level: 3
+    effect-duration: -1
+    effect-giver: "tomas"
+
+POCION_PERMANENTE_HEROE_4:
+  material: POTION
+  displayname: "&9Poción de Héroe de Villa Permanente IV"
+  lore:
+    - "&7Un brebaje místico otorgado por el Alcalde Tomas."
+    - "&eAl beberlo, obtendrás mayor estatus de Héroe permanente."
+    - "&9Efecto: Héroe de Villa IV (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel 4 de 5"
+  color: 3355647  # Azul
+  enchantments:
+    - "LUCK:4"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  custom-effects:
+    effect-type: "hero"
+    effect-level: 4
+    effect-duration: -1
+    effect-giver: "tomas"
+
+POCION_PERMANENTE_HEROE_5:
+  material: POTION
+  displayname: "&9Poción de Héroe de Villa Permanente V"
+  lore:
+    - "&7Un brebaje místico otorgado por el Alcalde Tomas."
+    - "&eAl beberlo, obtendrás el máximo estatus de Héroe permanente."
+    - "&9Efecto: Héroe de Villa V (permanente)"
+    - "&8Solo funciona una vez."
+    - "&7Nivel MÁXIMO"
+  color: 3355647  # Azul
+  enchantments:
+    - "LUCK:5"
+  flags:
+    - "HIDE_POTION_EFFECTS"
+    - "HIDE_ENCHANTS"
+  glow: true
+  custom-effects:
+    effect-type: "hero"
+    effect-level: 5
+    effect-duration: -1
+    effect-giver: "tomas"
+    is-maximum: true
+
+############################################################
+# 3.9 POCIONES DE SATURACIÓN (2 NIVELES)                   #
+############################################################
+# Otorgadas por Bruno, el Chef
+
+POCION_PERMANENTE_SATURACION_1:
+  material: POTION
+  displayname: "&ePoción de Saturación Permanente I"
+  lore:
+    - "&7Un brebaje místico otorgado por Bruno, el Chef."
+    - "&eAl beberlo, obtendrás saturación permanente."
+    - "&eEfecto: Saturación I (permanente)"
+    - "&8Solo funciona una vez."
+  flags:
+    - HIDE_POTION_EFFECTS
+    - HIDE_ATTRIBUTES
+  nbt:
+    effect: "saturation"
+    level: 1
+    permanent: true
+    giver: "bruno"
+  damage: 0
+  color: 16768000
+
+POCION_PERMANENTE_SATURACION_2:
+  material: POTION
+  displayname: "&ePoción de Saturación Permanente II"
+  lore:
+    - "&7Un brebaje místico otorgado por Bruno, el Chef."
+    - "&eAl beberlo, obtendrás saturación suprema permanente."
+    - "&eEfecto: Saturación II (permanente)"
+    - "&8Solo funciona una vez."
+  flags:
+    - HIDE_POTION_EFFECTS
+    - HIDE_ATTRIBUTES
+  nbt:
+    effect: "saturation"
+    level: 2
+    permanent: true
+    giver: "bruno"
+  damage: 0
+  color: 16768000
+
+############################################################
+# 4. AMULETOS Y RELIQUIAS                                  #
+############################################################
+# Ítems de protección y artefactos especiales
+
+AMULETO_PROTECCION_FUEGO:
+  material: FIRE_CHARGE
+  displayname: "&cAmuleto de Resistencia Ígnea"
+  lore:
+    - "&7Creado por Sae la Sanadora con técnicas ancestrales."
+    - "&eOtorga protección contra daño de fuego y lava."
+    - "&6Cuenta la leyenda que fue forjado con la sangre de un blaze."
+    - "&8Úsalo en tu inventario para activar su protección."
+  enchantments:
+    - "FIRE_PROTECTION:5"
+  flags:
+    - "HIDE_ENCHANTS"
+    - "HIDE_ATTRIBUTES"
+  custom-data:
+    amulet-type: "fire_protection"
+    effect-level: 2
+    active: true
+
+AMULETO_PROTECCION_VENENO:
+  material: SPIDER_EYE
+  displayname: "&2Amuleto Antitoxina"
+  lore:
+    - "&7Elaborado por Helena la Curandera con hierbas raras."
+    - "&eAnula los efectos de veneno y wither."
+    - "&6Destila la esencia purificadora de una araña umbría."
+    - "&8Úsalo en tu inventario para activar su protección."
+  enchantments:
+    - "PROTECTION:3"
+  flags:
+    - "HIDE_ENCHANTS"
+    - "HIDE_ATTRIBUTES"
+  custom-data:
+    amulet-type: "poison_protection"
+    effect-level: 2
+    active: true
+
+############################################################
+# 5. ARTEFACTOS DE LOS FUNDADORES                          #
+############################################################
+# Reliquias legendarias de los fundadores del pueblo
+
+ESPADA_DEL_PRIMER_CAMPEON:
+  material: NETHERITE_SWORD
+  displayname: "&5Espada de Thorgar"
+  lore:
+    - "&dReliquia ancestral del primer campeón fundador."
+    - "&eForjada con metales olvidados y encantada con runas antiguas."
+    - "&bSe dice que puede cortar la oscuridad misma."
+    - "&7\"El poder no es nada sin la sabiduría para guiarlo.\" -Thorgar"
+    - "&8Reliquia legendaria: Artefacto de los Fundadores."
+  enchantments:
+    - "SMITE:5"
+    - "SWEEPING_EDGE:3"
+    - "UNBREAKING:5"
+    - "MENDING:1"
+    - "KNOCKBACK:2"
+  unbreakable: true
+  flags:
+    - "HIDE_ENCHANTS"
+    - "HIDE_UNBREAKABLE"
+    - "HIDE_ATTRIBUTES"
+  custom-data:
+    item-type: "founders-artifact"
+    effect: "light-radius"
+
+BASTON_DE_LA_SEGUNDA_CAMPEONA:
+  material: BLAZE_ROD
+  displayname: "&bBastón de Lyria"
+  lore:
+    - "&dReliquia ancestral de la segunda campeona fundadora."
+    - "&eTallado de un blaze rod primigenio, canaliza energías arcanas."
+    - "&bLos vientos y las aguas obedecen a quien lo empuña."
+    - "&7\"La verdadera fuerza proviene del conocimiento y la armonía.\" -Lyria"
+    - "&8Reliquia legendaria: Artefacto de los Fundadores."
+  enchantments:
+    - "LOYALTY:5"
+    - "CHANNELING:3"
+    - "UNBREAKING:10"
+    - "MENDING:1"
+  unbreakable: true
+  flags:
+    - "HIDE_ENCHANTS"
+    - "HIDE_UNBREAKABLE"
+    - "HIDE_ATTRIBUTES"
+  custom-data:
+    item-type: "founders-artifact"
+    effect: "weather-control"
+
+############################################################
+# 6. TROFEOS DE JEFES                                      #
+############################################################
+# Recompensas únicas por derrotar a jefes principales
+
+CORONA_DEL_WITHER_SUPREMO:
+  material: WITHER_SKELETON_SKULL
+  displayname: "&8Corona del Rey Corrompido"
+  lore:
+    - "&7Formada a partir de los restos del Wither Supremo."
+    - "&eOtorga inmunidad al efecto Wither."
+    - "&cEquiparla drena lentamente tu vida, pero aumenta tu poder."
+    - "&6\"El poder siempre exige un precio.\" -Inscripción antigua"
+    - "&dTrofeo obtenido tras derrotar al Wither Supremo."
+  enchantments:
+    - "PROTECTION:6"
+  flags:
+    - "HIDE_ENCHANTS"
+  custom-data:
+    boss-trophy: "wither"
+    effect-immunity: "wither"
+    damage-boost: 0.75
+
+CORAZON_DEL_DRAGON:
+  material: NETHERITE_BOOTS
+  displayname: "&5Botas del Corazón de Dragón"
+  lore:
+    - "&7Forjadas con la esencia del Dragón Final derrotado."
+    - "&ePulsan con energía antigua que permite vuelos cortos."
+    - "&cSu poder es inestable y requiere periodos de recarga."
+    - "&6\"El cielo no tiene límites para quien ha conquistado sus miedos.\""
+    - "&dTrofeo obtenido tras derrotar al Dragón Final."
+  enchantments:
+    - "PROTECTION:5"
+    - "FEATHER_FALLING:10"
+    - "SOUL_SPEED:3"
+  unbreakable: true
+  flags:
+    - "HIDE_ENCHANTS"
+    - "HIDE_UNBREAKABLE"
+  custom-data:
+    boss-trophy: "dragon"
+    flight-enabled: true
+    flight-duration: 30
+    cooldown: 300
+
+TRIDENTE_DEL_TITAN:
+  material: TRIDENT
+  displayname: "&3Tridente del Titán Marino"
+  lore:
+    - "&7El arma ancestral del Pez Antiguo."
+    - "&ePermite respirar bajo el agua y nadar más rápido."
+    - "&cInvoca relámpagos al impactar en el agua."
+    - "&6\"Las profundidades guardan secretos que la superficie jamás comprenderá.\""
+    - "&dTrofeo obtenido tras derrotar al Elder Guardian Titán."
+  enchantments:
+    - "IMPALING:10"
+    - "LOYALTY:5"
+    - "CHANNELING:3"
+    - "UNBREAKING:10"
+    - "MENDING:1"
+  unbreakable: true
+  flags:
+    - "HIDE_ENCHANTS"
+    - "HIDE_UNBREAKABLE"
+  custom-data:
+    boss-trophy: "guardian"
+    water-breathing: true
+    swim-speed: 2
+    lightning-chance: 0.75
+
+############################################################
+# 7. CONSUMIBLES ESPECIALES                                #
+############################################################
+# Ítems de un solo uso con efectos poderosos
+
+ESTOFADO_DE_BRUNO:
+  material: MUSHROOM_STEW
+  displayname: "&6Estofado Legendario de Bruno"
+  lore:
+    - "&7La receta secreta del chef Bruno."
+    - "&eAl consumirlo, otorga todos los efectos positivos de comida por 30 minutos."
+    - "&6\"La comida no alimenta solo el cuerpo, sino también el espíritu.\""
+    - "&cReceta exclusiva, imposible de replicar."
+  flags:
+    - "HIDE_ATTRIBUTES"
+  custom-data:
+    consumable-type: "food"
+    effect-duration: 1800
+    all-positive-effects: true
+    creator: "bruno"
+
+BREBAJE_DE_HELENA:
+  material: HONEY_BOTTLE
+  displayname: "&dElixir Curativo de Helena"
+  lore:
+    - "&7Una poción milagrosa elaborada por Helena."
+    - "&eAl consumirla, cura todas las heridas y neutraliza efectos negativos."
+    - "&6\"La verdadera curación viene de entender el equilibrio entre cuerpo y alma.\""
+    - "&cSolo Helena conoce los ingredientes secretos."
+  enchantments:
+    - "LUCK:1"
+  flags:
+    - "HIDE_ENCHANTS"
+  custom-data:
+    consumable-type: "potion"
+    removes-negative-effects: true
+    healing-amount: "full"
+    creator: "helena"
+
+############################################################
+# 8. ÍTEMS DE EVENTO                                       #
+############################################################
+# Tokens y objetos especiales para eventos temporales
+
+TOKEN_EVENTO_SOLSTICIO:
+  material: SUNFLOWER
+  displayname: "&eMedallón del Solsticio"
+  lore:
+    - "&7Un medallón dorado que conmemora el festival del solsticio."
+    - "&eMoneda especial de evento, colecciónala para intercambiar por premios."
+    - "&6Solo disponible durante el Festival del Solsticio."
+    - "&cColeccionable de tiempo limitado."
+  enchantments:
+    - "LUCK:2"
+  flags:
+    - "HIDE_ENCHANTS"
+  custom-data:
+    event-type: "solstice"
+    value: 5
+    seasonal: true
+
+############################################################
+# 9. PERGAMINOS Y COLECCIONABLES                           #
+############################################################
+# Ítems que narran la historia del mundo y recompensas especiales
+
+# =================================================================
+# PERGAMINOS DE LA HISTORIA DE NÁPOLES
+# =================================================================
+# Coleccionables que narran la historia del pueblo a través de
+# cinco épocas distintas. Elementos de lore que enriquecen la
+# experiencia de juego y el conocimiento del mundo.
+# =================================================================
+
+PERGAMINO_HISTORIA_NAPOLES_1:
+  material: PAPER
+  displayname: "&6Pergamino: Fundación de Nápoles"
+  lore:
+    - "&eDocumento histórico que narra la fundación del pueblo."
+    - "&7\"Cuando Thorgar y Lyria llegaron a estas tierras,"
+    - "&7encontraron solo páramos inhóspitos. Con determinación,"
+    - "&7transformaron este lugar en un refugio para todos."
+    - "&7Thorgar con su espada y Lyria con su bastón,"
+    - "&7protegieron a los primeros colonos de las bestias salvajes.\""
+    - "&aParte 1 de 5 de la Historia de Nápoles."
+    - "&dColeccionable histórico"
+  enchantments:
+    - "LUCK_OF_THE_SEA:1"
+  flags:
+    - "HIDE_ENCHANTS"
+  custom-data:
+    lore-item: true
+    collection: "historia-napoles"
+    part: 1
+
+PERGAMINO_HISTORIA_NAPOLES_2:
+  material: PAPER
+  displayname: "&6Pergamino: La Era de Oro"
+  lore:
+    - "&eDocumento histórico que narra la primera expansión."
+    - "&7\"Bajo el liderazgo de Thorgar y Lyria, Nápoles prosperó."
+    - "&7Se construyeron las grandes murallas, se establecieron"
+    - "&7las primeras rutas comerciales y llegaron artesanos de tierras lejanas."
+    - "&7Fue entonces cuando Erika la Cazadora se unió a la villa,"
+    - "&7trayendo consigo el conocimiento de la caza y la arquería.\""
+    - "&aParte 2 de 5 de la Historia de Nápoles."
+    - "&dColeccionable histórico"
+  enchantments:
+    - "LUCK_OF_THE_SEA:2"
+  flags:
+    - "HIDE_ENCHANTS"
+  custom-data:
+    lore-item: true
+    collection: "historia-napoles"
+    part: 2
+
+PERGAMINO_HISTORIA_NAPOLES_3:
+  material: PAPER
+  displayname: "&6Pergamino: La Gran Batalla"
+  lore:
+    - "&eDocumento histórico que narra el conflicto más grande."
+    - "&7\"En el centésimo año desde la fundación, el Carnicero y"
+    - "&7sus hordas de piglin atacaron desde el portal del Nether."
+    - "&7Marta la Guardiana dirigió la defensa mientras Paúl el Minero"
+    - "&7fortificaba las murallas. El Alcalde Tomas, descendiente directo"
+    - "&7de Thorgar, lideró la carga final que repelió al invasor.\""
+    - "&aParte 3 de 5 de la Historia de Nápoles."
+    - "&dColeccionable histórico"
+  enchantments:
+    - "LUCK_OF_THE_SEA:3"
+  flags:
+    - "HIDE_ENCHANTS"
+  custom-data:
+    lore-item: true
+    collection: "historia-napoles"
+    part: 3
+
+PERGAMINO_HISTORIA_NAPOLES_4:
+  material: PAPER
+  displayname: "&6Pergamino: Edad de Sabiduría"
+  lore:
+    - "&eDocumento histórico que narra la era de conocimiento."
+    - "&7\"Tras la victoria, Sae la Sanadora estableció la primera"
+    - "&7biblioteca y Helena la Curandera fundó la academia de alquimia."
+    - "&7Bruno el Chef perfeccionó sus recetas legendarias que atraían"
+    - "&7viajeros de todos los reinos. La villa se transformó en un faro"
+    - "&7de conocimiento y las artes florecieron como nunca antes.\""
+    - "&aParte 4 de 5 de la Historia de Nápoles."
+    - "&dColeccionable histórico"
+  enchantments:
+    - "LUCK_OF_THE_SEA:4"
+  flags:
+    - "HIDE_ENCHANTS"
+  custom-data:
+    lore-item: true
+    collection: "historia-napoles"
+    part: 4
+
+PERGAMINO_HISTORIA_NAPOLES_5:
+  material: PAPER
+  displayname: "&6Pergamino: Desafíos Actuales"
+  lore:
+    - "&eDocumento histórico que narra la época actual."
+    - "&7\"Hoy Nápoles enfrenta nuevas amenazas: el despertar del"
+    - "&7Wither Supremo, el regreso del Titán Marino y rumores del"
+    - "&7Gran Dragón. Los héroes de antaño nos inspiran, pero necesitamos"
+    - "&7nuevos campeones. Tú, viajero, podrías ser quien escriba"
+    - "&7el próximo capítulo en la historia de nuestra amada villa.\""
+    - "&aParte 5 de 5 de la Historia de Nápoles."
+    - "&dColeccionable histórico"
+  enchantments:
+    - "LUCK_OF_THE_SEA:5"
+  flags:
+    - "HIDE_ENCHANTS"
+  glow: true
+  custom-data:
+    lore-item: true
+    collection: "historia-napoles"
+    part: 5
+    is-final: true
+
+TRIDENTE_DEL_TITAN:
+  material: TRIDENT
+  displayname: "&3Tridente del Titán Marino"
+  lore:
+    - "&7El arma ancestral del Pez Antiguo."
+    - "&ePermite respirar bajo el agua y nadar más rápido."
+    - "&cInvoca relámpagos al impactar en el agua."
+    - "&6\"Las profundidades guardan secretos que la superficie jamás comprenderá.\""
+    - "&dTrofeo obtenido tras derrotar al Elder Guardian Titán."
+  enchantments:
+    - IMPALING:10
+    - LOYALTY:5
+    - CHANNELING:3
+    - UNBREAKING:10
+    - MENDING:1
+  unbreakable: true
+  flags:
+    - HIDE_ENCHANTS
+    - HIDE_UNBREAKABLE
+  nbt:
+    boss_trophy: "elder_guardian"
+    water_breathing: true
+    swim_speed: 2
+    lightning_chance: 0.75
+  damage: 0
+# Justificación: Completa el trío de trofeos de los jefes principales.
+# Su enfoque en habilidades acuáticas lo hace único y situacional,
+# incentivando la exploración submarina y añadiendo versatilidad.
+
+# =================================================================
+# CONSUMIBLES ESPECIALES
+# =================================================================
+# Ítems de un solo uso que proporcionan ventajas temporales
+# pero significativas. Añaden opciones estratégicas.
+# =================================================================
+
+ESTOFADO_DE_BRUNO:
+  material: MUSHROOM_STEW
+  displayname: "&6Estofado Legendario de Bruno"
+  lore:
+    - "&7La receta secreta del chef Bruno."
+    - "&eAl consumirlo, otorga todos los efectos positivos de comida por 30 minutos."
+    - "&6\"La comida no alimenta solo el cuerpo, sino también el espíritu.\""
+    - "&cReceta exclusiva, imposible de replicar."
+  flags:
+    - HIDE_ATTRIBUTES
+  nbt:
+    food_type: "special_stew"
+    effect_duration: 1800
+    all_positive_effects: true
+    creator: "bruno"
+  damage: 0
+# Justificación: Este consumible relaciona directamente con Bruno el Chef
+# y su rol en el servidor. Proporciona un beneficio temporal significativo
+# que incentiva realizar sus misiones para obtener más estofados.
+
+BREBAJE_DE_HELENA:
+  material: HONEY_BOTTLE
+  displayname: "&dElixir Curativo de Helena"
+  lore:
+    - "&7Una poción milagrosa elaborada por Helena."
+    - "&eAl consumirla, cura todas las heridas y neutraliza efectos negativos."
+    - "&6\"La verdadera curación viene de entender el equilibrio entre cuerpo y alma.\""
+    - "&cSolo Helena conoce los ingredientes secretos."
+  enchantments:
+    - LUCK:1
+  flags:
+    - HIDE_ENCHANTS
+  nbt:
+    potion_type: "master_healing"
+    removes_negative_effects: true
+    healing_amount: "full"
+    creator: "helena"
+  damage: 0
+# Justificación: Complementa el personaje de Helena y añade un recurso
+# valioso que los jugadores querrán obtener para situaciones difíciles.
+# Su rareza lo convierte en un ítem estratégico para momentos críticos.
+
+# =================================================================
+# TOKENS ESPECIALES DE EVENTO
+# =================================================================
+# Monedas especiales que solo se obtienen durante eventos temporales
+# en el servidor, utilizables para recompensas exclusivas.
+# =================================================================
+
+TOKEN_EVENTO_SOLSTICIO:
+  material: SUNFLOWER
+  displayname: "&eMedallón del Solsticio"
+  lore:
+    - "&7Un medallón dorado que conmemora el festival del solsticio."
+    - "&eMoneda especial de evento, colecciónala para intercambiar por premios."
+    - "&6Solo disponible durante el Festival del Solsticio."
+    - "&cColeccionable de tiempo limitado."
+  enchantments:
+    - LUCK:2
+  flags:
+    - HIDE_ENCHANTS
+  nbt:
+    event_token: "solstice"
+    seasonal: true
+    value: 5
+  damage: 0
+# Justificación: Este tipo de tokens permite implementar eventos temporales
+# en el servidor que mantengan la jugabilidad fresca. Incentiva la participación
+# en estos eventos y proporciona una economía alternativa para recompensas exclusivas.

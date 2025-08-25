@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "8f586096-0c8b-31d8-8b1a-e92b2cfc7804",
+    "name": "Nadone_MC",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "e111d400-ee3b-3077-a066-4176326717b0",
+    "name": "LewisMania",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  }
+]

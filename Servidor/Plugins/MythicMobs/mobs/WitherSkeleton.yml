@@ -1,0 +1,24 @@
+WitherSkeleton_Miniboss:
+  Type: WITHER_SKELETON
+  Display: '§8Guardian del Nether'
+  Health: 60
+  Damage: 15
+  Armor: 12
+  Drops:
+    - minecraft:wither_skeleton_skull 1 10
+    - minecraft:coal 1-2 50
+    - TOKEN_MISION 6 100
+  Skills:
+    - effect:particles{p=soul;a=10;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
+    - potion{type=WITHER;duration=40;level=1} @LivingEntitiesInRadius{r=2} ~onAttack
+  Options:
+    PreventOtherDrops: true
+    AlwaysShowName: true
+    Despawn: false
+    KnockbackResistance: 0.3
+  SpawnOverride:
+    Type: WITHER_SKELETON
+    Priority: 1
+    ReplaceType: true
+    Conditions:
+      - always

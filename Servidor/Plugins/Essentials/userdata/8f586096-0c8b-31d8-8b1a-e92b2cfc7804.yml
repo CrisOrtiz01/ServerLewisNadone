@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 79.116.126.168
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1755801780872
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1756114100953
+  login: 1756113665760
+money: '0'
+last-account-name: Nadone_MC
+lastlocation:
+  world: 207edbd1-0098-4868-98a7-b0f0843f63e0
+  world-name: MundoNalgon
+  x: -15.76630915066349
+  y: -57.13140143858811
+  z: 186.18106914268762
+  yaw: -73.73382568359375
+  pitch: 24.001497268676758
+logoutlocation:
+  world: 207edbd1-0098-4868-98a7-b0f0843f63e0
+  world-name: MundoNalgon
+  x: 7.8485855955558765
+  y: -59.125
+  z: 6.615308224551576
+  yaw: 171.11192321777344
+  pitch: 21.76937484741211

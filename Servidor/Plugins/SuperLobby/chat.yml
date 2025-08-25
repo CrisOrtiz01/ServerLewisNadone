@@ -1,0 +1,7 @@
+
+chat-format:
+  enable: true
+  format:
+    default: '{Jugador} &5&l{PLAYER_NAME} &4&l> &7{MESSAGE}'
+    vip: '{VIP} &3&l{PLAYER_NAME} &2&l> &5{MESSAGE}'
+    admin: '{Jefecito} &4&l{PLAYER_NAME}% &5&l> &c{MESSAGE}'

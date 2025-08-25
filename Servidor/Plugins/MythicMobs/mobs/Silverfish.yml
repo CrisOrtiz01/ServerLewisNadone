@@ -1,0 +1,22 @@
+Silverfish_Infectado:
+  Type: SILVERFISH
+  Display: '§7Silverfish Infectado'
+  Health: 20
+  Damage: 5
+  Armor: 5
+  Drops:
+    - minecraft:emerald 0-1 30
+    - TOKEN_MISION 1 100
+  Skills:
+    - effect:particles{p=block_dust;minecraft:stone;a=10;hs=0.3;vs=0.5;s=0.1;y=0.5} @Self ~onTimer:20
+    - potion{type=POISON;duration=60;level=1} @LivingEntitiesInRadius{r=2} ~onAttack
+  Options:
+    PreventOtherDrops: true
+    AlwaysShowName: true
+    Despawn: false
+  SpawnOverride:
+    Type: SILVERFISH
+    Priority: 1
+    ReplaceType: true
+    Conditions:
+      - always

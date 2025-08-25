@@ -1,0 +1,1212 @@
+# ServerLewisNadone - Documento Técnico y Explicativo
+
+1. Lore y Ambientación
+
+El servidor está ambientado en un pueblo fundado por dos campeones legendarios, que transmitieron sus conocimientos a generaciones futuras. Hoy, el pueblo es guiado por 9 líderes, quienes reciben a los jugadores (extranjeros que buscan ser los proximos campeones del pueblo) y los introducen en una constante búsqueda de poder y superación. El lore se apoya en la interacción con NPCs, misiones y progresión RPG.
+
+2. Plugins Principales
+
+- **EssentialsX**: Comandos básicos, homes, kits, warps.
+- **LuckPerms**: Gestión avanzada de permisos y rangos.
+- **GeyserMC + Floodgate**: Compatibilidad Bedrock ↔ Java.
+- **Citizens2**: Creación de NPCs interactivos.
+- **Quests**: Sistema flexible de misiones, integración con Citizens.
+- **MythicMobs**: Creación y gestión de mobs custom, reemplazo de mobs vanilla.
+- **MMOItems/MMOCore**: Objetos RPG, clases, profesiones, habilidades (si está disponible).
+- **Lands/FactionsUUID**: Gestión de territorios y facciones.
+- **HolographicDisplays**: Texto flotante para ambientación.
+- **TAB**: Customización del tablist.
+- **ItemsAdder/Oraxen**: Texturas, bloques y objetos custom.
+- **CoreProtect**: Protección y rollback.
+- **WorldGuard + WorldEdit**: Protección de regiones y utilidades de construcción.
+- **ClearLag**: Optimización de entidades.
+
+3. Mobs Custom (MythicMobs) - Análisis Detallado
+
+### Zombies
+
+#### Zombie_Corrupto
+- **Tipo**: ZOMBIE
+- **Display**: §2Zombie Corrupto
+- **Salud**: 40 HP
+- **Daño**: 9 puntos
+- **Armadura**: 4 puntos
+- **Drops**:
+  - minecraft:rotten_flesh: 3-6 unidades (100% probabilidad)
+  - minecraft:carrot: 1-2 unidades (25% probabilidad)
+  - minecraft:potato: 1-2 unidades (25% probabilidad)
+  - minecraft:iron_ingot: 1-2 unidades (10% probabilidad)
+  - TOKEN_MISION: 1 unidad (100% probabilidad)
+- **Habilidades**:
+  - Partículas de bloque de carne podrida cada 20 ticks
+  - Aplica veneno nivel 2 durante 80 ticks a entidades en un radio de 3 bloques al atacar
+- **Opciones**:
+  - PreventOtherDrops: true (Solo dropea los ítems definidos)
+  - AlwaysShowName: true (Siempre muestra su nombre)
+  - Despawn: false (No desaparece con el tiempo)
+- **SpawnOverride**:
+  - Reemplaza todos los zombies vanilla del juego
+
+### Lobos
+
+#### Wolf_Alfa
+- **Tipo**: WOLF
+- **Display**: §7Lobo de Wall Street
+- **Salud**: 20 HP
+- **Daño**: 10 puntos
+- **Armadura**: 2 puntos
+- **Drops**:
+  - minecraft:beef: 1-2 unidades (100% probabilidad)
+  - minecraft:emerald: 1 unidad (100% probabilidad)
+  - TOKEN_MISION: 1 unidad (100% probabilidad)
+- **Habilidades**:
+  - Partículas de bloque de hueso cada 20 ticks
+  - Daño adicional de 7 puntos a entidades en radio de 2 bloques al atacar
+- **Opciones**:
+  - PreventOtherDrops: true
+  - AlwaysShowName: true
+  - Despawn: false
+  - AngryByDefault: false (No es hostil inicialmente)
+- **SpawnOverride**:
+  - Reemplaza todos los lobos vanilla del juego
+
+### Esqueletos
+
+#### Skeleton_Guerrero
+- **Tipo**: SKELETON
+- **Display**: §fEsqueleto
+- **Salud**: 40 HP
+- **Daño**: 10 puntos
+- **Armadura**: 4 puntos
+- **Drops**:
+  - minecraft:bone: 3-6 unidades (100% probabilidad)
+  - minecraft:arrow: 8-16 unidades (100% probabilidad)
+  - TOKEN_MISION: 1 unidad (100% probabilidad)
+- **Habilidades**:
+  - Partículas de bloque de hueso cada 20 ticks
+  - Dispara flechas con 9 puntos de daño a entidades en radio de 10 bloques
+- **SpawnOverride**:
+  - Reemplaza todos los esqueletos vanilla del juego
+
+#### SkeletonHorseman_JefeMenor
+- **Tipo**: SKELETON
+- **Display**: §fMensajero de PanaNeto12
+- **Salud**: 100 HP
+- **Daño**: 20 puntos
+- **Armadura**: 8 puntos
+- **BossBar**: Activada, color blanco, estilo segmentado (10)
+- **Drops**:
+  - minecraft:bone: 8-16 unidades (100% probabilidad)
+  - minecraft:spectral_arrow: 16-24 unidades (100% probabilidad)
+  - minecraft:enchanted_book{Enchantments=[CONDUCTIVITY:1]}: 1 unidad (100% probabilidad)
+  - TOKEN_MISION: 10 unidades (100% probabilidad)
+- **Habilidades**:
+  - Partículas de bloque de hueso cada 20 ticks
+  - Disparo de flechas con 12 puntos de daño
+  - Aplica lentitud nivel 2 durante 60 ticks a entidades en radio de 4 bloques
+- **Opciones**:
+  - Monta un caballo esqueleto (Riding: SKELETON_HORSE)
+  - KnockbackResistance: 0.5
+- **SpawnOverride**:
+  - Reemplaza caballos esqueleto vanilla
+
+#### WitherSkeleton_Miniboss
+- **Tipo**: WITHER_SKELETON
+- **Display**: §8Guardian del Nether
+- **Salud**: 60 HP
+- **Daño**: 15 puntos
+- **Armadura**: 12 puntos
+- **Drops**:
+  - minecraft:wither_skeleton_skull: 1 unidad (10% probabilidad)
+  - minecraft:coal: 1-2 unidades (50% probabilidad)
+  - TOKEN_MISION: 6 unidades (100% probabilidad)
+- **Habilidades**:
+  - Partículas de almas cada 20 ticks
+  - Aplica efecto Wither nivel 1 durante 40 ticks a entidades en radio de 2 bloques al atacar
+- **Opciones**:
+  - PreventOtherDrops: true
+  - AlwaysShowName: true
+  - Despawn: false
+  - KnockbackResistance: 0.3
+- **SpawnOverride**:
+  - Reemplaza todos los esqueletos wither vanilla
+
+### Arañas
+
+#### Spider_Mutante
+- **Tipo**: SPIDER
+- **Display**: §cAraña
+- **Salud**: 32 HP
+- **Daño**: 6 puntos
+- **Armadura**: 4 puntos
+- **Drops**:
+  - minecraft:string: 0-2 unidades (100% probabilidad)
+  - minecraft:spider_eye: 0-1 unidad (50% probabilidad)
+  - TOKEN_MISION: 1 unidad (100% probabilidad)
+- **Habilidades**:
+  - Partículas de telaraña cada 20 ticks
+  - Aplica ceguera nivel 1 durante 5 ticks a entidades en radio de 3 bloques al atacar
+- **SpawnOverride**:
+  - Reemplaza todas las arañas vanilla
+
+#### CaveSpider_Toxica
+- **Tipo**: CAVE_SPIDER
+- **Display**: §aTenta Culos
+- **Salud**: 35 HP
+- **Daño**: 7 puntos
+- **Armadura**: 2 puntos
+- **Drops**:
+  - minecraft:string: 2-4 unidades (100% probabilidad)
+  - TOKEN_MISION: 2 unidades (100% probabilidad)
+- **Habilidades**:
+  - Partículas de hechizo verde cada 20 ticks
+  - Aplica veneno nivel 2 durante 100 ticks a entidades en radio de 3 bloques
+  - Genera telarañas cerca de jugadores en radio de 2 bloques
+  - Mensaje "¡El veneno de la cueva te consume!" a jugadores cercanos al morir
+- **SpawnOverride**:
+  - Reemplaza todas las arañas de cueva vanilla
+
+### Creepers
+
+#### Creeper_Explosivo
+- **Tipo**: CREEPER
+- **Display**: §aCarga Ambulante
+- **Salud**: 30 HP
+- **Daño**: 22 puntos
+- **Armadura**: 5 puntos
+- **Drops**:
+  - minecraft:gunpowder: 4-8 unidades (100% probabilidad)
+  - TOKEN_MISION: 2 unidades (100% probabilidad)
+- **Habilidades**:
+  - Partículas de explosión cada 20 ticks
+  - Aplica ceguera nivel 1 durante 60 ticks a entidades en radio de 3 bloques
+  - Explosión de potencia 4
+- **SpawnOverride**:
+  - Reemplaza todos los creepers vanilla (prioridad 1)
+
+#### ElectricCreeper_JefeMenor
+- **Tipo**: CREEPER
+- **Display**: §bCreeper Eléctrico
+- **Salud**: 40 HP
+- **Daño**: 40 puntos
+- **Armadura**: 10 puntos
+- **BossBar**: Activada, color verde, estilo segmentado (10)
+- **Drops**:
+  - minecraft:gunpowder: 8-12 unidades (10% probabilidad)
+  - TOKEN_MISION: 8 unidades (100% probabilidad)
+  - minecraft:charged_creeper_head: 1 unidad (100% probabilidad)
+- **Habilidades**:
+  - Partículas eléctricas cada 20 ticks
+  - Aplica ceguera nivel 2 durante 80 ticks a entidades en radio de 4 bloques
+  - Explosión de potencia 6
+- **SpawnOverride**:
+  - Reemplaza creepers vanilla (prioridad 2)
+
+### Guardianes y Elder Guardianes
+
+#### Guardian_Marino
+- **Tipo**: GUARDIAN
+- **Display**: §bGuardián Marino
+- **Salud**: 45 HP
+- **Daño**: 15 puntos
+- **Armadura**: 2 puntos
+- **Drops**:
+  - minecraft:dark_prismarine: 1-2 unidades (30% probabilidad)
+  - minecraft:prismarine: 1-3 unidades (30% probabilidad)
+  - minecraft:prismarine_bricks: 1-2 unidades (20% probabilidad)
+  - minecraft:prismarine_shard: 3-5 unidades (100% probabilidad)
+  - minecraft:cod: 1-2 unidades (80% probabilidad)
+  - TOKEN_MISION: 6 unidades (100% probabilidad)
+- **Habilidades**:
+  - Partículas de salpicadura de agua cada 20 ticks
+  - Daño adicional de 8 puntos a entidades en radio de 3 bloques
+- **SpawnOverride**:
+  - Reemplaza todos los guardianes vanilla
+
+#### ElderGuardian_Titan
+- **Tipo**: ELDER_GUARDIAN
+- **Display**: §bPez Antiguo
+- **Salud**: 400 HP
+- **Daño**: 24 puntos
+- **Armadura**: 20 puntos
+- **BossBar**: Activada, color azul, estilo segmentado (10)
+- **Drops**:
+  - minecraft:prismarine_crystals: 32-64 unidades (100% probabilidad)
+  - minecraft:sponges: 16-32 unidades (60% probabilidad)
+  - TOKEN_MISION: 128 unidades (100% probabilidad)
+  - minecraft:trident: 1 unidad (50% probabilidad)
+- **Habilidades**:
+  - Partículas de salpicadura de agua cada 20 ticks
+  - Aplica fatiga minera nivel 5 durante 200 ticks a entidades en radio de 8 bloques
+  - Daño de 20 puntos a entidades en radio de 6 bloques
+  - Invoca 3 ahogados bebés cada 400 ticks
+  - Aplica resistencia nivel 2 durante 100 ticks a sí mismo
+  - Partículas de nautilus cada 40 ticks
+- **Opciones**:
+  - KnockbackResistance: 1.0
+- **SpawnOverride**:
+  - Prioridad 2: Reemplaza elder guardians en monumentos oceánicos (100% probabilidad)
+  - Prioridad 1: Reemplaza elder guardians en biomas oceánicos (10% probabilidad)
+
+### Blaze
+
+#### GuardianDeLasCenizas
+- **Tipo**: BLAZE
+- **Display**: §6Guardian de las Cenizas
+- **Salud**: 60 HP
+- **Daño**: 12 puntos
+- **Armadura**: 4 puntos
+- **Drops**:
+  - minecraft:blaze_rod: 1-5 unidades (100% probabilidad)
+  - TOKEN_MISION: 3 unidades (100% probabilidad)
+- **Habilidades**:
+  - Partículas de lava cada 20 ticks
+  - Partículas de ceniza cada 40 ticks
+  - Prende fuego a entidades en radio de 5 bloques por 60 ticks
+  - Invoca otro blaze (50% probabilidad) al recibir daño
+  - Aplica debilidad nivel 1 durante 60 ticks a entidades en radio de 4 bloques
+- **SpawnOverride**:
+  - Reemplaza todos los blaze vanilla
+
+### Silverfish y Endermite
+
+#### Silverfish_Infectado
+- **Tipo**: SILVERFISH
+- **Display**: §7Silverfish Infectado
+- **Salud**: 20 HP
+- **Daño**: 5 puntos
+- **Armadura**: 5 puntos
+- **Drops**:
+  - minecraft:emerald: 0-1 unidad (30% probabilidad)
+  - TOKEN_MISION: 1 unidad (100% probabilidad)
+- **Habilidades**:
+  - Partículas de piedra cada 20 ticks
+  - Aplica veneno nivel 1 durante 60 ticks a entidades en radio de 2 bloques
+- **SpawnOverride**:
+  - Reemplaza todos los silverfish vanilla
+
+#### Endermite_Venenoso
+- **Tipo**: ENDERMITE
+- **Display**: §7Cucaracha del End
+- **Salud**: 20 HP
+- **Daño**: 5 puntos
+- **Armadura**: 5 puntos
+- **Drops**:
+  - minecraft:chorus_fruit: 1-2 unidades (50% probabilidad)
+  - TOKEN_MISION: 1 unidad (100% probabilidad)
+- **Habilidades**:
+  - Partículas de portal cada 20 ticks
+  - Aplica veneno nivel 1 durante 60 ticks a entidades en radio de 2 bloques
+- **SpawnOverride**:
+  - Reemplaza todos los endermites vanilla
+
+### Otros Mobs Hostiles
+
+#### Ravager_JefeMenor
+- **Tipo**: RAVAGER
+- **Display**: §8Coloso
+- **Salud**: 200 HP
+- **Daño**: 30 puntos
+- **Armadura**: 10 puntos
+- **BossBar**: Activada, color naranja, estilo segmentado (10)
+- **Drops**:
+  - minecraft:saddle: 1 unidad (100% probabilidad)
+  - minecraft:emerald: 1-8 unidades (50% probabilidad)
+  - TOKEN_MISION: 16 unidades (100% probabilidad)
+- **Habilidades**:
+  - Partículas de tierra cada 20 ticks
+  - Empuje de fuerza 6 a entidades en radio de 4 bloques
+  - Aplica fuerza nivel 2 durante 120 ticks a sí mismo cada 100 ticks
+- **Opciones**:
+  - KnockbackResistance: 0.8
+- **SpawnOverride**:
+  - Reemplaza todos los ravagers vanilla
+
+#### PiglinBrute_Carcinero
+- **Tipo**: PIGLIN_BRUTE
+- **Display**: §6Carnicero
+- **Salud**: 120 HP
+- **Daño**: 25 puntos
+- **Armadura**: 20 puntos
+- **Drops**:
+  - minecraft:gilded_blackstone: 12-24 unidades (100% probabilidad)
+  - minecraft:netherite_scrap: 4-8 unidades (70% probabilidad)
+  - TOKEN_MISION: 15 unidades (100% probabilidad)
+  - minecraft:golden_apple: 1 unidad (50% probabilidad)
+  - Hacha_Del_Carcinero: 1 unidad (25% probabilidad)
+- **Habilidades**:
+  - Partículas de polvo rojo dorado cada 20 ticks
+  - Empuje de fuerza 4 a entidades en radio de 3 bloques
+  - Daño adicional de 18 puntos a entidades en radio de 2 bloques
+- **SpawnOverride**:
+  - Reemplaza todos los piglins brute vanilla
+
+#### Hoglin_Salvaje
+- **Tipo**: HOGLIN
+- **Display**: §cBasura del Nether
+- **Salud**: 20 HP
+- **Daño**: 6 puntos
+- **Armadura**: 0 puntos
+- **Drops**:
+  - minecraft:spider_eye: 1 unidad (100% probabilidad)
+- **Habilidades**:
+  - Partículas de polvo rojo cada 20 ticks
+  - Empuje de fuerza 2 a entidades en radio de 2 bloques
+- **SpawnOverride**:
+  - Reemplaza todos los hoglins vanilla
+
+#### Evoker_Arcano
+- **Tipo**: EVOKER
+- **Display**: §5Mago del Vacio
+- **Salud**: 40 HP
+- **Daño**: 16 puntos
+- **Drops**:
+  - minecraft:totem_of_undying: 1-2 unidades (100% probabilidad)
+  - minecraft:potion{Potion=bad_omen;level=3}: 1 unidad (100% probabilidad)
+  - TOKEN_MISION: 6 unidades (100% probabilidad)
+- **Habilidades**:
+  - Partículas de bruja cada 20 ticks
+  - Aplica debilidad nivel 1 durante 60 ticks a entidades en radio de 3 bloques
+  - Invoca 2 Vex_Fantasmal cada 400 ticks
+- **SpawnOverride**:
+  - Reemplaza todos los evokers vanilla
+
+#### Enderman_Sombrio
+- **Tipo**: ENDERMAN
+- **Display**: §dLewis Crimenes de Guerra Mania
+- **Salud**: 60 HP
+- **Daño**: 20 puntos
+- **Armadura**: 5 puntos
+- **Drops**:
+  - minecraft:ender_pearl: 2-4 unidades (100% probabilidad)
+  - minecraft:ender_eye: 1 unidad (20% probabilidad)
+  - TOKEN_MISION: 8 unidades (100% probabilidad)
+- **Habilidades**:
+  - Partículas de portal cada 20 ticks
+  - Aplica náuseas durante 60 ticks a entidades en radio de 3 bloques
+  - Teletransporte en radio de 10 bloques
+  - Partículas de aliento de dragón al teletransportarse
+- **SpawnOverride**:
+  - Reemplaza todos los enderman vanilla
+
+#### Shulker_Mistico
+- **Tipo**: SHULKER
+- **Display**: §dShulker
+- **Salud**: 30 HP
+- **Daño**: 6 puntos
+- **Armadura**: 4 puntos
+- **Drops**:
+  - minecraft:shulker_shell: 1-4 unidades (70% probabilidad)
+  - TOKEN_MISION: 2 unidades (100% probabilidad)
+- **Habilidades**:
+  - Partículas de portal cada 20 ticks
+  - Aplica levitación durante 80 ticks a entidades en radio de 2 bloques
+  - Aplica ceguera nivel 1 durante 60 ticks a entidades en radio de 2 bloques
+- **SpawnOverride**:
+  - Reemplaza todos los shulkers vanilla
+
+### Jefes Principales
+
+#### Wither_Supremo
+- **Tipo**: WITHER
+- **Display**: §8Wither Supremo
+- **Salud**: 700 HP
+- **Daño**: 40 puntos
+- **Armadura**: 20 puntos
+- **BossBar**: Activada, color rojo, estilo segmentado (10)
+- **Drops**:
+  - minecraft:nether_star: 3 unidades (100% probabilidad)
+  - minecraft:wither_skeleton_skull: 3 unidades (5% probabilidad)
+  - TOKEN_MISION: 196 unidades (100% probabilidad)
+  - minecraft:gold_block: 8 unidades (100% probabilidad)
+  - minecraft:netherite_ingot: 4-9 unidades (100% probabilidad)
+  - minecraft:coal_block: 5-10 unidades (100% probabilidad)
+- **Habilidades**:
+  - Partículas de alma cada 20 ticks
+  - Aplica efecto Wither nivel 3 durante 160 ticks a entidades en radio de 8 bloques
+  - Daño adicional de 30 puntos a entidades en radio de 6 bloques
+  - Invoca 2 esqueletos wither, 2 blazes y 2 cubos de magma cada 400 ticks
+  - Aplica resistencia nivel 3 durante 120 ticks a sí mismo cada 100 ticks
+  - Partículas de llama cada 40 ticks y ceniza cada 60 ticks
+- **Opciones**:
+  - KnockbackResistance: 1.0
+- **SpawnOverride**:
+  - Reemplaza todos los withers vanilla
+
+#### EnderDragon_JefeFinal
+- **Tipo**: ENDER_DRAGON
+- **Display**: §5Dragón Final del Fin
+- **Salud**: 1000 HP
+- **Daño**: 80 puntos
+- **Armadura**: 20 puntos
+- **BossBar**: Activada, color púrpura, estilo segmentado (10)
+- **Drops**:
+  - minecraft:dragon_breath: 8-16 unidades (100% probabilidad)
+  - TOKEN_MISION: 250 unidades (100% probabilidad)
+  - minecraft:nether_star: 1 unidad (100% probabilidad)
+- **Habilidades**:
+  - Partículas de aliento de dragón cada 20 ticks
+  - Aplica levitación nivel 2 durante 120 ticks a entidades en radio de 12 bloques
+  - Daño adicional de 40 puntos a entidades en radio de 10 bloques
+  - Invoca 3 fantasmas y 5 endermites cada 600 ticks
+  - Aplica fuerza nivel 2 durante 200 ticks a sí mismo cada 100 ticks
+  - Invoca 3 withers cuando su salud baja a menos de 100 puntos (una sola vez)
+- **Opciones**:
+  - KnockbackResistance: 1.0
+- **SpawnOverride**:
+  - Reemplaza todos los dragones del End vanilla
+
+## 4. Ítems Custom (MythicMobs/Items)
+
+### TOKEN_MISION
+- **Material Base**: PRISMARINE_SHARD
+- **Nombre**: §eToken de Misión
+- **Descripción**:
+  - §7Canjea este token por recompensas especiales.
+  - §bBrilla con energía misteriosa.
+- **Encantamientos**:
+  - MENDING (nivel 1)
+- **Opciones**:
+  - Irrompible
+  - Oculta flags de irrompible y encantamientos
+- **Uso**: Principal moneda de misiones, necesaria para todas las recompensas de NPC
+
+### Esmeralda_Real
+- **Material Base**: EMERALD
+- **Nombre**: §aEsmeralda Real
+- **Descripción**:
+    - §2Moneda oficial del pueblo de Nápoles.
+    - §aBrilla con un resplandor ancestral.
+    - §7Aceptada por todos los comerciantes.
+    - §dHerencia de la antigua monarquía.
+- **Encantamientos**:
+    - FORTUNE (nivel 1)
+- **Opciones**:
+    - Irrompible
+    - Oculta flags de irrompible y encantamientos
+- **Uso**: Moneda principal para el comercio con NPCs mercaderes
+- **Obtención**: Intercambio de 8 TOKEN_MISION con comerciantes
+
+### Hacha_Del_Carcinero
+- **Material Base**: DIAMOND_AXE
+- **Nombre**: §6Hacha del Carcinero
+- **Descripción**:
+  - §cUna hacha brutal, forjada en el fuego eterno del Nether.
+  - §eSe dice que devora el alma de sus víctimas.
+  - §bOtorga poder y fortuna a quien la empuña.
+  - §6Solo los elegidos pueden controlar su sed de sangre.
+  - §dObjeto legendario: Su poder es temido en todos los reinos.
+- **Encantamientos**:
+  - SHARPNESS (nivel 7)
+  - FIRE_ASPECT (nivel 3)
+  - LOOTING (nivel 5)
+  - FORTUNE (nivel 4)
+  - UNBREAKING (nivel 5)
+  - MENDING (nivel 1)
+- **Opciones**:
+  - Irrompible
+  - Oculta flags de irrompible y encantamientos
+- **Obtención**: Drop del mob PiglinBrute_Carcinero (25% probabilidad)
+
+### META_CARRERA
+- **Material Base**: PAPER
+- **Nombre**: §bMeta de Carrera
+- **Descripción**:
+  - §7Certifica que has cruzado la meta en una carrera especial.
+  - §b¡Demuestra tu velocidad y habilidad!
+- **Opciones**: Irrompible
+- **Uso**: Requerido para las misiones de Lia para obtener Velocidad
+
+### META_PARKOUR
+- **Material Base**: PAPER
+- **Nombre**: §aMeta de Parkour
+- **Descripción**:
+  - §7Certifica que has superado un desafiante reto de parkour.
+  - §a¡Tu destreza y agilidad quedan marcadas en este papel!
+- **Opciones**: Irrompible
+- **Uso**: Requerido para las misiones de Ícaro para obtener Salto Aumentado
+
+### META_CURACION
+- **Material Base**: PAPER
+- **Nombre**: §dMeta de Curación
+- **Descripción**:
+  - §7Certifica que has completado un reto de curación.
+  - §d¡Tu habilidad para sanar ha sido reconocida!
+- **Opciones**: Irrompible
+- **Uso**: Requerido para las misiones de Helena para obtener Regeneración
+
+## 5. NPCs y Misiones (Citizens2 + Quests)
+
+### NPCs Principales
+
+#### 1. Erika la Cazadora
+- **Función**: Proveedora de animales al pueblo
+- **Misiones**: Caza de mobs hostiles y neutrales
+- **Recompensa**: Habilidad de Fuerza (niveles 1-10)
+- **Progresión**:
+  - **Fuerza 1**: Matar 20 zombies/esqueletos + 50 tokens
+  - **Fuerza 5**: Matar mobs del Nether + 120 tokens
+  - **Fuerza 10**: Matar los 3 jefes principales + 300 tokens
+
+#### 2. Marta, La Guardiana
+- **Función**: Seguridad del pueblo
+- **Misiones**: Caza de Creepers y recolección de materiales defensivos
+- **Recompensa**: Habilidad de Resistencia (niveles 1-3)
+- **Progresión**:
+  - **Resistencia 1**: Eliminar 15 creepers + 32 tokens
+  - **Resistencia 3**: Eliminar 25 creepers + 64 tokens
+
+#### 3. Sae, la Sanadora
+- **Función**: Curación y sanación
+- **Misiones**: Proteger aldeanos y recolectar ítems curativos
+- **Recompensa**: Habilidad de Salud Extra (niveles 1-5)
+- **Progresión**:
+  - **Salud Extra 1**: Matar 5 saqueadores + 60 tokens
+  - **Salud Extra 5**: Matar 25 saqueadores + 140 tokens
+
+#### 4. Lia, la Mensajera
+- **Función**: Entrega de mensajes, velocista del pueblo
+- **Misiones**: Carreras y pruebas de velocidad
+- **Recompensa**: Habilidad de Velocidad (niveles 1-3)
+- **Progresión**:
+  - **Velocidad 1**: Completar carrera básica + 32 tokens
+  - **Velocidad 3**: Completar carrera experta + 128 tokens
+
+#### 5. Ícaro, el Acróbata
+- **Función**: Entretenimiento, acrobacias en el circo
+- **Misiones**: Parkour y desafíos de agilidad
+- **Recompensa**: Habilidad de Salto Aumentado (niveles 1-4)
+- **Progresión**:
+  - **Salto 1**: Superar parkour básico + 30 tokens
+  - **Salto 4**: Superar parkour maestro + 256 tokens
+
+#### 6. Paúl, el Minero
+- **Función**: Suministro de carbón y minerales
+- **Misiones**: Recolección de minerales y recursos
+- **Recompensa**: Habilidad de Prisa Minera (niveles 1-10)
+- **Progresión**:
+  - **Prisa Minera 1**: Recolectar 5 bloques de redstone + 40 tokens
+  - **Prisa Minera 10**: Recolectar cientos de recursos + 192 tokens
+
+#### 7. Helena, la Curandera
+- **Función**: Bendiciones curativas
+- **Misiones**: Curar aldeanos y pruebas de sanación
+- **Recompensa**: Habilidad de Regeneración (niveles 1-3)
+- **Progresión**:
+  - **Regeneración 1**: Curar 3 aldeanos + 35 tokens
+  - **Regeneración 3**: Curar 12 aldeanos + 100 tokens
+
+#### 8. Alcalde Tomas
+- **Función**: Líder del pueblo, héroe de batalla
+- **Misiones**: Defensa de la aldea contra invasiones
+- **Recompensa**: Habilidad Héroe de Villa (niveles 1-20)
+- **Progresión**:
+  - **Héroe 1**: Defender contra 1 saqueador + 16 tokens
+  - **Héroe 20**: Defender contra 20 saqueadores + 320 tokens
+
+#### 9. Bruno, el Chef
+- **Función**: Gastronomía y alimentación
+- **Misiones**: Recolección de alimentos e ingredientes
+- **Recompensa**: Habilidad de Saturación (niveles 1-3)
+- **Progresión**:
+  - **Saturación 1**: Recolectar 32 alimentos diversos + tokens
+  - **Saturación 3**: Recolectar 64 alimentos diversos + tokens
+
+### Sistema de Misiones
+
+- **Estructura**: Las misiones utilizan el plugin Quests integrado con Citizens2
+- **Progresión**: Sistema de niveles de habilidad (efectos de poción persistentes)
+- **Recompensas**: Efectos permanentes que persisten después de la muerte
+- **Mecánica**: Misiones interdependientes que requieren exploración y combate
+
+### Otros NPS's
+
+-NPCs Comerciantes
+
+El pueblo cuenta con una red de comerciantes especializados que utilizan una moneda antigua y respetada: la §aEsmeralda Real§r. Esta moneda representa el legado de la monarquía que alguna vez gobernó estas tierras y sigue siendo el medio de intercambio preferido entre los mercaderes del pueblo.
+
+- **Obtención de Esmeralda Real**: Los jugadores pueden obtener esta valiosa moneda intercambiando 8 TOKEN_MISION por 1 Esmeralda Real con cualquiera de los comerciantes.
+
+##### Comerciantes Principales
+
+1. **Maderero Rodolfo**
+    - **Ubicación**: Plaza central del pueblo
+    - **Especialidad**: Todos los tipos de madera y derivados
+    - **Ejemplos de intercambios**:
+      - 8 TOKEN_MISION → 1 Esmeralda Real
+      - 1 Esmeralda Real → 16 oak logs
+      - 1 Esmeralda Real → 12 spruce logs
+      - 1 Esmeralda Real → 10 jungle logs
+      - 1 Esmeralda Real → 24 oak planks
+
+2. **Constructora Beatriz**
+    - **Ubicación**: Zona este del pueblo
+    - **Especialidad**: Materiales de construcción
+    - **Ejemplos de intercambios**:
+      - 8 TOKEN_MISION → 1 Esmeralda Real
+      - 1 Esmeralda Real → 32 stone
+      - 1 Esmeralda Real → 16 bricks
+      - 1 Esmeralda Real → 8 glass blocks
+      - 2 Esmeraldas Reales → 16 quartz blocks
+
+3. **Alquimista Gerardo**
+    - **Ubicación**: Torre cerca del centro del pueblo
+    - **Especialidad**: Pociones, ingredientes y materiales mágicos
+    - **Ejemplos de intercambios**:
+      - 8 TOKEN_MISION → 1 Esmeralda Real
+      - 1 Esmeralda Real → 3 blaze rods
+      - 2 Esmeraldas Reales → 1 poción de fuerza
+      - 5 Esmeraldas Reales → 1 poción de regeneración extendida
+      - 1 Esmeralda Real → 8 nether wart
+
+4. **Minera Sofía**
+    - **Ubicación**: Entrada a las minas
+    - **Especialidad**: Minerales y gemas
+    - **Ejemplos de intercambios**:
+      - 8 TOKEN_MISION → 1 Esmeralda Real
+      - 1 Esmeralda Real → 10 iron ore
+      - 1 Esmeralda Real → 6 iron ingots
+      - 3 Esmeraldas Reales → 1 diamond
+      - 1 Esmeralda Real → 5 gold ore
+
+5. **Armero Guillermo**
+    - **Ubicación**: Herrería del pueblo
+    - **Especialidad**: Armas, armaduras y herramientas
+    - **Ejemplos de intercambios**:
+      - 8 TOKEN_MISION → 1 Esmeralda Real
+      - 5 Esmeraldas Reales → 1 diamond sword
+      - 12 Esmeraldas Reales → 1 set de iron armor
+      - 3 Esmeraldas Reales → 1 bow con encantamiento básico
+      - 8 Esmeraldas Reales → 1 diamond pickaxe
+
+6. **Granjera Olivia**
+    - **Ubicación**: Granjas del oeste
+    - **Especialidad**: Alimentos, cultivos y recursos de granja
+    - **Ejemplos de intercambios**:
+      - 8 TOKEN_MISION → 1 Esmeralda Real
+      - 1 Esmeralda Real → 32 wheat
+      - 1 Esmeralda Real → 16 carrots
+      - 1 Esmeralda Real → 8 steaks
+      - 1 Esmeralda Real → 16 baked potatoes
+
+El sistema de comercio con Esmeraldas Reales permite a los jugadores obtener prácticamente cualquier ítem del juego, ajustando los precios según la rareza y utilidad de los objetos. Este sistema complementa la progresión del servidor, permitiendo a los jugadores dedicarse a actividades específicas para obtener tokens, y luego intercambiarlos por Esmeraldas Reales que pueden usar para comprar los ítems que necesiten.
+
+## 6. Sistema de Misiones Detallado
+
+### Introducción
+El sistema de misiones es el pilar fundamental del servidor, proporcionando a los jugadores una clara progresión de dificultad y recompensas. Cada NPC ofrece una serie de misiones que, al completarse, otorgan habilidades permanentes (efectos de poción) que persisten incluso después de la muerte. Estas misiones representan el camino que los extranjeros (jugadores) deben recorrer para convertirse en campeones dignos de la herencia de los fundadores del pueblo.
+
+### Misiones de Erika la Cazadora
+
+#### Lore
+Erika es descendiente de una antigua estirpe de cazadores que ha abastecido al pueblo durante generaciones. Su puntería es legendaria y se dice que puede detectar el movimiento de una criatura a cientos de metros. Tras la reciente aparición de criaturas más poderosas y corrompidas, Erika ha decidido entrenar a los extranjeros en el arte de la caza, otorgándoles parte de su fuerza ancestral a aquellos que demuestren ser dignos.
+
+#### Misiones
+
+##### Cazador Iniciado (Fuerza I)
+- **Requisitos**: 
+  - Derrotar 20 ZOMBIE_CAPITAN_V1
+  - Derrotar 20 SKELETON_TACTICO_V1
+  - Recolectar 32 de carne podrida
+  - Recolectar 32 huesos
+  - Entregar 50 TOKEN_MISION
+- **Recompensa**: Fuerza I (permanente)
+- **Lore**: "Los no-muertos se han vuelto más fuertes y organizados. Demuéstrame que puedes enfrentarte a ellos y te enseñaré a canalizar tu fuerza interior."
+
+##### Cazador Experimentado (Fuerza II)
+- **Requisitos**:
+  - Derrotar 10 VINDICATOR_DEMOLEDOR_V1
+  - Derrotar 10 EVOKER_BRUJO_V1
+  - Recolectar 8 varas de blaze
+  - Entregar 70 TOKEN_MISION
+- **Recompensa**: Fuerza II (permanente)
+- **Lore**: "Los pillagers han formado una alianza con magos oscuros. Elimínalos y trae pruebas de tu incursión al Nether. Tu fuerza crecerá con cada enemigo que superes."
+
+##### Cazador Veterano (Fuerza III)
+- **Requisitos**:
+  - Derrotar 5 WITHER_SKELETON_CAPITAN_V1
+  - Derrotar 5 BLAZE_FURIA_V1
+  - Recolectar 4 bloques de hierro
+  - Entregar 80 TOKEN_MISION
+- **Recompensa**: Fuerza III (permanente)
+- **Lore**: "El Nether se agita. Sus criaturas más poderosas deben ser controladas. Enfréntalas y forja tu cuerpo en el fuego eterno de esa dimensión."
+
+##### Cazador de Élite (Fuerza IV)
+- **Requisitos**:
+  - Derrotar 3 PILLAGER_RAIDER_V1
+  - Derrotar 3 VINDICATOR_DEMOLEDOR_V1
+  - Recolectar 2 bloques de diamante
+  - Entregar 100 TOKEN_MISION
+- **Recompensa**: Fuerza IV (permanente)
+- **Lore**: "Los líderes de las incursiones deben ser eliminados. Son astutos y poderosos, pero confío en que podrás vencerlos. Los diamantes fortalecerán el vínculo con tu nueva habilidad."
+
+##### Maestro Cazador (Fuerza V)
+- **Requisitos**:
+  - Derrotar 10 WITHER_SKELETON_CAPITAN_V1
+  - Derrotar 10 MAGMA_CUBE
+  - Derrotar 10 BLAZE
+  - Recolectar 1 bloque de esmeralda
+  - Recolectar 1 estrella del Nether
+  - Entregar 120 TOKEN_MISION
+- **Recompensa**: Fuerza V (permanente)
+- **Lore**: "El Nether debe ser purgado de sus líderes más poderosos. Esto requerirá toda tu habilidad y determinación, pero la recompensa valdrá la pena."
+
+##### Cazador Legendario (Fuerza VI)
+- **Requisitos**:
+  - Derrotar 1 WITHER_BOSS_V1
+  - Recolectar 1 bloque de esmeralda
+  - Recolectar 1 estrella del Nether
+  - Entregar 150 TOKEN_MISION
+- **Recompensa**: Fuerza VI (permanente)
+- **Lore**: "El Wither, una abominación de pura maldad. Demuestra que puedes derrotar a semejante criatura y tu fuerza se volverá casi sobrenatural."
+
+##### Cazador de Bestias Mitológicas (Fuerza VII)
+- **Requisitos**:
+  - Derrotar 2 WITHER_BOSS_V1
+  - Derrotar 5 ENDER_DRAGON_GUARDIAN_V1
+  - Recolectar 2 bloques de esmeralda
+  - Recolectar 2 estrellas del Nether
+  - Entregar 180 TOKEN_MISION
+- **Recompensa**: Fuerza VII (permanente)
+- **Lore**: "Pocos han visto a los guardianes del dragón y vivido para contarlo. Demuestrame que eres digno de cantar la hazaña."
+
+##### Cazador de lo Imposible (Fuerza VIII)
+- **Requisitos**:
+  - Derrotar 3 WITHER_BOSS_V1
+  - Derrotar 3 ENDER_DRAGON_GUARDIAN_V1
+  - Recolectar 3 bloques de esmeralda
+  - Recolectar 3 estrellas del Nether
+  - Entregar 210 TOKEN_MISION
+- **Recompensa**: Fuerza VIII (permanente)
+- **Lore**: "Tu nombre ya se susurra con admiración. Conviértelo en leyenda enfrentando a los seres más poderosos de este mundo."
+
+##### Cazador Divino (Fuerza IX)
+- **Requisitos**:
+  - Derrotar 1 ENDER_DRAGON_BOSS_V1
+  - Derrotar 5 WITHER_BOSS_V1
+  - Recolectar 5 bloques de esmeralda
+  - Recolectar 5 estrellas del Nether
+  - Entregar 240 TOKEN_MISION
+- **Recompensa**: Fuerza IX (permanente)
+- **Lore**: "El dragón ancestral... Dicen que es inmortal, pero quizás tú puedas probar lo contrario. Este desafío te llevará más allá de los límites mortales."
+
+##### Cazador de Dioses (Fuerza X)
+- **Requisitos**:
+  - Derrotar 1 ENDER_DRAGON_BOSS_V1
+  - Derrotar 1 WITHER_BOSS_V1
+  - Derrotar 1 ELDER_GUARDIAN_TITAN_V1
+  - Recolectar 10 bloques de esmeralda
+  - Recolectar 10 estrellas del Nether
+  - Entregar 300 TOKEN_MISION
+- **Recompensa**: Fuerza X (permanente)
+- **Lore**: "Los tres reyes primordiales deben caer ante ti. Ningún mortal lo ha logrado jamás, pero tú no eres un simple mortal, ¿verdad? Completa esta prueba y tu fuerza rivalizará con la de los dioses antiguos."
+
+### Misiones de Marta, La Guardiana
+
+#### Lore
+Marta ha protegido el pueblo desde que era una niña. Tras perder a su familia en un ataque de creepers, juró que nadie más sufriría el mismo destino. Su cuerpo está cubierto de cicatrices de incontables batallas, pero su determinación nunca ha flaqueado. Marta busca aprendices que compartan su dedicación a la protección y defensa.
+
+#### Misiones
+
+##### Escudo del Pueblo (Resistencia I)
+- **Requisitos**:
+  - Eliminar 15 CREEPER_TANQUE_V1
+  - Recolectar 1 escudo
+  - Recolectar 8 bloques de obsidiana
+  - Entregar 32 TOKEN_MISION
+- **Recompensa**: Resistencia I (permanente)
+- **Lore**: "Los creepers se han vuelto más resistentes y sus explosiones más devastadoras. Necesito que los elimines antes de que destruyan nuestros hogares. La obsidiana te enseñará el secreto de la verdadera resistencia."
+
+##### Muro Impenetrable (Resistencia II)
+- **Requisitos**:
+  - Eliminar 20 CREEPER_TANQUE_V1
+  - Recolectar 1 escudo
+  - Recolectar 12 bloques de obsidiana
+  - Entregar 48 TOKEN_MISION
+- **Recompensa**: Resistencia II (permanente)
+- **Lore**: "Tu cuerpo debe convertirse en un escudo viviente. Estas criaturas explosivas pondrán a prueba tu determinación. Aprende de cada impacto, de cada cicatriz."
+
+##### Guardián Eterno (Resistencia III)
+- **Requisitos**:
+  - Eliminar 25 CREEPER_TANQUE_V1
+  - Recolectar 1 escudo
+  - Recolectar 16 bloques de obsidiana
+  - Entregar 64 TOKEN_MISION
+- **Recompensa**: Resistencia III (permanente)
+- **Lore**: "Los antiguos guardianes podían resistir el impacto directo de un creeper sin inmutarse. Este nivel de resistencia solo se consigue enfrentando tus mayores temores una y otra vez. Demuestra que eres digno de portar el título de Guardián Eterno."
+
+### Misiones de Sae, la Sanadora
+
+#### Lore
+Descendiente de una antigua línea de curanderos, Sae posee conocimientos que se remontan a la fundación del pueblo. Su bondad solo es comparable con su sabiduría, y dedica cada momento de su vida a sanar a quienes lo necesitan. Sae cree que la verdadera salud proviene del equilibrio entre cuerpo y espíritu, y busca transmitir esta sabiduría a quienes demuestren tener un corazón puro.
+
+#### Misiones
+
+##### Aprendiz de Sanación (Salud Extra I)
+- **Requisitos**:
+  - Proteger aldeanos (matar 5 PILLAGER_RAIDER_V1)
+  - Recolectar 4 manzanas doradas
+  - Recolectar 7 botellas de miel
+  - Entregar 60 TOKEN_MISION
+- **Recompensa**: Salud Extra I (permanente)
+- **Lore**: "Los aldeanos son inocentes y merecen nuestra protección. Demuestra que valoras la vida y te enseñaré a fortalecer la tuya."
+
+##### Sanador Experimentado (Salud Extra II)
+- **Requisitos**:
+  - Proteger aldeanos (matar 10 PILLAGER_RAIDER_V1)
+  - Recolectar 6 manzanas doradas
+  - Recolectar 14 botellas de miel
+  - Entregar 80 TOKEN_MISION
+- **Recompensa**: Salud Extra II (permanente)
+- **Lore**: "Tu dedicación es admirable. La verdadera fuerza reside en la capacidad de cuidar a los demás. Estos ingredientes contienen secretos ancestrales que amplificarán tu vitalidad."
+
+##### Maestro Sanador (Salud Extra III)
+- **Requisitos**:
+  - Proteger aldeanos (matar 15 PILLAGER_RAIDER_V1)
+  - Recolectar 8 manzanas doradas
+  - Recolectar 14 botellas de miel
+  - Entregar 100 TOKEN_MISION
+- **Recompensa**: Salud Extra III (permanente)
+- **Lore**: "Las energías curativas fluyen a través de ti. Siento que estás listo para ascender en el camino de la sanación."
+
+##### Médico de Batalla (Salud Extra IV)
+- **Requisitos**:
+  - Proteger aldeanos (matar 20 PILLAGER_RAIDER_V1)
+  - Recolectar 10 manzanas doradas
+  - Recolectar 16 botellas de miel
+  - Entregar 120 TOKEN_MISION
+- **Recompensa**: Salud Extra IV (permanente)
+- **Lore**: "En el fragor de la batalla, la capacidad de resistir es tan importante como la de sanar. Tu cuerpo debe convertirse en un templo inquebrantable."
+
+##### Sanador Divino (Salud Extra V)
+- **Requisitos**:
+  - Proteger aldeanos (matar 25 PILLAGER_RAIDER_V1)
+  - Recolectar 12 manzanas doradas
+  - Recolectar 18 botellas de miel
+  - Entregar 140 TOKEN_MISION
+- **Recompensa**: Salud Extra V (permanente)
+- **Lore**: "Los antiguos textos hablan de sanadores que podían soportar heridas mortales y seguir luchando. Tu dedicación te ha llevado a ese umbral divino donde la vida se multiplica dentro de ti."
+
+### Misiones de Lia, la Mensajera
+
+#### Lore
+Lia es conocida por su energía inagotable y velocidad sobrenatural. Nadie en el pueblo puede igualar su rapidez, y las leyendas dicen que puede entregar un mensaje de una punta a otra del reino antes de que se ponga el sol. Su carácter rebelde y vivaz esconde una lealtad inquebrantable hacia el pueblo y sus habitantes. Lia busca aprendices que compartan su pasión por la velocidad y la libertad.
+
+#### Misiones
+
+##### Mensajero Principiante (Velocidad I)
+- **Requisitos**:
+  - Completar la carrera entre aldeas y entregar el ítem META_CARRERA
+  - Recolectar 16 de azúcar
+  - Entregar 32 TOKEN_MISION
+- **Recompensa**: Velocidad I (permanente)
+- **Lore**: "¡Así que quieres ser rápido como el viento! Primero demuéstrame que tienes lo básico. Esta carrera es sencilla, pero te pondrá a prueba. El azúcar te enseñará sobre la energía pura del movimiento."
+
+##### Mensajero Veloz (Velocidad II)
+- **Requisitos**:
+  - Completar la carrera avanzada y entregar el ítem META_CARRERA
+  - Eliminar 10 SKELETON_TACTICO_V1
+  - Recolectar 32 de azúcar
+  - Entregar 64 TOKEN_MISION
+- **Recompensa**: Velocidad II (permanente)
+- **Lore**: "¡Ahora viene lo divertido! Esta ruta tiene obstáculos y peligros. Los esqueletos tácticos intentarán frenarte con sus flechas. ¡Demuestra que puedes ser rápido incluso en situación de peligro!"
+
+##### Mensajero Relámpago (Velocidad III)
+- **Requisitos**:
+  - Completar la carrera experta y entregar el ítem META_CARRERA
+  - Eliminar 15 SKELETON_TACTICO_V1
+  - Recolectar 64 de azúcar
+  - Recolectar 1 tarta
+  - Entregar 128 TOKEN_MISION
+- **Recompensa**: Velocidad III (permanente)
+- **Lore**: "Esta es la prueba definitiva. Solo otro mensajero además de mí la ha completado en la historia del pueblo. La tarta es para celebrar cuando lo logres... ¡si es que lo logras! Con esta velocidad podrías superar incluso a los vientos del este."
+
+### Misiones de Ícaro, el Acróbata
+
+#### Lore
+Ícaro es un maestro de lo imposible. Sus acrobacias desafían la gravedad y las leyes de la física, dejando boquiabiertos a todos los espectadores. Creció en el circo del pueblo junto a su hermana Lia, pero mientras ella se dedicó a la velocidad, él perfeccionó el arte del salto y la acrobacia. Ahora busca pasar sus conocimientos a aquellos que tengan el valor de desafiar sus límites.
+
+#### Misiones
+
+##### Acróbata Novato (Salto Aumentado I)
+- **Requisitos**:
+  - Superar el parkour de la torre y entregar el ítem META_PARKOUR
+  - Recolectar 1 bloque de slime
+  - Recolectar 24 plumas
+  - Entregar 30 TOKEN_MISION
+- **Recompensa**: Salto Aumentado I (permanente)
+- **Lore**: "¡El primer paso hacia las estrellas! Este parkour básico pondrá a prueba tu equilibrio y precisión. Las plumas te enseñarán sobre la gracia y el slime sobre la flexibilidad necesaria para dominar el arte del salto."
+
+##### Acróbata Experimentado (Salto Aumentado II)
+- **Requisitos**:
+  - Superar el parkour avanzado y entregar el ítem META_PARKOUR
+  - Eliminar 5 SPIDER_UMBRIA_V1
+  - Recolectar 2 bloques de slime
+  - Recolectar 48 plumas
+  - Entregar 64 TOKEN_MISION
+- **Recompensa**: Salto Aumentado II (permanente)
+- **Lore**: "¡Ahora las cosas se ponen interesantes! Los saltos son más largos y las plataformas más pequeñas. Las arañas umbría tienen secretos de movimiento que debes aprender a través del combate."
+
+##### Maestro Acróbata (Salto Aumentado III)
+- **Requisitos**:
+  - Superar el parkour experto y entregar el ítem META_PARKOUR
+  - Eliminar 10 SPIDER_UMBRIA_V1
+  - Recolectar 3 bloques de slime
+  - Recolectar 64 plumas
+  - Entregar 128 TOKEN_MISION
+- **Recompensa**: Salto Aumentado III (permanente)
+- **Lore**: "Pocos llegan hasta aquí. Este parkour requiere precisión milimétrica y nervios de acero. Las arañas umbría han sido tus maestras involuntarias en el arte del movimiento perfecto."
+
+##### Acróbata Divino (Salto Aumentado IV)
+- **Requisitos**:
+  - Superar el parkour maestro y entregar el ítem META_PARKOUR
+  - Eliminar 15 SPIDER_UMBRIA_V1
+  - Recolectar 4 bloques de slime
+  - Recolectar 80 plumas
+  - Entregar 256 TOKEN_MISION
+- **Recompensa**: Salto Aumentado IV (permanente)
+- **Lore**: "¡La prueba definitiva! Ni siquiera yo completo este parkour sin fallar al menos una vez. Es la culminación de todo mi conocimiento. Si lo logras, tu capacidad de salto será legendaria, casi como volar sin alas."
+
+### Misiones de Paúl, el Minero
+
+#### Lore
+Paúl ha pasado más tiempo bajo tierra que en la superficie. Sus manos callosas y su rostro marcado por cicatrices cuentan la historia de décadas extrayendo recursos para el pueblo. Conoce cada tipo de roca y mineral por su tacto, olor y sabor. A pesar de su edad avanzada, sigue siendo el minero más eficiente y rápido del pueblo. Busca aprendices que aprecien el verdadero valor de lo que la tierra ofrece.
+
+#### Misiones
+
+##### Aprendiz de Minero (Prisa Minera I)
+- **Requisitos**:
+  - Recolectar 5 bloques de redstone
+  - Recolectar 1 diamante
+  - Entregar 40 TOKEN_MISION
+- **Recompensa**: Prisa Minera I (permanente)
+- **Lore**: "¡Así que quieres ser minero! Empecemos con lo básico. La redstone te enseñará sobre la energía que necesitas canalizar, y el diamante será tu primera recompensa verdadera. Te enseñaré a extraer más rápido de lo que creías posible."
+
+##### Minero Experimentado (Prisa Minera II)
+- **Requisitos**:
+  - Recolectar 10 bloques de redstone
+  - Recolectar 1 bloque de diamante
+  - Entregar 80 TOKEN_MISION
+- **Recompensa**: Prisa Minera II (permanente)
+- **Lore**: "Estás progresando bien. Un bloque completo de diamante muestra tu dedicación. Ahora te revelaré técnicas que me tomó años perfeccionar."
+
+##### Maestro de las Profundidades (Prisa Minera III)
+- **Requisitos**:
+  - Recolectar 15 bloques de carbón
+  - Recolectar 5 bloques de hierro
+  - Entregar 120 TOKEN_MISION
+- **Recompensa**: Prisa Minera III (permanente)
+- **Lore**: "El verdadero minero aprecia tanto el carbón como el diamante. Cada mineral tiene su propósito y valor. Esta lección te llevará más allá de la superficie."
+
+##### Buscador de Tesoros (Prisa Minera IV)
+- **Requisitos**:
+  - Recolectar 20 bloques de amatista
+  - Recolectar 10 bloques de cuarzo
+  - Entregar 192 TOKEN_MISION
+- **Recompensa**: Prisa Minera IV (permanente)
+- **Lore**: "Los cristales contienen secretos que las rocas ordinarias no. Su estructura nos enseña sobre la perfección y la paciencia. Con este conocimiento, tus manos se moverán más rápido que el pensamiento."
+
+##### Minero del Abismo (Prisa Minera V)
+- **Requisitos**:
+  - Recolectar cinco stacks de pizarra profunda
+  - Recolectar tres stacks de basalto
+  - Entregar 192 TOKEN_MISION
+- **Recompensa**: Prisa Minera V (permanente)
+- **Lore**: "Las profundidades más oscuras contienen las mayores riquezas. La pizarra profunda y el basalto te conectarán con los ritmos primigenios de la tierra."
+
+##### Buscador de Netherita (Prisa Minera VI)
+- **Requisitos**:
+  - Recolectar 1 bloque de esmeralda
+  - Recolectar 1 lingote de netherite
+  - Entregar 192 TOKEN_MISION
+- **Recompensa**: Prisa Minera VI (permanente)
+- **Lore**: "La netherita es el desafío final de todo minero. Forjada en los fuegos primordiales, representa la culminación de la búsqueda mineral. La esmeralda representa la riqueza que puedes alcanzar con estos conocimientos."
+
+##### Magnate Mineral (Prisa Minera VII)
+- **Requisitos**:
+  - Recolectar 25 bloques de hierro
+  - Recolectar 15 bloques de oro
+  - Entregar 192 TOKEN_MISION
+- **Recompensa**: Prisa Minera VII (permanente)
+- **Lore**: "Hierro y oro, los pilares de la civilización. Domina su extracción y dominarás el arte de la prosperidad."
+
+##### Señor de las Sombras (Prisa Minera VIII)
+- **Requisitos**:
+  - Recolectar 64 bloques de carbón
+  - Recolectar 64 bloques de obsidiana
+  - Entregar 192 TOKEN_MISION
+- **Recompensa**: Prisa Minera VIII (permanente)
+- **Lore**: "La oscuridad y la resistencia son dos caras de la misma moneda. El carbón alimenta nuestros hornos, la obsidiana protege nuestros tesoros. Domina ambos y serás imparable bajo tierra."
+
+##### Excavador de Lágrimas (Prisa Minera IX)
+- **Requisitos**:
+  - Recolectar 16 bloques de obsidiana llorosa
+  - Recolectar 64 bloques de oro
+  - Entregar 192 TOKEN_MISION
+- **Recompensa**: Prisa Minera IX (permanente)
+- **Lore**: "Las lágrimas de la tierra contienen poder ancestral. La obsidiana llorosa es rara y preciosa, casi tanto como el conocimiento que te otorgará."
+
+##### Titán de la Minería (Prisa Minera X)
+- **Requisitos**:
+  - Recolectar 128 bloques de carbón
+  - Recolectar 128 bloques de obsidiana
+  - Recolectar 32 bloques de diamante
+  - Recolectar 32 bloques de hierro
+  - Entregar 192 TOKEN_MISION
+- **Recompensa**: Prisa Minera X (permanente)
+- **Lore**: "Esta prueba final representa todo lo que significa ser un verdadero minero. Cantidad, calidad, variedad y dedicación. Complétala y tu pico se moverá tan rápido que apenas será visible para el ojo humano."
+
+### Misiones de Helena, la Curandera
+
+#### Lore
+Helena es la guardiana de conocimientos medicinales ancestrales, transmitidos de generación en generación. Mientras Sae se centra en la salud preventiva, Helena es una experta en tratar heridas y enfermedades ya manifiestas. Su cabaña siempre huele a hierbas y pociones, y los aldeanos acuden a ella cuando necesitan curaciones rápidas y eficaces. Helena cree que el don de curar debe ser compartido con aquellos que demuestren compasión genuina.
+
+#### Misiones
+
+##### Sanador Principiante (Regeneración I)
+- **Requisitos**:
+  - Curar 3 aldeanos (entregar el ítem META_CURACION)
+  - Recolectar 12 botellas de miel
+  - Recolectar 1 poción de curación
+  - Entregar 35 TOKEN_MISION
+- **Recompensa**: Regeneración I (permanente)
+- **Lore**: "La curación comienza con la compasión. Estos aldeanos necesitan tu ayuda. La miel contiene propiedades curativas que te enseñarán sobre el arte de la regeneración natural."
+
+##### Médico Experimentado (Regeneración II)
+- **Requisitos**:
+  - Curar 6 aldeanos (entregar el ítem META_CURACION)
+  - Recolectar 8 lágrimas de ghast
+  - Entregar 70 TOKEN_MISION
+- **Recompensa**: Regeneración II (permanente)
+- **Lore**: "Las lágrimas de ghast contienen propiedades regenerativas excepcionales. Son difíciles de obtener, pero su poder compensa el esfuerzo. Tu dedicación a los enfermos me demuestra que eres digno de este conocimiento."
+
+##### Maestro Sanador (Regeneración III)
+- **Requisitos**:
+  - Curar 12 aldeanos (entregar el ítem META_CURACION)
+  - Recolectar 12 lágrimas de ghast
+  - Entregar 100 TOKEN_MISION
+- **Recompensa**: Regeneración III (permanente)
+- **Lore**: "El nivel máximo del arte de la regeneración. Con este poder, las heridas se cerrarán ante tus ojos y tu cuerpo se renovará constantemente. Pocos alcanzan este nivel de maestría, pero tu compasión y dedicación te han hecho merecedor."
+
+### Misiones del Alcalde Tomas
+
+#### Lore
+Tomas ganó su puesto de alcalde tras liderar la defensa del pueblo contra la mayor incursión de pillagers jamás vista. Su estrategia y valentía salvaron innumerables vidas, y el pueblo lo eligió unánimemente como su líder. Ahora, Tomas dedica su vida a entrenar defensores para el pueblo, asegurándose de que siempre esté protegido. Su habilidad especial, Héroe de Villa, es considerada la más versátil y poderosa, reflejando el respeto y admiración que los aldeanos sienten por aquellos que los protegen.
+
+#### Misiones
+La progresión de estas misiones es lineal, aumentando gradualmente la dificultad y los requisitos. Para mayor claridad, se presentan en formato condensado:
+
+##### Defensor Novato a Defensor Legendario (Héroe de Villa I-XX)
+- **Requisitos Base**:
+  - Defender la villa de X PILLAGER_RAIDER_V1 (donde X es igual al nivel de la habilidad)
+  - Recolectar X esmeraldas (donde X es igual al nivel de la habilidad)
+  - Entregar TOKEN_MISION según la siguiente fórmula: 16 × nivel de habilidad
+- **Progresión de Tokens**:
+  - Nivel 1: 16 tokens
+  - Nivel 10: 160 tokens
+  - Nivel 20: 320 tokens
+- **Recompensas**: Héroe de Villa I a XX (permanente)
+- **Lore General**: "El verdadero héroe no busca gloria personal, sino la protección de aquellos que no pueden defenderse por sí mismos. Cada pillager eliminado es una familia que puede dormir tranquila. Cada nivel de esta habilidad representa el agradecimiento de los aldeanos por tu dedicación inquebrantable."
+
+### Misiones de Bruno, el Chef
+
+#### Lore
+Bruno es la prueba viviente de que las apariencias engañan. A pesar de su aspecto frágil, sus comidas son legendarias en todo el reino. Se dice que un guerrero que come un festín preparado por Bruno puede luchar durante días sin sentir hambre. Bruno cree que la buena comida no solo alimenta el cuerpo, sino también el espíritu, y busca aprendices que compartan su pasión por los sabores y la nutrición.
+
+#### Misiones
+
+##### Cocinero Aficionado (Saturación I)
+- **Requisitos**:
+  - Recolectar 32 items de comida variada (incluyendo Manzanas Doradas, Zanahorias Doradas, carnes cocinadas diversas, pescados cocinados, panes, pasteles, etc.)
+  - Entregar TOKEN_MISION correspondientes
+- **Recompensa**: Saturación I (permanente)
+- **Lore**: "¡La variedad es el secreto de una buena nutrición! Tráeme un poco de todo y te enseñaré a preparar comidas que te mantendrán satisfecho por más tiempo del que crees posible."
+
+##### Chef Experimentado (Saturación II)
+- **Requisitos**:
+  - Recolectar 48 items de comida variada
+  - Entregar TOKEN_MISION correspondientes
+- **Recompensa**: Saturación II (permanente)
+- **Lore**: "¡Ahora hablamos el mismo idioma! Con estos ingredientes podré enseñarte técnicas más avanzadas. La saturación que sentirás será tan profunda que olvidarás lo que es tener hambre."
+
+##### Maestro Gastronómico (Saturación III)
+- **Requisitos**:
+  - Recolectar 64 items de comida variada
+  - Entregar TOKEN_MISION correspondientes
+- **Recompensa**: Saturación III (permanente)
+- **Lore**: "¡Este es el nivel máximo del arte culinario! Con estos ingredientes prepararemos un festín que cambiaría para siempre. Tu cuerpo recordará esta nutrición y la mantendrá por tiempos increíbles."
+
+## 7. Configuración de Archivos y Análisis de Sistema
+
+### MythicMobs
+
+- **Config-Spawning.yml**:
+  - DisableVanillaSpawns: false (Crucial para permitir el reemplazo de mobs)
+  - SpawnRadiusPerPlayer: 64 (Radio de spawn alrededor del jugador)
+  - LimitMultiplier: 1.2 (20% más de mobs que vanilla)
+  - ReplaceObeysCap: false (El reemplazo no obedece límite de mobs)
+
+- **Config-Mobs.yml**:
+  - DefaultDropMethod: VANILLA (Sistema de drops vanilla)
+  - DoLootsplosionByDefault: false (No explosión de loot por defecto)
+  - MinimumDamagePercentForDrops: 1% (Requiere poco daño para drops)
+
+- **RandomSpawns**:
+  - Archivo ejemplificativo para spawns aleatorios personalizados
+  - No usado actualmente pero disponible para implementación futura
+
+### Sistema de Traducciones (Quests)
+
+- Dos archivos de lenguaje: es-MX y es-ES
+- Traducciones completas para toda la interfaz de misiones
+- Mensajes personalizados para cada tipo de objetivo y recompensa
+
+## 8. Análisis de Reemplazo de Mobs
+
+El sistema utiliza `SpawnOverride` en todos los mobs custom para reemplazar sus equivalentes vanilla:
+
+- **Mecanismo**: Cuando un mob vanilla intenta spawnear, MythicMobs lo intercepta y lo reemplaza
+- **Condiciones**: La mayoría usa `always` como condición (reemplazo incondicional)
+- **Prioridades**: Algunos mobs tienen diferentes prioridades (1-2) para control de spawn
+- **Requisitos**: DisableVanillaSpawns debe estar en false para funcionar
+
+### Posibles Problemas de Spawn Detectados:
+
+1. Algunos archivos YAML pueden tener problemas de indentación
+2. Algunos mobs pueden tener configuraciones de spawn contradictorias
+3. Conflictos potenciales con otros plugins de gestión de mobs
+4. La configuración actual no contempla tasas de spawn diferenciadas por bioma para todos los mobs
+
+## 9. Recomendaciones de Mejora
+
+1. **Expandir Sistema de Drops**:
+   - Implementar sistema de drop tables más complejas
+   - Añadir ítems con efectos especiales como recompensas raras
+
+2. **Balanceo de Dificultad**:
+   - Ajustar atributos de mobs según zonas y progresión
+   - Crear variantes "élite" con menor tasa de spawn pero mayor recompensa
+
+3. **Integración con Otros Plugins**:
+   - Conectar con MMOItems para ítems más complejos
+   - Utilizar ModelEngine para modelos 3D de mobs únicos
+
+4. **Optimización de Spawn**:
+   - Configurar spawn rates específicos por bioma y dimensión
+   - Limitar spawns de jefes menores a zonas específicas
+
+5. **Sistema de Misiones Avanzado**:
+   - Crear cadenas de misiones con narrativa
+   - Implementar misiones grupales que requieran cooperación
+
+## 10. Conclusión
+
+El servidor ServerLewisNadone implementa un sistema RPG detallado con:
+- 21+ mobs custom totalmente configurados con atributos, habilidades y loot
+- 9 NPCs con progresión de misiones y recompensas
+- Sistema de ítems custom para progresión
+- Reemplazo completo del ecosistema de mobs vanilla
+- Sistema de misiones con múltiples niveles de dificultad
+
+La estructura actual proporciona una base sólida, pero requiere pruebas y ajustes constantes para balancear la dificultad y asegurar que el sistema de spawn de mobs funcione correctamente en todas las dimensiones y biomas.
+

@@ -1,0 +1,42 @@
+EnderDragon_JefeFinal:
+  Type: ENDER_DRAGON
+  Display: '§5Dragón Final del Fin'
+  Health: 1000
+  Damage: 80
+  Armor: 20
+  BossBar:
+    Enabled: true
+    Title: '§5Jefe Final: Dragón del Fin'
+    Color: PURPLE
+    Style: SEGMENTED_10
+  Drops:
+    - minecraft:dragon_breath 8-16 100
+    - TOKEN_MISION 250 100
+    - minecraft:nether_star 1 100
+  Skills:
+    - effect:particles{p=dragon_breath;a=80;hs=2;vs=3;s=1;y=3} @Self ~onTimer:20
+    - potion{type=LEVITATION;duration=120;level=2} @LivingEntitiesInRadius{r=12} ~onAttack
+    - damage{d=40} @LivingEntitiesInRadius{r=10} ~onAttack
+    - summon{type=PHANTOM;amount=3} @Self ~onTimer:600
+    - summon{type=ENDERMITE;amount=5} @Self ~onTimer:600
+    - potion{type=STRENGTH;duration=200;level=2} @Self ~onTimer:100
+    - effect:particles{p=portal;a=40;hs=2;vs=2;s=0.5;y=2} @Self ~onTimer:40
+    - skill{s=EnderDragon_SummonWithers} @Self ~onSignal:LowHealth
+  Options:
+    PreventOtherDrops: true
+    AlwaysShowName: true
+    Despawn: false
+    KnockbackResistance: 1
+  SpawnOverride:
+    Type: ENDER_DRAGON
+    Priority: 1
+    ReplaceType: true
+    Conditions:
+      - always
+
+EnderDragon_SummonWithers:
+  Skills:
+    - summon{type=WITHER;amount=3} @Self
+  Conditions:
+    - health{h=<100}
+    - signal{n=LowHealth;once=true}

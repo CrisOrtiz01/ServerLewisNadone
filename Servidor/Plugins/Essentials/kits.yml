@@ -1,0 +1,196 @@
+# =================================================================
+# EssentialsX Kits Configuration for ServerLewisNadone
+# =================================================================
+# Este archivo contiene los kits para el equipo administrativo.
+# Siguiendo el lore del servidor, no se incluyen kits para jugadores nuevos
+# para mantener la progresión de dificultad y el desafío RPG.
+# =================================================================
+#
+# NOTAS IMPORTANTES SOBRE LOS KITS:
+#
+# 1. Estos kits son EXCLUSIVAMENTE para administración y eventos especiales
+# 2. Los kits no deben entregarse a jugadores normales para mantener el balance
+# 3. Los delays están configurados en segundos (86400 = 24 horas)
+# 4. Se requieren permisos específicos para cada kit (essentials.kits.nombrekit)
+# 5. Los kits son necesarios para la gestión efectiva del servidor y eventos
+#
+# =================================================================
+
+kits:
+  # =================================================================
+  # KIT DE ADMINISTRACIÓN
+  # =================================================================
+  # Este kit proporciona las herramientas necesarias para la administración
+  # completa del servidor, incluyendo resolución de problemas, ajustes
+  # de terreno, gestión de regiones y supervisión del rendimiento.
+  # =================================================================
+  admin:
+    # Disponible una vez al día
+    delay: 86400
+    # Requiere el permiso essentials.kits.admin
+    items:
+      # Herramientas de Netherite con encantamientos máximos
+      - netherite_sword unbreaking:5 sharpness:5 sweeping:5 knockback:2 looting:5 mending:1 name:&4Espada_del_Administrador lore:&8Forjada|&8para|&8mantener|&8el|&8orden
+      - netherite_pickaxe unbreaking:5 efficiency:5 fortune:5 mending:1 name:&4Pico_del_Administrador
+      - netherite_axe unbreaking:5 efficiency:5 fortune:5 mending:1 name:&4Hacha_del_Administrador
+      - netherite_shovel unbreaking:5 efficiency:5 fortune:5 mending:1 name:&4Pala_del_Administrador
+      # Armadura completa con protección máxima
+      - netherite_helmet protection:5 unbreaking:5 respiration:3 aqua_affinity:1 mending:1 name:&4Casco_del_Administrador
+      - netherite_chestplate protection:5 unbreaking:5 mending:1 name:&4Peto_del_Administrador
+      - netherite_leggings protection:5 unbreaking:5 mending:1 name:&4Grebas_del_Administrador
+      - netherite_boots protection:5 unbreaking:5 feather_falling:5 depth_strider:3 mending:1 name:&4Botas_del_Administrador
+      # Herramientas administrativas
+      - command_block name:&4Bloque_de_Comandos
+      - chain_command_block name:&4Bloque_de_Comandos_Encadenado
+      - repeating_command_block name:&4Bloque_de_Comandos_Repetición
+      - structure_block name:&4Bloque_de_Estructura
+      - debug_stick name:&4Vara_de_Depuración
+      - barrier amount:64 name:&4Barrera_Invisible
+      - light amount:64 name:&4Bloque_de_Luz
+      # Bloques y materiales de WorldEdit
+      - wooden_axe name:&4Hacha_de_WorldEdit
+      - compass name:&4Brújula_de_Teleportación
+      # Misceláneos
+      - elytra unbreaking:5 mending:1 name:&4Alas_del_Administrador
+      - trident riptide:3 unbreaking:5 mending:1 name:&4Tridente_del_Administrador
+      - dragon_egg name:&4Huevo_de_Dragón_Ceremonial
+      - filled_map name:&4Mapa_Maestro
+
+  # =================================================================
+  # KIT DE MODERACIÓN
+  # =================================================================
+  # Kit diseñado para moderadores con herramientas para vigilar y 
+  # mantener el orden sin alterar significativamente el entorno.
+  # No incluye bloques de comando ni elementos que puedan causar cambios
+  # permanentes en el mundo.
+  # =================================================================
+  mod:
+    # Disponible cada 12 horas
+    delay: 43200
+    items:
+      # Equipo básico para moderación
+      - diamond_sword sharpness:4 unbreaking:3 name:&bEspada_del_Vigilante lore:&7Para|&7mantener|&7la|&7paz
+      - diamond_pickaxe efficiency:4 unbreaking:3 name:&bPico_del_Vigilante
+      - diamond_axe efficiency:4 unbreaking:3 name:&bHacha_del_Vigilante
+      # Armadura para protección
+      - diamond_helmet protection:3 unbreaking:3 name:&bCasco_del_Vigilante
+      - diamond_chestplate protection:3 unbreaking:3 name:&bPeto_del_Vigilante
+      - diamond_leggings protection:3 unbreaking:3 name:&bGrebas_del_Vigilante
+      - diamond_boots protection:3 unbreaking:3 name:&bBotas_del_Vigilante
+      # Herramientas de moderación
+      - compass name:&bBrújula_de_Investigación
+      - book name:&bRegistro_de_Incidentes
+      - paper name:&bPase_de_Moderador lore:&7Certificado|&7de|&7autoridad
+      # Misceláneos
+      - golden_apple amount:5 name:&bRación_de_Emergencia
+      - ender_pearl amount:16 name:&bPerla_de_Persecución
+      - potion name:&bPoción_de_Invisibilidad
+      - potion name:&bPoción_de_Velocidad
+
+  # =================================================================
+  # KIT DE CONSTRUCTOR
+  # =================================================================
+  # Kit para el equipo de construcción y desarrolladores del mundo.
+  # Incluye herramientas optimizadas para construcción y decoración,
+  # así como recursos básicos para prototipar estructuras.
+  # =================================================================
+  builder:
+    # Disponible cada 8 horas
+    delay: 28800
+    items:
+      # Herramientas optimizadas para construcción
+      - diamond_pickaxe efficiency:5 silk_touch:1 unbreaking:3 name:&aHerramienta_del_Arquitecto
+      - diamond_axe efficiency:5 silk_touch:1 unbreaking:3 name:&aHacha_del_Carpintero
+      - diamond_shovel efficiency:5 silk_touch:1 unbreaking:3 name:&aPala_del_Paisajista
+      # Bloques básicos para construcción (grandes cantidades)
+      - oak_planks amount:64 name:&aMadera_de_Construcción
+      - spruce_planks amount:64 name:&aMadera_de_Construcción
+      - stone amount:64 name:&aPiedra_de_Construcción
+      - stone_bricks amount:64 name:&aLadrillos_de_Piedra
+      - quartz_block amount:64 name:&aCuarzo_Arquitectónico
+      - glass amount:64 name:&aVidrio_de_Construcción
+      # Herramientas decorativas
+      - oak_sign amount:16 name:&aSeñal_de_Información
+      - item_frame amount:16 name:&aMarco_Decorativo
+      - flower_pot amount:16 name:&aMaceta_Decorativa
+      - sea_lantern amount:16 name:&aLinterna_Arquitectónica
+      - redstone_lamp amount:16 name:&aLámpara_Decorativa
+      # Instrumentos de medición
+      - wooden_axe name:&aHacha_de_WorldEdit
+      - string amount:64 name:&aCuerda_de_Medición
+      - scaffolding amount:64 name:&aAndamio_Temporal
+      # Cubo de agua y lava para fabricación
+      - water_bucket name:&aFuente_de_Agua
+      - lava_bucket name:&aFuente_de_Lava
+      # Misceláneos
+      - elytra name:&aAlas_del_Constructor
+      - potion name:&aPoción_de_Vuelo lore:&7Facilita|&7el|&7trabajo|&7en|&7alturas
+
+  # =================================================================
+  # KIT DE EVENTOS
+  # =================================================================
+  # Este kit está diseñado para la organización de eventos especiales.
+  # Incluye elementos decorativos, premios para concursos, y materiales
+  # para crear escenarios atractivos y memorables para la comunidad.
+  # =================================================================
+  evento:
+    # Disponible cada día
+    delay: 86400
+    items:
+      # Decoración festiva
+      - firework_rocket amount:64 name:&dFuegos_Artificiales_Festivos
+      - lantern amount:32 name:&dFarolillos_Festivos
+      - note_block amount:16 name:&dCaja_Musical_Festiva
+      - jukebox amount:1 name:&dOrquesta_Portátil
+      - music_disc_far amount:1 name:&dDisco_del_Festival
+      - campfire amount:8 name:&dHoguera_Ceremonial
+      # Premios y recompensas
+      - golden_apple amount:8 name:&dPremio_Menor
+      - enchanted_golden_apple amount:2 name:&dPremio_Mayor
+      - diamond amount:8 name:&dRecompensa_Valiosa
+      - name_tag amount:4 name:&dEtiqueta_Conmemorativa
+      # Materiales para pistas y escenarios
+      - black_wool amount:64 name:&dTela_para_Escenario
+      - red_wool amount:64 name:&dTela_Decorativa
+      - blue_wool amount:64 name:&dTela_Decorativa
+      - yellow_wool amount:64 name:&dTela_Decorativa
+      - lectern amount:4 name:&dAtril_de_Presentación
+      - lightning_rod amount:4 name:&dMarcador_de_Objetivo
+      # Misceláneos para competencias
+      - crossbow amount:2 name:&dBallesta_de_Competición
+      - arrow amount:64 name:&dFlechas_de_Competición
+      - target amount:8 name:&dDiana_de_Competición
+      # Podio
+      - gold_block amount:1 name:&dPodio_-_Primer_Lugar
+      - iron_block amount:1 name:&dPodio_-_Segundo_Lugar
+      - copper_block amount:1 name:&dPodio_-_Tercer_Lugar
+      # Puntuación
+      - oak_sign amount:10 name:&dTablero_de_Puntuación
+
+  # =================================================================
+  # KIT DE EMERGENCIA
+  # =================================================================
+  # Kit diseñado para situaciones críticas como caídas de servidor,
+  # bugs graves, o problemas que requieren intervención inmediata.
+  # Contiene herramientas esenciales para la recuperación rápida.
+  # =================================================================
+  emergencia:
+    # Disponible cada 6 horas
+    delay: 21600
+    items:
+      # Herramientas de intervención rápida
+      - netherite_pickaxe efficiency:5 unbreaking:3 name:&cHerramienta_de_Rescate
+      - netherite_axe efficiency:5 unbreaking:3 name:&cHerramienta_de_Rescate
+      - netherite_shovel efficiency:5 unbreaking:3 name:&cHerramienta_de_Rescate
+      # Bloques para contención
+      - barrier amount:64 name:&cBarrera_de_Emergencia
+      - obsidian amount:64 name:&cBloque_de_Contención
+      # Herramientas diagnósticas
+      - compass name:&cLocalizador_de_Problemas
+      - written_book name:&cManual_de_Procedimientos lore:&7Protocolos|&7de|&7emergencia
+      # Misceláneos
+      - ender_pearl amount:16 name:&cPerla_de_Escape
+      - golden_apple amount:5 name:&cRación_de_Crisis
+      # Bloques de luz para marcar áreas afectadas
+      - glowstone amount:16 name:&cMarcador_de_Emergencia
+      - redstone_torch amount:16 name:&cSeñalizador_de_Crisis

@@ -1,0 +1,32 @@
+SkeletonHorseman_JefeMenor:
+  Type: SKELETON
+  Display: '§fMensajero de PanaNeto12'
+  Health: 100
+  Damage: 20
+  Armor: 8
+  BossBar:
+    Enabled: true
+    Title: '§fMensajero de PanaNeto12'
+    Color: WHITE
+    Style: SEGMENTED_10
+  Drops:
+    - minecraft:bone 8-16 100
+    - minecraft:spectral_arrow 16-24 100
+    - minecraft:enchanted_book{Enchantments=[CONDUCTIVITY:1]} 1 100
+    - TOKEN_MISION 10 100
+  Skills:
+    - effect:particles{p=block_dust;minecraft:bone_block;a=10;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
+    - shoot{type=ARROW;d=12} @LivingEntitiesInRadius{r=12}
+    - potion{type=SLOWNESS;duration=60;level=2} @LivingEntitiesInRadius{r=4} ~onAttack
+  Options:
+    PreventOtherDrops: true
+    AlwaysShowName: true
+    Despawn: false
+    KnockbackResistance: 0.5
+    Riding: SKELETON_HORSE
+  SpawnOverride:
+    Type: SKELETON_HORSE
+    Priority: 1
+    ReplaceType: true
+    Conditions:
+      - always

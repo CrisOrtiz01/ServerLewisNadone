@@ -1,0 +1,23 @@
+Creeper_Explosivo:
+  Type: CREEPER
+  Display: '§aCarga Ambulante'
+  Health: 30
+  Damage: 22
+  Armor: 5
+  Drops:
+    - minecraft:gunpowder 4-8 100
+    - TOKEN_MISION 2 100
+  Skills:
+    - effect:particles{p=explosion;a=15;hs=1;vs=1;s=0.3;y=1} @Self ~onTimer:20
+    - potion{type=BLINDNESS;duration=60;level=1} @LivingEntitiesInRadius{r=3} ~onAttack
+    - explode{power=4}
+  Options:
+    PreventOtherDrops: true
+    AlwaysShowName: true
+    Despawn: false
+  SpawnOverride:
+    Type: CREEPER
+    Priority: 1
+    ReplaceType: true
+    Conditions:
+      - always

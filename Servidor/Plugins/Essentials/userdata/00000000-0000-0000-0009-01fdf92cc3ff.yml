@@ -1,0 +1,30 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 186.26.123.242
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1755361916995
+  login: 1755361835197
+money: '0'
+last-account-name: BEMilex_367
+logoutlocation:
+  world: 6e1580e1-ae2f-4761-be94-9de29caf4688
+  world-name: MundoNalgon
+  x: -596.2991
+  y: 74.17675
+  z: -1105.9625
+  yaw: 70.36407470703125
+  pitch: 1.0287017822265625

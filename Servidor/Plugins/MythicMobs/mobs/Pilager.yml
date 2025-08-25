@@ -1,0 +1,22 @@
+Pillager_Asaltante:
+  Type: PILLAGER
+  Display: '§7Pillager Asaltante'
+  Health: 40
+  Damage: 8
+  Drops:
+    - minecraft:crossbow 1{display_name="La Vieja Betsy"} 20
+    - minecraft:arrow 8-16 20
+    - TOKEN_MISION 2 20
+  Skills:
+    - effect:particles{p=crit;a=10;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
+    - shoot{type=ARROW;d=10} @LivingEntitiesInRadius{r=10}
+  Options:
+    PreventOtherDrops: true
+    AlwaysShowName: true
+    Despawn: false
+  SpawnOverride:
+    Type: PILLAGER
+    Priority: 1
+    ReplaceType: true
+    Conditions:
+      - always

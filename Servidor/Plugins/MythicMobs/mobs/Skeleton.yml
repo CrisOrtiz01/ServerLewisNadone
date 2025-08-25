@@ -1,0 +1,23 @@
+Skeleton_Guerrero:
+  Type: SKELETON
+  Display: '§fEsqueleto'
+  Health: 40
+  Damage: 10
+  Armor: 4
+  Drops:
+    - minecraft:bone 3-6 100
+    - minecraft:arrow 8-16 100
+    - TOKEN_MISION 1 100
+  Skills:
+    - effect:particles{p=block_dust;minecraft:bone_block;a=10;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
+    - shoot{type=ARROW;d=9} @LivingEntitiesInRadius{r=10}
+  Options:
+    PreventOtherDrops: true
+    AlwaysShowName: true
+    Despawn: false
+  SpawnOverride:
+    Type: SKELETON
+    Priority: 1
+    ReplaceType: true
+    Conditions:
+      - always

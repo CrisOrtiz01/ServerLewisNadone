@@ -1,0 +1,329 @@
+############################################################
+# +------------------------------------------------------+ #
+# |          EssentialsX Recipe Book Configuration       | #
+# |           ServerLewisNadone - Recetas                | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Este archivo contiene las recetas personalizadas para el servidor
+# Permite a los jugadores crear ítems especiales usando conocimientos del lore
+
+# =================================================================
+# NOTAS IMPORTANTES SOBRE LAS RECETAS:
+# 1. Las recetas están diseñadas para complementar el sistema de misiones
+# 2. No reemplazan la obtención principal de recompensas (a través de NPCs)
+# 3. Requieren ingredientes difíciles de conseguir para mantener el balance
+# 4. Están temáticamente vinculadas al lore del servidor
+# =================================================================
+
+# =================================================================
+# RECETAS CEREMONIALES
+# =================================================================
+# Pociones y artefactos relacionados con los fundadores y la historia
+
+pocion_vision_ancestral:
+  type: SHAPED
+  result: POTION name:&6Poción_de_Visión_Ancestral lore:&7Permite_ver_brevemente|&7a_los_campeones_fundadores.|&eDuración:_30_segundos custom-effect:night_vision,1,600
+  shape:
+    - ABC
+    - DEF
+    - GHI
+  ingredients:
+    A: GLOWSTONE_DUST
+    B: FERMENTED_SPIDER_EYE
+    C: GLOWSTONE_DUST
+    D: PHANTOM_MEMBRANE
+    E: GLASS_BOTTLE
+    F: PHANTOM_MEMBRANE
+    G: REDSTONE
+    H: GOLDEN_CARROT
+    I: REDSTONE
+
+medallion_fundadores:
+  type: SHAPED
+  result: GOLD_NUGGET amount:1 name:&eMediallón_de_los_Fundadores lore:&7Reliquia_ancestral_que_contiene|&7la_esencia_de_Thorgar_y_Lyria.|&6Otorga_protección_contra_el_daño_mágico. enchant:protection:3 flags:HIDE_ENCHANTS
+  shape:
+    - ABA
+    - CDC
+    - AEA
+  ingredients:
+    A: GOLD_INGOT
+    B: DIAMOND
+    C: BLAZE_POWDER
+    D: EMERALD
+    E: NETHERITE_SCRAP
+
+mapa_napoles_antiguo:
+  type: SHAPED
+  result: FILLED_MAP name:&6Mapa_Ancestral_de_Nápoles lore:&7Este_mapa_muestra_el_pueblo|&7como_era_en_tiempos_de_los_fundadores.|&eRevela_ubicaciones_ocultas_cuando|&ese_usa_cerca_del_Templo_Central.
+  shape:
+    - ABA
+    - CDC
+    - ABA
+  ingredients:
+    A: PAPER
+    B: REDSTONE
+    C: COMPASS
+    D: MAP
+    
+# =================================================================
+# POCIONES CURATIVAS Y ELIXIRES
+# =================================================================
+# Recetas creadas por Sae la Sanadora y Helena la Curandera
+
+elixir_curativo_menor:
+  type: SHAPED
+  result: POTION name:&dElixir_Curativo_Menor lore:&7Una_poción_preparada_según|&7las_recetas_de_Helena_la_Curandera.|&eRestauración:_4_corazones custom-effect:instant_health,1,1
+  shape:
+    - ABA
+    - CDC
+    - EFE
+  ingredients:
+    A: RED_MUSHROOM
+    B: HONEY_BOTTLE
+    C: GLISTERING_MELON_SLICE
+    D: POTION:water
+    E: SUGAR
+    F: GHAST_TEAR
+
+brebaje_regeneracion:
+  type: SHAPED
+  result: POTION name:&aBrebe_de_Regeneración lore:&7Un_brebaje_de_Sae_la_Sanadora|&7que_otorga_regeneración_temporal.|&eDuración:_45_segundos custom-effect:regeneration,1,900
+  shape:
+    - ABC
+    - DEF
+    - GHI
+  ingredients:
+    A: HONEY_BOTTLE
+    B: GHAST_TEAR
+    C: HONEY_BOTTLE
+    D: GLISTERING_MELON_SLICE
+    E: GLASS_BOTTLE
+    F: GLISTERING_MELON_SLICE
+    G: GOLDEN_CARROT
+    H: REDSTONE
+    I: GOLDEN_CARROT
+
+panacea_helena:
+  type: SHAPED
+  result: SUSPICIOUS_STEW name:&dPanacea_de_Helena lore:&7Un_estofado_medicinal_que|&7cura_todos_los_efectos_negativos.|&e¡El_secreto_está_en_las_flores!
+  shape:
+    - ABA
+    - CDC
+    - EFE
+  ingredients:
+    A: DANDELION
+    B: RED_MUSHROOM
+    C: BOWL
+    D: HONEY_BOTTLE
+    E: OXEYE_DAISY
+    F: BROWN_MUSHROOM
+
+# =================================================================
+# ARMAS Y HERRAMIENTAS CEREMONIALES
+# =================================================================
+# Versiones ceremoniales de las armas legendarias de los NPCs
+
+hacha_ceremonial:
+  type: SHAPED
+  result: IRON_AXE name:&6Hacha_Ceremonial lore:&7Una_réplica_ceremonial_del|&7Hacha_del_Carcinero.|&eOtorga_un_modesto_poder_al_portador. enchant:sharpness:3 enchant:fire_aspect:1
+  shape:
+    - ABA
+    - ACA
+    - ADA
+  ingredients:
+    A: IRON_INGOT
+    B: BLAZE_POWDER
+    C: STICK
+    D: MAGMA_CREAM
+
+arco_iniciado:
+  type: SHAPED
+  result: BOW name:&cArco_del_Iniciado lore:&7Una_réplica_del_legendario|&7arco_de_Erika.|&ePermite_a_los_cazadores_novatos|&edemostrar_su_destreza. enchant:power:2 enchant:flame:1
+  shape:
+    - ABD
+    - ACF
+    - ABD
+  ingredients:
+    A: STRING
+    B: STICK
+    C: BLAZE_ROD
+    D: FEATHER
+    F: ARROW
+
+escudo_aprendiz:
+  type: SHAPED
+  result: SHIELD name:&7Escudo_del_Aprendiz lore:&7Réplica_del_escudo_de_Marta.|&eCreado_para_los_guardianes_en_entrenamiento. enchant:durability:2
+  shape:
+    - ABA
+    - CDC
+    - AEA
+  ingredients:
+    A: IRON_INGOT
+    B: OBSIDIAN
+    C: OAK_PLANKS
+    D: IRON_BLOCK
+    E: OBSIDIAN
+
+pico_minero:
+  type: SHAPED
+  result: IRON_PICKAXE name:&6Pico_del_Aprendiz_Minero lore:&7Un_pico_diseñado_según_las|&7enseñanzas_de_Paúl.|&eAcelera_ligeramente_la_minería. enchant:efficiency:2 enchant:fortune:1
+  shape:
+    - AAA
+    - BCD
+    - BEB
+  ingredients:
+    A: IRON_INGOT
+    B: REDSTONE
+    C: STICK
+    D: GLOWSTONE_DUST
+    E: REDSTONE_BLOCK
+
+# =================================================================
+# AMULETOS Y RELIQUIAS
+# =================================================================
+# Ítems protectores con efectos especiales
+
+amuleto_proteccion_basico:
+  type: SHAPED
+  result: HEART_OF_THE_SEA name:&9Amuleto_de_Protección_Básico lore:&7Un_pequeño_amuleto_que_otorga|&7resistencia_limitada_al_daño.|&eCreado_según_antigua_tradición. enchant:protection:1 flags:HIDE_ENCHANTS
+  shape:
+    - ABA
+    - BCB
+    - ABA
+  ingredients:
+    A: IRON_NUGGET
+    B: LAPIS_LAZULI
+    C: PRISMARINE_CRYSTALS
+
+totem_menor:
+  type: SHAPED
+  result: RABBIT_FOOT name:&dTótem_Menor_de_Helena lore:&7Un_talismán_creado_siguiendo|&7los_conocimientos_de_Helena.|&eOtorga_buena_suerte_en_combate. enchant:luck:2 flags:HIDE_ENCHANTS
+  shape:
+    - ABA
+    - CDC
+    - EFE
+  ingredients:
+    A: GOLD_NUGGET
+    B: RABBIT_HIDE
+    C: HONEY_BOTTLE
+    D: EMERALD
+    E: FEATHER
+    F: GOLD_NUGGET
+
+collar_fundadores:
+  type: SHAPED
+  result: NAUTILUS_SHELL name:&eCollar_de_los_Fundadores lore:&7Una_réplica_del_collar_usado|&7por_Lyria,_la_primera_campeona.|&eOtorga_protección_contra_el_agua. enchant:respiration:2 flags:HIDE_ENCHANTS
+  shape:
+    - ABA
+    - CDC
+    - EFE
+  ingredients:
+    A: PRISMARINE_SHARD
+    B: GOLD_INGOT
+    C: DIAMOND
+    D: HEART_OF_THE_SEA
+    E: LAPIS_LAZULI
+    F: PRISMARINE_SHARD
+
+# =================================================================
+# ALIMENTOS ESPECIALES
+# =================================================================
+# Recetas creadas por Bruno el Chef que otorgan efectos temporales
+
+estofado_menor_bruno:
+  type: SHAPED
+  result: MUSHROOM_STEW name:&6Estofado_Menor_de_Bruno lore:&7Una_receta_simple_basada_en|&7las_enseñanzas_del_gran_chef.|&eOtorga_saturación_temporal. custom-effect:saturation,1,200
+  shape:
+    - ABA
+    - CDC
+    - EFE
+  ingredients:
+    A: COOKED_BEEF
+    B: CARROT
+    C: BOWL
+    D: BROWN_MUSHROOM
+    E: POTATO
+    F: RED_MUSHROOM
+
+pan_dorado:
+  type: SHAPED
+  result: BREAD amount:1 name:&ePan_Dorado lore:&7Pan_especial_preparado_con|&7un_toque_de_oro.|&eOtorga_vitalidad_temporal. custom-effect:absorption,1,600
+  shape:
+    - AAA
+    - BCB
+    - DDD
+  ingredients:
+    A: WHEAT
+    B: GOLD_NUGGET
+    C: HONEY_BOTTLE
+    D: WHEAT
+    
+# =================================================================
+# MATERIALES RITUALES
+# =================================================================
+# Materiales necesarios para ceremonias e invocaciones especiales
+
+polvo_ritual:
+  type: SHAPED
+  result: GLOWSTONE_DUST amount:4 name:&5Polvo_Ritual lore:&7Un_polvo_brillante_usado|&7en_ceremonias_ancestrales.|&eIngrediente_para_invocaciones.
+  shape:
+    - ABA
+    - BCB
+    - ABA
+  ingredients:
+    A: REDSTONE
+    B: BLAZE_POWDER
+    C: GLOWSTONE_DUST
+
+esencia_vida:
+  type: SHAPED
+  result: GHAST_TEAR amount:1 name:&aEsencia_de_Vida lore:&7Concentrado_de_energía_vital.|&eUsado_en_rituales_de_sanación.
+  shape:
+    - ABA
+    - CDC
+    - AEA
+  ingredients:
+    A: HONEY_BOTTLE
+    B: GOLDEN_APPLE
+    C: GLISTERING_MELON_SLICE
+    D: EMERALD
+    E: GOLDEN_CARROT
+
+cristal_memoria:
+  type: SHAPED
+  result: AMETHYST_SHARD amount:2 name:&dCristal_de_Memoria lore:&7Almacena_los_recuerdos_de|&7los_fundadores_del_pueblo.|&eComponente_ritual_importante.
+  shape:
+    - ABA
+    - CDC
+    - ABA
+  ingredients:
+    A: AMETHYST_SHARD
+    B: LAPIS_LAZULI
+    C: DIAMOND
+    D: QUARTZ
+
+# =================================================================
+# TOKENS TEMPORALES DE MISIÓN
+# =================================================================
+# Versiones temporales de tokens que ayudan en misiones específicas
+
+token_temporal:
+  type: SHAPED
+  result: PRISMARINE_CRYSTALS amount:1 name:&eToken_Temporal_de_Misión lore:&7Una_versión_temporal_del|&7Token_de_Misión_estándar.|&eSe_desvanece_tras_24_horas.|&cNo_reemplaza_al_token_original.
+  shape:
+    - AAA
+    - ABA
+    - AAA
+  ingredients:
+    A: PRISMARINE_SHARD
+    B: CLOCK
+
+# =================================================================
+# NOTAS DE RECETAS
+# =================================================================
+# 1. Las recetas no deberían crear ítems que desbalanceen el servidor
+# 2. Todas las recetas requieren materiales que implican esfuerzo
+# 3. Los efectos de las pociones y comidas son temporales, no permanentes
+# 4. Las armas y herramientas ceremoniales son más débiles que sus versiones legendarias
+# 5. Se recomienda usar estas recetas como complemento a las misiones, no como reemplazo

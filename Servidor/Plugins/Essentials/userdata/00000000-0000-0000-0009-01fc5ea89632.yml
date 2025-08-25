@@ -1,0 +1,40 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 200.119.187.196
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1755364152644
+  login: 1755356378870
+money: '0'
+last-account-name: BEYeishlin2006
+logoutlocation:
+  world: 6e1580e1-ae2f-4761-be94-9de29caf4688
+  world-name: MundoNalgon
+  x: -672.24365
+  y: -28.0
+  z: -1113.3389
+  yaw: 125.23226928710938
+  pitch: -19.7060546875
+past-usernames:
+- .Yeishlin2006
+lastlocation:
+  world: 6e1580e1-ae2f-4761-be94-9de29caf4688
+  world-name: MundoNalgon
+  x: -580.3836
+  y: 72.0
+  z: -1090.69999
+  yaw: -21.801177978515625
+  pitch: 76.683349609375

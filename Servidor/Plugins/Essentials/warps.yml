@@ -1,0 +1,557 @@
+############################################################
+# +------------------------------------------------------+ #
+# |             EssentialsX Warps Configuration          | #
+# |           ServerLewisNadone - Puntos de Interés      | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Este archivo contiene todos los warps (puntos de teletransporte) del servidor
+# Organizado por categorías para facilitar la navegación y el mantenimiento
+
+# Sistema de costos:
+# - Área principal (spawn): Gratis
+# - Áreas principales cercanas (pueblo, mercado): 1-2 Esmeraldas Reales
+# - NPCs: 1 Esmeralda Real (balance económico)
+# - Recursos: 3-5 Esmeraldas Reales (según distancia)
+# - Misiones: 2-8 Esmeraldas Reales (según dificultad)
+# - Zonas peligrosas: 10-25 Esmeraldas Reales (según nivel de peligro)
+
+# Sistema de permisos:
+# - essentials.warps.basico: Acceso a áreas principales
+# - essentials.warps.npc: Acceso a NPCs
+# - essentials.warps.recursos: Acceso a zonas de recursos
+# - essentials.warps.mision.facil: Misiones nivel 1
+# - essentials.warps.mision.medio: Misiones nivel 2
+# - essentials.warps.mision.dificil: Misiones nivel 3-4
+# - essentials.warps.peligro.*: Zonas de alto peligro
+
+# =================================================================
+# ÁREAS PRINCIPALES
+# =================================================================
+
+spawn:
+  world: world
+  x: 0.5
+  y: 70.0
+  z: 0.5
+  yaw: 0.0
+  pitch: 0.0
+  # Las coordenadas del spawn deben ser el centro exacto del spawn para evitar problemas de teletransporte
+  # El jugador debe aparecer mirando hacia el pueblo de Nápoles
+  category: principales
+  description: |
+    &6Punto de aparición de todos los viajeros.
+    &ePor aquí comienza tu aventura en las tierras de Nápoles.
+    &eMira hacia el este para divisar la entrada al pueblo.
+  permission: essentials.warps.basico
+
+napoles:
+  world: world
+  x: 10.5
+  y: 70.0
+  z: 10.5
+  yaw: 180.0
+  pitch: 0.0
+  # Estas coordenadas deben ser la plaza central de Nápoles
+  category: principales
+  description: |
+    &6Nápoles, el pueblo principal de estas tierras.
+    &eFundado hace siglos por dos grandes campeones.
+    &eAquí encontrarás a los 9 líderes que guían a los habitantes.
+  cost: 1
+  permission: essentials.warps.basico
+
+mercado:
+  world: world
+  x: 125.5
+  y: 72.0
+  z: 125.5
+  yaw: 90.0
+  pitch: 0.0
+  # El mercado debe estar cerca de la plaza central pero en una zona distinta
+  category: principales
+  description: |
+    &6El Mercado de Nápoles.
+    &eCentro de comercio donde los mercaderes intercambian
+    &eEsmeraldas Reales por recursos y tesoros exóticos.
+    &eAquí podrás encontrar casi cualquier cosa que necesites.
+    &7Costo: &a1 Esmeralda Real
+  cost: 1
+  permission: essentials.warps.basico
+
+highgarden:
+  world: world
+  x: 200.5
+  y: 85.0
+  z: 200.5
+  yaw: 270.0
+  pitch: 0.0
+  # Highgarden debe estar en una colina elevada, visible desde Nápoles
+  category: principales
+  description: |
+    &6Highgarden, el Santuario Sagrado.
+    &eLugar de adoración a los dioses de los primeros campeones.
+    &eSe dice que quien medita aquí recibe la bendición de los ancestros.
+    &eLas flores eternas que lo rodean nunca se marchitan.
+    &7Costo: &a2 Esmeraldas Reales
+  cost: 2
+  permission: essentials.warps.basico
+
+# =================================================================
+# NPCS PRINCIPALES - UBICACIONES
+# =================================================================
+
+# Cada warp de NPC debe corresponder exactamente con la ubicación del NPC
+# para que los jugadores puedan encontrarlos fácilmente
+
+erika:
+  world: world
+  x: 110.5
+  y: 70.0
+  z: 80.5
+  yaw: 135.0
+  pitch: 0.0
+  # La arena de entrenamiento debe estar en una zona abierta, preferiblemente cerca de un bosque
+  category: npcs
+  description: |
+    &6Arena de Entrenamiento de Erika la Cazadora.
+    &eMaestra en el arte de la caza y la batalla.
+    &eAquí podrás recibir misiones para obtener la habilidad de &cFuerza&e.
+    &7"La verdadera fuerza proviene de conocer a tu presa." -Erika
+    &7Costo: &a1 Esmeralda Real
+  cost: 1
+  permission: essentials.warps.npc
+
+marta:
+  world: world
+  x: 130.5
+  y: 71.0
+  z: 90.5
+  yaw: 0.0
+  pitch: 0.0
+  # El puesto de guardia debe estar cerca de la entrada principal del pueblo
+  category: npcs
+  description: |
+    &6Puesto de Guardia de Marta, La Guardiana.
+    &eProtectora del pueblo y sus habitantes.
+    &eAquí podrás recibir misiones para obtener la habilidad de &7Resistencia&e.
+    &7"Un escudo firme vale más que mil espadas." -Marta
+    &7Costo: &a1 Esmeralda Real
+  cost: 1
+  permission: essentials.warps.npc
+
+sae:
+  world: world
+  x: 95.5
+  y: 70.0
+  z: 110.5
+  yaw: 270.0
+  pitch: 0.0
+  # El hospital debe estar en una zona tranquila y accesible desde la plaza
+  category: npcs
+  description: |
+    &6Hospital de Sae, la Sanadora.
+    &eExperta en el arte de la medicina y la curación.
+    &eAquí podrás recibir misiones para obtener la habilidad de &4Salud Extra&e.
+    &7"El cuerpo es el templo del espíritu; cuídalo con sabiduría." -Sae
+    &7Costo: &a1 Esmeralda Real
+  cost: 1
+  permission: essentials.warps.npc
+
+lia:
+  world: world
+  x: 150.5
+  y: 70.0
+  z: 120.5
+  yaw: 90.0
+  pitch: 0.0
+  # La pista de carreras debe ser amplia y extenderse fuera del pueblo
+  category: npcs
+  description: |
+    &6Pista de Carreras de Lia, la Mensajera.
+    &eLa más veloz de todo el pueblo.
+    &eAquí podrás recibir misiones para obtener la habilidad de &bVelocidad&e.
+    &7"La velocidad sin dirección es solo confusión." -Lia
+    &7Costo: &a1 Esmeralda Real
+  cost: 1
+  permission: essentials.warps.npc
+
+icaro:
+  world: world
+  x: 120.5
+  y: 72.0
+  z: 140.5
+  yaw: 180.0
+  pitch: 0.0
+  # El circo debe tener estructuras altas para los parkour
+  category: npcs
+  description: |
+    &6Circo de Ícaro, el Acróbata.
+    &eMaestro de lo imposible y las acrobacias aéreas.
+    &eAquí podrás recibir misiones para obtener la habilidad de &aSalto Aumentado&e.
+    &7"Los límites solo existen en la mente del que no salta." -Ícaro
+    &7Costo: &a1 Esmeralda Real
+  cost: 1
+  permission: essentials.warps.npc
+
+paul:
+  world: world
+  x: 80.5
+  y: 65.0
+  z: 95.5
+  yaw: 315.0
+  pitch: 0.0
+  # Las minas deben estar por debajo del nivel del pueblo
+  category: npcs
+  description: |
+    &6Minas de Paúl, el Minero.
+    &eExplorador de las profundidades y experto en minerales.
+    &eAquí podrás recibir misiones para obtener la habilidad de &6Prisa Minera&e.
+    &7"Las verdaderas riquezas están donde otros no se atreven a excavar." -Paúl
+    &7Costo: &a1 Esmeralda Real
+  cost: 1
+  permission: essentials.warps.npc
+
+helena:
+  world: world
+  x: 105.5
+  y: 71.0
+  z: 130.5
+  yaw: 225.0
+  pitch: 0.0
+  # El puesto de curación debe estar cerca del hospital pero en una zona diferente
+  category: npcs
+  description: |
+    &6Puesto de Curación de Helena, la Curandera.
+    &eMaestra de pociones y remedios ancestrales.
+    &eAquí podrás recibir misiones para obtener la habilidad de &dRegeneración&e.
+    &7"La sanación verdadera comienza cuando el alma está en paz." -Helena
+    &7Costo: &a1 Esmeralda Real
+  cost: 1
+  permission: essentials.warps.npc
+
+alcalde:
+  world: world
+  x: 100.5
+  y: 73.0
+  z: 100.5
+  yaw: 0.0
+  pitch: 0.0
+  # El ayuntamiento debe estar en el centro del pueblo, cerca o en la plaza
+  category: npcs
+  description: |
+    &6Ayuntamiento del Alcalde Tomas.
+    &eHéroe de guerra y líder respetado.
+    &eAquí podrás recibir misiones para obtener la habilidad de &9Héroe de Villa&e.
+    &7"El verdadero líder sirve a su pueblo, no se sirve de él." -Alcalde Tomas
+    &7Costo: &a1 Esmeralda Real
+  cost: 1
+  permission: essentials.warps.npc
+
+bruno:
+  world: world
+  x: 115.5
+  y: 70.0
+  z: 105.5
+  yaw: 45.0
+  pitch: 0.0
+  # El restaurante debe estar cerca del mercado y la plaza
+  category: npcs
+  description: |
+    &6Restaurante de Bruno, el Chef.
+    &eMaestro culinario de platillos legendarios.
+    &eAquí podrás recibir misiones para obtener la habilidad de &eSaturación&e.
+    &7"La comida no es solo sustento para el cuerpo, sino alegría para el alma." -Bruno
+    &7Costo: &a1 Esmeralda Real
+  cost: 1
+  permission: essentials.warps.npc
+
+# =================================================================
+# ÁREAS DE RECURSOS
+# =================================================================
+
+bosque:
+  world: world
+  x: 300.5
+  y: 75.0
+  z: 100.5
+  yaw: 270.0
+  pitch: 0.0
+  # El bosque debe estar alejado del pueblo pero accesible
+  category: recursos
+  description: |
+    &6Bosque Ancestral.
+    &eHogar de criaturas diversas y árboles milenarios.
+    &eAquí encontrarás abundantes recursos de madera y alimentos.
+    &cCuidado con los monstruos que acechan entre las sombras.
+    &7Costo: &a3 Esmeraldas Reales
+  cost: 3
+  permission: essentials.warps.recursos
+
+cantera:
+  world: world
+  x: 200.5
+  y: 80.0
+  z: 50.5
+  yaw: 180.0
+  pitch: 0.0
+  # La cantera debe estar en una zona montañosa
+  category: recursos
+  description: |
+    &6Cantera de Piedra Ancestral.
+    &eFuente de los mejores materiales de construcción.
+    &eLa piedra extraída aquí fue utilizada para construir Nápoles.
+    &cAsegúrate de tener buenas herramientas antes de venir.
+    &7Costo: &a3 Esmeraldas Reales
+  cost: 3
+  permission: essentials.warps.recursos
+
+lago:
+  world: world
+  x: 150.5
+  y: 68.0
+  z: 250.5
+  yaw: 90.0
+  pitch: 0.0
+  # El lago debe ser amplio y contener diversos recursos acuáticos
+  category: recursos
+  description: |
+    &6Lago de las Mil Voces.
+    &eAguas cristalinas que reflejan el cielo y las estrellas.
+    &eHogar de peces exóticos y plantas acuáticas.
+    &eSe dice que de noche pueden escucharse cantos ancestrales.
+    &7Costo: &a3 Esmeraldas Reales
+  cost: 3
+  permission: essentials.warps.recursos
+
+# =================================================================
+# ÁREAS DE MISIONES ESPECÍFICAS
+# =================================================================
+
+carrera_basica:
+  world: world
+  x: 160.5
+  y: 70.0
+  z: 120.5
+  yaw: 90.0
+  pitch: 0.0
+  # Inicio de la carrera básica de Lia
+  category: misiones
+  description: |
+    &6Inicio de la Carrera Básica.
+    &eAquí comienza la primera prueba de Lia.
+    &eSigue el camino marcado y regresa con la &bMeta de Carrera&e.
+    &7Dificultad: ★☆☆
+    &7Costo: &a2 Esmeraldas Reales
+  cost: 2
+  permission: essentials.warps.mision.facil
+
+carrera_avanzada:
+  world: world
+  x: 180.5
+  y: 71.0
+  z: 130.5
+  yaw: 90.0
+  pitch: 0.0
+  # Inicio de la carrera avanzada de Lia, debe ser más lejos que la básica
+  category: misiones
+  description: |
+    &6Inicio de la Carrera Avanzada.
+    &eSegunda prueba de velocidad de Lia.
+    &eEl recorrido tiene obstáculos y enemigos.
+    &7Dificultad: ★★☆
+    &7Costo: &a4 Esmeraldas Reales
+  cost: 4
+  permission: essentials.warps.mision.medio
+
+carrera_experta:
+  world: world
+  x: 200.5
+  y: 72.0
+  z: 150.5
+  yaw: 135.0
+  pitch: 0.0
+  # Inicio de la carrera experta de Lia, debe ser mucho más lejos y en terreno difícil
+  category: misiones
+  description: |
+    &6Inicio de la Carrera Experta.
+    &eLa prueba definitiva de velocidad.
+    &eSolo los más veloces podrán completarla.
+    &7Dificultad: ★★★
+    &7Costo: &a6 Esmeraldas Reales
+  cost: 6
+  permission: essentials.warps.mision.dificil
+
+parkour_basico:
+  world: world
+  x: 120.5
+  y: 75.0
+  z: 150.5
+  yaw: 180.0
+  pitch: 0.0
+  # Inicio del parkour básico de Ícaro
+  category: misiones
+  description: |
+    &6Inicio del Parkour de la Torre.
+    &ePrimera prueba de agilidad de Ícaro.
+    &eDemuestra tu equilibrio y precisión.
+    &7Dificultad: ★☆☆
+    &7Costo: &a2 Esmeraldas Reales
+  cost: 2
+  permission: essentials.warps.mision.facil
+
+parkour_avanzado:
+  world: world
+  x: 125.5
+  y: 80.0
+  z: 155.5
+  yaw: 180.0
+  pitch: 0.0
+  # Inicio del parkour avanzado de Ícaro, debe estar más alto que el básico
+  category: misiones
+  description: |
+    &6Inicio del Parkour Avanzado.
+    &eSegunda prueba de agilidad de Ícaro.
+    &eSaltos más largos y plataformas más pequeñas.
+    &7Dificultad: ★★☆
+    &7Costo: &a4 Esmeraldas Reales
+  cost: 4
+  permission: essentials.warps.mision.medio
+
+parkour_experto:
+  world: world
+  x: 130.5
+  y: 85.0
+  z: 160.5
+  yaw: 225.0
+  pitch: 0.0
+  # Inicio del parkour experto de Ícaro, debe estar mucho más alto y ser visiblemente difícil
+  category: misiones
+  description: |
+    &6Inicio del Parkour Experto.
+    &eTercera prueba de agilidad de Ícaro.
+    &eRequiere precisión milimétrica y nervios de acero.
+    &7Dificultad: ★★★
+    &7Costo: &a6 Esmeraldas Reales
+  cost: 6
+  permission: essentials.warps.mision.dificil
+
+parkour_maestro:
+  world: world
+  x: 135.5
+  y: 90.0
+  z: 165.5
+  yaw: 270.0
+  pitch: 0.0
+  # Inicio del parkour maestro de Ícaro, debe ser el más alto y extremadamente desafiante
+  category: misiones
+  description: |
+    &6Inicio del Parkour Maestro.
+    &eLa prueba definitiva de agilidad.
+    &eNi siquiera Ícaro lo completa sin fallar al menos una vez.
+    &7Dificultad: ★★★★
+    &7Costo: &a8 Esmeraldas Reales
+  cost: 8
+  permission: essentials.warps.mision.dificil
+
+curacion_prueba:
+  world: world
+  x: 105.5
+  y: 71.0
+  z: 140.5
+  yaw: 225.0
+  pitch: 0.0
+  # Área de prueba de curación de Helena, debe estar cerca de su puesto
+  category: misiones
+  description: |
+    &6Prueba de Curación de Helena.
+    &eAquí demostrarás tu capacidad para sanar.
+    &eAyuda a los aldeanos enfermos para obtener el &dMeta de Curación&e.
+    &7Dificultad: Varía según la prueba
+    &7Costo: &a3 Esmeraldas Reales
+  cost: 3
+  permission: essentials.warps.mision.medio
+
+# =================================================================
+# ÁREAS DE PELIGRO Y EXPLORACIÓN
+# =================================================================
+
+cueva_umbria:
+  world: world
+  x: 50.5
+  y: 40.0
+  z: 250.5
+  yaw: 0.0
+  pitch: 0.0
+  # Cueva con alta concentración de monstruos, debe estar lejos del pueblo
+  category: peligro
+  description: |
+    &6Cueva Umbría.
+    &eHogar de las temibles Arañas Umbrías.
+    &eSe dice que en sus profundidades hay tesoros antiguos.
+    &c¡PELIGRO! Solo aventureros experimentados deben entrar.
+    &7Dificultad: ★★★
+    &7Costo: &a10 Esmeraldas Reales
+    &8Requiere permiso especial
+  cost: 10
+  permission: essentials.warps.peligro.cueva
+
+fortaleza_pillagers:
+  world: world
+  x: -200.5
+  y: 75.0
+  z: 150.5
+  yaw: 0.0
+  pitch: 0.0
+  # Fortaleza ocupada por pillagers, debe estar muy lejos del pueblo
+  category: peligro
+  description: |
+    &6Fortaleza de los Saqueadores.
+    &eBase principal de las fuerzas hostiles que amenazan Nápoles.
+    &eAquí encontrarás a los líderes de las incursiones.
+    &c¡PELIGRO EXTREMO! Se recomienda ir en grupo.
+    &7Dificultad: ★★★★
+    &7Costo: &a15 Esmeraldas Reales
+    &8Requiere permiso especial
+  cost: 15
+  permission: essentials.warps.peligro.fortaleza
+
+portal_nether:
+  world: world
+  x: -100.5
+  y: 64.0
+  z: -100.5
+  yaw: 45.0
+  pitch: 0.0
+  # Portal al Nether ya construido, debe estar alejado pero accesible
+  category: peligro
+  description: |
+    &6Portal al Nether.
+    &eEntrada a la dimensión de fuego eterno.
+    &eAquí comenzarás tu búsqueda de los materiales más raros.
+    &c¡PELIGRO EXTREMO! Prepárate adecuadamente.
+    &7Dificultad: ★★★★
+    &7Costo: &a20 Esmeraldas Reales
+    &8Requiere permiso especial
+  cost: 20
+  permission: essentials.warps.peligro.nether
+
+altar_dragon:
+  world: world
+  x: 500.5
+  y: 80.0
+  z: 500.5
+  yaw: 90.0
+  pitch: 0.0
+  # Estructura ceremonial relacionada con el Ender Dragon, muy lejos del pueblo
+  category: peligro
+  description: |
+    &6Altar del Dragón.
+    &eEstructura antigua conectada con el poder del End.
+    &eSe dice que aquí se puede invocar a los guardianes del dragón.
+    &c¡PELIGRO MÁXIMO! Solo los héroes más poderosos sobrevivirán.
+    &7Dificultad: ★★★★★
+    &7Costo: &a25 Esmeraldas Reales
+    &8Requiere permiso especial
+  cost: 25
+  permission: essentials.warps.peligro.altar

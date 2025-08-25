@@ -1,0 +1,462 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                 EssentialsX Config                   | #
+# |           Configurado para ServerLewisNadone         | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Este es el archivo de configuración para EssentialsX.
+# Adaptado específicamente para el servidor RPG ServerLewisNadone.
+# Fusiona las configuraciones necesarias para mantener el lore y la jugabilidad.
+
+# Configuración general del plugin
+settings:
+  # Establece el formato de fecha global que se utiliza en EssentialsX
+  format:
+    date-format: 'dd/MM/yyyy HH:mm:ss'
+    short-date-format: 'dd/MM/yyyy'
+    time-format: 'HH:mm:ss'
+    short-time-format: 'HH:mm'
+
+  # Usa los colores del servidor, asignados por LuckPerms, para el chat
+  change-displayname: true
+  
+  # Mensajes de conexión y desconexión personalizados
+  change-playerlist: true
+
+  # Mensaje personalizado de bienvenida para nuevos jugadores
+  # Introduce a los jugadores al lore del servidor
+  newbies:
+    announce-format: '&d¡Un nuevo extranjero llamado &b{DISPLAYNAME}&d ha llegado al pueblo de Nápoles!'
+    spawn-on-join: true
+    kit: ''
+    # Mensaje de bienvenida extenso para nuevos jugadores
+    message: |
+      &6Bienvenido a &lNápoles&6, extranjero.
+      
+      &eHas llegado a un pueblo fundado por dos grandes campeones,
+      cuyos conocimientos han sido transmitidos por generaciones.
+      
+      &eBusca a los &a9 líderes del pueblo&e para recibir misiones
+      y obtener habilidades que te harán más poderoso.
+      
+      &2Erika la Cazadora&e - Otorga &cFuerza
+      &2Marta, La Guardiana&e - Otorga &7Resistencia
+      &2Sae, la Sanadora&e - Otorga &4Salud Extra
+      &2Lia, la Mensajera&e - Otorga &bVelocidad
+      &2Ícaro, el Acróbata&e - Otorga &aSalto Aumentado
+      &2Paúl, el Minero&e - Otorga &6Prisa Minera
+      &2Helena, la Curandera&e - Otorga &dRegeneración
+      &2Alcalde Tomas&e - Otorga &9Héroe de Villa
+      &2Bruno, el Chef&e - Otorga &eSaturación
+      
+      &6¡La búsqueda de poder ha comenzado!
+
+  # Controla cuándo y por qué EssentialsX guardará datos de usuario
+  data:
+    save-on-quit: true
+    save-interval: 300
+
+  # Configuración para evitar el spam en el chat
+  chat:
+    seconds-per-chat: 3
+    format: '<{DISPLAYNAME}> {MESSAGE}'
+
+  # Configuración específica para comandos de teletransporte
+  # Adaptados para mantener el desafío en el servidor RPG
+  teleport-safety: true
+  teleport-delay: 5
+  teleport-cancel-on-movement: true
+  
+  # Limita el uso de comandos de viaje instantáneo para mantener el espíritu del juego
+  back-on-death: true
+  spawn-on-join: false
+  spawn-join-group: ''
+  
+  # Configuración de localización y respawn
+  locale: 'es_ES'
+  respawn-at-home: false
+  respawn-at-anchor: true
+  
+  # Si los usuarios intentan ir a una ubicación insegura, deben ser teletransportados a un lugar seguro cercano
+  # para evitar la muerte accidental por caída o ahogamiento
+  teleport-safety: true
+  
+  # Si el jugador se mueve o es atacado durante este tiempo (en segundos), el teletransporte se cancela
+  teleport-delay: 5
+  
+  # La seguridad del servidor requiere que todos los datos de usuario se guarden regularmente
+  data:
+    save-on-quit: true
+    save-interval: 300
+
+# Configuración de la economía del servidor
+# Este servidor utiliza un sistema de economía basado en items físicos en lugar de cuentas virtuales
+economy:
+  # Desactivamos el sistema de economía virtual de EssentialsX
+  enable: false
+  
+  # Notas sobre la economía del servidor:
+  # - La riqueza se mide por ítems físicos, no por saldos virtuales
+  # - Se utilizan Esmeraldas_Reales (esmeraldas customizadas) como moneda principal
+  # - Los jugadores consiguen Esmeraldas_Reales intercambiando TOKEN_MISION (8 unidades) con NPCs comerciantes
+  # - Las Esmeraldas_Reales se usan para comerciar con NPCs y obtener casi cualquier ítem del juego
+  
+  # Desactivamos características relacionadas con la economía virtual
+  log-enabled: false
+  enable-signs: false
+
+# Configuración para comandos de /tpa y teleportación
+# Configurados con cooldowns altos para mantener la dificultad
+tpa:
+  # Tiempo para aceptar antes de expirar la petición
+  request-timeout: 120
+  
+  # Tiempo antes de poder usar /tpa de nuevo
+  cooldown: 180
+
+# Configuración de homes
+# Limitados para mantener el desafío del servidor
+home:
+  # Máximo de homes por defecto
+  default-number: 1
+  
+  # Configuración de homes por grupos de permiso
+  # Más homes para jugadores con más progreso
+  limits:
+    aventurero: 2
+    heroe: 3
+    veterano: 5
+    
+  # Tiempo de espera para el comando /home
+  delay: 5
+
+# Configuración de warps
+# Sistema esencial para moverse entre áreas importantes
+warp:
+  # Mensaje cuando un jugador se teletransporta a un warp
+  welcome-message: '&6Has llegado a &e{WARP}&6.'
+  
+  # Tiempo de espera antes del warp
+  delay: 5
+
+# Configuración de protección y comportamiento de bloques
+protection:
+  # Evitar que los usuarios se dañen entre sí a menos que estén en PvP
+  prevent:
+    pvp: false
+    teleport-accept-pvp: false
+    lava-flow: true
+    water-flow: true
+    fire-spread: true
+    portal-creation: false
+    tnt-explosion: false
+    tnt-playerdamage: false
+    no-falling-damage: false
+
+# Configuración de comandos
+# Habilitar/deshabilitar comandos específicos
+# y establecer cooldowns para mantener el balance
+commands:
+  # Comandos para el sistema de economía (deshabilitados - no hay economía virtual)
+  pay:
+    disable: true
+    cooldown: 60
+    minimum-pay: 1
+    maximum-pay: 10000
+  
+  # Comandos de sanación limitados para staff o recompensa de misión
+  heal:
+    cooldown: 3600
+    disable: true
+    
+  # Comandos para reparar items, limitados para mantener la dificultad
+  repair:
+    cooldown: 7200
+    disable: true
+    
+  # Comando para alimentarse, limitado para mantener la dificultad
+  feed:
+    cooldown: 3600
+    disable: true
+    
+  # Comandos para teletransportarse
+  # Con cooldowns significativos para mantener el desafío
+  home:
+    cooldown: 300
+  spawn:
+    cooldown: 60
+  back:
+    cooldown: 30
+    
+  # Comandos para gestionar la economía (deshabilitados)
+  balance:
+    disable: true
+  sell:
+    disable: true
+    
+  # Comandos para viajes
+  warp:
+    cooldown: 60
+    
+  # Comandos para moderación (solo disponibles para staff)
+  god:
+    disable: false
+  vanish:
+    disable: false
+  
+  # Comando para obtener información del tiempo
+  time:
+    cooldown: 5
+    
+  # Deshabilitar comandos que no encajen con la temática RPG
+  unlimited:
+    disable: true
+  spawnmob:
+    disable: true
+  item:
+    disable: true
+  give:
+    disable: true
+  
+  # Configuración específica para el clima
+  weather:
+    cooldown: 30
+    disable: false
+    permission: "essentials.weather.admin"
+    permission-message: "&cSolo los dioses pueden controlar el clima en Nápoles."
+    
+  # Comandos de utilidad
+  helpop:
+    cooldown: 10
+  msg:
+    cooldown: 3
+  me:
+    disable: true
+  nick:
+    disable: true
+  afk:
+    disable: false
+    auto-afk: 300
+
+# Configuración de chat y permisos
+chat:
+  # Formato del chat
+  # {DISPLAYNAME} será el nombre con formato basado en LuckPerms
+  # {MESSAGE} será el mensaje del jugador
+  format: '<{DISPLAYNAME}> {MESSAGE}'
+  
+  # Opciones para colores en el chat
+  enable-color: false
+  
+  # Distancia máxima del chat local (175 = mensajes visibles en un radio de 175 bloques)
+  # Reducido de 1000 para crear una experiencia de chat verdaderamente local y regional
+  # que fomente la inmersión y la formación de comunidades locales
+  radius: 175
+  
+  # Prefijo para mensajes globales (mensajes visibles en todo el servidor)
+  # Usar ! al inicio del mensaje para enviar globalmente
+  global-prefix: '!'
+  
+  # Opciones para el comando /ignore
+  ignore-player-enable: true
+
+# Configuración para kits
+# Limitados a staff o eventos especiales
+kits:
+  delay: 10
+  start-time-from: login
+  bypass-exempt-permissions: true
+
+# Configuración para firmas
+# Todas desactivadas para mantener el balance del RPG
+signs:
+  # Todas las firmas están deshabilitadas para preservar la experiencia RPG
+  color-signs: false
+  
+  # Firmas de balances - deshabilitadas
+  balance:
+    enable: false
+  
+  # Firmas para compra y venta - deshabilitadas
+  buy:
+    enable: false
+  sell:
+    enable: false
+  
+  # Firmas para free (dar items gratis) - deshabilitadas
+  free:
+    enable: false
+  
+  # Firmas para curación - deshabilitadas
+  heal:
+    enable: false
+    
+  # Firmas para obtener comandos - deshabilitadas
+  disposal:
+    enable: false
+  
+  # Firmas para teletransporte - deshabilitadas
+  warp:
+    enable: false
+  
+  # Firmas para mail entre jugadores - deshabilitadas
+  mail:
+    enable: false
+  
+  # Firmas de reparación - deshabilitadas
+  repair:
+    enable: false
+
+# Configuración para el sistema de correo
+mail:
+  # Mostrar mensaje en login
+  notify-on-login: true
+  
+  # Guardar hasta 100 mensajes
+  save-count: 100
+
+# Integraciones con otros plugins
+hooks:
+  # Integración con LuckPerms para prefijos y grupos
+  luck-perms: true
+  
+  # Integración con WorldGuard para zonas protegidas
+  world-guard: true
+  
+  # Integración con Vault para la economía
+  vault: true
+  
+  # Integración con Citizens para interacción con NPCs
+  citizens: true
+  
+  # Integración con Quests para el sistema de misiones
+  quests: true
+
+# Mensajes personalizados para comandos y errores
+custom-messages:
+  # Mensajes personalizados para varios comandos
+  custom-message-examples:
+    no-permission: '&cNo tienes permiso para usar este poder.'
+    teleport-request-sent: '&6Has enviado una solicitud de teletransporte a &e{0}&6.'
+    teleport-request-here-sent: '&6Has enviado una solicitud a &e{0}&6 para que venga a ti.'
+    teleport-request-accepted: '&e{0}&6 ha aceptado tu petición de teletransporte.'
+    teleport-request-denied: '&e{0}&6 ha rechazado tu petición de teletransporte.'
+    teleport-request-timed-out: '&cLa solicitud de teletransporte ha expirado.'
+    teleport-to-success: '&6Te has teletransportado a &e{0}&6.'
+    teleport-to-fail: '&cNo se pudo teletransportar a &e{0}&c.'
+    homes-limit: '&cSolo puedes tener &e{0}&c hogares.'
+    home-set: '&6Has establecido tu hogar en esta ubicación.'
+    home-not-set: '&cNo tienes un hogar establecido.'
+    warp-not-exist: '&cEl destino &e{0}&c no existe.'
+    warp-success: '&6Te has teletransportado a &e{0}&6.'
+
+# Configuración para integración con otros plugins
+integrations:
+  # Integración con Citizens2
+  citizens:
+    # Permitir que NPCs ejecuten comandos de EssentialsX
+    allow-npc-commands: true
+  
+  # Integración con Quests
+  quests:
+    # Permitir recompensas de EssentialsX en misiones
+    allow-quest-rewards: true
+
+# Configuración avanzada para optimización
+advanced:
+  # Modo debug para solucionar problemas (normalmente deshabilitado)
+  debug: false
+  
+  # Optimizaciones para servidores
+  mob-limiter:
+    # Límites de mobs para mejorar rendimiento
+    enabled: false
+    # Tipos de mobs para limitar
+    types:
+      monsters: 70
+      animals: 15
+      water: 5
+      ambient: 15
+    # Rango para aplicar límites
+    range: 16
+
+# Configuración de nacimiento de nuevos jugadores
+newbies:
+  # Debería Essentials anunciar al servidor cuando alguien se conecta por primera vez
+  announce-format: '&d¡Un nuevo extranjero llamado &b{DISPLAYNAME}&d ha llegado al pueblo de Nápoles!'
+  
+  # Cuando los jugadores aparecen por primera vez, qué punto de aparición se debe usar
+  spawnpoint: spawn
+  
+  # Kit para nuevos jugadores (deshabilitado para mantener la progresión)
+  kit: ''
+
+# Configuración de spawns y respawn
+spawn-on-join: true
+respawn-at-home: false
+respawn-at-anchor: true
+
+# Si un jugador no tiene hogar, ¿debería ser enviado al spawn?
+spawn-if-no-home: true
+
+# Límite de velocidades de movimiento
+max-walk-speed: 0.8
+max-fly-speed: 0.8
+
+# Confirmación para sobrescribir homes
+confirm-home-overwrite: true
+
+# Verifica actualizaciones de EssentialsX
+update-check: true
+
+# Comandos que requieren confirmación
+default-enabled-confirm-commands:
+  - pay
+  - clearinventory
+
+# Configuración para usuarios afk
+# Después de este tiempo en segundos, el jugador será marcado como AFK
+# Esta función requiere que el jugador tenga el permiso 'essentials.afk.auto'
+# Aumentado de 300 a 480 segundos (8 minutos) para dar más flexibilidad 
+# a los jugadores mientras exploran, leen diálogos de misiones o planifican estrategias
+auto-afk: 300
+
+# Después de este tiempo en segundos, el jugador será expulsado del servidor
+# El permiso 'essentials.afk.kickexempt' anula esta función
+# Mantenemos en -1 para desactivar la expulsión automática
+auto-afk-kick: -1
+
+# Configurar esto a true si quieres congelar a los jugadores cuando están AFK
+# Cambiado a true para proteger a jugadores AFK de mobs hostiles personalizados
+freeze-afk-players: true
+
+# Cuando un jugador está AFK, ¿debería poder recoger objetos?
+# Cambiado a true para evitar que los inventarios se llenen mientras están AFK
+disable-item-pickup-while-afk: true
+
+# Esta configuración controla si un jugador es marcado como activo al interactuar
+cancel-afk-on-interact: true
+
+# ¿Debería Essentials eliminar automáticamente el estado AFK cuando un jugador se mueve?
+cancel-afk-on-move: true
+
+# Configuración para el mundo
+world-settings:
+  default:
+    merge-radius:
+      exp: 3
+      item: 2.5
+    mob-spawn-range: 6
+    entity-activation-range:
+      animals: 32
+      monsters: 32
+      raiders: 48
+      misc: 16
+    entity-tracking-range:
+      players: 48
+      animals: 48
+      monsters: 48
+      misc: 32
+      display: 128
+      other: 64

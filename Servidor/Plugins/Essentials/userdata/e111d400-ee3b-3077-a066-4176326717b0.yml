@@ -1,0 +1,47 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 189.190.248.215
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1755802757273
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1755802963049
+  login: 1755801259961
+money: '0'
+last-account-name: LewisMania
+lastlocation:
+  world: d84d2887-f2b3-4fe4-ba26-6721c1b4c7ca
+  world-name: MundoNalgon
+  x: -7.548170564359675
+  y: -60.0
+  z: -8.602734012462316
+  yaw: 144.6000213623047
+  pitch: 14.700004577636719
+homes:
+  mercado:
+    world: d84d2887-f2b3-4fe4-ba26-6721c1b4c7ca
+    world-name: MundoNalgon
+    x: -789.0860812253462
+    y: 122.0
+    z: -930.991315039767
+    yaw: 78.7510986328125
+    pitch: 38.250511169433594
+logoutlocation:
+  world: d84d2887-f2b3-4fe4-ba26-6721c1b4c7ca
+  world-name: MundoNalgon
+  x: -9.92296266792643
+  y: -60.0
+  z: -15.59179378587338
+  yaw: -30.29986572265625
+  pitch: 12.900038719177246

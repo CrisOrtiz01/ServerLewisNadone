@@ -1,0 +1,21 @@
+Hoglin_Salvaje:
+  Type: HOGLIN
+  Display: '§cBasura del Nether'
+  Health: 20
+  Damage: 6
+  Armor: 0
+  Drops:
+    - minecraft:spider_eye:1:100
+  Skills:
+    - effect:particles{p=reddust;a=15;hs=0.7;vs=1;s=0.2;y=1;color=FF0000} @Self ~onTimer:20
+    - knockback{strength=2} @LivingEntitiesInRadius{r=2} ~onAttack
+  Options:
+    PreventOtherDrops: true
+    AlwaysShowName: true
+    Despawn: false
+  SpawnOverride:
+    Type: HOGLIN
+    Priority: 1
+    ReplaceType: true
+    Conditions:
+      - always

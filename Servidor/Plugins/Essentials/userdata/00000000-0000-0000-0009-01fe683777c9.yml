@@ -1,0 +1,40 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 189.190.248.215
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1755308462003
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1755314844577
+  login: 1755313680481
+money: '0'
+last-account-name: BETacoMasteir
+lastlocation:
+  world: 6e1580e1-ae2f-4761-be94-9de29caf4688
+  world-name: MundoNalgon
+  x: -687.3255
+  y: 99.01357
+  z: -1026.6846
+  yaw: 43.279052734375
+  pitch: 12.567916870117188
+logoutlocation:
+  world: 6e1580e1-ae2f-4761-be94-9de29caf4688
+  world-name: MundoNalgon
+  x: -799.8004
+  y: 112.9375
+  z: -934.5235
+  yaw: 152.33602905273438
+  pitch: -47.945098876953125
+past-usernames:
+- .TacoMasteir

@@ -1,0 +1,28 @@
+PiglinBrute_Carcinero:
+  Type: PIGLIN_BRUTE
+  Display: '§6Carnicero'
+  Health: 120
+  Damage: 25
+  Armor: 20
+  Drops:
+    - minecraft:gilded_blackstone 12-24 100
+    - minecraft:netherite_scrap 4-8 70
+    - TOKEN_MISION 15 100
+    - minecraft:golden_apple 1 50
+    - Hacha_Del_Carcinero 1 25
+  Skills:
+    - effect:particles{p=reddust;a=25;hs=1;vs=1;s=0.3;y=1;color=FFD700} @Self ~onTimer:20
+    - knockback{strength=4} @LivingEntitiesInRadius{r=3} ~onAttack
+    - damage{d=18} @LivingEntitiesInRadius{r=2} ~onAttack
+    - potion{type=STRENGTH;duration=120;level=2} @Self ~onTimer:100
+  Options:
+    PreventOtherDrops: true
+    AlwaysShowName: true
+    Despawn: false
+    KnockbackResistance: 0.7
+  SpawnOverride:
+    Type: PIGLIN_BRUTE
+    Priority: 1
+    ReplaceType: true
+    Conditions:
+      - always
