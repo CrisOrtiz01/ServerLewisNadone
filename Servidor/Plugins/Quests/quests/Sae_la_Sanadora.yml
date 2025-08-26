@@ -1,0 +1,249 @@
+quests:
+  aprendiz_sanacion:
+    name: '&aAprendiz de Sanación'
+    ask-message: '&a[Sae]: &7Los aldeanos son inocentes y merecen nuestra protección. Demuestra que valoras la vida y te enseñaré a fortalecer la tuya.'
+    finish-message: '&a[Sae]: &7Has demostrado un espíritu protector. Ahora aprenderás a aumentar tu salud vital.'
+    requirements:
+      level: 0
+    rewards:
+      commands:
+      - effect give %player% health_boost 999999 0 true
+      - tellraw %player% {"text":"Has obtenido Salud Extra I de forma permanente","color":"green"}
+      items:
+      - TOKEN_MISION 5
+      money: 100
+      quest-points: 5
+      permission: habilidades.saludextra.1
+    objectives:
+      kill_pillagers:
+        type: kill
+        mob: PILLAGER_RAIDER_V1
+        amount: 5
+        data: []
+      manzanas:
+        type: collect
+        item: GOLDEN_APPLE
+        amount: 4
+        data: []
+      miel:
+        type: collect
+        item: HONEY_BOTTLE
+        amount: 7
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 60
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: sanador
+      
+  sanador_experimentado:
+    name: '&aSanador Experimentado'
+    ask-message: '&a[Sae]: &7Tu dedicación es admirable. La verdadera fuerza reside en la capacidad de cuidar a los demás. Estos ingredientes contienen secretos ancestrales que amplificarán tu vitalidad.'
+    finish-message: '&a[Sae]: &7Tu cuerpo está aprendiendo a expandir sus límites. Ahora posees mayor vitalidad.'
+    requirements:
+      quest-points: 5
+      permission: habilidades.saludextra.1
+    rewards:
+      commands:
+      - effect give %player% health_boost 999999 1 true
+      - tellraw %player% {"text":"Has mejorado a Salud Extra II de forma permanente","color":"green"}
+      items:
+      - TOKEN_MISION 10
+      money: 200
+      quest-points: 10
+      permission: habilidades.saludextra.2
+    objectives:
+      kill_pillagers:
+        type: kill
+        mob: PILLAGER_RAIDER_V1
+        amount: 10
+        data: []
+      manzanas:
+        type: collect
+        item: GOLDEN_APPLE
+        amount: 6
+        data: []
+      miel:
+        type: collect
+        item: HONEY_BOTTLE
+        amount: 14
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 80
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: sanador
+      requires:
+      - aprendiz_sanacion
+      
+  maestro_sanador:
+    name: '&aMaestro Sanador'
+    ask-message: '&a[Sae]: &7Las energías curativas fluyen a través de ti. Siento que estás listo para ascender en el camino de la sanación.'
+    finish-message: '&a[Sae]: &7Has alcanzado un nivel superior de maestría sobre tu vitalidad. Tu esencia vital se ha expandido considerablemente.'
+    requirements:
+      quest-points: 15
+      permission: habilidades.saludextra.2
+    rewards:
+      commands:
+      - effect give %player% health_boost 999999 2 true
+      - tellraw %player% {"text":"Has mejorado a Salud Extra III de forma permanente","color":"green"}
+      items:
+      - TOKEN_MISION 15
+      money: 300
+      quest-points: 15
+      permission: habilidades.saludextra.3
+    objectives:
+      kill_pillagers:
+        type: kill
+        mob: PILLAGER_RAIDER_V1
+        amount: 15
+        data: []
+      manzanas:
+        type: collect
+        item: GOLDEN_APPLE
+        amount: 8
+        data: []
+      miel:
+        type: collect
+        item: HONEY_BOTTLE
+        amount: 14
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 100
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: sanador
+      requires:
+      - sanador_experimentado
+      
+  medico_batalla:
+    name: '&aMédico de Batalla'
+    ask-message: '&a[Sae]: &7En el fragor de la batalla, la capacidad de resistir es tan importante como la de sanar. Tu cuerpo debe convertirse en un templo inquebrantable.'
+    finish-message: '&a[Sae]: &7Has aprendido a expandir tu esencia vital hasta límites que pocos pueden imaginar.'
+    requirements:
+      quest-points: 30
+      permission: habilidades.saludextra.3
+    rewards:
+      commands:
+      - effect give %player% health_boost 999999 3 true
+      - tellraw %player% {"text":"Has mejorado a Salud Extra IV de forma permanente","color":"green"}
+      items:
+      - TOKEN_MISION 20
+      money: 400
+      quest-points: 20
+      permission: habilidades.saludextra.4
+    objectives:
+      kill_pillagers:
+        type: kill
+        mob: PILLAGER_RAIDER_V1
+        amount: 20
+        data: []
+      manzanas:
+        type: collect
+        item: GOLDEN_APPLE
+        amount: 10
+        data: []
+      miel:
+        type: collect
+        item: HONEY_BOTTLE
+        amount: 16
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 120
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: sanador
+      requires:
+      - maestro_sanador
+      
+  sanador_divino:
+    name: '&aSanador Divino'
+    ask-message: '&a[Sae]: &7Los antiguos textos hablan de sanadores que podían soportar heridas mortales y seguir luchando. Tu dedicación te ha llevado a ese umbral divino donde la vida se multiplica dentro de ti.'
+    finish-message: '&a[Sae]: &7Has alcanzado la cima del camino de la vitalidad. Tu cuerpo ahora rebosa de energía vital que otros solo pueden soñar.'
+    requirements:
+      quest-points: 50
+      permission: habilidades.saludextra.4
+    rewards:
+      commands:
+      - effect give %player% health_boost 999999 4 true
+      - tellraw %player% {"text":"¡Has alcanzado Salud Extra V, el poder máximo!","color":"green","bold":true}
+      - title %player% title {"text":"¡Sanador Divino!","color":"green","bold":true}
+      - title %player% subtitle {"text":"Has dominado el poder de la Vitalidad","color":"white"}
+      items:
+      - TOKEN_MISION 25
+      money: 500
+      quest-points: 25
+      permission: habilidades.saludextra.5
+    objectives:
+      kill_pillagers:
+        type: kill
+        mob: PILLAGER_RAIDER_V1
+        amount: 25
+        data: []
+      manzanas:
+        type: collect
+        item: GOLDEN_APPLE
+        amount: 12
+        data: []
+      miel:
+        type: collect
+        item: HONEY_BOTTLE
+        amount: 18
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 140
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: sanador
+      requires:
+      - medico_batalla

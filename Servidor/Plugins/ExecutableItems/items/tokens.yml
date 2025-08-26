@@ -1,0 +1,47 @@
+token_mision:
+  display_name: '&eToken de Misión'
+  lore:
+    - '&7Canjea este token por recompensas especiales.'
+    - '&bBrilla con energía misteriosa.'
+  material: PRISMARINE_SHARD
+  glow: true
+  unbreakable: true
+  hide_flags: true
+  custom_model_data: 1001
+  max_stack_size: 64
+  
+meta_carrera:
+  display_name: '&bMeta de Carrera'
+  lore:
+    - '&7Certifica que has cruzado la meta en una carrera especial.'
+    - '&b¡Demuestra tu velocidad y habilidad!'
+  material: PAPER
+  glow: true
+  unbreakable: true
+  hide_flags: true
+  custom_model_data: 1002
+  max_stack_size: 1
+  
+meta_parkour:
+  display_name: '&aMeta de Parkour'
+  lore:
+    - '&7Certifica que has superado un desafiante reto de parkour.'
+    - '&a¡Tu destreza y agilidad quedan marcadas en este papel!'
+  material: PAPER
+  glow: true
+  unbreakable: true
+  hide_flags: true
+  custom_model_data: 1003
+  max_stack_size: 1
+  
+meta_curacion:
+  display_name: '&dMeta de Curación'
+  lore:
+    - '&7Certifica que has completado un reto de curación.'
+    - '&d¡Tu habilidad para sanar ha sido reconocida!'
+  material: PAPER
+  glow: true
+  unbreakable: true
+  hide_flags: true
+  custom_model_data: 1004
+  max_stack_size: 1

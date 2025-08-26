@@ -1,0 +1,16 @@
+global:
+  uid: '93266666-9320-7451-0239-66662fa66666'      # User ID. Default: 93266666-9320-7451-0239-66662fa66666
+  url: https://ia.tinksp.cn:38031/upload         # Backend URL for uploading. Example: IAUP SaaS https://iaup.liuzhen932.top/upload
+  download_key: 'download_rul' # IAUP SaaS use 'url'
+
+locale:
+  reload: '重载完成. 如遇到问题请重启服务器!'
+  error: 'An error occurred unexpectedly.'
+  failed-mkdir: ''
+  failed-save: 'Failed to save config!'
+  failed-save-console: '未能成功保存配置文件'
+  failed-read: '文件无法读取 (可能不存在)'
+  failed-upload-console: '文件上传错误! 请将相关日志反馈给开发者'
+  failed-upload-player: '文件上传失败! 请查看控制台并将相关日志反馈给开发者'
+  success-upload: '文件上传成功! 输入 /iareload 重载'
+  ready-upload: '文件分片完成, 开始上传...'

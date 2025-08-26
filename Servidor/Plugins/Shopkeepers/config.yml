@@ -116,6 +116,10 @@ ignore-failed-server-assumption-tests: false
 # If enabled, Shopkeepers tries to bypass other plugins that deny mob spawning
 # (e.g. land protection plugins).
 bypass-spawn-blocking: true
+
+# Añadir esta configuración para mejorar compatibilidad con otros plugins:
+enable-citizens-compatibility: true
+
 # If enabled, Shopkeepers takes into account whether other plugins deny
 # interaction with the shopkeepers.
 check-shop-interaction-result: false

@@ -535,7 +535,7 @@ El servidor está ambientado en un pueblo fundado por dos campeones legendarios,
 - **Opciones**: Irrompible
 - **Uso**: Requerido para las misiones de Helena para obtener Regeneración
 
-## 5. NPCs y Misiones (Citizens2 + Quests)
+## 5. NPCs y Misiones (ZNPCs + Quests)
 
 ### NPCs Principales
 

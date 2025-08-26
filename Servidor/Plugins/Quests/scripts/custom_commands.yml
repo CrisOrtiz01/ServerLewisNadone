@@ -1,0 +1,124 @@
+commands:
+  misionesCazaErika:
+    type: player
+    name: misionesCazaErika
+    cooldown: 10
+    usage: /misionesCazaErika
+    description: Muestra las misiones de caza disponibles
+    execute:
+      - message: "&6=== Misiones de Caza de Erika ==="
+      - message: "&7Estas son las misiones disponibles:"
+      - command: "q take cazador_iniciado"
+      - message: "&e- Cazador Iniciado (Para principiantes)"
+      - message: "&e- Cazador Experimentado (Requiere completar la anterior)"
+      - message: "&e- Cazador Veterano (Requiere nivel previo)"
+      - message: "&7Usa /q take <nombre_mision> para aceptar una misión"
+
+  misionesResistenciaMarta:
+    type: player
+    name: misionesResistenciaMarta
+    cooldown: 10
+    usage: /misionesResistenciaMarta
+    description: Muestra las misiones de resistencia disponibles
+    execute:
+      - message: "&c=== Misiones de Resistencia de Marta ==="
+      - message: "&7Estas son las misiones disponibles:"
+      - message: "&e- Escudo del Pueblo (Para principiantes)"
+      - message: "&e- Muro Impenetrable (Requiere nivel previo)"
+      - message: "&e- Guardián Eterno (Nivel máximo)"
+      - message: "&7Usa /q take <nombre_mision> para aceptar una misión"
+
+  misionesSaludSae:
+    type: player
+    name: misionesSaludSae
+    cooldown: 10
+    usage: /misionesSaludSae
+    description: Muestra las misiones de salud disponibles
+    execute:
+      - message: "&a=== Misiones de Salud de Sae ==="
+      - message: "&7Estas son las misiones disponibles:"
+      - message: "&e- Aprendiz de Sanación (Para principiantes)"
+      - message: "&e- Sanador Experimentado (Requiere nivel previo)"
+      - message: "&e- Y más misiones avanzadas..."
+      - message: "&7Usa /q take <nombre_mision> para aceptar una misión"
+
+  misionesVelocidadLia:
+    type: player
+    name: misionesVelocidadLia
+    cooldown: 10
+    usage: /misionesVelocidadLia
+    description: Muestra las misiones de velocidad disponibles
+    execute:
+      - message: "&b=== Misiones de Velocidad de Lia ==="
+      - message: "&7Estas son las misiones disponibles:"
+      - message: "&e- Mensajero Principiante (Para principiantes)"
+      - message: "&e- Mensajero Veloz (Requiere nivel previo)"
+      - message: "&e- Mensajero Relámpago (Nivel máximo)"
+      - message: "&7Usa /q take <nombre_mision> para aceptar una misión"
+
+  misionesSaltoIcaro:
+    type: player
+    name: misionesSaltoIcaro
+    cooldown: 10
+    usage: /misionesSaltoIcaro
+    description: Muestra las misiones de salto disponibles
+    execute:
+      - message: "&d=== Misiones de Parkour de Ícaro ==="
+      - message: "&7Estas son las misiones disponibles:"
+      - message: "&e- Acróbata Novato (Para principiantes)"
+      - message: "&e- Acróbata Experimentado (Requiere nivel previo)"
+      - message: "&e- Maestro Acróbata (Nivel avanzado)"
+      - message: "&e- Acróbata Divino (Nivel máximo)"
+      - message: "&7Usa /q take <nombre_mision> para aceptar una misión"
+
+  misionesMineriaPaul:
+    type: player
+    name: misionesMineriaPaul
+    cooldown: 10
+    usage: /misionesMineriaPaul
+    description: Muestra las misiones de minería disponibles
+    execute:
+      - message: "&8=== Misiones de Minería de Paúl ==="
+      - message: "&7Estas son las misiones disponibles:"
+      - message: "&e- Aprendiz de Minero (Para principiantes)"
+      - message: "&e- Y muchas más misiones de minería..."
+      - message: "&7Usa /q take <nombre_mision> para aceptar una misión"
+
+  misionesCuracionHelena:
+    type: player
+    name: misionesCuracionHelena
+    cooldown: 10
+    usage: /misionesCuracionHelena
+    description: Muestra las misiones de regeneración disponibles
+    execute:
+      - message: "&f=== Misiones de Curación de Helena ==="
+      - message: "&7Estas son las misiones disponibles:"
+      - message: "&e- Sanador Principiante (Para principiantes)"
+      - message: "&e- Médico Experimentado (Nivel intermedio)"
+      - message: "&e- Maestro Sanador (Nivel máximo)"
+      - message: "&7Usa /q take <nombre_mision> para aceptar una misión"
+
+  hablarAlcaldeTomas:
+    type: player
+    name: hablarAlcaldeTomas
+    cooldown: 10
+    usage: /hablarAlcaldeTomas
+    description: Muestra el diálogo del alcalde
+    execute:
+      - message: "&e[Alcalde Tomás]: &7Bienvenido al pueblo de Nápoles, extranjero."
+      - message: "&e[Alcalde Tomás]: &7Este pueblo fue fundado por dos grandes campeones cuyos conocimientos han sido transmitidos por generaciones."
+      - message: "&e[Alcalde Tomás]: &7Te recomiendo hablar con los demás líderes del pueblo para obtener misiones y mejorar tus habilidades."
+
+  misionesCocinabruno:
+    type: player
+    name: misionesCocinabruno
+    cooldown: 10
+    usage: /misionesCocinaBruno
+    description: Muestra las misiones de cocina disponibles
+    execute:
+      - message: "&c=== Misiones de Cocina de Bruno ==="
+      - message: "&7Estas son las misiones disponibles:"
+      - message: "&e- Cocinero Aficionado (Para principiantes)"
+      - message: "&e- Chef Experimentado (Nivel intermedio)"
+      - message: "&e- Maestro Gastronómico (Nivel máximo)"
+      - message: "&7Usa /q take <nombre_mision> para aceptar una misión"
