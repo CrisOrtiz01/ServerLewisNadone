@@ -10,14 +10,14 @@ quests:
       - effect give %player% hero_of_the_village 999999 0 true
       - tellraw %player% {"text":"Has obtenido Héroe de Villa I de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 5
+      - mm:TOKEN_MISION 5
       money: 50
       quest-points: 5
       permission: habilidades.heroevilla.1
     objectives:
       kill_pillagers:
         type: kill
-        mob: PILLAGER_RAIDER_V1
+        mob: Pillager_Asaltante
         amount: 1
         data: []
       esmeralda:
@@ -27,7 +27,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 16
         data:
           display-name: '&eToken de Misión'
@@ -53,14 +53,14 @@ quests:
       - effect give %player% hero_of_the_village 999999 1 true
       - tellraw %player% {"text":"Has mejorado a Héroe de Villa II de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 6
+      - mm:TOKEN_MISION 6
       money: 60
       quest-points: 6
       permission: habilidades.heroevilla.2
     objectives:
       kill_pillagers:
         type: kill
-        mob: PILLAGER_RAIDER_V1
+        mob: Pillager_Asaltante
         amount: 2
         data: []
       esmeraldas:
@@ -70,7 +70,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 32
         data:
           display-name: '&eToken de Misión'
@@ -98,14 +98,14 @@ quests:
       - effect give %player% hero_of_the_village 999999 2 true
       - tellraw %player% {"text":"Has mejorado a Héroe de Villa III de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 7
+      - mm:TOKEN_MISION 7
       money: 70
       quest-points: 7
       permission: habilidades.heroevilla.3
     objectives:
       kill_pillagers:
         type: kill
-        mob: PILLAGER_RAIDER_V1
+        mob: Pillager_Asaltante
         amount: 3
         data: []
       esmeraldas:
@@ -115,7 +115,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 48
         data:
           display-name: '&eToken de Misión'
@@ -143,14 +143,14 @@ quests:
       - effect give %player% hero_of_the_village 999999 3 true
       - tellraw %player% {"text":"Has mejorado a Héroe de Villa IV de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 8
+      - mm:TOKEN_MISION 8
       money: 80
       quest-points: 8
       permission: habilidades.heroevilla.4
     objectives:
       kill_pillagers:
         type: kill
-        mob: PILLAGER_RAIDER_V1
+        mob: Pillager_Asaltante
         amount: 4
         data: []
       esmeraldas:
@@ -160,7 +160,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 64
         data:
           display-name: '&eToken de Misión'
@@ -188,14 +188,14 @@ quests:
       - effect give %player% hero_of_the_village 999999 4 true
       - tellraw %player% {"text":"Has mejorado a Héroe de Villa V de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 9
+      - mm:TOKEN_MISION 9
       money: 90
       quest-points: 9
       permission: habilidades.heroevilla.5
     objectives:
       kill_pillagers:
         type: kill
-        mob: PILLAGER_RAIDER_V1
+        mob: Pillager_Asaltante
         amount: 5
         data: []
       esmeraldas:
@@ -205,7 +205,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 80
         data:
           display-name: '&eToken de Misión'
@@ -233,14 +233,14 @@ quests:
       - effect give %player% hero_of_the_village 999999 5 true
       - tellraw %player% {"text":"Has mejorado a Héroe de Villa VI de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 10
+      - mm:TOKEN_MISION 10
       money: 100
       quest-points: 10
       permission: habilidades.heroevilla.6
     objectives:
       kill_pillagers:
         type: kill
-        mob: PILLAGER_RAIDER_V1
+        mob: Pillager_Asaltante
         amount: 6
         data: []
       esmeraldas:
@@ -250,7 +250,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 96
         data:
           display-name: '&eToken de Misión'
@@ -278,14 +278,14 @@ quests:
       - effect give %player% hero_of_the_village 999999 6 true
       - tellraw %player% {"text":"Has mejorado a Héroe de Villa VII de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 11
+      - mm:TOKEN_MISION 11
       money: 110
       quest-points: 11
       permission: habilidades.heroevilla.7
     objectives:
       kill_pillagers:
         type: kill
-        mob: PILLAGER_RAIDER_V1
+        mob: Pillager_Asaltante
         amount: 7
         data: []
       esmeraldas:
@@ -295,7 +295,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 112
         data:
           display-name: '&eToken de Misión'
@@ -323,14 +323,14 @@ quests:
       - effect give %player% hero_of_the_village 999999 7 true
       - tellraw %player% {"text":"Has mejorado a Héroe de Villa VIII de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 12
+      - mm:TOKEN_MISION 12
       money: 120
       quest-points: 12
       permission: habilidades.heroevilla.8
     objectives:
       kill_pillagers:
         type: kill
-        mob: PILLAGER_RAIDER_V1
+        mob: Pillager_Asaltante
         amount: 8
         data: []
       esmeraldas:
@@ -340,7 +340,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 128
         data:
           display-name: '&eToken de Misión'
@@ -368,14 +368,14 @@ quests:
       - effect give %player% hero_of_the_village 999999 8 true
       - tellraw %player% {"text":"Has mejorado a Héroe de Villa IX de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 13
+      - mm:TOKEN_MISION 13
       money: 130
       quest-points: 13
       permission: habilidades.heroevilla.9
     objectives:
       kill_pillagers:
         type: kill
-        mob: PILLAGER_RAIDER_V1
+        mob: Pillager_Asaltante
         amount: 9
         data: []
       esmeraldas:
@@ -385,7 +385,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 144
         data:
           display-name: '&eToken de Misión'
@@ -413,14 +413,14 @@ quests:
       - effect give %player% hero_of_the_village 999999 9 true
       - tellraw %player% {"text":"Has mejorado a Héroe de Villa X de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 14
+      - mm:TOKEN_MISION 14
       money: 140
       quest-points: 14
       permission: habilidades.heroevilla.10
     objectives:
       kill_pillagers:
         type: kill
-        mob: PILLAGER_RAIDER_V1
+        mob: Pillager_Asaltante
         amount: 10
         data: []
       esmeraldas:
@@ -430,7 +430,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 160
         data:
           display-name: '&eToken de Misión'

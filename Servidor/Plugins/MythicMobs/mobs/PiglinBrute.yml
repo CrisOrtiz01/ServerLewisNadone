@@ -7,7 +7,7 @@ PiglinBrute_Carcinero:
   Drops:
     - minecraft:gilded_blackstone 12-24 100
     - minecraft:netherite_scrap 4-8 70
-    - TOKEN_MISION 15 100
+    - mm:TOKEN_MISION 15 100
     - minecraft:golden_apple 1 50
     - Hacha_Del_Carcinero 1 25
   Skills:

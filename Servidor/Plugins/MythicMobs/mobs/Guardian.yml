@@ -10,7 +10,7 @@ Guardian_Marino:
     - minecraft:prismarine_bricks 1-2 20
     - minecraft:prismarine_shard 3-5 100
     - minecraft:cod 1-2 80
-    - TOKEN_MISION 6 100
+    - mm:TOKEN_MISION 6 100
   Skills:
     - effect:particles{p=water_splash;a=15;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
     - damage{d=8} @LivingEntitiesInRadius{r=3} ~onAttack
