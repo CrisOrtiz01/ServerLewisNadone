@@ -1,0 +1,17 @@
+display: '&6&lMisiones de Caza'
+description:
+  - '&7Erika la Cazadora te ofrece misiones para poner a prueba'
+  - '&7tus habilidades de combate contra las criaturas más peligrosas.'
+  - '&7Completa estas misiones para obtener la habilidad de Fuerza.'
+  - '&7"La verdadera fuerza se forja en la caza."'
+permission: ''
+cat-item: BOW
+gui:
+  title: '&6&lMisiones de Erika la Cazadora'
+  size: 27
+  fill: BLACK_STAINED_GLASS_PANE
+  show-unavailable: true
+  order:
+    by: ID
+    ascending: true
+  slots: 10,11,12,13,14,15,16

@@ -1,0 +1,17 @@
+display: '&6&lMisiones de Cocina'
+description:
+  - '&7Bruno el Chef te ofrece misiones para recolectar'
+  - '&7los ingredientes más finos para sus recetas.'
+  - '&7Completa estas misiones para obtener la habilidad de Saturación.'
+  - '&7"La buena comida alimenta el cuerpo y el espíritu."'
+permission: ''
+cat-item: CAKE
+gui:
+  title: '&6&lMisiones de Bruno el Chef'
+  size: 27
+  fill: BLACK_STAINED_GLASS_PANE
+  show-unavailable: true
+  order:
+    by: ID
+    ascending: true
+  slots: 11,12,13

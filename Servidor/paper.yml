@@ -1,0 +1,45 @@
+# Configuración optimizada de Paper para ServerLewisNadone
+
+# Configuraciones para mejor rendimiento con mobs y misiones
+world-settings:
+  default:
+    # Optimizaciones generales
+    per-player-mob-spawns: true
+    optimize-explosions: true
+    mob-spawner-tick-rate: 2
+    container-update-tick-rate: 3
+    grass-spread-tick-rate: 4
+    
+    # Ajustes para mobs personalizados
+    monster-spawn-max-light-level: -1  # Usar configuración de MythicMobs
+    spawn-limits:
+      monster: 50
+      animal: 20
+      water-ambient: 10
+      water-animal: 8
+      ambient: 5
+    
+    # Chunks y vista
+    entity-tracking-range:
+      players: 48  # Mayor rango para jugadores en misiones
+      animals: 32
+      monsters: 48  # Mayor rango para mobs personalizados
+      misc: 32
+      other: 32
+    
+    # Ticking
+    entity-activation-range:
+      animals: 16
+      monsters: 24  # Mayor para mobs personalizados
+      raiders: 48   # Mayor para invasiones
+      misc: 12
+      water: 12
+      villagers: 32  # Mayor para misiones con aldeanos
+
+# Ajustes específicos de servidor
+settings:
+  use-faster-eigencraft-redstone: true
+  lag-compensate-block-breaking: true
+  use-alternate-keepalive: true
+  async-chunks:
+    threads: 4  # Ajustar según los núcleos del servidor

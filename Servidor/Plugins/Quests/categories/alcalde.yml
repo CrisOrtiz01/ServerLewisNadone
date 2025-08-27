@@ -1,0 +1,17 @@
+display: '&e&lMisiones del Pueblo'
+description:
+  - '&7El Alcalde Tomás te ofrece misiones para defender'
+  - '&7el pueblo de los constantes ataques de pillagers.'
+  - '&7Completa estas misiones para obtener la habilidad de Héroe de Villa.'
+  - '&7"Un verdadero líder protege a los suyos sin dudarlo."'
+permission: ''
+cat-item: EMERALD
+gui:
+  title: '&e&lMisiones del Alcalde Tomás'
+  size: 36
+  fill: BLACK_STAINED_GLASS_PANE
+  show-unavailable: true
+  order:
+    by: ID
+    ascending: true
+  slots: 10,11,12,13,14,15,16,19,20,21,22,23,24,25,28,29,30,31,32,33

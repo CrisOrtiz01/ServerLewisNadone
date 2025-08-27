@@ -1,0 +1,17 @@
+display: '&c&lMisiones de Resistencia'
+description:
+  - '&7Marta la Guardiana te ofrece misiones que pondrán'
+  - '&7a prueba tu capacidad de resistir el daño.'
+  - '&7Completa estas misiones para obtener la habilidad de Resistencia.'
+  - '&7"Solo los más resistentes pueden proteger a los demás."'
+permission: ''
+cat-item: SHIELD
+gui:
+  title: '&c&lMisiones de Marta la Guardiana'
+  size: 27
+  fill: BLACK_STAINED_GLASS_PANE
+  show-unavailable: true
+  order:
+    by: ID
+    ascending: true
+  slots: 11,12,13

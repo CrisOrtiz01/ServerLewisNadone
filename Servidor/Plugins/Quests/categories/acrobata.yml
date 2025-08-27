@@ -1,0 +1,17 @@
+display: '&d&lMisiones de Parkour'
+description:
+  - '&7Ícaro el Acróbata te ofrece misiones para poner a prueba'
+  - '&7tu capacidad de salto y equilibrio en parkours desafiantes.'
+  - '&7Completa estas misiones para obtener la habilidad de Salto Aumentado.'
+  - '&7"El cielo no es el límite cuando sabes saltar."'
+permission: ''
+cat-item: FEATHER
+gui:
+  title: '&d&lMisiones de Ícaro el Acróbata'
+  size: 27
+  fill: BLACK_STAINED_GLASS_PANE
+  show-unavailable: true
+  order:
+    by: ID
+    ascending: true
+  slots: 11,12,13,14

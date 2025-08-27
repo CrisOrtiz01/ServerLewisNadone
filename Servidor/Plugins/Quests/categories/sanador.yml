@@ -1,0 +1,17 @@
+display: '&a&lMisiones de Salud'
+description:
+  - '&7Sae la Sanadora te ofrece misiones para proteger a los débiles'
+  - '&7y expandir tu propia vitalidad.'
+  - '&7Completa estas misiones para obtener la habilidad de Salud Extra.'
+  - '&7"La vida es el recurso más valioso que poseemos."'
+permission: ''
+cat-item: GOLDEN_APPLE
+gui:
+  title: '&a&lMisiones de Sae la Sanadora'
+  size: 27
+  fill: BLACK_STAINED_GLASS_PANE
+  show-unavailable: true
+  order:
+    by: ID
+    ascending: true
+  slots: 11,12,13,14,15

@@ -2,8 +2,6 @@
 # EssentialsX Kits Configuration for ServerLewisNadone
 # =================================================================
 # Este archivo contiene los kits para el equipo administrativo.
-# Siguiendo el lore del servidor, no se incluyen kits para jugadores nuevos
-# para mantener la progresión de dificultad y el desafío RPG.
 # =================================================================
 #
 # NOTAS IMPORTANTES SOBRE LOS KITS:
@@ -12,7 +10,8 @@
 # 2. Los kits no deben entregarse a jugadores normales para mantener el balance
 # 3. Los delays están configurados en segundos (86400 = 24 horas)
 # 4. Se requieren permisos específicos para cada kit (essentials.kits.nombrekit)
-# 5. Los kits son necesarios para la gestión efectiva del servidor y eventos
+# 5. IMPORTANTE: Estos kits utilizan encantamientos de nivel superior al vanilla
+#    y requieren un plugin como CMI o EssentialsX que permita estos niveles
 #
 # =================================================================
 
@@ -29,16 +28,16 @@ kits:
     delay: 86400
     # Requiere el permiso essentials.kits.admin
     items:
-      # Herramientas de Netherite con encantamientos máximos
-      - netherite_sword unbreaking:5 sharpness:5 sweeping:5 knockback:2 looting:5 mending:1 name:&4Espada_del_Administrador lore:&8Forjada|&8para|&8mantener|&8el|&8orden
-      - netherite_pickaxe unbreaking:5 efficiency:5 fortune:5 mending:1 name:&4Pico_del_Administrador
-      - netherite_axe unbreaking:5 efficiency:5 fortune:5 mending:1 name:&4Hacha_del_Administrador
-      - netherite_shovel unbreaking:5 efficiency:5 fortune:5 mending:1 name:&4Pala_del_Administrador
-      # Armadura completa con protección máxima
-      - netherite_helmet protection:5 unbreaking:5 respiration:3 aqua_affinity:1 mending:1 name:&4Casco_del_Administrador
-      - netherite_chestplate protection:5 unbreaking:5 mending:1 name:&4Peto_del_Administrador
-      - netherite_leggings protection:5 unbreaking:5 mending:1 name:&4Grebas_del_Administrador
-      - netherite_boots protection:5 unbreaking:5 feather_falling:5 depth_strider:3 mending:1 name:&4Botas_del_Administrador
+      # Herramientas de Netherite con encantamientos ajustados a niveles válidos
+      - netherite_sword unbreaking:3 sharpness:5 sweeping:3 knockback:2 looting:3 mending:1 name:&4Espada_del_Administrador lore:&8Forjada|&8para|&8mantener|&8el|&8orden
+      - netherite_pickaxe unbreaking:3 efficiency:5 fortune:3 mending:1 name:&4Pico_del_Administrador
+      - netherite_axe unbreaking:3 efficiency:5 fortune:3 mending:1 name:&4Hacha_del_Administrador
+      - netherite_shovel unbreaking:3 efficiency:5 fortune:3 mending:1 name:&4Pala_del_Administrador
+      # Armadura con encantamientos ajustados
+      - netherite_helmet protection:4 unbreaking:3 respiration:3 aqua_affinity:1 mending:1 name:&4Casco_del_Administrador
+      - netherite_chestplate protection:4 unbreaking:3 mending:1 name:&4Peto_del_Administrador
+      - netherite_leggings protection:4 unbreaking:3 mending:1 name:&4Grebas_del_Administrador
+      - netherite_boots protection:4 unbreaking:3 feather_falling:4 depth_strider:3 mending:1 name:&4Botas_del_Administrador
       # Herramientas administrativas
       - command_block name:&4Bloque_de_Comandos
       - chain_command_block name:&4Bloque_de_Comandos_Encadenado
@@ -193,4 +192,5 @@ kits:
       - golden_apple amount:5 name:&cRación_de_Crisis
       # Bloques de luz para marcar áreas afectadas
       - glowstone amount:16 name:&cMarcador_de_Emergencia
+      - redstone_torch amount:16 name:&cSeñalizador_de_Crisis
       - redstone_torch amount:16 name:&cSeñalizador_de_Crisis

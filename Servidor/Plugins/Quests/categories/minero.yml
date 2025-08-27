@@ -1,0 +1,17 @@
+display: '&8&lMisiones de Minería'
+description:
+  - '&7Paúl el Minero te ofrece misiones para recolectar minerales'
+  - '&7y recursos preciosos de las profundidades.'
+  - '&7Completa estas misiones para obtener la habilidad de Prisa Minera.'
+  - '&7"La riqueza está bajo nuestros pies, solo hay que saber extraerla."'
+permission: ''
+cat-item: DIAMOND_PICKAXE
+gui:
+  title: '&8&lMisiones de Paúl el Minero'
+  size: 27
+  fill: BLACK_STAINED_GLASS_PANE
+  show-unavailable: true
+  order:
+    by: ID
+    ascending: true
+  slots: 10,11,12,13,14,15,16,19,20,21

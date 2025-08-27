@@ -491,3 +491,50 @@ custom-trigger-removal:
             - zombie
             - skeleton
             - enderman
+# Configuración optimizada de ClearLag para ServerLewisNadone
+
+# Módulos
+modules-enabled:
+  - "ItemClearer"
+  - "MobLimiter"
+  - "HaltActivity"
+  - "MemoryMonitor"
+
+# Limpieza de entidades
+item-removal:
+  enabled: true
+  interval-seconds: 300
+  warning-broadcast:
+    - "&6[&4Limpieza&6] &eLimpieza de ítems en &c{timeleft} &esegundos!"
+  items-removed-msg: "&6[&4Limpieza&6] &eSe han eliminado &c{removed} &eítems del suelo."
+  
+  # No eliminar ítems especiales de misiones
+  remove-whitelist:
+    - "minecraft:prismarine_shard"
+    - "minecraft:paper"
+
+# Control de mobs
+mob-limiter:
+  enabled: true
+  check-interval: 60
+  broadcast-warnings: true
+  limits:
+    # Límites ajustados para mobs personalizados
+    monster: 120
+    animal: 100
+    water-mob: 40
+    ambient: 30
+    npc: 100  # Asegurar suficientes NPCs para misiones
+
+# Específico para ServerLewisNadone
+server-specific:
+  # No eliminar mobs con nombres personalizados (NPCs y jefes)
+  protect-named-mobs: true
+  # Priorizar rendimiento en áreas con alta concentración de jugadores
+  dynamic-limiter: true
+  # Proteger ítems de misiones especiales
+  special-items:
+    - "TOKEN_MISION"
+    - "META_CARRERA"
+    - "META_PARKOUR"
+    - "META_CURACION"

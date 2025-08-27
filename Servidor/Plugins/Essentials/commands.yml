@@ -108,7 +108,6 @@ lluvia: weather rain
 tormenta: weather thunder
 invocar: summon
 rayo: lightning
-reparar: repair
 volar: fly
 diagnostico: lag
 limpieza: clearlag
@@ -127,7 +126,6 @@ investigar: invsee
 
 # Comandos para gestionar el mundo
 proteger: region
-construir: worldedit
 cambiar: world
 limpiar: killall
 restaurar: rollback

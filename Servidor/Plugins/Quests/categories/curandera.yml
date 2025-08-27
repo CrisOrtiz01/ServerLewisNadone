@@ -1,0 +1,17 @@
+display: '&f&lMisiones de Curación'
+description:
+  - '&7Helena la Curandera te ofrece misiones para ayudar'
+  - '&7a sanar a los necesitados y aprender el arte de la regeneración.'
+  - '&7Completa estas misiones para obtener la habilidad de Regeneración.'
+  - '&7"Las heridas del cuerpo sanan, las del alma perduran."'
+permission: ''
+cat-item: GHAST_TEAR
+gui:
+  title: '&f&lMisiones de Helena la Curandera'
+  size: 27
+  fill: BLACK_STAINED_GLASS_PANE
+  show-unavailable: true
+  order:
+    by: ID
+    ascending: true
+  slots: 11,12,13

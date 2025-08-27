@@ -78,18 +78,6 @@ settings:
   respawn-at-home: false
   respawn-at-anchor: true
   
-  # Si los usuarios intentan ir a una ubicación insegura, deben ser teletransportados a un lugar seguro cercano
-  # para evitar la muerte accidental por caída o ahogamiento
-  teleport-safety: true
-  
-  # Si el jugador se mueve o es atacado durante este tiempo (en segundos), el teletransporte se cancela
-  teleport-delay: 5
-  
-  # La seguridad del servidor requiere que todos los datos de usuario se guarden regularmente
-  data:
-    save-on-quit: true
-    save-interval: 300
-
 # Configuración de la economía del servidor
 # Este servidor utiliza un sistema de economía basado en items físicos en lugar de cuentas virtuales
 economy:

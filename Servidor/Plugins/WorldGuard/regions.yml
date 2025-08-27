@@ -1,0 +1,39 @@
+# Configuración inicial de regiones para ServerLewisNadone
+
+regions:
+  pueblo_principal:
+    min: [-200, 0, -200]
+    max: [200, 256, 200]
+    priority: 100
+    flags:
+      pvp: deny
+      mob-spawning: deny
+      greeting: "&6Bienvenido al Pueblo de Nápoles"
+    owners:
+      players: []
+    members:
+      players: []
+  
+  zona_carreras:
+    min: [250, 60, 250]
+    max: [450, 100, 450]
+    priority: 50
+    flags:
+      pvp: deny
+      greeting: "&bZona de Carreras - Misiones de Lia"
+    owners:
+      players: []
+    members:
+      players: []
+  
+  zona_parkour:
+    min: [250, 60, -250]
+    max: [450, 150, -450]
+    priority: 50
+    flags:
+      pvp: deny
+      greeting: "&aZona de Parkour - Misiones de Ícaro"
+    owners:
+      players: []
+    members:
+      players: []

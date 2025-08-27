@@ -2,7 +2,7 @@ quests:
   cazador_iniciado:
     name: '&6Cazador Iniciado'
     ask-message: '&6[Erika]: &7Los no-muertos se han vuelto más fuertes y organizados. Demuéstrame que puedes enfrentarte a ellos y te enseñaré a canalizar tu fuerza interior.'
-    finish-message: '&6[Erika]: &7¡Excelente trabajo! Ahora puedo enseñarte los secretos de la fuerza interior.'
+    finish-message: '&6[Erika]: &7¡Impresionante! Has demostrado valor. Te otorgo el poder de la Fuerza I.'
     requirements:
       level: 0
     rewards:
@@ -54,7 +54,7 @@ quests:
   cazador_experimentado:
     name: '&6Cazador Experimentado'
     ask-message: '&6[Erika]: &7Los pillagers han formado una alianza con magos oscuros. Elimínalos y trae pruebas de tu incursión al Nether. Tu fuerza crecerá con cada enemigo que superes.'
-    finish-message: '&6[Erika]: &7Tu cuerpo se fortalece con cada desafío. Ahora posees mayor fuerza.'
+    finish-message: '&6[Erika]: &7Tu habilidad crece cada día. Ahora posees Fuerza II.'
     requirements:
       quest-points: 5
       permission: habilidades.fuerza.1
@@ -100,11 +100,11 @@ quests:
       category: cazador
       requires:
       - cazador_iniciado
-
+      
   cazador_veterano:
     name: '&6Cazador Veterano'
     ask-message: '&6[Erika]: &7El Nether se agita. Sus criaturas más poderosas deben ser controladas. Enfréntalas y forja tu cuerpo en el fuego eterno de esa dimensión.'
-    finish-message: '&6[Erika]: &7Las pruebas del Nether te han transformado. Tu fuerza ha alcanzado un nuevo nivel.'
+    finish-message: '&6[Erika]: &7Has superado pruebas que harían temblar a guerreros experimentados. Tu fuerza aumenta notablemente.'
     requirements:
       quest-points: 15
       permission: habilidades.fuerza.2
@@ -118,7 +118,7 @@ quests:
       quest-points: 15
       permission: habilidades.fuerza.3
     objectives:
-      kill_witherskeletons:
+      kill_wither_skeletons:
         type: kill
         mob: WITHER_SKELETON_CAPITAN_V1
         amount: 5
@@ -128,7 +128,7 @@ quests:
         mob: BLAZE_FURIA_V1
         amount: 5
         data: []
-      hierro:
+      iron_blocks:
         type: collect
         item: IRON_BLOCK
         amount: 4
@@ -154,7 +154,7 @@ quests:
   cazador_elite:
     name: '&6Cazador de Élite'
     ask-message: '&6[Erika]: &7Los líderes de las incursiones deben ser eliminados. Son astutos y poderosos, pero confío en que podrás vencerlos. Los diamantes fortalecerán el vínculo con tu nueva habilidad.'
-    finish-message: '&6[Erika]: &7Tu fuerza ha alcanzado un nivel que pocos pueden soñar. La élite de los cazadores te reconoce como uno de los suyos.'
+    finish-message: '&6[Erika]: &7Tu nombre comienza a ser susurrado con temor entre nuestros enemigos. Tu fuerza ha alcanzado un nivel extraordinario.'
     requirements:
       quest-points: 30
       permission: habilidades.fuerza.3
@@ -178,7 +178,7 @@ quests:
         mob: VINDICATOR_DEMOLEDOR_V1
         amount: 3
         data: []
-      diamantes:
+      diamond_blocks:
         type: collect
         item: DIAMOND_BLOCK
         amount: 2
@@ -204,7 +204,7 @@ quests:
   maestro_cazador:
     name: '&6Maestro Cazador'
     ask-message: '&6[Erika]: &7El Nether debe ser purgado de sus líderes más poderosos. Esto requerirá toda tu habilidad y determinación, pero la recompensa valdrá la pena.'
-    finish-message: '&6[Erika]: &7Has demostrado maestría en el arte de la caza. Tu fuerza ahora inspira respeto y temor.'
+    finish-message: '&6[Erika]: &7Has limpiado el Nether de amenazas importantes. Tu fuerza ha crecido hasta niveles que pocos pueden alcanzar.'
     requirements:
       quest-points: 50
       permission: habilidades.fuerza.4
@@ -218,12 +218,12 @@ quests:
       quest-points: 25
       permission: habilidades.fuerza.5
     objectives:
-      kill_witherskeletons:
+      kill_wither_skeletons:
         type: kill
         mob: WITHER_SKELETON_CAPITAN_V1
         amount: 10
         data: []
-      kill_magmacubes:
+      kill_magma_cubes:
         type: kill
         mob: MAGMA_CUBE
         amount: 10
@@ -233,12 +233,12 @@ quests:
         mob: BLAZE
         amount: 10
         data: []
-      esmeralda:
+      emerald_block:
         type: collect
         item: EMERALD_BLOCK
         amount: 1
         data: []
-      netherstar:
+      nether_star:
         type: collect
         item: NETHER_STAR
         amount: 1
@@ -264,7 +264,7 @@ quests:
   cazador_legendario:
     name: '&6Cazador Legendario'
     ask-message: '&6[Erika]: &7El Wither, una abominación de pura maldad. Demuestra que puedes derrotar a semejante criatura y tu fuerza se volverá casi sobrenatural.'
-    finish-message: '&6[Erika]: &7Has derrotado al Wither y absorbido parte de su esencia. Tu fuerza es ahora legendaria.'
+    finish-message: '&6[Erika]: &7¡Lo has conseguido! Has derrotado a una de las criaturas más temibles conocidas. Tu fuerza ahora es casi sobrenatural.'
     requirements:
       quest-points: 75
       permission: habilidades.fuerza.5
@@ -283,12 +283,12 @@ quests:
         mob: WITHER_BOSS_V1
         amount: 1
         data: []
-      esmeralda:
+      emerald_block:
         type: collect
         item: EMERALD_BLOCK
         amount: 1
         data: []
-      netherstar:
+      nether_star:
         type: collect
         item: NETHER_STAR
         amount: 1
@@ -311,10 +311,10 @@ quests:
       requires:
       - maestro_cazador
       
-  cazador_mitologico:
+  cazador_bestias_mitologicas:
     name: '&6Cazador de Bestias Mitológicas'
     ask-message: '&6[Erika]: &7Pocos han visto a los guardianes del dragón y vivido para contarlo. Demuéstrame que eres digno de cantar la hazaña.'
-    finish-message: '&6[Erika]: &7Las bestias mitológicas han caído ante ti. Tu nombre será recordado en leyendas.'
+    finish-message: '&6[Erika]: &7Has enfrentado criaturas cuya existencia muchos consideran mera leyenda. Tu fuerza ha alcanzado niveles casi divinos.'
     requirements:
       quest-points: 105
       permission: habilidades.fuerza.6
@@ -333,17 +333,17 @@ quests:
         mob: WITHER_BOSS_V1
         amount: 2
         data: []
-      kill_enderdragons:
+      kill_dragon_guardians:
         type: kill
         mob: ENDER_DRAGON_GUARDIAN_V1
         amount: 5
         data: []
-      esmeraldas:
+      emerald_blocks:
         type: collect
         item: EMERALD_BLOCK
         amount: 2
         data: []
-      netherstars:
+      nether_stars:
         type: collect
         item: NETHER_STAR
         amount: 2
@@ -369,7 +369,7 @@ quests:
   cazador_imposible:
     name: '&6Cazador de lo Imposible'
     ask-message: '&6[Erika]: &7Tu nombre ya se susurra con admiración. Conviértelo en leyenda enfrentando a los seres más poderosos de este mundo.'
-    finish-message: '&6[Erika]: &7Has logrado lo imposible. Tu fuerza supera la comprensión de mortales comunes.'
+    finish-message: '&6[Erika]: &7Las leyendas sobre ti se extienden por todas las tierras. Tu fuerza ahora rivaliza con la de los antiguos héroes.'
     requirements:
       quest-points: 140
       permission: habilidades.fuerza.7
@@ -388,17 +388,17 @@ quests:
         mob: WITHER_BOSS_V1
         amount: 3
         data: []
-      kill_enderdragons:
+      kill_dragon_guardians:
         type: kill
         mob: ENDER_DRAGON_GUARDIAN_V1
         amount: 3
         data: []
-      esmeraldas:
+      emerald_blocks:
         type: collect
         item: EMERALD_BLOCK
         amount: 3
         data: []
-      netherstars:
+      nether_stars:
         type: collect
         item: NETHER_STAR
         amount: 3
@@ -419,12 +419,12 @@ quests:
         amount: 1
       category: cazador
       requires:
-      - cazador_mitologico
+      - cazador_bestias_mitologicas
       
   cazador_divino:
     name: '&6Cazador Divino'
     ask-message: '&6[Erika]: &7El dragón ancestral... Dicen que es inmortal, pero quizás tú puedas probar lo contrario. Este desafío te llevará más allá de los límites mortales.'
-    finish-message: '&6[Erika]: &7Has trascendido lo mortal. Tu fuerza ahora rivaliza con la de los dioses antiguos.'
+    finish-message: '&6[Erika]: &7¡Has derrotado al dragón ancestral! Tu fuerza ahora es prácticamente divina.'
     requirements:
       quest-points: 180
       permission: habilidades.fuerza.8
@@ -438,7 +438,7 @@ quests:
       quest-points: 45
       permission: habilidades.fuerza.9
     objectives:
-      kill_enderdragon:
+      kill_dragon:
         type: kill
         mob: ENDER_DRAGON_BOSS_V1
         amount: 1
@@ -448,12 +448,12 @@ quests:
         mob: WITHER_BOSS_V1
         amount: 5
         data: []
-      esmeraldas:
+      emerald_blocks:
         type: collect
         item: EMERALD_BLOCK
         amount: 5
         data: []
-      netherstars:
+      nether_stars:
         type: collect
         item: NETHER_STAR
         amount: 5
@@ -479,7 +479,7 @@ quests:
   cazador_dioses:
     name: '&6Cazador de Dioses'
     ask-message: '&6[Erika]: &7Los tres reyes primordiales deben caer ante ti. Ningún mortal lo ha logrado jamás, pero tú no eres un simple mortal, ¿verdad? Completa esta prueba y tu fuerza rivalizará con la de los dioses antiguos.'
-    finish-message: '&6[Erika]: &7Has completado lo inconcebible. Tu fuerza es ahora absoluta, divina, perfecta.'
+    finish-message: '&6[Erika]: &7¡Has logrado lo imposible! Has derrotado a los tres reyes primordiales. Tu fuerza ahora es legendaria, digna de los dioses mismos.'
     requirements:
       quest-points: 225
       permission: habilidades.fuerza.9
@@ -488,14 +488,14 @@ quests:
       - effect give %player% strength 999999 9 true
       - tellraw %player% {"text":"¡Has alcanzado Fuerza X, el poder máximo!","color":"gold","bold":true}
       - title %player% title {"text":"¡Cazador de Dioses!","color":"gold","bold":true}
-      - title %player% subtitle {"text":"Has dominado el poder de la Fuerza","color":"yellow"}
+      - title %player% subtitle {"text":"Has dominado el poder de la Fuerza","color":"white"}
       items:
       - TOKEN_MISION 50
       money: 1000
       quest-points: 50
       permission: habilidades.fuerza.10
     objectives:
-      kill_enderdragon:
+      kill_dragon:
         type: kill
         mob: ENDER_DRAGON_BOSS_V1
         amount: 1
@@ -505,17 +505,17 @@ quests:
         mob: WITHER_BOSS_V1
         amount: 1
         data: []
-      kill_elderguardian:
+      kill_guardian:
         type: kill
         mob: ELDER_GUARDIAN_TITAN_V1
         amount: 1
         data: []
-      esmeraldas:
+      emerald_blocks:
         type: collect
         item: EMERALD_BLOCK
         amount: 10
         data: []
-      netherstars:
+      nether_stars:
         type: collect
         item: NETHER_STAR
         amount: 10

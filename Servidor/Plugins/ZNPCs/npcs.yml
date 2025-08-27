@@ -1,0 +1,276 @@
+# Configuración completa de NPCs para ServerLewisNadone
+
+# Erika la Cazadora
+Erika:
+  name: '&6&lErika_la_Cazadora'
+  location:
+    world: world
+    x: 100
+    y: 64
+    z: 100
+    yaw: 0
+    pitch: 0
+  skin:
+    texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGNhYzk3NzRkYTEyMTcyNDg1MzJjZTE0N2Y3ODMxZjY3YTEyZmRjY2ExY2YwY2I0YjM4NDhkZTZiYzY4In19fQ=="
+    url: "https://www.minecraftskins.com/uploads/skins/2025/04/20/hunter-girl-23209587.png?v901"
+  settings:
+    lookAtPlayer: true
+    interactCooldown: 2000
+  hologram:
+    lines:
+      - '&6&lErika la Cazadora'
+      - '&7Maestra de la Fuerza'
+      - '&7"La fuerza se forja en la caza"'
+  equipment:
+    HAND: "BOW"
+  actions:
+    - 'MESSAGE &6[Erika la Cazadora]: &7¡Saludos, aventurero! Soy la maestra cazadora de este pueblo.'
+    - 'MESSAGE &6[Erika la Cazadora]: &7Si buscas dominar el arte del combate y la fuerza, has venido al lugar indicado.'
+    - 'MESSAGE &6[Erika la Cazadora]: &7Tengo &c10 niveles de misiones &7para ti, desde principiante hasta legendario.'
+    - 'CMD q category cazador'
+    - 'COOLDOWN 0 3'
+
+# Marta la Guardiana
+Marta:
+  name: '&c&lMarta_la_Guardiana'
+  location:
+    world: world
+    x: 110
+    y: 64
+    z: 100
+    yaw: 0
+    pitch: 0
+  skin:
+    texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTZmYzg1NGJkODYwNTZlZDllYmZlZWZiYjRlYTVlYzk5YWZkM2NmYTY5ZWFjZDdhZGJiYWYyYzQ1YWI1In19fQ=="
+    url: "https://www.minecraftskins.com/uploads/skins/2015/05/31/sara-the-female-guard-knight-5252565.png"
+  settings:
+    lookAtPlayer: true
+    interactCooldown: 2000
+  hologram:
+    lines:
+      - '&c&lMarta la Guardiana'
+      - '&7Maestra de la Resistencia'
+      - '&7"Mi escudo nunca falla"'
+  equipment:
+    HAND: "IRON_SWORD"
+    OFFHAND: "SHIELD"
+    HELMET: "IRON_HELMET"
+  actions:
+    - 'MESSAGE &c[Marta la Guardiana]: &7La seguridad del pueblo es mi responsabilidad.'
+    - 'MESSAGE &c[Marta la Guardiana]: &7Si quieres aprender a resistir los ataques más poderosos, puedo entrenarte.'
+    - 'MESSAGE &c[Marta la Guardiana]: &7Mis &c3 niveles de misiones &7te convertirán en un muro impenetrable.'
+    - 'CMD q category guardian'
+    - 'COOLDOWN 0 3'
+
+# Sae la Sanadora
+Sae:
+  name: '&a&lSae_la_Sanadora'
+  location:
+    world: world
+    x: 120
+    y: 64
+    z: 100
+    yaw: 0
+    pitch: 0
+  skin:
+    texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThhNTlkMzkzOGE2MjYyNmQzMzMwOTZiODgxYzc0YmEyODYxZDU5ZTY0YjU3YzQyZjY2YjU5OGVmN2M0NSJ9fX0="
+    url: "https://www.minecraftskins.com/uploads/skins/2016/03/12/healer-girl-6589432.png"
+  settings:
+    lookAtPlayer: true
+    interactCooldown: 2000
+  hologram:
+    lines:
+      - '&a&lSae la Sanadora'
+      - '&7Maestra de la Salud'
+      - '&7"La salud es el mayor tesoro"'
+  equipment:
+    HAND: "POTION"
+  actions:
+    - 'MESSAGE &a[Sae la Sanadora]: &7Bienvenido a mi santuario de curación.'
+    - 'MESSAGE &a[Sae la Sanadora]: &7El arte de fortalecer tu propia vida es tan importante como el de sanar a otros.'
+    - 'MESSAGE &a[Sae la Sanadora]: &7Mis &c5 niveles de misiones &7te enseñarán a expandir tu vitalidad.'
+    - 'CMD q category sanador'
+    - 'COOLDOWN 0 3'
+
+# Lia la Mensajera
+Lia:
+  name: '&b&lLia_la_Mensajera'
+  location:
+    world: world
+    x: 130
+    y: 64
+    z: 100
+    yaw: 0
+    pitch: 0
+  skin:
+    texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDNkMDRkYjRhOGU1YzBmZDQ0OGJmNTQ4ZThjMWY1ZGQxMzlhOWMzN2ZjZDRmOGI4YjY3ZGE5ZjYxZGY4YiJ9fX0="
+    url: "https://www.minecraftskins.com/uploads/skins/2017/08/15/messenger-girl-9876543.png"
+  settings:
+    lookAtPlayer: true
+    interactCooldown: 2000
+  hologram:
+    lines:
+      - '&b&lLia la Mensajera'
+      - '&7Maestra de la Velocidad'
+      - '&3Mensajera Rebelde'
+  equipment:
+    HAND: "PAPER"
+  actions:
+    - 'MESSAGE &b[Lia la Mensajera]: &7¡Hey! ¿Te gustaría ser tan rápido como el viento?'
+    - 'MESSAGE &b[Lia la Mensajera]: &7¡No tengo todo el día! Hay mensajes que entregar y carreras que ganar.'
+    - 'MESSAGE &b[Lia la Mensajera]: &7Mis &c3 niveles de misiones &7pondrán a prueba tu velocidad y agilidad.'
+    - 'CMD q category mensajero'
+    - 'COOLDOWN 0 2'
+
+# Ícaro el Acróbata
+Icaro:
+  name: '&d&lIcaro_el_Acrobata'
+  location:
+    world: world
+    x: 140
+    y: 64
+    z: 100
+    yaw: 0
+    pitch: 0
+  skin:
+    texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjZmYjg3YTBhMDVmYmNiNjhkYWM0YTE3NTIxYzgzMjk0ZDllN2JmYTM2MzcxODdjNDQ4ZDIyYzU1ZmMifX19"
+    url: "https://www.minecraftskins.com/uploads/skins/2018/06/22/circus-acrobat-1234567.png"
+  settings:
+    lookAtPlayer: true
+    interactCooldown: 2000
+  hologram:
+    lines:
+      - '&d&lÍcaro el Acróbata'
+      - '&7Maestro del Salto'
+      - '&5Maestro del Circo'
+  equipment:
+    HAND: "STICK"
+  actions:
+    - 'MESSAGE &d[Ícaro el Acróbata]: &7¡Saludos desde las alturas, amigo!'
+    - 'MESSAGE &d[Ícaro el Acróbata]: &7El arte del parkour y el salto es mi especialidad.'
+    - 'MESSAGE &d[Ícaro el Acróbata]: &7Mis &c4 niveles de misiones &7te llevarán a alcanzar alturas que jamás imaginaste.'
+    - 'CMD q category acrobata'
+    - 'COOLDOWN 0 3'
+
+# Paúl el Minero
+Paul:
+  name: '&8&lPaul_el_Minero'
+  location:
+    world: world
+    x: 150
+    y: 64
+    z: 100
+    yaw: 0
+    pitch: 0
+  skin:
+    texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODJhYjZjNzljOGQxYTU3NTNmMjE5YzM1OGJlZTJiYjY3NDQ5ZDVjYTRjZjRiYjNjZDQ3NjE4OWZiZTMxODUifX19"
+    url: "https://www.minecraftskins.com/uploads/skins/2019/02/14/old-miner-9876543.png"
+  settings:
+    lookAtPlayer: true
+    interactCooldown: 2000
+  hologram:
+    lines:
+      - '&8&lPaúl el Minero'
+      - '&7Maestro de la Minería'
+      - '&7Anciano Minero'
+  equipment:
+    HAND: "IRON_PICKAXE"
+    HELMET: "IRON_HELMET"
+  actions:
+    - 'MESSAGE &8[Paúl el Minero]: &7*tose* Las profundidades guardan secretos y tesoros, joven.'
+    - 'MESSAGE &8[Paúl el Minero]: &7Después de 50 años bajo tierra, he aprendido un par de cosas sobre minería.'
+    - 'MESSAGE &8[Paúl el Minero]: &7Mis &c10 niveles de misiones &7te convertirán en un verdadero titán de la minería.'
+    - 'CMD q category minero'
+    - 'COOLDOWN 0 3'
+
+# Helena la Curandera
+Helena:
+  name: '&f&lHelena_la_Curandera'
+  location:
+    world: world
+    x: 160
+    y: 64
+    z: 100
+    yaw: 0
+    pitch: 0
+  skin:
+    texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTRkYTM2YzIxZjg1YTNlODY5YjM2YWVjODNhZmZkMzU0MzJmYWM4YmNhODljODEyZDZhZmZkMTYxZWFkNzU3In19fQ=="
+    url: "https://www.minecraftskins.com/uploads/skins/2020/01/10/holy-priestess-5432167.png"
+  settings:
+    lookAtPlayer: true
+    interactCooldown: 2000
+  hologram:
+    lines:
+      - '&f&lHelena la Curandera'
+      - '&7Maestra de la Regeneración'
+      - '&7Bendecidora de Guerreros'
+  equipment:
+    HAND: "GOLDEN_HOE"
+  actions:
+    - 'MESSAGE &f[Helena la Curandera]: &7La verdadera curación viene de dentro, querido.'
+    - 'MESSAGE &f[Helena la Curandera]: &7Mis conocimientos ancestrales pueden enseñarte a regenerar tu cuerpo.'
+    - 'MESSAGE &f[Helena la Curandera]: &7Tengo &c3 niveles de misiones &7para compartir con almas bondadosas como tú.'
+    - 'CMD q category curandera'
+    - 'COOLDOWN 0 3'
+
+# Alcalde Tomás
+Alcalde:
+  name: '&e&lAlcalde_Tomas'
+  location:
+    world: world
+    x: 170
+    y: 64
+    z: 100
+    yaw: 0
+    pitch: 0
+  skin:
+    texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTY4YjU2YzQzYzk2NmM4ZDU3NGZhYjJkYTc4MjFjNmE0NGJmNDI4OGI1ZmJjMjgxN2Q0ZmVlZTc0OWZkMWUifX19"
+    url: "https://www.minecraftskins.com/uploads/skins/2019/11/05/mayor-hero-7654321.png"
+  settings:
+    lookAtPlayer: true
+    interactCooldown: 2000
+  hologram:
+    lines:
+      - '&e&lAlcalde Tomás'
+      - '&7Maestro de la Villa'
+      - '&6Héroe de Guerra'
+  equipment:
+    HAND: "GOLDEN_SWORD"
+    CHESTPLATE: "GOLDEN_CHESTPLATE"
+  actions:
+    - 'MESSAGE &e[Alcalde Tomás]: &7¡Bienvenido a nuestro humilde pueblo, forastero!'
+    - 'MESSAGE &e[Alcalde Tomás]: &7Como alcalde, mi deber es proteger a nuestra gente de las amenazas exteriores.'
+    - 'MESSAGE &e[Alcalde Tomás]: &7Tengo &c20 niveles de misiones &7que te convertirán en un verdadero héroe para nuestro pueblo.'
+    - 'CMD q category alcalde'
+    - 'COOLDOWN 0 4'
+
+# Bruno el Chef
+Bruno:
+  name: '&6&lBruno_el_Chef'
+  location:
+    world: world
+    x: 180
+    y: 64
+    z: 100
+    yaw: 0
+    pitch: 0
+  skin:
+    texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDM0Y2I1YTM2N2Q1NGQwMTI3YjhhZWE1M2Y1OTQ5ODA1ZWM3YWVlNjY3YTA5OTQ3Mjk5YzIyNTUwN2M5MzYifX19"
+    url: "https://www.minecraftskins.com/uploads/skins/2018/09/18/thin-chef-3456789.png"
+  settings:
+    lookAtPlayer: true
+    interactCooldown: 2000
+  hologram:
+    lines:
+      - '&6&lBruno el Chef'
+      - '&7Maestro de la Saturación'
+      - '&4Maestro Culinario'
+  equipment:
+    HAND: "WOODEN_SWORD"
+    HELMET: "WHITE_LEATHER_HELMET"
+  actions:
+    - 'MESSAGE &6[Bruno el Chef]: &7¡Ah! ¡Un nuevo rostro en mi cocina! Bienvenido, bienvenido.'
+    - 'MESSAGE &6[Bruno el Chef]: &7La buena comida no solo alimenta el cuerpo, sino también el espíritu.'
+    - 'MESSAGE &6[Bruno el Chef]: &7Mis &c3 niveles de misiones &7te enseñarán el arte de la verdadera nutrición.'
+    - 'CMD q category cocinero'
+    - 'COOLDOWN 0 3'

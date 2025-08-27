@@ -1,0 +1,57 @@
+# Configuración inicial de ítems para ServerLewisNadone
+
+TOKEN_MISION:
+  Id: prismarine_shard
+  Display: '&eToken de Misión'
+  Lore:
+    - '&7Canjea este token por recompensas especiales.'
+    - '&bBrilla con energía misteriosa.'
+  Options:
+    Unbreakable: true
+    HideFlags: 63
+  Enchantments:
+    - MENDING:1
+
+META_CARRERA:
+  Id: paper
+  Display: '&bMeta de Carrera'
+  Lore:
+    - '&7Certifica que has cruzado la meta en una carrera especial.'
+    - '&b¡Demuestra tu velocidad y habilidad!'
+  Options:
+    Unbreakable: true
+    HideFlags: 63
+
+META_PARKOUR:
+  Id: paper
+  Display: '&aMeta de Parkour'
+  Lore:
+    - '&7Certifica que has superado un desafiante reto de parkour.'
+    - '&a¡Tu destreza y agilidad quedan marcadas en este papel!'
+  Options:
+    Unbreakable: true
+    HideFlags: 63
+
+META_CURACION:
+  Id: paper
+  Display: '&dMeta de Curación'
+  Lore:
+    - '&7Certifica que has completado un reto de curación.'
+    - '&d¡Tu habilidad para sanar ha sido reconocida!'
+  Options:
+    Unbreakable: true
+    HideFlags: 63
+
+Arco_De_Atreus:
+  Id: bow
+  Display: '&bArco de Atreus'
+  Lore:
+    - '&7Un arco legendario usado por un antiguo héroe.'
+    - '&b¡Sus flechas nunca fallan el blanco!'
+  Options:
+    Unbreakable: true
+    HideFlags: 63
+  Enchantments:
+    - POWER:3
+    - PUNCH:1
+    - INFINITY:1

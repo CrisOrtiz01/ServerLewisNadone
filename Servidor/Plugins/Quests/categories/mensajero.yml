@@ -1,0 +1,17 @@
+display: '&b&lMisiones de Velocidad'
+description:
+  - '&7Lia la Mensajera te ofrece misiones para poner a prueba'
+  - '&7tu velocidad y agilidad en carreras desafiantes.'
+  - '&7Completa estas misiones para obtener la habilidad de Velocidad.'
+  - '&7"El viento siempre sopla a favor de los rápidos."'
+permission: ''
+cat-item: SUGAR
+gui:
+  title: '&b&lMisiones de Lia la Mensajera'
+  size: 27
+  fill: BLACK_STAINED_GLASS_PANE
+  show-unavailable: true
+  order:
+    by: ID
+    ascending: true
+  slots: 11,12,13
