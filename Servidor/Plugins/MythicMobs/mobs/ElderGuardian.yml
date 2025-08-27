@@ -12,7 +12,7 @@ ElderGuardian_Titan:
   Drops:
     - minecraft:prismarine_crystals 32-64 100
     - minecraft:sponges 16-32 60
-    - TOKEN_MISION 128 100
+    - mm:TOKEN_MISION 128 100
     - minecraft:trident 1 50
   Skills:
     - effect:particles{p=water_splash;a=40;hs=1;vs=2;s=0.5;y=2} @Self ~onTimer:20

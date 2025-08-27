@@ -6,7 +6,7 @@ Vindicator_Feroz:
   Drops:
     - minecraft:iron_axe 1 10
     - minecraft:iron_ingot 2-4 20
-    - TOKEN_MISION 3 100
+    - mm:TOKEN_MISION 3 100
   Skills:
     - effect:particles{p=block_dust;minecraft:iron_block;a=10;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
     - damage{d=12} @LivingEntitiesInRadius{r=2} ~onAttack

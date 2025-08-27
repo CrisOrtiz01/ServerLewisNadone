@@ -6,7 +6,7 @@ Ghast_Fantasmal:
   Drops:
     - minecraft:ghast_tear 2-3 100
     - minecraft:gunpowder 2-12 100
-    - TOKEN_MISION 24-32 100
+    - mm:TOKEN_MISION 24-32 100
     - minecraft:tearsdisk 1 100
   Skills:
     - effect:particles{p=flame;a=20;hs=1;vs=1;s=0.3;y=2} @Self ~onTimer:20

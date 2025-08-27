@@ -10,7 +10,7 @@ quests:
       - effect give %player% regeneration 999999 0 true
       - tellraw %player% {"text":"Has obtenido Regeneración I de forma permanente","color":"white"}
       items:
-      - TOKEN_MISION 5
+      - mm:TOKEN_MISION 5
       money: 100
       quest-points: 5
       permission: habilidades.regeneracion.1
@@ -34,7 +34,7 @@ quests:
           potion-type: INSTANT_HEAL
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 35
         data:
           display-name: '&eToken de Misión'
@@ -60,7 +60,7 @@ quests:
       - effect give %player% regeneration 999999 1 true
       - tellraw %player% {"text":"Has mejorado a Regeneración II de forma permanente","color":"white"}
       items:
-      - TOKEN_MISION 10
+      - mm:TOKEN_MISION 10
       money: 200
       quest-points: 10
       permission: habilidades.regeneracion.2
@@ -78,7 +78,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 70
         data:
           display-name: '&eToken de Misión'
@@ -108,7 +108,7 @@ quests:
       - title %player% title {"text":"¡Maestro Sanador!","color":"white","bold":true}
       - title %player% subtitle {"text":"Has dominado el poder de la Regeneración","color":"gray"}
       items:
-      - TOKEN_MISION 15
+      - mm:TOKEN_MISION 15
       money: 300
       quest-points: 15
       permission: habilidades.regeneracion.3
@@ -126,7 +126,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 100
         data:
           display-name: '&eToken de Misión'

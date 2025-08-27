@@ -7,7 +7,7 @@ PolarBear_Gigante:
   Drops:
     - minecraft:fish 3-5 100
     - minecraft:ice 2-40 100
-    - TOKEN_MISION 2 100
+    - mm:TOKEN_MISION 2 100
   Skills:
     - effect:particles{p=snowball;a=15;hs=0.7;vs=1;s=0.2;y=1} @Self ~onTimer:20
     - knockback{strength=2} @LivingEntitiesInRadius{r=2} ~onAttack

@@ -10,19 +10,19 @@ quests:
       - effect give %player% strength 999999 0 true
       - tellraw %player% {"text":"Has obtenido Fuerza I de forma permanente","color":"gold"}
       items:
-      - TOKEN_MISION 5
+      - mm:TOKEN_MISION 5
       money: 100
       quest-points: 5
       permission: habilidades.fuerza.1
     objectives:
       kill_zombies:
         type: kill
-        mob: ZOMBIE_CAPITAN_V1
+        mob: Zombie_Corrupto
         amount: 20
         data: []
       kill_skeletons:
         type: kill
-        mob: SKELETON_TACTICO_V1
+        mob: Skeleton_Guerrero
         amount: 20
         data: []
       carne:
@@ -37,7 +37,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 50
         data:
           display-name: '&eToken de Misión'
@@ -63,19 +63,19 @@ quests:
       - effect give %player% strength 999999 1 true
       - tellraw %player% {"text":"Has mejorado a Fuerza II de forma permanente","color":"gold"}
       items:
-      - TOKEN_MISION 10
+      - mm:TOKEN_MISION 10
       money: 200
       quest-points: 10
       permission: habilidades.fuerza.2
     objectives:
       kill_vindicators:
         type: kill
-        mob: VINDICATOR_DEMOLEDOR_V1
+        mob: Vindicator_Feroz
         amount: 10
         data: []
       kill_evokers:
         type: kill
-        mob: EVOKER_BRUJO_V1
+        mob: Evoker_Arcano
         amount: 10
         data: []
       blaze_rods:
@@ -85,7 +85,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 70
         data:
           display-name: '&eToken de Misión'
@@ -113,19 +113,19 @@ quests:
       - effect give %player% strength 999999 2 true
       - tellraw %player% {"text":"Has mejorado a Fuerza III de forma permanente","color":"gold"}
       items:
-      - TOKEN_MISION 15
+      - mm:TOKEN_MISION 15
       money: 300
       quest-points: 15
       permission: habilidades.fuerza.3
     objectives:
       kill_wither_skeletons:
         type: kill
-        mob: WITHER_SKELETON_CAPITAN_V1
+        mob: WitherSkeleton_Miniboss
         amount: 5
         data: []
       kill_blazes:
         type: kill
-        mob: BLAZE_FURIA_V1
+        mob: GuardianDeLasCenizas
         amount: 5
         data: []
       iron_blocks:
@@ -135,7 +135,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 80
         data:
           display-name: '&eToken de Misión'
@@ -163,19 +163,19 @@ quests:
       - effect give %player% strength 999999 3 true
       - tellraw %player% {"text":"Has mejorado a Fuerza IV de forma permanente","color":"gold"}
       items:
-      - TOKEN_MISION 20
+      - mm:TOKEN_MISION 20
       money: 400
       quest-points: 20
       permission: habilidades.fuerza.4
     objectives:
       kill_pillagers:
         type: kill
-        mob: PILLAGER_RAIDER_V1
+        mob: Pillager_Asaltante
         amount: 3
         data: []
       kill_vindicators:
         type: kill
-        mob: VINDICATOR_DEMOLEDOR_V1
+        mob: Vindicator_Feroz
         amount: 3
         data: []
       diamond_blocks:
@@ -185,7 +185,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 100
         data:
           display-name: '&eToken de Misión'
@@ -213,14 +213,14 @@ quests:
       - effect give %player% strength 999999 4 true
       - tellraw %player% {"text":"Has mejorado a Fuerza V de forma permanente","color":"gold"}
       items:
-      - TOKEN_MISION 25
+      - mm:TOKEN_MISION 25
       money: 500
       quest-points: 25
       permission: habilidades.fuerza.5
     objectives:
       kill_wither_skeletons:
         type: kill
-        mob: WITHER_SKELETON_CAPITAN_V1
+        mob: WitherSkeleton_Miniboss
         amount: 10
         data: []
       kill_magma_cubes:
@@ -245,7 +245,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 120
         data:
           display-name: '&eToken de Misión'
@@ -273,14 +273,14 @@ quests:
       - effect give %player% strength 999999 5 true
       - tellraw %player% {"text":"Has mejorado a Fuerza VI de forma permanente","color":"gold"}
       items:
-      - TOKEN_MISION 30
+      - mm:TOKEN_MISION 30
       money: 600
       quest-points: 30
       permission: habilidades.fuerza.6
     objectives:
       kill_wither:
         type: kill
-        mob: WITHER_BOSS_V1
+        mob: Wither_Supremo
         amount: 1
         data: []
       emerald_block:
@@ -295,7 +295,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 150
         data:
           display-name: '&eToken de Misión'
@@ -323,19 +323,19 @@ quests:
       - effect give %player% strength 999999 6 true
       - tellraw %player% {"text":"Has mejorado a Fuerza VII de forma permanente","color":"gold"}
       items:
-      - TOKEN_MISION 35
+      - mm:TOKEN_MISION 35
       money: 700
       quest-points: 35
       permission: habilidades.fuerza.7
     objectives:
       kill_wither:
         type: kill
-        mob: WITHER_BOSS_V1
+        mob: Wither_Supremo
         amount: 2
         data: []
       kill_dragon_guardians:
         type: kill
-        mob: ENDER_DRAGON_GUARDIAN_V1
+        mob: EnderDragon_JefeFinal
         amount: 5
         data: []
       emerald_blocks:
@@ -350,7 +350,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 180
         data:
           display-name: '&eToken de Misión'
@@ -378,19 +378,19 @@ quests:
       - effect give %player% strength 999999 7 true
       - tellraw %player% {"text":"Has mejorado a Fuerza VIII de forma permanente","color":"gold"}
       items:
-      - TOKEN_MISION 40
+      - mm:TOKEN_MISION 40
       money: 800
       quest-points: 40
       permission: habilidades.fuerza.8
     objectives:
       kill_wither:
         type: kill
-        mob: WITHER_BOSS_V1
+        mob: Wither_Supremo
         amount: 3
         data: []
       kill_dragon_guardians:
         type: kill
-        mob: ENDER_DRAGON_GUARDIAN_V1
+        mob: EnderDragon_JefeFinal
         amount: 3
         data: []
       emerald_blocks:
@@ -405,7 +405,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 210
         data:
           display-name: '&eToken de Misión'
@@ -433,19 +433,19 @@ quests:
       - effect give %player% strength 999999 8 true
       - tellraw %player% {"text":"Has mejorado a Fuerza IX de forma permanente","color":"gold"}
       items:
-      - TOKEN_MISION 45
+      - mm:TOKEN_MISION 45
       money: 900
       quest-points: 45
       permission: habilidades.fuerza.9
     objectives:
       kill_dragon:
         type: kill
-        mob: ENDER_DRAGON_BOSS_V1
+        mob: EnderDragon_JefeFinal
         amount: 1
         data: []
       kill_withers:
         type: kill
-        mob: WITHER_BOSS_V1
+        mob: Wither_Supremo
         amount: 5
         data: []
       emerald_blocks:
@@ -460,7 +460,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 240
         data:
           display-name: '&eToken de Misión'
@@ -490,24 +490,24 @@ quests:
       - title %player% title {"text":"¡Cazador de Dioses!","color":"gold","bold":true}
       - title %player% subtitle {"text":"Has dominado el poder de la Fuerza","color":"white"}
       items:
-      - TOKEN_MISION 50
+      - mm:TOKEN_MISION 50
       money: 1000
       quest-points: 50
       permission: habilidades.fuerza.10
     objectives:
       kill_dragon:
         type: kill
-        mob: ENDER_DRAGON_BOSS_V1
+        mob: EnderDragon_JefeFinal
         amount: 1
         data: []
       kill_wither:
         type: kill
-        mob: WITHER_BOSS_V1
+        mob: Wither_Supremo
         amount: 1
         data: []
       kill_guardian:
         type: kill
-        mob: ELDER_GUARDIAN_TITAN_V1
+        mob: ElderGuardian_Titan
         amount: 1
         data: []
       emerald_blocks:
@@ -522,7 +522,7 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 300
         data:
           display-name: '&eToken de Misión'

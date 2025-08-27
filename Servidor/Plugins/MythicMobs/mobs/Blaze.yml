@@ -6,7 +6,7 @@ GuardianDeLasCenizas:
   Armor: 4
   Drops:
     - minecraft:blaze_rod 1-5 100
-    - TOKEN_MISION 3 100
+    - mm:TOKEN_MISION 3 100
   Skills:
     - effect:particles{p=lava;a=30;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
     - effect:particles{p=ash;a=10;hs=0.7;vs=0.5;s=0.1;y=1} @Self ~onTimer:40

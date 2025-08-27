@@ -6,7 +6,7 @@ MagmaCube_Furia:
   Armor: 4
   Drops:
     - minecraft:magma_cream 2-4 100
-    - TOKEN_MISION 2 100
+    - mm:TOKEN_MISION 2 100
   Skills:
     - effect:particles{p=flame;a=20;hs=0.7;vs=1;s=0.2;y=1} @Self ~onTimer:20
     - ignite{ticks=80} @LivingEntitiesInRadius{r=3} ~onAttack

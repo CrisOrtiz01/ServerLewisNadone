@@ -6,7 +6,7 @@ Shulker_Mistico:
   Armor: 4
   Drops:
     - minecraft:shulker_shell 1-4 70
-    - TOKEN_MISION 2 100
+    - mm:TOKEN_MISION 2 100
   Skills:
     - effect:particles{p=portal;a=10;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
     - levitate{duration=80} @LivingEntitiesInRadius{r=2} ~onAttack
