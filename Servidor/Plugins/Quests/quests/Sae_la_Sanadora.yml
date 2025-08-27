@@ -14,7 +14,6 @@ quests:
       money: 100
       quest-points: 5
       permission: habilidades.saludextra.1
-    objectives:
       kill_pillagers:
         type: kill
         mob: Pillager_Asaltante
@@ -36,7 +35,6 @@ quests:
         amount: 60
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -53,6 +51,8 @@ quests:
     requirements:
       quest-points: 5
       permission: habilidades.saludextra.1
+      quests-completed:
+      - aprendiz_sanacion
     rewards:
       commands:
       - effect give %player% health_boost 999999 1 true
@@ -62,7 +62,6 @@ quests:
       money: 200
       quest-points: 10
       permission: habilidades.saludextra.2
-    objectives:
       kill_pillagers:
         type: kill
         mob: Pillager_Asaltante
@@ -84,7 +83,6 @@ quests:
         amount: 80
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -103,6 +101,8 @@ quests:
     requirements:
       quest-points: 15
       permission: habilidades.saludextra.2
+      quests-completed:
+      - sanador_experimentado
     rewards:
       commands:
       - effect give %player% health_boost 999999 2 true
@@ -112,7 +112,6 @@ quests:
       money: 300
       quest-points: 15
       permission: habilidades.saludextra.3
-    objectives:
       kill_pillagers:
         type: kill
         mob: Pillager_Asaltante
@@ -134,7 +133,6 @@ quests:
         amount: 100
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -153,6 +151,8 @@ quests:
     requirements:
       quest-points: 30
       permission: habilidades.saludextra.3
+      quests-completed:
+      - maestro_sanador
     rewards:
       commands:
       - effect give %player% health_boost 999999 3 true
@@ -162,7 +162,6 @@ quests:
       money: 400
       quest-points: 20
       permission: habilidades.saludextra.4
-    objectives:
       kill_pillagers:
         type: kill
         mob: Pillager_Asaltante
@@ -184,7 +183,6 @@ quests:
         amount: 120
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -203,6 +201,8 @@ quests:
     requirements:
       quest-points: 50
       permission: habilidades.saludextra.4
+      quests-completed:
+      - medico_batalla
     rewards:
       commands:
       - effect give %player% health_boost 999999 4 true
@@ -214,7 +214,6 @@ quests:
       money: 500
       quest-points: 25
       permission: habilidades.saludextra.5
-    objectives:
       kill_pillagers:
         type: kill
         mob: Pillager_Asaltante
@@ -236,7 +235,6 @@ quests:
         amount: 140
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400

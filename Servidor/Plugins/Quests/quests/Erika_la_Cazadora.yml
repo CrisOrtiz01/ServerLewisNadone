@@ -14,7 +14,6 @@ quests:
       money: 100
       quest-points: 5
       permission: habilidades.fuerza.1
-    objectives:
       kill_zombies:
         type: kill
         mob: Zombie_Corrupto
@@ -41,7 +40,6 @@ quests:
         amount: 50
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -50,7 +48,7 @@ quests:
         infinite: false
         amount: 1
       category: cazador
-      
+     
   cazador_experimentado:
     name: '&6Cazador Experimentado'
     ask-message: '&6[Erika]: &7Los pillagers han formado una alianza con magos oscuros. Elimínalos y trae pruebas de tu incursión al Nether. Tu fuerza crecerá con cada enemigo que superes.'
@@ -58,6 +56,8 @@ quests:
     requirements:
       quest-points: 5
       permission: habilidades.fuerza.1
+      quests-completed:
+      - cazador_iniciado
     rewards:
       commands:
       - effect give %player% strength 999999 1 true
@@ -67,7 +67,6 @@ quests:
       money: 200
       quest-points: 10
       permission: habilidades.fuerza.2
-    objectives:
       kill_vindicators:
         type: kill
         mob: Vindicator_Feroz
@@ -89,7 +88,6 @@ quests:
         amount: 70
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -100,7 +98,7 @@ quests:
       category: cazador
       requires:
       - cazador_iniciado
-      
+     
   cazador_veterano:
     name: '&6Cazador Veterano'
     ask-message: '&6[Erika]: &7El Nether se agita. Sus criaturas más poderosas deben ser controladas. Enfréntalas y forja tu cuerpo en el fuego eterno de esa dimensión.'
@@ -108,6 +106,8 @@ quests:
     requirements:
       quest-points: 15
       permission: habilidades.fuerza.2
+      quests-completed:
+      - cazador_experimentado
     rewards:
       commands:
       - effect give %player% strength 999999 2 true
@@ -117,7 +117,6 @@ quests:
       money: 300
       quest-points: 15
       permission: habilidades.fuerza.3
-    objectives:
       kill_wither_skeletons:
         type: kill
         mob: WitherSkeleton_Miniboss
@@ -139,7 +138,6 @@ quests:
         amount: 80
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -158,6 +156,8 @@ quests:
     requirements:
       quest-points: 30
       permission: habilidades.fuerza.3
+      quests-completed:
+      - cazador_veterano
     rewards:
       commands:
       - effect give %player% strength 999999 3 true
@@ -167,7 +167,6 @@ quests:
       money: 400
       quest-points: 20
       permission: habilidades.fuerza.4
-    objectives:
       kill_pillagers:
         type: kill
         mob: Pillager_Asaltante
@@ -189,7 +188,6 @@ quests:
         amount: 100
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -208,6 +206,8 @@ quests:
     requirements:
       quest-points: 50
       permission: habilidades.fuerza.4
+      quests-completed:
+      - cazador_elite
     rewards:
       commands:
       - effect give %player% strength 999999 4 true
@@ -217,7 +217,6 @@ quests:
       money: 500
       quest-points: 25
       permission: habilidades.fuerza.5
-    objectives:
       kill_wither_skeletons:
         type: kill
         mob: WitherSkeleton_Miniboss
@@ -249,7 +248,6 @@ quests:
         amount: 120
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -268,6 +266,8 @@ quests:
     requirements:
       quest-points: 75
       permission: habilidades.fuerza.5
+      quests-completed:
+      - maestro_cazador
     rewards:
       commands:
       - effect give %player% strength 999999 5 true
@@ -277,7 +277,6 @@ quests:
       money: 600
       quest-points: 30
       permission: habilidades.fuerza.6
-    objectives:
       kill_wither:
         type: kill
         mob: Wither_Supremo
@@ -299,7 +298,6 @@ quests:
         amount: 150
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -310,7 +308,7 @@ quests:
       category: cazador
       requires:
       - maestro_cazador
-      
+     
   cazador_bestias_mitologicas:
     name: '&6Cazador de Bestias Mitológicas'
     ask-message: '&6[Erika]: &7Pocos han visto a los guardianes del dragón y vivido para contarlo. Demuéstrame que eres digno de cantar la hazaña.'
@@ -318,6 +316,8 @@ quests:
     requirements:
       quest-points: 105
       permission: habilidades.fuerza.6
+      quests-completed:
+      - cazador_legendario
     rewards:
       commands:
       - effect give %player% strength 999999 6 true
@@ -327,7 +327,6 @@ quests:
       money: 700
       quest-points: 35
       permission: habilidades.fuerza.7
-    objectives:
       kill_wither:
         type: kill
         mob: Wither_Supremo
@@ -354,7 +353,6 @@ quests:
         amount: 180
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -373,6 +371,8 @@ quests:
     requirements:
       quest-points: 140
       permission: habilidades.fuerza.7
+      quests-completed:
+      - cazador_bestias_mitologicas
     rewards:
       commands:
       - effect give %player% strength 999999 7 true
@@ -382,7 +382,6 @@ quests:
       money: 800
       quest-points: 40
       permission: habilidades.fuerza.8
-    objectives:
       kill_wither:
         type: kill
         mob: Wither_Supremo
@@ -409,7 +408,6 @@ quests:
         amount: 210
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -428,6 +426,8 @@ quests:
     requirements:
       quest-points: 180
       permission: habilidades.fuerza.8
+      quests-completed:
+      - cazador_imposible
     rewards:
       commands:
       - effect give %player% strength 999999 8 true
@@ -437,7 +437,6 @@ quests:
       money: 900
       quest-points: 45
       permission: habilidades.fuerza.9
-    objectives:
       kill_dragon:
         type: kill
         mob: EnderDragon_JefeFinal
@@ -464,7 +463,6 @@ quests:
         amount: 240
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -483,6 +481,8 @@ quests:
     requirements:
       quest-points: 225
       permission: habilidades.fuerza.9
+      quests-completed:
+      - cazador_divino
     rewards:
       commands:
       - effect give %player% strength 999999 9 true
@@ -493,8 +493,7 @@ quests:
       - mm:TOKEN_MISION 50
       money: 1000
       quest-points: 50
-      permission: habilidades.fuerza.10
-    objectives:
+      permission: habilidades.fuerza.
       kill_dragon:
         type: kill
         mob: EnderDragon_JefeFinal
@@ -526,7 +525,6 @@ quests:
         amount: 300
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -537,3 +535,5 @@ quests:
       category: cazador
       requires:
       - cazador_divino
+
+

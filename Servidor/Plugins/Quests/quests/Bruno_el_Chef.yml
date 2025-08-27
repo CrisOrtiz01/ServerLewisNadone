@@ -14,7 +14,6 @@ quests:
       money: 100
       quest-points: 5
       permission: habilidades.saturacion.1
-    objectives:
       manzanas_doradas:
         type: collect
         item: GOLDEN_APPLE
@@ -111,7 +110,6 @@ quests:
         amount: 32
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -120,7 +118,7 @@ quests:
         infinite: false
         amount: 1
       category: chef
-      
+
   chef_experimentado:
     name: '&6Chef Experimentado'
     ask-message: '&6[Bruno]: &7¡Ahora hablamos el mismo idioma! Con estos ingredientes podré enseñarte técnicas más avanzadas. La saturación que sentirás será tan profunda que olvidarás lo que es tener hambre.'
@@ -128,6 +126,8 @@ quests:
     requirements:
       quest-points: 5
       permission: habilidades.saturacion.1
+      quests-completed:
+      - cocinero_aficionado
     rewards:
       commands:
       - effect give %player% saturation 999999 1 true
@@ -137,7 +137,6 @@ quests:
       money: 200
       quest-points: 10
       permission: habilidades.saturacion.2
-    objectives:
       manzanas_doradas:
         type: collect
         item: GOLDEN_APPLE
@@ -234,7 +233,6 @@ quests:
         amount: 48
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -245,7 +243,7 @@ quests:
       category: chef
       requires:
       - cocinero_aficionado
-      
+
   maestro_gastronomico:
     name: '&6Maestro Gastronómico'
     ask-message: '&6[Bruno]: &7¡Este es el nivel máximo del arte culinario! Con estos ingredientes prepararemos un festín que cambiará tu vida para siempre. Tu cuerpo recordará esta nutrición y la mantendrá por tiempos increíbles.'
@@ -253,6 +251,8 @@ quests:
     requirements:
       quest-points: 15
       permission: habilidades.saturacion.2
+      quests-completed:
+      - chef_experimentado
     rewards:
       commands:
       - effect give %player% saturation 999999 2 true
@@ -264,7 +264,6 @@ quests:
       money: 300
       quest-points: 15
       permission: habilidades.saturacion.3
-    objectives:
       manzanas_doradas:
         type: collect
         item: GOLDEN_APPLE
@@ -361,7 +360,6 @@ quests:
         amount: 64
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -372,3 +370,4 @@ quests:
       category: chef
       requires:
       - chef_experimentado
+
