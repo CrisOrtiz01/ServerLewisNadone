@@ -14,7 +14,7 @@ generate-files-on-join: true
 give-journal-item: false
 ignore-locked-quests: false
 kill-delay: 600
-language: en-US
+language: es-MX
 language-override-client: false
 max-quests: 0
 npc-effects:

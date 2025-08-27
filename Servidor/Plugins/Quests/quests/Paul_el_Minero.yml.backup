@@ -14,19 +14,33 @@ quests:
       money: 100
       quest-points: 5
       permission: habilidades.prisaminera.1
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          items-to-deliver:
-          - REDSTONE_BLOCK
-          - DIAMOND
-          - TOKEN_MISION
-          delivery-amounts:
-          - 5
-          - 1
-          - 40
-    category: minero
+    objectives:
+      redstone_blocks:
+        type: collect
+        item: REDSTONE_BLOCK
+        amount: 5
+        data: []
+      diamond:
+        type: collect
+        item: DIAMOND
+        amount: 1
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 40
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: minero
+      
   minero_experimentado:
     name: '&8Minero Experimentado'
     ask-message: '&8[Paúl]: &7Estás progresando bien. Un bloque completo de diamante muestra tu dedicación. Ahora te revelaré técnicas que me tomó años perfeccionar.'
@@ -34,8 +48,6 @@ quests:
     requirements:
       quest-points: 5
       permission: habilidades.prisaminera.1
-      quests-completed:
-      - aprendiz_minero
     rewards:
       commands:
       - effect give %player% haste 999999 1 true
@@ -45,19 +57,35 @@ quests:
       money: 200
       quest-points: 10
       permission: habilidades.prisaminera.2
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          items-to-deliver:
-          - REDSTONE_BLOCK
-          - DIAMOND_BLOCK
-          - TOKEN_MISION
-          delivery-amounts:
-          - 10
-          - 1
-          - 80
-    category: minero
+    objectives:
+      redstone_blocks:
+        type: collect
+        item: REDSTONE_BLOCK
+        amount: 10
+        data: []
+      diamond_block:
+        type: collect
+        item: DIAMOND_BLOCK
+        amount: 1
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 80
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: minero
+      requires:
+      - aprendiz_minero
+      
   maestro_profundidades:
     name: '&8Maestro de las Profundidades'
     ask-message: '&8[Paúl]: &7El verdadero minero aprecia tanto el carbón como el diamante. Cada mineral tiene su propósito y valor. Esta lección te llevará más allá de la superficie.'
@@ -65,8 +93,6 @@ quests:
     requirements:
       quest-points: 15
       permission: habilidades.prisaminera.2
-      quests-completed:
-      - minero_experimentado
     rewards:
       commands:
       - effect give %player% haste 999999 2 true
@@ -76,19 +102,35 @@ quests:
       money: 300
       quest-points: 15
       permission: habilidades.prisaminera.3
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          items-to-deliver:
-          - COAL_BLOCK
-          - IRON_BLOCK
-          - TOKEN_MISION
-          delivery-amounts:
-          - 15
-          - 5
-          - 120
-    category: minero
+    objectives:
+      coal_blocks:
+        type: collect
+        item: COAL_BLOCK
+        amount: 15
+        data: []
+      iron_blocks:
+        type: collect
+        item: IRON_BLOCK
+        amount: 5
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 120
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: minero
+      requires:
+      - minero_experimentado
+      
   buscador_tesoros:
     name: '&8Buscador de Tesoros'
     ask-message: '&8[Paúl]: &7Los cristales contienen secretos que las rocas ordinarias no. Su estructura nos enseña sobre la perfección y la paciencia. Con este conocimiento, tus manos se moverán más rápido que el pensamiento.'
@@ -96,8 +138,6 @@ quests:
     requirements:
       quest-points: 30
       permission: habilidades.prisaminera.3
-      quests-completed:
-      - maestro_profundidades
     rewards:
       commands:
       - effect give %player% haste 999999 3 true
@@ -107,19 +147,35 @@ quests:
       money: 400
       quest-points: 20
       permission: habilidades.prisaminera.4
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          items-to-deliver:
-          - AMETHYST_BLOCK
-          - QUARTZ_BLOCK
-          - TOKEN_MISION
-          delivery-amounts:
-          - 20
-          - 10
-          - 192
-    category: minero
+    objectives:
+      amethyst_blocks:
+        type: collect
+        item: AMETHYST_BLOCK
+        amount: 20
+        data: []
+      quartz_blocks:
+        type: collect
+        item: QUARTZ_BLOCK
+        amount: 10
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 192
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: minero
+      requires:
+      - maestro_profundidades
+      
   minero_abismo:
     name: '&8Minero del Abismo'
     ask-message: '&8[Paúl]: &7Las profundidades más oscuras contienen las mayores riquezas. La pizarra profunda y el basalto te conectarán con los ritmos primigenios de la tierra.'
@@ -127,8 +183,6 @@ quests:
     requirements:
       quest-points: 50
       permission: habilidades.prisaminera.4
-      quests-completed:
-      - buscador_tesoros
     rewards:
       commands:
       - effect give %player% haste 999999 4 true
@@ -138,19 +192,35 @@ quests:
       money: 500
       quest-points: 25
       permission: habilidades.prisaminera.5
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          items-to-deliver:
-          - DEEPSLATE
-          - BASALT
-          - TOKEN_MISION
-          delivery-amounts:
-          - 320
-          - 192
-          - 192
-    category: minero
+    objectives:
+      deepslate:
+        type: collect
+        item: DEEPSLATE
+        amount: 320
+        data: []
+      basalt:
+        type: collect
+        item: BASALT
+        amount: 192
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 192
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: minero
+      requires:
+      - buscador_tesoros
+      
   buscador_netherita:
     name: '&8Buscador de Netherita'
     ask-message: '&8[Paúl]: &7La netherita es el desafío final de todo minero. Forjada en los fuegos primordiales, representa la culminación de la búsqueda mineral. La esmeralda representa la riqueza que puedes alcanzar con estos conocimientos.'
@@ -158,8 +228,6 @@ quests:
     requirements:
       quest-points: 75
       permission: habilidades.prisaminera.5
-      quests-completed:
-      - minero_abismo
     rewards:
       commands:
       - effect give %player% haste 999999 5 true
@@ -169,19 +237,35 @@ quests:
       money: 600
       quest-points: 30
       permission: habilidades.prisaminera.6
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          items-to-deliver:
-          - EMERALD_BLOCK
-          - NETHERITE_INGOT
-          - TOKEN_MISION
-          delivery-amounts:
-          - 1
-          - 1
-          - 192
-    category: minero
+    objectives:
+      emerald_block:
+        type: collect
+        item: EMERALD_BLOCK
+        amount: 1
+        data: []
+      netherite_ingot:
+        type: collect
+        item: NETHERITE_INGOT
+        amount: 1
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 192
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: minero
+      requires:
+      - minero_abismo
+      
   magnate_mineral:
     name: '&8Magnate Mineral'
     ask-message: '&8[Paúl]: &7Hierro y oro, los pilares de la civilización. Domina su extracción y dominarás el arte de la prosperidad.'
@@ -189,8 +273,6 @@ quests:
     requirements:
       quest-points: 105
       permission: habilidades.prisaminera.6
-      quests-completed:
-      - buscador_netherita
     rewards:
       commands:
       - effect give %player% haste 999999 6 true
@@ -200,19 +282,35 @@ quests:
       money: 700
       quest-points: 35
       permission: habilidades.prisaminera.7
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          items-to-deliver:
-          - IRON_BLOCK
-          - GOLD_BLOCK
-          - TOKEN_MISION
-          delivery-amounts:
-          - 25
-          - 15
-          - 192
-    category: minero
+    objectives:
+      iron_blocks:
+        type: collect
+        item: IRON_BLOCK
+        amount: 25
+        data: []
+      gold_blocks:
+        type: collect
+        item: GOLD_BLOCK
+        amount: 15
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 192
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: minero
+      requires:
+      - buscador_netherita
+      
   senor_sombras:
     name: '&8Señor de las Sombras'
     ask-message: '&8[Paúl]: &7La oscuridad y la resistencia son dos caras de la misma moneda. El carbón alimenta nuestros hornos, la obsidiana protege nuestros tesoros. Domina ambos y serás imparable bajo tierra.'
@@ -220,8 +318,6 @@ quests:
     requirements:
       quest-points: 140
       permission: habilidades.prisaminera.7
-      quests-completed:
-      - magnate_mineral
     rewards:
       commands:
       - effect give %player% haste 999999 7 true
@@ -231,19 +327,35 @@ quests:
       money: 800
       quest-points: 40
       permission: habilidades.prisaminera.8
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          items-to-deliver:
-          - COAL_BLOCK
-          - OBSIDIAN
-          - TOKEN_MISION
-          delivery-amounts:
-          - 64
-          - 64
-          - 192
-    category: minero
+    objectives:
+      coal_blocks:
+        type: collect
+        item: COAL_BLOCK
+        amount: 64
+        data: []
+      obsidian:
+        type: collect
+        item: OBSIDIAN
+        amount: 64
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 192
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: minero
+      requires:
+      - magnate_mineral
+      
   excavador_lagrimas:
     name: '&8Excavador de Lágrimas'
     ask-message: '&8[Paúl]: &7Las lágrimas de la tierra contienen poder ancestral. La obsidiana llorosa es rara y preciosa, casi tanto como el conocimiento que te otorgará.'
@@ -251,8 +363,6 @@ quests:
     requirements:
       quest-points: 180
       permission: habilidades.prisaminera.8
-      quests-completed:
-      - senor_sombras
     rewards:
       commands:
       - effect give %player% haste 999999 8 true
@@ -262,19 +372,35 @@ quests:
       money: 900
       quest-points: 45
       permission: habilidades.prisaminera.9
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          items-to-deliver:
-          - CRYING_OBSIDIAN
-          - GOLD_BLOCK
-          - TOKEN_MISION
-          delivery-amounts:
-          - 16
-          - 64
-          - 192
-    category: minero
+    objectives:
+      crying_obsidian:
+        type: collect
+        item: CRYING_OBSIDIAN
+        amount: 16
+        data: []
+      gold_blocks:
+        type: collect
+        item: GOLD_BLOCK
+        amount: 64
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 192
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: minero
+      requires:
+      - senor_sombras
+      
   titan_mineria:
     name: '&8Titán de la Minería'
     ask-message: '&8[Paúl]: &7Esta prueba final representa todo lo que significa ser un verdadero minero. Cantidad, calidad, variedad y dedicación. Complétala y tu pico se moverá tan rápido que apenas será visible para el ojo humano.'
@@ -282,8 +408,6 @@ quests:
     requirements:
       quest-points: 225
       permission: habilidades.prisaminera.9
-      quests-completed:
-      - excavador_lagrimas
     rewards:
       commands:
       - effect give %player% haste 999999 9 true
@@ -295,20 +419,41 @@ quests:
       money: 1000
       quest-points: 50
       permission: habilidades.prisaminera.10
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          items-to-deliver:
-          - COAL_BLOCK
-          - OBSIDIAN
-          - DIAMOND_BLOCK
-          - IRON_BLOCK
-          - TOKEN_MISION
-          delivery-amounts:
-          - 128
-          - 128
-          - 32
-          - 32
-          - 192
-    category: minero
+    objectives:
+      coal_blocks:
+        type: collect
+        item: COAL_BLOCK
+        amount: 128
+        data: []
+      obsidian:
+        type: collect
+        item: OBSIDIAN
+        amount: 128
+        data: []
+      diamond_blocks:
+        type: collect
+        item: DIAMOND_BLOCK
+        amount: 32
+        data: []
+      iron_blocks:
+        type: collect
+        item: IRON_BLOCK
+        amount: 32
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 192
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: minero
+      requires:
+      - excavador_lagrimas

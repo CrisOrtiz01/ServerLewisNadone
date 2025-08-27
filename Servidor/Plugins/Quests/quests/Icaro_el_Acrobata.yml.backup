@@ -14,21 +14,39 @@ quests:
       money: 100
       quest-points: 5
       permission: habilidades.saltoaumentado.1
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          items-to-deliver:
-          - META_PARKOUR
-          - SLIME_BLOCK
-          - FEATHER
-          - TOKEN_MISION
-          delivery-amounts:
-          - 1
-          - 1
-          - 24
-          - 30
-    category: acrobata
+    objectives:
+      meta_parkour:
+        type: collect
+        item: META_PARKOUR
+        amount: 1
+        data:
+          display-name: '&aMeta de Parkour'
+      slime:
+        type: collect
+        item: SLIME_BLOCK
+        amount: 1
+        data: []
+      plumas:
+        type: collect
+        item: FEATHER
+        amount: 24
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 30
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: acrobata
+      
   acrobata_experimentado:
     name: '&dAcróbata Experimentado'
     ask-message: '&d[Ícaro]: &7¡Ahora las cosas se ponen interesantes! Los saltos son más largos y las plataformas más pequeñas. Las arañas umbría tienen secretos de movimiento que debes aprender a través del combate.'
@@ -36,8 +54,6 @@ quests:
     requirements:
       quest-points: 5
       permission: habilidades.saltoaumentado.1
-      quests-completed:
-      - acrobata_novato
     rewards:
       commands:
       - effect give %player% jump_boost 999999 1 true
@@ -47,25 +63,46 @@ quests:
       money: 200
       quest-points: 10
       permission: habilidades.saltoaumentado.2
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          mobs-to-kill:
-          - SPIDER_UMBRIA_V1
-          mob-amounts:
-          - 5
-          items-to-deliver:
-          - META_PARKOUR
-          - SLIME_BLOCK
-          - FEATHER
-          - TOKEN_MISION
-          delivery-amounts:
-          - 1
-          - 2
-          - 48
-          - 64
-    category: acrobata
+    objectives:
+      meta_parkour:
+        type: collect
+        item: META_PARKOUR
+        amount: 1
+        data:
+          display-name: '&aMeta de Parkour'
+      kill_spiders:
+        type: kill
+        mob: SPIDER_UMBRIA_V1
+        amount: 5
+        data: []
+      slime:
+        type: collect
+        item: SLIME_BLOCK
+        amount: 2
+        data: []
+      plumas:
+        type: collect
+        item: FEATHER
+        amount: 48
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 64
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: acrobata
+      requires:
+      - acrobata_novato
+      
   maestro_acrobata:
     name: '&dMaestro Acróbata'
     ask-message: '&d[Ícaro]: &7Pocos llegan hasta aquí. Este parkour requiere precisión milimétrica y nervios de acero. Las arañas umbría han sido tus maestras involuntarias en el arte del movimiento perfecto.'
@@ -73,8 +110,6 @@ quests:
     requirements:
       quest-points: 15
       permission: habilidades.saltoaumentado.2
-      quests-completed:
-      - acrobata_experimentado
     rewards:
       commands:
       - effect give %player% jump_boost 999999 2 true
@@ -84,25 +119,46 @@ quests:
       money: 300
       quest-points: 15
       permission: habilidades.saltoaumentado.3
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          mobs-to-kill:
-          - SPIDER_UMBRIA_V1
-          mob-amounts:
-          - 10
-          items-to-deliver:
-          - META_PARKOUR
-          - SLIME_BLOCK
-          - FEATHER
-          - TOKEN_MISION
-          delivery-amounts:
-          - 1
-          - 3
-          - 64
-          - 128
-    category: acrobata
+    objectives:
+      meta_parkour:
+        type: collect
+        item: META_PARKOUR
+        amount: 1
+        data:
+          display-name: '&aMeta de Parkour'
+      kill_spiders:
+        type: kill
+        mob: SPIDER_UMBRIA_V1
+        amount: 10
+        data: []
+      slime:
+        type: collect
+        item: SLIME_BLOCK
+        amount: 3
+        data: []
+      plumas:
+        type: collect
+        item: FEATHER
+        amount: 64
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 128
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: acrobata
+      requires:
+      - acrobata_experimentado
+      
   acrobata_divino:
     name: '&dAcróbata Divino'
     ask-message: '&d[Ícaro]: &7¡La prueba definitiva! Ni siquiera yo completo este parkour sin fallar al menos una vez. Es la culminación de todo mi conocimiento. Si lo logras, tu capacidad de salto será legendaria, casi como volar sin alas.'
@@ -110,8 +166,6 @@ quests:
     requirements:
       quest-points: 30
       permission: habilidades.saltoaumentado.3
-      quests-completed:
-      - maestro_acrobata
     rewards:
       commands:
       - effect give %player% jump_boost 999999 3 true
@@ -123,22 +177,42 @@ quests:
       money: 400
       quest-points: 20
       permission: habilidades.saltoaumentado.4
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          mobs-to-kill:
-          - SPIDER_UMBRIA_V1
-          mob-amounts:
-          - 15
-          items-to-deliver:
-          - META_PARKOUR
-          - SLIME_BLOCK
-          - FEATHER
-          - TOKEN_MISION
-          delivery-amounts:
-          - 1
-          - 4
-          - 80
-          - 256
-    category: acrobata
+    objectives:
+      meta_parkour:
+        type: collect
+        item: META_PARKOUR
+        amount: 1
+        data:
+          display-name: '&aMeta de Parkour'
+      kill_spiders:
+        type: kill
+        mob: SPIDER_UMBRIA_V1
+        amount: 15
+        data: []
+      slime:
+        type: collect
+        item: SLIME_BLOCK
+        amount: 4
+        data: []
+      plumas:
+        type: collect
+        item: FEATHER
+        amount: 80
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 256
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: acrobata
+      requires:
+      - maestro_acrobata

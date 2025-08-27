@@ -14,21 +14,40 @@ quests:
       money: 100
       quest-points: 5
       permission: habilidades.regeneracion.1
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          items-to-deliver:
-          - META_CURACION
-          - HONEY_BOTTLE
-          - POTION
-          - TOKEN_MISION
-          delivery-amounts:
-          - 3
-          - 12
-          - 1
-          - 35
-    category: curandera
+    objectives:
+      meta_curacion:
+        type: collect
+        item: META_CURACION
+        amount: 3
+        data:
+          display-name: '&dMeta de Curación'
+      miel:
+        type: collect
+        item: HONEY_BOTTLE
+        amount: 12
+        data: []
+      pocion:
+        type: collect
+        item: POTION
+        amount: 1
+        data:
+          potion-type: INSTANT_HEAL
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 35
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: curandera
+      
   medico_experimentado:
     name: '&fMédico Experimentado'
     ask-message: '&f[Helena]: &7Las lágrimas de ghast contienen propiedades regenerativas excepcionales. Son difíciles de obtener, pero su poder compensa el esfuerzo. Tu dedicación a los enfermos me demuestra que eres digno de este conocimiento.'
@@ -36,8 +55,6 @@ quests:
     requirements:
       quest-points: 5
       permission: habilidades.regeneracion.1
-      quests-completed:
-      - sanador_principiante
     rewards:
       commands:
       - effect give %player% regeneration 999999 1 true
@@ -47,19 +64,36 @@ quests:
       money: 200
       quest-points: 10
       permission: habilidades.regeneracion.2
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          items-to-deliver:
-          - META_CURACION
-          - GHAST_TEAR
-          - TOKEN_MISION
-          delivery-amounts:
-          - 6
-          - 8
-          - 70
-    category: curandera
+    objectives:
+      meta_curacion:
+        type: collect
+        item: META_CURACION
+        amount: 6
+        data:
+          display-name: '&dMeta de Curación'
+      lagrimas:
+        type: collect
+        item: GHAST_TEAR
+        amount: 8
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 70
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: curandera
+      requires:
+      - sanador_principiante
+      
   maestro_sanador:
     name: '&fMaestro Sanador'
     ask-message: '&f[Helena]: &7El nivel máximo del arte de la regeneración. Con este poder, las heridas se cerrarán ante tus ojos y tu cuerpo se renovará constantemente. Pocos alcanzan este nivel de maestría, pero tu compasión y dedicación te han hecho merecedor.'
@@ -67,8 +101,6 @@ quests:
     requirements:
       quest-points: 15
       permission: habilidades.regeneracion.2
-      quests-completed:
-      - medico_experimentado
     rewards:
       commands:
       - effect give %player% regeneration 999999 2 true
@@ -80,16 +112,32 @@ quests:
       money: 300
       quest-points: 15
       permission: habilidades.regeneracion.3
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          items-to-deliver:
-          - META_CURACION
-          - GHAST_TEAR
-          - TOKEN_MISION
-          delivery-amounts:
-          - 12
-          - 12
-          - 100
-    category: curandera
+    objectives:
+      meta_curacion:
+        type: collect
+        item: META_CURACION
+        amount: 12
+        data:
+          display-name: '&dMeta de Curación'
+      lagrimas:
+        type: collect
+        item: GHAST_TEAR
+        amount: 12
+        data: []
+      tokens:
+        type: collect
+        item: TOKEN_MISION
+        amount: 100
+        data:
+          display-name: '&eToken de Misión'
+    options:
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: curandera
+      requires:
+      - medico_experimentado
