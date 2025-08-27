@@ -10,27 +10,40 @@ quests:
       - effect give %player% resistance 999999 0 true
       - tellraw %player% {"text":"Has obtenido Resistencia I de forma permanente","color":"red"}
       items:
-      - TOKEN_MISION 5
+      - mm:TOKEN_MISION 5
       money: 100
       quest-points: 5
       permission: habilidades.resistencia.1
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          mobs-to-kill:
-          - CREEPER_TANQUE_V1
-          mob-amounts:
-          - 15
-          items-to-deliver:
-          - SHIELD
-          - OBSIDIAN
-          - TOKEN_MISION
-          delivery-amounts:
-          - 1
-          - 8
-          - 32
-    category: guardian
+      kill_creepers:
+        type: kill
+        mob: Creeper_Explosivo
+        amount: 15
+        data: []
+      escudo:
+        type: collect
+        item: SHIELD
+        amount: 1
+        data: []
+      obsidiana:
+        type: collect
+        item: OBSIDIAN
+        amount: 8
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 32
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: guardian
+      
   muro_impenetrable:
     name: '&cMuro Impenetrable'
     ask-message: '&c[Marta]: &7Tu cuerpo debe convertirse en un escudo viviente. Estas criaturas explosivas pondrán a prueba tu determinación. Aprende de cada impacto, de cada cicatriz.'
@@ -45,27 +58,42 @@ quests:
       - effect give %player% resistance 999999 1 true
       - tellraw %player% {"text":"Has mejorado a Resistencia II de forma permanente","color":"red"}
       items:
-      - TOKEN_MISION 10
+      - mm:TOKEN_MISION 10
       money: 200
       quest-points: 10
       permission: habilidades.resistencia.2
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          mobs-to-kill:
-          - CREEPER_TANQUE_V1
-          mob-amounts:
-          - 20
-          items-to-deliver:
-          - SHIELD
-          - OBSIDIAN
-          - TOKEN_MISION
-          delivery-amounts:
-          - 1
-          - 12
-          - 48
-    category: guardian
+      kill_creepers:
+        type: kill
+        mob: Creeper_Explosivo
+        amount: 20
+        data: []
+      escudo:
+        type: collect
+        item: SHIELD
+        amount: 1
+        data: []
+      obsidiana:
+        type: collect
+        item: OBSIDIAN
+        amount: 12
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 48
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: guardian
+      requires:
+      - escudo_pueblo
+      
   guardian_eterno:
     name: '&cGuardián Eterno'
     ask-message: '&c[Marta]: &7Los antiguos guardianes podían resistir el impacto directo de un creeper sin inmutarse. Este nivel de resistencia solo se consigue enfrentando tus mayores temores una y otra vez. Demuestra que eres digno de portar el título de Guardián Eterno.'
@@ -82,24 +110,41 @@ quests:
       - title %player% title {"text":"¡Guardián Eterno!","color":"red","bold":true}
       - title %player% subtitle {"text":"Has dominado el poder de la Resistencia","color":"white"}
       items:
-      - TOKEN_MISION 15
+      - mm:TOKEN_MISION 15
       money: 300
       quest-points: 15
       permission: habilidades.resistencia.3
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          mobs-to-kill:
-          - CREEPER_TANQUE_V1
-          mob-amounts:
-          - 25
-          items-to-deliver:
-          - SHIELD
-          - OBSIDIAN
-          - TOKEN_MISION
-          delivery-amounts:
-          - 1
-          - 16
-          - 64
-    category: guardian
+      kill_creepers:
+        type: kill
+        mob: Creeper_Explosivo
+        amount: 25
+        data: []
+      escudo:
+        type: collect
+        item: SHIELD
+        amount: 1
+        data: []
+      obsidiana:
+        type: collect
+        item: OBSIDIAN
+        amount: 16
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 64
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: guardian
+      requires:
+      - muro_impenetrable
+
+
+

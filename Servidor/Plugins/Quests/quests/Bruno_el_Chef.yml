@@ -10,55 +10,115 @@ quests:
       - effect give %player% saturation 999999 0 true
       - tellraw %player% {"text":"Has obtenido Saturación I de forma permanente","color":"gold"}
       items:
-      - TOKEN_MISION 5
+      - mm:TOKEN_MISION 5
       money: 100
       quest-points: 5
       permission: habilidades.saturacion.1
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          items-to-deliver:
-          - GOLDEN_APPLE
-          - GOLDEN_CARROT
-          - COOKED_PORKCHOP
-          - COOKED_BEEF
-          - COOKED_MUTTON
-          - COOKED_SALMON
-          - COOKED_COD
-          - COOKED_CHICKEN
-          - BAKED_POTATO
-          - BREAD
-          - COOKED_RABBIT
-          - APPLE
-          - MELON_SLICE
-          - CARROT
-          - PUMPKIN_PIE
-          - COOKIE
-          - SWEET_BERRIES
-          - ROTTEN_FLESH
-          - TOKEN_MISION
-          delivery-amounts:
-          - 32
-          - 32
-          - 32
-          - 32
-          - 32
-          - 32
-          - 32
-          - 32
-          - 32
-          - 32
-          - 32
-          - 32
-          - 32
-          - 32
-          - 32
-          - 32
-          - 32
-          - 32
-          - 32
-    category: cocinero
+      manzanas_doradas:
+        type: collect
+        item: GOLDEN_APPLE
+        amount: 32
+        data: []
+      zanahorias_doradas:
+        type: collect
+        item: GOLDEN_CARROT
+        amount: 32
+        data: []
+      cerdo_cocinado:
+        type: collect
+        item: COOKED_PORKCHOP
+        amount: 32
+        data: []
+      res_cocinada:
+        type: collect
+        item: COOKED_BEEF
+        amount: 32
+        data: []
+      cordero_cocinado:
+        type: collect
+        item: COOKED_MUTTON
+        amount: 32
+        data: []
+      salmon_cocinado:
+        type: collect
+        item: COOKED_SALMON
+        amount: 32
+        data: []
+      bacalao_cocinado:
+        type: collect
+        item: COOKED_COD
+        amount: 32
+        data: []
+      pollo_cocinado:
+        type: collect
+        item: COOKED_CHICKEN
+        amount: 32
+        data: []
+      patata_cocinada:
+        type: collect
+        item: BAKED_POTATO
+        amount: 32
+        data: []
+      pan:
+        type: collect
+        item: BREAD
+        amount: 32
+        data: []
+      conejo_cocinado:
+        type: collect
+        item: COOKED_RABBIT
+        amount: 32
+        data: []
+      manzanas:
+        type: collect
+        item: APPLE
+        amount: 32
+        data: []
+      sandias:
+        type: collect
+        item: MELON_SLICE
+        amount: 32
+        data: []
+      zanahorias:
+        type: collect
+        item: CARROT
+        amount: 32
+        data: []
+      torta_calabaza:
+        type: collect
+        item: PUMPKIN_PIE
+        amount: 32
+        data: []
+      galletas:
+        type: collect
+        item: COOKIE
+        amount: 32
+        data: []
+      bayas:
+        type: collect
+        item: SWEET_BERRIES
+        amount: 32
+        data: []
+      carne_podrida:
+        type: collect
+        item: ROTTEN_FLESH
+        amount: 32
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 32
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: chef
+
   chef_experimentado:
     name: '&6Chef Experimentado'
     ask-message: '&6[Bruno]: &7¡Ahora hablamos el mismo idioma! Con estos ingredientes podré enseñarte técnicas más avanzadas. La saturación que sentirás será tan profunda que olvidarás lo que es tener hambre.'
@@ -73,55 +133,117 @@ quests:
       - effect give %player% saturation 999999 1 true
       - tellraw %player% {"text":"Has mejorado a Saturación II de forma permanente","color":"gold"}
       items:
-      - TOKEN_MISION 10
+      - mm:TOKEN_MISION 10
       money: 200
       quest-points: 10
       permission: habilidades.saturacion.2
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          items-to-deliver:
-          - GOLDEN_APPLE
-          - GOLDEN_CARROT
-          - COOKED_PORKCHOP
-          - COOKED_BEEF
-          - COOKED_MUTTON
-          - COOKED_SALMON
-          - COOKED_COD
-          - COOKED_CHICKEN
-          - BAKED_POTATO
-          - BREAD
-          - COOKED_RABBIT
-          - APPLE
-          - MELON_SLICE
-          - CARROT
-          - PUMPKIN_PIE
-          - COOKIE
-          - SWEET_BERRIES
-          - ROTTEN_FLESH
-          - TOKEN_MISION
-          delivery-amounts:
-          - 48
-          - 48
-          - 48
-          - 48
-          - 48
-          - 48
-          - 48
-          - 48
-          - 48
-          - 48
-          - 48
-          - 48
-          - 48
-          - 48
-          - 48
-          - 48
-          - 48
-          - 48
-          - 48
-    category: cocinero
+      manzanas_doradas:
+        type: collect
+        item: GOLDEN_APPLE
+        amount: 48
+        data: []
+      zanahorias_doradas:
+        type: collect
+        item: GOLDEN_CARROT
+        amount: 48
+        data: []
+      cerdo_cocinado:
+        type: collect
+        item: COOKED_PORKCHOP
+        amount: 48
+        data: []
+      res_cocinada:
+        type: collect
+        item: COOKED_BEEF
+        amount: 48
+        data: []
+      cordero_cocinado:
+        type: collect
+        item: COOKED_MUTTON
+        amount: 48
+        data: []
+      salmon_cocinado:
+        type: collect
+        item: COOKED_SALMON
+        amount: 48
+        data: []
+      bacalao_cocinado:
+        type: collect
+        item: COOKED_COD
+        amount: 48
+        data: []
+      pollo_cocinado:
+        type: collect
+        item: COOKED_CHICKEN
+        amount: 48
+        data: []
+      patata_cocinada:
+        type: collect
+        item: BAKED_POTATO
+        amount: 48
+        data: []
+      pan:
+        type: collect
+        item: BREAD
+        amount: 48
+        data: []
+      conejo_cocinado:
+        type: collect
+        item: COOKED_RABBIT
+        amount: 48
+        data: []
+      manzanas:
+        type: collect
+        item: APPLE
+        amount: 48
+        data: []
+      sandias:
+        type: collect
+        item: MELON_SLICE
+        amount: 48
+        data: []
+      zanahorias:
+        type: collect
+        item: CARROT
+        amount: 48
+        data: []
+      torta_calabaza:
+        type: collect
+        item: PUMPKIN_PIE
+        amount: 48
+        data: []
+      galletas:
+        type: collect
+        item: COOKIE
+        amount: 48
+        data: []
+      bayas:
+        type: collect
+        item: SWEET_BERRIES
+        amount: 48
+        data: []
+      carne_podrida:
+        type: collect
+        item: ROTTEN_FLESH
+        amount: 48
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 48
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: chef
+      requires:
+      - cocinero_aficionado
+
   maestro_gastronomico:
     name: '&6Maestro Gastronómico'
     ask-message: '&6[Bruno]: &7¡Este es el nivel máximo del arte culinario! Con estos ingredientes prepararemos un festín que cambiará tu vida para siempre. Tu cuerpo recordará esta nutrición y la mantendrá por tiempos increíbles.'
@@ -138,52 +260,114 @@ quests:
       - title %player% title {"text":"¡Maestro Gastronómico!","color":"gold","bold":true}
       - title %player% subtitle {"text":"Has dominado el poder de la Saturación","color":"white"}
       items:
-      - TOKEN_MISION 15
+      - mm:TOKEN_MISION 15
       money: 300
       quest-points: 15
       permission: habilidades.saturacion.3
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          items-to-deliver:
-          - GOLDEN_APPLE
-          - GOLDEN_CARROT
-          - COOKED_PORKCHOP
-          - COOKED_BEEF
-          - COOKED_MUTTON
-          - COOKED_SALMON
-          - COOKED_COD
-          - COOKED_CHICKEN
-          - BAKED_POTATO
-          - BREAD
-          - COOKED_RABBIT
-          - APPLE
-          - MELON_SLICE
-          - CARROT
-          - PUMPKIN_PIE
-          - COOKIE
-          - SWEET_BERRIES
-          - ROTTEN_FLESH
-          - TOKEN_MISION
-          delivery-amounts:
-          - 64
-          - 64
-          - 64
-          - 64
-          - 64
-          - 64
-          - 64
-          - 64
-          - 64
-          - 64
-          - 64
-          - 64
-          - 64
-          - 64
-          - 64
-          - 64
-          - 64
-          - 64
-          - 64
-    category: cocinero
+      manzanas_doradas:
+        type: collect
+        item: GOLDEN_APPLE
+        amount: 64
+        data: []
+      zanahorias_doradas:
+        type: collect
+        item: GOLDEN_CARROT
+        amount: 64
+        data: []
+      cerdo_cocinado:
+        type: collect
+        item: COOKED_PORKCHOP
+        amount: 64
+        data: []
+      res_cocinada:
+        type: collect
+        item: COOKED_BEEF
+        amount: 64
+        data: []
+      cordero_cocinado:
+        type: collect
+        item: COOKED_MUTTON
+        amount: 64
+        data: []
+      salmon_cocinado:
+        type: collect
+        item: COOKED_SALMON
+        amount: 64
+        data: []
+      bacalao_cocinado:
+        type: collect
+        item: COOKED_COD
+        amount: 64
+        data: []
+      pollo_cocinado:
+        type: collect
+        item: COOKED_CHICKEN
+        amount: 64
+        data: []
+      patata_cocinada:
+        type: collect
+        item: BAKED_POTATO
+        amount: 64
+        data: []
+      pan:
+        type: collect
+        item: BREAD
+        amount: 64
+        data: []
+      conejo_cocinado:
+        type: collect
+        item: COOKED_RABBIT
+        amount: 64
+        data: []
+      manzanas:
+        type: collect
+        item: APPLE
+        amount: 64
+        data: []
+      sandias:
+        type: collect
+        item: MELON_SLICE
+        amount: 64
+        data: []
+      zanahorias:
+        type: collect
+        item: CARROT
+        amount: 64
+        data: []
+      torta_calabaza:
+        type: collect
+        item: PUMPKIN_PIE
+        amount: 64
+        data: []
+      galletas:
+        type: collect
+        item: COOKIE
+        amount: 64
+        data: []
+      bayas:
+        type: collect
+        item: SWEET_BERRIES
+        amount: 64
+        data: []
+      carne_podrida:
+        type: collect
+        item: ROTTEN_FLESH
+        amount: 64
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 64
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: chef
+      requires:
+      - chef_experimentado
+

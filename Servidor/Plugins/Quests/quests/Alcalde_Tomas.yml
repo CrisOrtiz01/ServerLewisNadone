@@ -10,25 +10,35 @@ quests:
       - effect give %player% hero_of_the_village 999999 0 true
       - tellraw %player% {"text":"Has obtenido Héroe de Villa I de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 5
+      - mm:TOKEN_MISION 5
       money: 50
       quest-points: 5
       permission: habilidades.heroevilla.1
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          mobs-to-kill:
-          - PILLAGER_RAIDER_V1
-          mob-amounts:
-          - 1
-          items-to-deliver:
-          - EMERALD
-          - TOKEN_MISION
-          delivery-amounts:
-          - 1
-          - 16
-    category: alcalde
+      kill_pillagers:
+        type: kill
+        mob: Pillager_Asaltante
+        amount: 1
+        data: []
+      esmeralda:
+        type: collect
+        item: EMERALD
+        amount: 1
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 16
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: alcalde
+
   defensor_nivel2:
     name: '&eDefensor del Pueblo II'
     ask-message: '&e[Alcalde Tomás]: &7Tu dedicación a nuestro pueblo merece mayor reconocimiento. Esta nueva amenaza requerirá más de tu habilidad, pero sé que estás a la altura del desafío.'
@@ -43,25 +53,37 @@ quests:
       - effect give %player% hero_of_the_village 999999 1 true
       - tellraw %player% {"text":"Has mejorado a Héroe de Villa II de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 6
+      - mm:TOKEN_MISION 6
       money: 60
       quest-points: 6
       permission: habilidades.heroevilla.2
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          mobs-to-kill:
-          - PILLAGER_RAIDER_V1
-          mob-amounts:
-          - 2
-          items-to-deliver:
-          - EMERALD
-          - TOKEN_MISION
-          delivery-amounts:
-          - 2
-          - 32
-    category: alcalde
+      kill_pillagers:
+        type: kill
+        mob: Pillager_Asaltante
+        amount: 2
+        data: []
+      esmeraldas:
+        type: collect
+        item: EMERALD
+        amount: 2
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 32
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: alcalde
+      requires:
+      - defensor_nivel1
+
   defensor_nivel3:
     name: '&eDefensor del Pueblo III'
     ask-message: '&e[Alcalde Tomás]: &7Los saqueadores regresan con más fuerza. Necesitamos tu experiencia y valentía para rechazarlos nuevamente.'
@@ -76,25 +98,37 @@ quests:
       - effect give %player% hero_of_the_village 999999 2 true
       - tellraw %player% {"text":"Has mejorado a Héroe de Villa III de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 7
+      - mm:TOKEN_MISION 7
       money: 70
       quest-points: 7
       permission: habilidades.heroevilla.3
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          mobs-to-kill:
-          - PILLAGER_RAIDER_V1
-          mob-amounts:
-          - 3
-          items-to-deliver:
-          - EMERALD
-          - TOKEN_MISION
-          delivery-amounts:
-          - 3
-          - 48
-    category: alcalde
+      kill_pillagers:
+        type: kill
+        mob: Pillager_Asaltante
+        amount: 3
+        data: []
+      esmeraldas:
+        type: collect
+        item: EMERALD
+        amount: 3
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 48
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: alcalde
+      requires:
+      - defensor_nivel2
+
   defensor_nivel4:
     name: '&eDefensor del Pueblo IV'
     ask-message: '&e[Alcalde Tomás]: &7Tu valor inspira a otros. Esta nueva ola de saqueadores es más numerosa, pero confío en tu capacidad para protegernos.'
@@ -109,25 +143,37 @@ quests:
       - effect give %player% hero_of_the_village 999999 3 true
       - tellraw %player% {"text":"Has mejorado a Héroe de Villa IV de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 8
+      - mm:TOKEN_MISION 8
       money: 80
       quest-points: 8
       permission: habilidades.heroevilla.4
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          mobs-to-kill:
-          - PILLAGER_RAIDER_V1
-          mob-amounts:
-          - 4
-          items-to-deliver:
-          - EMERALD
-          - TOKEN_MISION
-          delivery-amounts:
-          - 4
-          - 64
-    category: alcalde
+      kill_pillagers:
+        type: kill
+        mob: Pillager_Asaltante
+        amount: 4
+        data: []
+      esmeraldas:
+        type: collect
+        item: EMERALD
+        amount: 4
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 64
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: alcalde
+      requires:
+      - defensor_nivel3
+
   defensor_nivel5:
     name: '&eDefensor del Pueblo V'
     ask-message: '&e[Alcalde Tomás]: &7Los pillagers han enviado un grupo más grande y peligroso. Tu experiencia será crucial para esta batalla.'
@@ -142,25 +188,37 @@ quests:
       - effect give %player% hero_of_the_village 999999 4 true
       - tellraw %player% {"text":"Has mejorado a Héroe de Villa V de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 9
+      - mm:TOKEN_MISION 9
       money: 90
       quest-points: 9
       permission: habilidades.heroevilla.5
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          mobs-to-kill:
-          - PILLAGER_RAIDER_V1
-          mob-amounts:
-          - 5
-          items-to-deliver:
-          - EMERALD
-          - TOKEN_MISION
-          delivery-amounts:
-          - 5
-          - 80
-    category: alcalde
+      kill_pillagers:
+        type: kill
+        mob: Pillager_Asaltante
+        amount: 5
+        data: []
+      esmeraldas:
+        type: collect
+        item: EMERALD
+        amount: 5
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 80
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: alcalde
+      requires:
+      - defensor_nivel4
+
   defensor_nivel6:
     name: '&eDefensor del Pueblo VI'
     ask-message: '&e[Alcalde Tomás]: &7Los pillagers no se rinden. Esta vez han enviado soldados de élite. Necesitamos tu protección más que nunca.'
@@ -175,25 +233,37 @@ quests:
       - effect give %player% hero_of_the_village 999999 5 true
       - tellraw %player% {"text":"Has mejorado a Héroe de Villa VI de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 10
+      - mm:TOKEN_MISION 10
       money: 100
       quest-points: 10
       permission: habilidades.heroevilla.6
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          mobs-to-kill:
-          - PILLAGER_RAIDER_V1
-          mob-amounts:
-          - 6
-          items-to-deliver:
-          - EMERALD
-          - TOKEN_MISION
-          delivery-amounts:
-          - 6
-          - 96
-    category: alcalde
+      kill_pillagers:
+        type: kill
+        mob: Pillager_Asaltante
+        amount: 6
+        data: []
+      esmeraldas:
+        type: collect
+        item: EMERALD
+        amount: 6
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 96
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: alcalde
+      requires:
+      - defensor_nivel5
+
   defensor_nivel7:
     name: '&eDefensor del Pueblo VII'
     ask-message: '&e[Alcalde Tomás]: &7Informes indican que un capitán pillager lidera este nuevo ataque. Tu intervención es vital para nuestra supervivencia.'
@@ -208,25 +278,37 @@ quests:
       - effect give %player% hero_of_the_village 999999 6 true
       - tellraw %player% {"text":"Has mejorado a Héroe de Villa VII de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 11
+      - mm:TOKEN_MISION 11
       money: 110
       quest-points: 11
       permission: habilidades.heroevilla.7
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          mobs-to-kill:
-          - PILLAGER_RAIDER_V1
-          mob-amounts:
-          - 7
-          items-to-deliver:
-          - EMERALD
-          - TOKEN_MISION
-          delivery-amounts:
-          - 7
-          - 112
-    category: alcalde
+      kill_pillagers:
+        type: kill
+        mob: Pillager_Asaltante
+        amount: 7
+        data: []
+      esmeraldas:
+        type: collect
+        item: EMERALD
+        amount: 7
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 112
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: alcalde
+      requires:
+      - defensor_nivel6
+
   defensor_nivel8:
     name: '&eDefensor del Pueblo VIII'
     ask-message: '&e[Alcalde Tomás]: &7Los pillagers han jurado venganza por sus derrotas anteriores. Este asalto será brutal, pero confío en tus habilidades.'
@@ -241,25 +323,37 @@ quests:
       - effect give %player% hero_of_the_village 999999 7 true
       - tellraw %player% {"text":"Has mejorado a Héroe de Villa VIII de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 12
+      - mm:TOKEN_MISION 12
       money: 120
       quest-points: 12
       permission: habilidades.heroevilla.8
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          mobs-to-kill:
-          - PILLAGER_RAIDER_V1
-          mob-amounts:
-          - 8
-          items-to-deliver:
-          - EMERALD
-          - TOKEN_MISION
-          delivery-amounts:
-          - 8
-          - 128
-    category: alcalde
+      kill_pillagers:
+        type: kill
+        mob: Pillager_Asaltante
+        amount: 8
+        data: []
+      esmeraldas:
+        type: collect
+        item: EMERALD
+        amount: 8
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 128
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: alcalde
+      requires:
+      - defensor_nivel7
+
   defensor_nivel9:
     name: '&eDefensor del Pueblo IX'
     ask-message: '&e[Alcalde Tomás]: &7Noticias alarmantes llegan desde la frontera. Los pillagers han reclutado mercenarios para reforzar su ataque. Necesitamos tu intervención inmediata.'
@@ -274,25 +368,37 @@ quests:
       - effect give %player% hero_of_the_village 999999 8 true
       - tellraw %player% {"text":"Has mejorado a Héroe de Villa IX de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 13
+      - mm:TOKEN_MISION 13
       money: 130
       quest-points: 13
       permission: habilidades.heroevilla.9
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          mobs-to-kill:
-          - PILLAGER_RAIDER_V1
-          mob-amounts:
-          - 9
-          items-to-deliver:
-          - EMERALD
-          - TOKEN_MISION
-          delivery-amounts:
-          - 9
-          - 144
-    category: alcalde
+      kill_pillagers:
+        type: kill
+        mob: Pillager_Asaltante
+        amount: 9
+        data: []
+      esmeraldas:
+        type: collect
+        item: EMERALD
+        amount: 9
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 144
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: alcalde
+      requires:
+      - defensor_nivel8
+
   defensor_nivel10:
     name: '&eDefensor del Pueblo X'
     ask-message: '&e[Alcalde Tomás]: &7Los pillagers han formado una coalición con otras tribus hostiles. Este será nuestro mayor desafío hasta ahora. El pueblo deposita toda su fe en ti.'
@@ -307,22 +413,34 @@ quests:
       - effect give %player% hero_of_the_village 999999 9 true
       - tellraw %player% {"text":"Has mejorado a Héroe de Villa X de forma permanente","color":"yellow"}
       items:
-      - TOKEN_MISION 14
+      - mm:TOKEN_MISION 14
       money: 140
       quest-points: 14
       permission: habilidades.heroevilla.10
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          mobs-to-kill:
-          - PILLAGER_RAIDER_V1
-          mob-amounts:
-          - 10
-          items-to-deliver:
-          - EMERALD
-          - TOKEN_MISION
-          delivery-amounts:
-          - 10
-          - 160
-    category: alcalde
+      kill_pillagers:
+        type: kill
+        mob: Pillager_Asaltante
+        amount: 10
+        data: []
+      esmeraldas:
+        type: collect
+        item: EMERALD
+        amount: 10
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 160
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: alcalde
+      requires:
+      - defensor_nivel9
+

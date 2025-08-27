@@ -13,7 +13,7 @@ SkeletonHorseman_JefeMenor:
     - minecraft:bone 8-16 100
     - minecraft:spectral_arrow 16-24 100
     - minecraft:enchanted_book{Enchantments=[CONDUCTIVITY:1]} 1 100
-    - TOKEN_MISION 10 100
+    - mm:TOKEN_MISION 10 100
   Skills:
     - effect:particles{p=block_dust;minecraft:bone_block;a=10;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
     - shoot{type=ARROW;d=12} @LivingEntitiesInRadius{r=12}

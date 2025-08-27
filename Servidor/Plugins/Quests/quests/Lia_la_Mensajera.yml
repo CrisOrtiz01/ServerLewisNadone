@@ -10,23 +10,36 @@ quests:
       - effect give %player% speed 999999 0 true
       - tellraw %player% {"text":"Has obtenido Velocidad I de forma permanente","color":"aqua"}
       items:
-      - TOKEN_MISION 5
+      - mm:TOKEN_MISION 5
       money: 100
       quest-points: 5
       permission: habilidades.velocidad.1
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          items-to-deliver:
-          - META_CARRERA
-          - SUGAR
-          - TOKEN_MISION
-          delivery-amounts:
-          - 1
-          - 16
-          - 32
-    category: mensajero
+      meta_carrera:
+        type: collect
+        item: META_CARRERA
+        amount: 1
+        data:
+          display-name: '&bMeta de Carrera'
+      azucar:
+        type: collect
+        item: SUGAR
+        amount: 16
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 32
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: mensajero
+      
   mensajero_veloz:
     name: '&bMensajero Veloz'
     ask-message: '&b[Lia]: &7¡Ahora viene lo divertido! Esta ruta tiene obstáculos y peligros. Los esqueletos tácticos intentarán frenarte con sus flechas. ¡Demuestra que puedes ser rápido incluso en situación de peligro!'
@@ -41,27 +54,43 @@ quests:
       - effect give %player% speed 999999 1 true
       - tellraw %player% {"text":"Has mejorado a Velocidad II de forma permanente","color":"aqua"}
       items:
-      - TOKEN_MISION 10
+      - mm:TOKEN_MISION 10
       money: 200
       quest-points: 10
       permission: habilidades.velocidad.2
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          mobs-to-kill:
-          - SKELETON_TACTICO_V1
-          mob-amounts:
-          - 10
-          items-to-deliver:
-          - META_CARRERA
-          - SUGAR
-          - TOKEN_MISION
-          delivery-amounts:
-          - 1
-          - 32
-          - 64
-    category: mensajero
+      meta_carrera:
+        type: collect
+        item: META_CARRERA
+        amount: 1
+        data:
+          display-name: '&bMeta de Carrera'
+      kill_skeletons:
+        type: kill
+        mob: Skeleton_Guerrero
+        amount: 10
+        data: []
+      azucar:
+        type: collect
+        item: SUGAR
+        amount: 32
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 64
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: mensajero
+      requires:
+      - mensajero_principiante
+      
   mensajero_relampago:
     name: '&bMensajero Relámpago'
     ask-message: '&b[Lia]: &7Esta es la prueba definitiva. Solo otro mensajero además de mí la ha completado en la historia del pueblo. La tarta es para celebrar cuando lo logres... ¡si es que lo logras! Con esta velocidad podrías superar incluso a los vientos del este.'
@@ -78,26 +107,48 @@ quests:
       - title %player% title {"text":"¡Mensajero Relámpago!","color":"aqua","bold":true}
       - title %player% subtitle {"text":"Has dominado el poder de la Velocidad","color":"white"}
       items:
-      - TOKEN_MISION 15
+      - mm:TOKEN_MISION 15
       money: 300
       quest-points: 15
       permission: habilidades.velocidad.3
-    redo-delay: 86400
-    stages:
-      ordered:
-        1:
-          mobs-to-kill:
-          - SKELETON_TACTICO_V1
-          mob-amounts:
-          - 15
-          items-to-deliver:
-          - META_CARRERA
-          - SUGAR
-          - CAKE
-          - TOKEN_MISION
-          delivery-amounts:
-          - 1
-          - 64
-          - 1
-          - 128
-    category: mensajero
+      meta_carrera:
+        type: collect
+        item: META_CARRERA
+        amount: 1
+        data:
+          display-name: '&bMeta de Carrera'
+      kill_skeletons:
+        type: kill
+        mob: Skeleton_Guerrero
+        amount: 15
+        data: []
+      azucar:
+        type: collect
+        item: SUGAR
+        amount: 64
+        data: []
+      tarta:
+        type: collect
+        item: CAKE
+        amount: 1
+        data: []
+      tokens:
+        type: collect
+        item: mm:TOKEN_MISION
+        amount: 128
+        data:
+          display-name: '&eToken de Misión'
+      cooldown:
+        enabled: true
+        time: 86400
+      repeat:
+        enabled: true
+        infinite: false
+        amount: 1
+      category: mensajero
+      requires:
+      - mensajero_veloz
+
+
+
+

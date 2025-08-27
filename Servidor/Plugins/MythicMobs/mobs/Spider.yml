@@ -7,7 +7,7 @@ Spider_Mutante:
   Drops:
     - minecraft:string:0-2:100
     - minecraft:spider_eye:0-1:50
-    - TOKEN_MISION:1:100
+    - mm:TOKEN_MISION 1 100
   Skills:
     - effect:particles{p=block_dust;minecraft:web;a=10;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
     - potion{type=BLINDNESS;duration=5;level=1} @LivingEntitiesInRadius{r=3} ~onAttack
