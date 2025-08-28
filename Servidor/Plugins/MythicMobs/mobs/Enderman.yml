@@ -1,4 +1,4 @@
-  Enderman_Sombrio:
+Enderman_Sombrio:
   Type: ENDERMAN
   Display: '§dLewis Crimenes de Guerra Mania'
   Health: 60
@@ -12,7 +12,7 @@
     - effect:particles{p=portal;a=20;hs=0.7;vs=1;s=0.2;y=1} @Self ~onTimer:20
     - potion{type=CONFUSION;duration=60;level=1} @LivingEntitiesInRadius{r=3} ~onAttack
     - teleport{radius=10}
-    effect:particles{p=dragon_breath;a=10;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTeleport
+    - effect:particles{p=dragon_breath;a=10;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTeleport
   Options:
     PreventOtherDrops: true
     AlwaysShowName: true
