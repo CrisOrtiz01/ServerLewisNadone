@@ -1,217 +1,86 @@
-Quiero crear un servidor de Minecraft.
-El servidor de Minecraft se hará en Alternos.
-El servidor no tendrá mods, pero si varios plugins que me dejarán customizar bastante la experiencia de juego para hacer un pequeño RPG donde cada jugador tiene una contante búsqueda de poder. 
-
-En el servidor hay un pequeño Lore, donde un pueblo fundado por dos campeones curtidos en diferentes materias guiaron y compartieron sus conocimientos con las generaciones que llegaron después de ellos. Hoy, siglos después de la muerte de esos grandes lideres, el pueblo continua siendo un lugar de paz y prosperidad, pero ahora han llegado extranjeros y son los 9 lideres del pueblo los que guiarán a los extranjeros. (Los extranjeros son los jugadores que llegarán a conocer este mundo)
-
-El servidor tiene como versión base la 1.21.6 de Minecraft, y contará con los siguientes plugins:
-
- 	EssentialsX → Comandos básicos, homes, kits, warps, economía base.
-
-	LuckPerms → Sistema de permisos flexible, indispensable para gestionar rangos y accesos.
-
-	GeyserMC + Floodgate → Compatibilidad Bedrock ↔ Java (Aternos ya los soporta, pero revisa que estén activados).
-
-	Citizens2 → Creación de NPCs (mercaderes, guías, quest givers).
-
-	Quests → Plugin de misiones flexible (mata mobs, recolecta, viaja, interactúa con NPCs). Se integra con Citizens.
-
-	MythicMobs → Creación de mobs custom (stats, skills, loot). Es la base para darle sabor RPG.
-
-	MMOItems (si Aternos lo soporta en Spigot 1.21.6) → Para crear armas, armaduras y objetos RPG con stats únicos.
-
-	MMOCore (opcional, depende si quieres clases/skills) → Sistema de niveles, experiencia, profesiones y clases RPG.
+El servidor será un RPG, centrado en misiones que darán a los jugadores ciertas habilidades (efectos de pocion permanentes) que van desde las mas basicas (Fuerza 1 y velocidad 1) hasta habilidades tan poderosas que pueden rivalizar con el poder de los dioses (Mencion de los dioses en el Lore).
+El servidor tendrá una ubicación que será el centro de la historia y el lugar de desarrollo de los jugadores; Nápoles, el pueblo que tiene 11 ubicaaciones importantes, el mercado (Lugar donde unos NPC customizados serán comerciantes; Venderán La mayoria de los items que se pueden conseguir en survival por medio de un item especial, Esmeralda Real), tambien tendrá una ubicacion para cada NPC "resposable" del desarrollo de la historia y el progreso de los jugsadores, los NPCs son:
+	Alcalde Tomás
+	Bruno el Chef
+	Erika la cazadora
+	Helena la Curandera
+	Ícaro el Acrobata
+	Lia la Mensajera
+	Marta la Guardiana
+	Paúl el Minero
+	Sae la Sanadora
+La última locación debe ser el altar a los ángeles, que será un pequeño bosque donde habrán estatuas de ángeles (únicamente funcional para el Lore de dioses antiguos y dioses nuevos)
 	
-	Lands o FactionsUUID → Gestión de territorios, facciones o reinos.
+Cada NPC Principal le entregará a los jugadores ciertas misiones que al ser hechas los jugadores recibiran como recompensa las habilidades permanentes, las habilidades son: 
+	Erkika - Fuerza I - X 
+	Marta - Resistencia I - III	
+	Sae - Salud Extra I - V
+	Lia - Velocidad I - III
+	Ícaro - Salto Aumentado I - IV
+	Paúl - Prisa Minera I - X
+	Helena - Regeneración I - III	
+	Alcalde Tomás - Heroe de Villa I - V 
+	Bruno - Saturación I - III
 
-	HolographicDisplays → Texto flotante sobre NPCs, carteles mágicos, ambientación.
+Misiones, ¿Cómo funcionarán las misiones? 
+	Las habilidades son importantes porque el mundo solo tendrá mobs customizados (solo mobs hostiles y algunos neutrales), estos mobs customizados tendrán mucha mas vida, mayor daño de ataque, mayor resistencia y skills únicas haciendo que matar a un simple zombie se comvierta en toda una osadía.
+	Estos mobs custom como drop tendran un item custom; TOKEN_MISION, un item que será clave para la entrega de misioes y la economia del servidor, dicha economía será fisica (Únicamente con items y no con "dinero"), es decir, solo se hará en base a items que se intercambian.
+	Cada mob da como drop el TOKEN_MISION, los comerciantes del pueblo (NPC segundarios) van a cambiar estos TOKEN_MISION por Esmeraldas Reales (8 TOKEN_MISION a cambio de 1 Esmeralda Real), con estas Esmeraldas Reales podrán acceder a los comercios, donde intercambiarán estas esmeraldas por items comunes del juego (1 Esmeralda Real por 16 troncos de roble, 8 Esmeraldas Reales por 1 manzana de oro, 32 Esmeraldas Reales por un lingote de netherite (precios no fijos - Pendiente revision)), así los jugadores tendrán mas de una razon para conseguir estos TOKEN_MISION y se le dará mas vida al pueblo.
 
-	TAB → Customización del tablist con rangos y estética.
+Mobs custom
+	La mayoria de los mobs hostiles tienen una version customizada, la intencion es que estos mobs customizados aparezcan de forma EXCLUSIVA, reemplazando por completo el spawn de mobs "vanilla", ¿Para qué? Para establecer dos cosas:
+		1. Hacer que el seridor sea un desafio desde el primer día, desafio enfocado a los jugadores experimentados y a los jugadores novatos les obligará a crear grupos para apoyarse entre ellos.
+		2. No tener que hacer una busqueda tediosa de los items para las misiones tales como los TOKEN_MISION, así cualquier mob hostíl puede otorgar estos TOKEN_MISION, asieendo que la economia (Economia fisica) siempre tenga un gran movimiento además de ayudar a los nuevos jugadores con una experiencia mas inmerciva.
+	Estos mobs hostiles aparecerán en la superficie (Y => 64) cuevas (Y =< 64) y tambien los mobspawners (Reemplazarán completamente a los mobs hostiles para que no hayan problemás a la hora de hacer granjas o similares).
 
-	ModelEngine (si está en Aternos para Spigot 1.21.6) → Modelos 3D para mobs y NPCs, integración con MythicMobs.
+Clanes, pueblos, municipios y ciudades
+	El servidor será un mundo desafiante y lleno de peligros que solo los mas experimentados pueden sobreponer a estos problemas solos, por ello habrán estos Clanes, pueblos, municipios y ciudades, para que los jugadores creen comunidades en las que se puedan apoyar para progresar.
+		Estos Clanes, pueblos, municipios y ciudades se harán por medio de bloques de protección y dentro de cada Clanes, pueblos, municipios y ciudades habrán diferentes roles (Alcalde, constructor, explorador, guardia, granjero, etc) estos roles serán solo eso, roles a excepción de los lideres de Clanes, pueblos, municipios y ciudades, los lideres de las comunidades son los unicos que podrán comprar las protecciones para expandir sus acentamientos.
+	
+Lore
 
-	ItemsAdder o Oraxen (si Aternos lo soporta en tu versión) → Para texturas personalizadas, bloques y objetos RPG.
+	"Hace incontables generaciones, cuando la tierra aún era salvaje y gobernada por criaturas imposibles de domar, dos campeones caminaron entre los mortales.
+	Uno era maestro de la sabiduría y el ingenio; el otro, de la fuerza y el valor. Unidos no por sangre, sino por propósito, fundaron un asentamiento a orillas de un valle fértil: Nápoles.
 
-	CoreProtect → Protección y rollback contra griefing.
+	Bajo su guía, las primeras familias sobrevivieron al hambre, a las bestias y a la oscuridad. Los campeones compartieron su conocimiento, enseñaron el arte de la caza, la forja, la medicina y la convivencia. Así, lo que comenzó como un refugio de viajeros se convirtió en un pueblo próspero, donde la paz y la esperanza echaron raíces.
 
-	WorldGuard + WorldEdit → Control de regiones, protección, utilidades de construcción.
+	Pero el tiempo es cruel incluso con los más grandes. Tras la muerte de los campeones, generaciones enteras pasaron. Nápoles creció, floreció y se sostuvo en la memoria de sus fundadores. Sin embargo, más allá de sus murallas, la tierra seguía siendo hostil. Criaturas extrañas, endurecidas por la magia antigua del mundo, acechaban en bosques, montañas y cavernas, volviéndose cada vez más fuertes con los siglos.
 
-	ClearLag → Evitar sobrecarga de entidades.
+	Hoy, los nativos de estas tierras, guardianes de costumbres olvidadas y herederos del linaje de los campeones, han tomado las riendas del pueblo. Nueve líderes, elegidos por su conocimiento y su servicio, gobiernan en nombre de Nápoles:
 
-Con estos plugins lo que quiero es hacer diferentes cosas que te mencionaré a continuación:
+		Tomás, el alcalde, que mantiene unida la voluntad del pueblo.
 
-	Citizens2:
+		Bruno, el chef, que conserva los secretos de la nutrición y la abundancia.
 
-	Con este plugin quiero hacer 9 NPC los cuales por medio de interacciones entre los plugins pueden dar misiones a los jugadores y otorgar recompensas. Como primera versión las únicas recompensas que ofrecen son habilidades (Efectos de poción permanentes, persistentes incluso después de la muerte de un jugador) que van desde los niveles básicos de poción (Fuerza 1, velocidad 1, regeneración 1, etc) hasta habilidades que les dan a los jugadores poderes que rivalizan con los dioses (Fuerza 10, resistencia 3, regeneración 3, etc)
+		Erika, la cazadora, implacable protectora de los caminos.
 
-Los NPC's son los siguientes:
+		Helena, la curandera, cuyo arte preserva la vida en la enfermedad y el dolor.
 
-	Erika la cazadora, encargada de proveer animales al pueblo, quien pondrá misiones de caza, tanto de mobs hostiles, pacificos y neutrales para otorgar la habilidad de Fuerza.
+		Ícaro, el acróbata, quien entrena el cuerpo y desafía las leyes de la gravedad.
 
-	Marta, La Guardiana, encargada de la seguridad del pueblo, encarga la caza y recolecta de materiales muy específicos, porque la habilidad que ella entrega como recompensa es una de las mas preciadas: La habilidad de Resistencia.
+		Lia, la mensajera, veloz como el viento, portadora de noticias y esperanzas.
 
-	Sae, la Sanadora, con sus manos delicadas es capaz de unir lo que las espadas y hachas afiladas logran rasgar, ella encarga proteger a los débiles para enseñarte sus dones y entregar la habilidad de salud extra, para que los viajeros puedan tener mas tiempo de ir a ella para ser sanados.
+		Marta, la guardiana, ejemplo de fortaleza y resistencia.
 
-	Lia, la mensajera, una mujer joven que como todos en esas edades rebeldes... Es difícil de controlar y hacer que se quede quieta, reparte las cartas del pueblo y antes del medio día molesta a Ícaro porque ha acabado de entregar gracias a su increíble velocidad. Ella por misiones otorga la habilidad de Velocidad.
+		Paúl, el minero, que desciende a las profundidades en busca de tesoros.
 
-	Ícaro, el acróbata, hermano de Lia es encargado del circo del pueblo, vive por y para el espectáculo, llevando sonrisas a los niños y sorpresa a los ancianos con sus saltos imposibles. Él otorga la habilidad de Salto Aumentado para los que cumplan sus exigencias.
+		Sae, la sanadora, discípula de antiguos ángeles, capaz de prolongar la vida misma.
 
-	Paúl, el minero, el anciano del pueblo encargado de llevar carbón a la forja y a las casas para mantener el calor en los hogares, él se encarga de entregar la habilidad de Prisa Minera a cambio de recolectar minerales y otras cosas.
+	Bajo su guía, Nápoles sigue siendo un faro de paz, pero la paz es frágil…
+	Pues nuevas generaciones de extranjeros han comenzado a llegar a este mundo. Hombres y mujeres sin tierra, sin recuerdos de su pasado, llamados por un destino mayor: sobrevivir y conquistar lo que los antiguos no pudieron.
 
-	Helena, la curandera, quien con amor y cariño da bendiciones a los guerreros entregando la habilidad de regeneración pidiendo a cambio diversos la resurrección de los caídos.
+	Los dioses antiguos y nuevos
 
-	Alcalde Tomas, un héroe de una batalla antigua, quien gracias a su liderazgo en el campo de batalla se gano la confianza para dirigir al pueblo y su gente.
+	Se dice que las habilidades que algunos mortales obtienen —fuerza inhumana, velocidad, regeneración o la resistencia a la muerte— no son dones gratuitos. Son fragmentos del poder de los dioses, esparcidos por el mundo en tiempos remotos.
+	Los dioses antiguos, ángeles y titanes, reinaron sobre estas tierras mucho antes de la llegada de los campeones. Sus estatuas aún vigilan en el Altar de los Ángeles, en un bosque sagrado a las afueras del pueblo. Allí, los líderes recuerdan a los extranjeros que toda fuerza viene acompañada de sacrificio.
 
-	Bruno, el chef, al contrario de lo que la gente cree, ese cuerpo delgado y manos temblorosas preparan comida... !Exquisita¡ Él solo pide las cosas que hacen falta en su cocina, a cambio te da la habilidad de Saturación.
+	La maldición de los monstruos
 
-Estos NPC's deberán darle misiones a los jugadores, misiones hechas con el plugin Quest. Ejemplos de las misiones son: 
+	Los monstruos que infestan el mundo no son simples bestias: son el resultado de la corrupción de los dioses antiguos, entidades deformadas por la magia de los cielos. Cada criatura abatida deja tras de sí un fragmento de esa corrupción: los Tokens de Misión. Estos tokens son la prueba de la lucha, y con ellos los extranjeros demuestran su valía.
 
-	Erika pide: Derrota 20 ZOMBIE_CAPITAN_V1 y 20 SKELETON_TACTICO_V1, recolecta 32 carne podrida, 32 huesos y 50 tokens de misión. A cambio, ella te dará Fuerza 1.
+	Los tokens pueden ser purificados y transformados en Esmeraldas Reales, la única moneda reconocida en Nápoles. Con ellas se comercia en el mercado, donde se accede a materiales y objetos de supervivencia.
 
-	Erika pide: Derrota 10 VINDICATOR_DEMOLEDOR_V1 y 10 EVOKER_BRUJO_V1, recolecta 8 varas de blaze y 70 tokens de misión. A cambio, ella te dará Fuerza 2.
+	El desafío del mundo
 
-	Erika pide: Derrota 5 WITHER_SKELETON_CAPITAN_V1 y 5 BLAZE_FURIA_V1, recolecta 4 bloques de hierro y 80 tokens de misión. A cambio, ella te dará Fuerza 3.
-
-	Erika pide: Derrota 3 PILLAGER_RAIDER_V1 y 3 VINDICATOR_DEMOLEDOR_V1, recolecta 2 bloques de diamante y 100 tokens de misión. A cambio, ella te dará Fuerza 4.
-
-	Erika pide: Derrota 10 WITHER_SKELETON_CAPITAN_V1, 10 MAGMA_CUBE y 10 BLAZE, recolecta 1 bloque de esmeralda, 1 estrella del Nether y 120 tokens de misión. A cambio, ella te dará Fuerza 5. 
-
-	Erika pide: Derrota 1 WITHER_BOSS_V1, recolecta 1 bloque de esmeralda, 1 estrella del Nether y 150 tokens de misión. A cambio, ella te dará Fuerza 6.
-
-	Erika pide: Derrota 2 WITHER_BOSS_V1 y 5 ENDER_DRAGON_GUARDIAN_V1, recolecta 2 bloques de esmeralda, 2 estrellas del Nether y 180 tokens de misión. A cambio, ella te dará Fuerza 7.
-
-	Erika pide: Derrota 3 WITHER_BOSS_V1 y 3 ENDER_DRAGON_GUARDIAN_V1, recolecta 3 bloques de esmeralda, 3 estrellas del Nether y 210 tokens de misión. A cambio, ella te dará Fuerza 8.
-
-	Erika pide: Derrota 1 ENDER_DRAGON_BOSS_V1 y 5 WITHER_BOSS_V1, recolecta 5 bloques de esmeralda, 5 estrellas del Nether y 240 tokens de misión. A cambio, ella te dará Fuerza 9.
-
-	Erika pide: Derrota 1 ENDER_DRAGON_BOSS_V1, 1 WITHER_BOSS_V1 y 1 ELDER_GUARDIAN_TITAN_V1, recolecta 10 bloques de esmeralda, 10 estrellas del Nether y 300 tokens de misión. A cambio, ella te dará Fuerza 10.
-
-	Marta pide: Sobrevive y elimina a 15 CREEPER_TANQUE_V1 y recolecta 1 escudo, 8 bloques de obsidiana y 32 tokens de misión. A cambio, ella te dará Resistencia 1.
-
-	Marta pide: Sobrevive y elimina a 20 CREEPER_TANQUE_V1 y recolecta 1 escudo, 12 bloques de obsidiana y 48 tokens de misión. A cambio, ella te dará Resistencia 2. 
-
-	Marta pide: Sobrevive y elimina a 25 CREEPER_TANQUE_V1 y recolecta 1 escudo, 16 bloques de obsidiana y 64 tokens de misión. A cambio, ella te dará Resistencia 3.
-
-	Sae pide: Protege aldeanos de ataques (matar 5 PILLAGER_RAIDER_V1) y recolecta 4 manzanas doradas, 7 botellas de miel y 60 tokens de misión. A cambio, ella te dará Salud Extra 1.
-
-	Sae pide: Protege aldeanos de ataques (matar 10 PILLAGER_RAIDER_V1) y recolecta 6 manzanas doradas, 14 botellas de miel y 80 tokens de misión. A cambio, ella te dará Salud Extra 2.
-
-	Sae pide: Protege aldeanos de ataques (matar 15 PILLAGER_RAIDER_V1) y recolecta 8 manzanas doradas, 14 botellas de miel y 100 tokens de misión. A cambio, ella te dará Salud Extra 3.
-
-	Sae pide: Protege aldeanos de ataques (matar 20 PILLAGER_RAIDER_V1) y recolecta 10 manzanas doradas, 16 botellas de miel y 120 tokens de misión. A cambio, ella te dará Salud Extra 4.
-
-	Sae pide: Protege aldeanos de ataques (matar 25 PILLAGER_RAIDER_V1) y recolecta 12 manzanas doradas, 18 botellas de miel y 140 tokens de misión. A cambio, ella te dará Salud Extra 5.
-
-	Lia pide: Completa la carrera entre aldeas y entrega el ítem META_CARRERA, además recolecta 16 de azúcar y 32 tokens de misión. A cambio ella te dará velocidad 1.
-
-	Lia pide: Completa la carrera avanzada y entrega el ítem META_CARRERA, elimina a 10 SKELETON_TACTICO_V1 y recolecta 32 de azúcar y 64 tokens de misión. A cambio ella te dará velocidad 2.
-
-	Lia pide: Completa la carrera experta y entrega el ítem META_CARRERA, elimina a 15 SKELETON_TACTICO_V1 y recolecta 64 de azúcar, una tarta y 128 tokens de misión. A cambio ella te dará velocidad 3.
-
-	Ícaro pide: Supera el parkour de la torre y entrega el ítem META_PARKOUR, además recolecta 1 bloque de slime, 24 plumas y 30 tokens de misión. A cambio él te dará Salto Aumentado 1.
-
-	Ícaro pide: Supera el parkour avanzado y entrega el ítem META_PARKOUR, elimina a 5 SPIDER_UMBRIA_V1 y recolecta 2 bloques de slime, 48 plumas y 64 tokens de misión. Supera el parkour experto y entrega el ítem META_PARKOUR, elimina a 10 SPIDER_UMBRIA_V1 y recolecta 3 bloques de slime, 64 plumas y 128 tokens de misión. A cambio él te dará Salto Aumentado 2.
-
-	Ícaro pide: Supera el parkour experto y entrega el ítem META_PARKOUR, elimina a 10 SPIDER_UMBRIA_V1 y recolecta 3 bloques de slime, 64 plumas y 128 tokens de misión. A cambio él te dará Salto Aumentado 3.
-
-	Ícaro pide: Supera el parkour maestro y entrega el ítem META_PARKOUR, elimina a 15 SPIDER_UMBRIA_V1 y recolecta 4 bloques de slime, 80 plumas y 256 tokens de misión. A cambio él te dará Salto Aumentado 4
-
-	Paúl pide: Recolecta 5 bloques de redstone, 1 diamante y 40 tokens de misión. A cambio él te dará Prisa Minera 1.
-
-	Paúl pide: Recolecta 10 bloques de redstone, un bloque de diamante y 80 tokens de misión. A cambio él te dará Prisa Minera 2.
-
-	Paúl pide: Recolecta 15 bloques de carbón, 5 bloques de hierro y 120 tokens de misión. A cambio él te dará Prisa Minera 3.
-
-	Paúl pide: Recolecta 20 bloques de amatista, 10 bloques de cuarzo y 192 tokens de misión. A cambio él te dará Prisa Minera 4.
-
-	Paúl pide: Recolecta cinco stacks de pizarra profunda, tres stacks de basalto y 192 tokens de misión. A cambio él te dará Prisa Minera 5.
-
-	Paúl pide: Recolecta un bloque de esmeralda, un lingote de netherite y 192 tokens de misión. A cambio él te dará Prisa Minera 6.
-
-	Paúl pide: Recolecta 25 bloques de hierro, 15 bloques de oro y 192 tokens de misión. A cambio él te dará Prisa Minera 7.
-
-	Paúl pide: Recolecta 64 bloques de carbón, 64 bloques de obsidiana y 192 tokens de misión. A cambio él te dará Prisa Minera 8.
-
-	Paúl pide: Recolecta 16 bloques de obsidiana llorosa, 64 bloques de oro y 192 tokens de misión. A cambio él te dará Prisa Minera 9. 
-
-	Paúl pide: Recolecta 128 bloques de carbón, 128 bloques de obsidiana, 32 bloques de diamante, 32 bloques de hierro y 192 tokens de misión. A cambio él te dará Prisa Minera 10.
-
-	Helena pide: Cura 3 aldeanos (entrega el ítem META_CURACION que se obtiene al completar la prueba de curación), recolecta 12 botellas de miel, 1 poción de curación y 35 tokens de misión. A cambio ella te dará Regeneración 1.
-
-	Helena pide: Cura 6 aldeanos (entrega el ítem META_CURACION), recolecta 8 lágrimas de ghast y 70 tokens de misión. A cambio ella te dará Regeneración 2.
-
-	Helena pide: Cura 12 aldeanos (entrega el ítem META_CURACION), recolecta 12 lágrimas de ghast y 100 tokens de misión. A cambio ella te dará Regeneración 3.
-
-	El Alcalde Tomas pide: Defiende la villa de 1 PILLAGER_RAIDER_V1 y recolecta 1 esmeralda y 16 tokens de misión. A cambio te dará Héroe de Villa 1.
-
-	El Alcalde Tomas pide: Defiende la villa de 2 PILLAGER_RAIDER_V1 y recolecta 2 esmeraldas y 32 tokens de misión. A cambio te dará Héroe de Villa 2.
-
-	El Alcalde Tomas pide: Defiende la villa de 3 PILLAGER_RAIDER_V1 y recolecta 3 esmeraldas y 48 tokens de misión. A cambio te dará Héroe de Villa 3.
-
-	El Alcalde Tomas pide: Defiende la villa de 4 PILLAGER_RAIDER_V1 y recolecta 4 esmeraldas y 64 tokens de misión. A cambio te dará Héroe de Villa 4.
-
-	El Alcalde Tomas pide: Defiende la villa de 5 PILLAGER_RAIDER_V1 y recolecta 5 esmeraldas y 80 tokens de misión. A cambio te dará Héroe de Villa 5.
-
-	El Alcalde Tomas pide: Defiende la villa de 6 PILLAGER_RAIDER_V1 y recolecta 6 esmeraldas y 96 tokens de misión. A cambio te dará Héroe de Villa 6.
-
-	El Alcalde Tomas pide: Defiende la villa de 7 PILLAGER_RAIDER_V1 y recolecta 7 esmeraldas y 112 tokens de misión. A cambio te dará Héroe de Villa 7.
-
-	El Alcalde Tomas pide: Defiende la villa de 8 PILLAGER_RAIDER_V1 y recolecta 8 esmeraldas y 128 tokens de misión. A cambio te dará Héroe de Villa 8.
-
-	El Alcalde Tomas pide: Defiende la villa de 9 PILLAGER_RAIDER_V1 y recolecta 9 esmeraldas y 144 tokens de misión. A cambio te dará Héroe de Villa 9.
-
-	El Alcalde Tomas pide: Defiende la villa de 10 PILLAGER_RAIDER_V1 y recolecta 10 esmeraldas y 160 tokens de misión. A cambio te dará Héroe de Villa 10.
-
-	El Alcalde Tomas pide: Defiende la villa de 11 PILLAGER_RAIDER_V1 y recolecta 11 esmeraldas y 176 tokens de misión. A cambio te dará Héroe de Villa 11.
-
-	El Alcalde Tomas pide: Defiende la villa de 12 PILLAGER_RAIDER_V1 y recolecta 12 esmeraldas y 192 tokens de misión. A cambio te dará Héroe de Villa 12.
-
-	El Alcalde Tomas pide: Defiende la villa de 13 PILLAGER_RAIDER_V1 y recolecta 13 esmeraldas y 208 tokens de misión. A cambio te dará Héroe de Villa 13.
-
-	El Alcalde Tomas pide: Defiende la villa de 14 PILLAGER_RAIDER_V1 y recolecta 14 esmeraldas y 224 tokens de misión. A cambio te dará Héroe de Villa 14.
-
-	El Alcalde Tomas pide: Defiende la villa de 15 PILLAGER_RAIDER_V1 y recolecta 15 esmeraldas y 240 tokens de misión. A cambio te dará Héroe de Villa 15.
-
-	El Alcalde Tomas pide: Defiende la villa de 16 PILLAGER_RAIDER_V1 y recolecta 16 esmeraldas y 256 tokens de misión. A cambio te dará Héroe de Villa 16.
-
-	El Alcalde Tomas pide: Defiende la villa de 17 PILLAGER_RAIDER_V1 y recolecta 17 esmeraldas y 272 tokens de misión. A cambio te dará Héroe de Villa 17.
-
-	El Alcalde Tomas pide: Defiende la villa de 18 PILLAGER_RAIDER_V1 y recolecta 18 esmeraldas y 288 tokens de misión. A cambio te dará Héroe de Villa 18.
-
-	El Alcalde Tomas pide: Defiende la villa de 19 PILLAGER_RAIDER_V1 y recolecta 19 esmeraldas y 304 tokens de misión. A cambio te dará Héroe de Villa 19.
-
-	El Alcalde Tomas pide: Defiende la villa de 20 PILLAGER_RAIDER_V1 y recolecta 20 esmeraldas y 320 tokens de misión. A cambio te dará Héroe de Villa 20.
-
-	Bruno pide: Recolecta de los siguientes objetos 32 items: Manzanas Doradas, Zanahorias Doradas, Carne de Cerdo Cocinada, Carne de Res cocinada, Carne de Cordero Cocinada, Salmón cocinado, Bacalao cocinado, Pollo Cocinado, Patata Cocinada, pan, Carne de Conejo Cocinado, Manzanas, Sandias, Zanahorias, Torta de Calabaza, Galletas, Bayas, Carne Podrida y tokens de misión. A cambio te dará Saturación 1.
-
-	Bruno pide: Recolecta de los siguientes objetos 48 items: Manzanas Doradas, Zanahorias Doradas, Carne de Cerdo Cocinada, Carne de Res cocinada, Carne de Cordero Cocinada, Salmón cocinado, Bacalao cocinado, Pollo Cocinado, Patata Cocinada, pan, Carne de Conejo Cocinado, Manzanas, Sandias, Zanahorias, Torta de Calabaza, Galletas, Bayas, Carne Podrida y tokens de misión. A cambio te dará Saturación 2.
-
-	Bruno pide: Recolecta de los siguientes objetos 64 items: Manzanas Doradas, Zanahorias Doradas, Carne de Cerdo Cocinada, Carne de Res cocinada, Carne de Cordero Cocinada, Salmón cocinado, Bacalao cocinado, Pollo Cocinado, Patata Cocinada, pan, Carne de Conejo Cocinado, Manzanas, Sandias, Zanahorias, Torta de Calabaza, Galletas, Bayas, Carne Podrida y tokens de misión. A cambio te dará Saturación 3.
-
-Estos NPC's también dan misiones segundarias, algunas para conseguir cosas graciosas o incluso básicas, otras cosas que son realmente complicadas de conseguir y que "obliga" a los jugadores a hacer esas misiones. Lo que quiero es que al igual que 
-
-De los mobs nos encargamos mas adelante, pero ten en cuenta que de todos los mobs hotiles y neutrales deberán ser editados para que el servidor sea desafiante y dificil, ademas, que quiero reemplazar todos los spawneos de mobs "normales" con estos mobs vanilla
-
-ZOMBIE_CAPITAN_V1, será un mob tipo zombie con 40 puntos de vida, 13.5 puntos de daño y dos puntos de armadura. un zombie que puede spawnear de forma natural, no puede spawnear en altura menor a 64. Cuenta con partículas verdes al rededor de su cuerpo que lo hacen distinguir de los demás zombies.
-
-	SKELETON_TACTICO_V1, será un mob tipo skeleton, con 32 puntos de vida, 8 puntos de daño y un punto de armadura, no puede spawnear en altura menor a 64 y tiene la peculiaridad de siempre dar como drop su arco <Arco de Atreus>. Cuenta con partículas azules que lo distinguen de los demás mobs, además de usar flechas de veneno y debilidad para atacar a los jugadores.
-
-	SPIDER_UMBRIA_V1, será un mob tipo spider, que cuenta con 30 puntos de vida y 7.5 puntos de daño, no puede spawnear en alturas mayores a 64 ya que su hogar siempre ha sido la profundidad de las cavernas. Cuenta con partículas moradas para distinguirla de las demás arañas. Esta araña para atacar, coloca en la posición del jugador una telaraña, para inmovilizarlo y poder devorar su presa. Se identifica de otras arañas con partículas moradas.
-
-	CREEPER_SEGMENTADO_V1, será un mob tipo creeper, que cuenta con 22 puntos de vida, no cuenta con puntos de armadura ni con daño cuerpo a cuerpo, este creeper tiene el atributo de velocidad 2, lo que lo vuelve un enemigo sigiloso y peligroso.
-
-	DROWNED_CORSARIO_V1, será un mob tipo drowned, cuenta con 38 puntos de vida, 12.75 puntos de daño y un punto de armadura, siguiendo su pasado pirata, spawnea únicamente en los barcos hundidos defendiendo su embarcación, como buen pirata, spawnea con espada de oro encantada con fire aspect 1 y se identifica de los demás drowners ya que cuenta con partículas de fuego, su ira contenida alimenta las llamas aún bajo el agua.
-
-	VINDICATOR_DEMOLEDOR_V1, será mob tipo vindicador, cuenta con 45 puntos de vida, 16.5 puntos de daño y 2 puntos de armadura, spawnean patrullas compuestas desde dos hasta cinco de estos VINDICATOR_DEMOLEDOR_V1 por patrulla en alturas mayores a 64, cada uno para distinguirse de los vindicadores normales cuentan con hachas de oro y pantalones de cuero teñidos de negro, además, cuentan con partículas color negro que anuncian el augurio de muerte que traen estas temidas patrullas.
-
-	SLIME_BABOSO_V1, será un mob tipo slime, el cual cuenta con 20 puntos de vida, cuatro puntos de daño y no cuenta con puntos de armadura, al ser un enemigo que no tiene gran daño, al golpear a los jugadores, les da efecto de veneno y debilidad por 5 segundos, haciéndolo un enemigo temible para quien se lo encuentre, este slime puede spawnear en cualquier chunck del overwold, con la única restricción de no spawnear en biomas cálidos (Desiertos y mesas). Se distingue de los demás slimes porque tiene el efecto de Glowing, haciéndolo sobresalir por encima de los demás enemigos.
-
-	MAGMA_INFERNAL_V1, será un mob tipo magmacube, cuenta con 100 puntos de vida, 18 puntos de daño de ataque y no cuenta con armadura, es un enemigo formidable ya salta y deja un aura de fuego al rededor suyo, haciendo que enfrentarse a él sea enfrentarse al nether mismo, spawnea únicamente en el bioma soul sand valley, al igual que su "homologo" SLIME_BABOSO_V1, su cuerpo brilla por encima de los demás, ya que cuenta con el efecto de Glowing.
-
-	SLAVES_OF_THE_WITHER_V1, será un mob tipo wither_skeleton, el cual cuenta con 50 puntos de vida, 18 puntos de daño y dos puntos de armadura, serán zurdos y pelearán con palas de oro y sus pies vestirán botas de oro, al final sirven al rey del nether. Estos tendrán un aura de fuego que hará el enfrentamiento a ellos sea complejo, y su cuerpo estará rodeado de partículas de fuego. Estos SLAVES_OF_THE_WITHER_V1 tienen una probabilidad del 33% en droppear una Calaveras_Maldita, que se usará para invocar al WITHER_SUPREMO_V1. Estos SLAVES_OF_THE_WITHER_V1 spawnean únicamente en el bioma soul sand valley, y spawnean en patrullas, desde dos hasta cinco SLAVES_OF_THE_WITHER_V1 a la vez.
-
-	WITHER_SUPREMO_V1, será un meob tipo wither, el cual tendrá 500 puntos de vida y 35 puntos de ataque, será un jefe absurdamente complicado, ya que al momento de recibir daño genera SLAVES_OF_THE_WITHER_V1 para defenderlo, tiene un comportamiento sumamente agresivo y cuenta con el efecto de velocidad 2. Ver su puesta en escena es asombrosa y temida, ya que su cuerpo esta rodeado de partículas de fuego azul, por todas las almas que ha tomado en su reinado. se invoca UNICAMENTE por medio de las Calaveras_Maldita que droppean los SLAVES_OF_THE_WITHER_V1. (EN lugar de usar los cuatro bloques de arena de alma y cabezas de wither, se reemplazan las cabezas de wither por las Calaveras_Malditas para invocar a este Jefe)
-
-	ENDER_DRAGON_GUARDIAN_V1, será mob tipo enderman, cuenta con 100 puntos de vida y 28 puntos de ataque, al contrario que los enderman normales, es inmune al agua, no es neutral, es agresivo, y cuando se teletransporta deja aliento de dragón en el suelo, enemigo en extremo peligroso que se distingue de los demás enderman porque su cuerpo es rodeado por partículas de aliento de dragón. 
-
-	ELDER_GUARDIAN_TITAN_V1, será un mob tipo elder_guardian, cuenta con 200 puntos de vida y 28 puntos de daño, son extremadamente agresivos y sus ataque son lanzar ráfagas de agua e invocar DROWNED_CORSARIO_V1, spawnea de forma natural en los océanos profundos (No spawnea en los templos marinos) y al vagar en las profundidades se convirtió en el rey de los mares. Se distingue de los demás elder_guardian porque tiene velocidad 2 y Glowing, lo que le abre paso como el rey de los océanos.
+	Aquí, nada es sencillo. Las criaturas del valle poseen más fuerza, más resistencia y más malicia que en cualquier otro mundo conocido. Los extranjeros que lleguen a Nápoles pronto descubrirán que ni el más simple de los zombis puede subestimarse.
+	Algunos afrontarán este destino en soledad, otros forjarán clanes, pueblos y ciudades para resistir juntos. La unión será la clave para progresar, porque un hombre aislado perece, pero una comunidad puede alzarse como imperio."
