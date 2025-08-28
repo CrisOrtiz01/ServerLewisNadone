@@ -10,11 +10,10 @@ quests:
       - effect give %player% haste 999999 0 true
       - tellraw %player% {"text":"Has obtenido Prisa Minera I de forma permanente","color":"dark_gray"}
       items:
-      - TOKEN_MISION 5
+      - mm:TOKEN_MISION 5
       money: 100
       quest-points: 5
       permission: habilidades.prisaminera.1
-    objectives:
       redstone_blocks:
         type: collect
         item: REDSTONE_BLOCK
@@ -27,11 +26,10 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 40
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -48,16 +46,17 @@ quests:
     requirements:
       quest-points: 5
       permission: habilidades.prisaminera.1
+      quests-completed:
+      - aprendiz_minero
     rewards:
       commands:
       - effect give %player% haste 999999 1 true
       - tellraw %player% {"text":"Has mejorado a Prisa Minera II de forma permanente","color":"dark_gray"}
       items:
-      - TOKEN_MISION 10
+      - mm:TOKEN_MISION 10
       money: 200
       quest-points: 10
       permission: habilidades.prisaminera.2
-    objectives:
       redstone_blocks:
         type: collect
         item: REDSTONE_BLOCK
@@ -70,11 +69,10 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 80
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -93,16 +91,17 @@ quests:
     requirements:
       quest-points: 15
       permission: habilidades.prisaminera.2
+      quests-completed:
+      - minero_experimentado
     rewards:
       commands:
       - effect give %player% haste 999999 2 true
       - tellraw %player% {"text":"Has mejorado a Prisa Minera III de forma permanente","color":"dark_gray"}
       items:
-      - TOKEN_MISION 15
+      - mm:TOKEN_MISION 15
       money: 300
       quest-points: 15
       permission: habilidades.prisaminera.3
-    objectives:
       coal_blocks:
         type: collect
         item: COAL_BLOCK
@@ -115,11 +114,10 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 120
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -138,16 +136,17 @@ quests:
     requirements:
       quest-points: 30
       permission: habilidades.prisaminera.3
+      quests-completed:
+      - maestro_profundidades
     rewards:
       commands:
       - effect give %player% haste 999999 3 true
       - tellraw %player% {"text":"Has mejorado a Prisa Minera IV de forma permanente","color":"dark_gray"}
       items:
-      - TOKEN_MISION 20
+      - mm:TOKEN_MISION 20
       money: 400
       quest-points: 20
       permission: habilidades.prisaminera.4
-    objectives:
       amethyst_blocks:
         type: collect
         item: AMETHYST_BLOCK
@@ -160,11 +159,10 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 192
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -183,16 +181,17 @@ quests:
     requirements:
       quest-points: 50
       permission: habilidades.prisaminera.4
+      quests-completed:
+      - buscador_tesoros
     rewards:
       commands:
       - effect give %player% haste 999999 4 true
       - tellraw %player% {"text":"Has mejorado a Prisa Minera V de forma permanente","color":"dark_gray"}
       items:
-      - TOKEN_MISION 25
+      - mm:TOKEN_MISION 25
       money: 500
       quest-points: 25
       permission: habilidades.prisaminera.5
-    objectives:
       deepslate:
         type: collect
         item: DEEPSLATE
@@ -205,11 +204,10 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 192
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -228,16 +226,17 @@ quests:
     requirements:
       quest-points: 75
       permission: habilidades.prisaminera.5
+      quests-completed:
+      - minero_abismo
     rewards:
       commands:
       - effect give %player% haste 999999 5 true
       - tellraw %player% {"text":"Has mejorado a Prisa Minera VI de forma permanente","color":"dark_gray"}
       items:
-      - TOKEN_MISION 30
+      - mm:TOKEN_MISION 30
       money: 600
       quest-points: 30
       permission: habilidades.prisaminera.6
-    objectives:
       emerald_block:
         type: collect
         item: EMERALD_BLOCK
@@ -250,11 +249,10 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 192
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -273,16 +271,17 @@ quests:
     requirements:
       quest-points: 105
       permission: habilidades.prisaminera.6
+      quests-completed:
+      - buscador_netherita
     rewards:
       commands:
       - effect give %player% haste 999999 6 true
       - tellraw %player% {"text":"Has mejorado a Prisa Minera VII de forma permanente","color":"dark_gray"}
       items:
-      - TOKEN_MISION 35
+      - mm:TOKEN_MISION 35
       money: 700
       quest-points: 35
       permission: habilidades.prisaminera.7
-    objectives:
       iron_blocks:
         type: collect
         item: IRON_BLOCK
@@ -295,11 +294,10 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 192
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -318,16 +316,17 @@ quests:
     requirements:
       quest-points: 140
       permission: habilidades.prisaminera.7
+      quests-completed:
+      - magnate_mineral
     rewards:
       commands:
       - effect give %player% haste 999999 7 true
       - tellraw %player% {"text":"Has mejorado a Prisa Minera VIII de forma permanente","color":"dark_gray"}
       items:
-      - TOKEN_MISION 40
+      - mm:TOKEN_MISION 40
       money: 800
       quest-points: 40
       permission: habilidades.prisaminera.8
-    objectives:
       coal_blocks:
         type: collect
         item: COAL_BLOCK
@@ -340,11 +339,10 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 192
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -363,16 +361,17 @@ quests:
     requirements:
       quest-points: 180
       permission: habilidades.prisaminera.8
+      quests-completed:
+      - senor_sombras
     rewards:
       commands:
       - effect give %player% haste 999999 8 true
       - tellraw %player% {"text":"Has mejorado a Prisa Minera IX de forma permanente","color":"dark_gray"}
       items:
-      - TOKEN_MISION 45
+      - mm:TOKEN_MISION 45
       money: 900
       quest-points: 45
       permission: habilidades.prisaminera.9
-    objectives:
       crying_obsidian:
         type: collect
         item: CRYING_OBSIDIAN
@@ -385,11 +384,10 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 192
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -408,6 +406,8 @@ quests:
     requirements:
       quest-points: 225
       permission: habilidades.prisaminera.9
+      quests-completed:
+      - excavador_lagrimas
     rewards:
       commands:
       - effect give %player% haste 999999 9 true
@@ -415,11 +415,10 @@ quests:
       - title %player% title {"text":"¡Titán de la Minería!","color":"dark_gray","bold":true}
       - title %player% subtitle {"text":"Has dominado el poder de la Prisa Minera","color":"gray"}
       items:
-      - TOKEN_MISION 50
+      - mm:TOKEN_MISION 50
       money: 1000
       quest-points: 50
       permission: habilidades.prisaminera.10
-    objectives:
       coal_blocks:
         type: collect
         item: COAL_BLOCK
@@ -442,11 +441,10 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 192
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -457,3 +455,6 @@ quests:
       category: minero
       requires:
       - excavador_lagrimas
+
+
+

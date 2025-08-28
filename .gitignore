@@ -1,0 +1,27 @@
+# Backup files
+*.backup
+*.bak
+*.orig
+
+# Temporary files
+/tmp/
+*.tmp
+
+# Plugin data that shouldn't be versioned
+**/stats.yml
+**/database.yml
+**/userdata/
+**/playerdata/
+
+# Server logs
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

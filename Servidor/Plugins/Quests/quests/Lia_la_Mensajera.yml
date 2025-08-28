@@ -10,11 +10,10 @@ quests:
       - effect give %player% speed 999999 0 true
       - tellraw %player% {"text":"Has obtenido Velocidad I de forma permanente","color":"aqua"}
       items:
-      - TOKEN_MISION 5
+      - mm:TOKEN_MISION 5
       money: 100
       quest-points: 5
       permission: habilidades.velocidad.1
-    objectives:
       meta_carrera:
         type: collect
         item: META_CARRERA
@@ -28,11 +27,10 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 32
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -49,16 +47,17 @@ quests:
     requirements:
       quest-points: 5
       permission: habilidades.velocidad.1
+      quests-completed:
+      - mensajero_principiante
     rewards:
       commands:
       - effect give %player% speed 999999 1 true
       - tellraw %player% {"text":"Has mejorado a Velocidad II de forma permanente","color":"aqua"}
       items:
-      - TOKEN_MISION 10
+      - mm:TOKEN_MISION 10
       money: 200
       quest-points: 10
       permission: habilidades.velocidad.2
-    objectives:
       meta_carrera:
         type: collect
         item: META_CARRERA
@@ -67,7 +66,7 @@ quests:
           display-name: '&bMeta de Carrera'
       kill_skeletons:
         type: kill
-        mob: SKELETON_TACTICO_V1
+        mob: Skeleton_Guerrero
         amount: 10
         data: []
       azucar:
@@ -77,11 +76,10 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 64
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -100,6 +98,8 @@ quests:
     requirements:
       quest-points: 15
       permission: habilidades.velocidad.2
+      quests-completed:
+      - mensajero_veloz
     rewards:
       commands:
       - effect give %player% speed 999999 2 true
@@ -107,11 +107,10 @@ quests:
       - title %player% title {"text":"¡Mensajero Relámpago!","color":"aqua","bold":true}
       - title %player% subtitle {"text":"Has dominado el poder de la Velocidad","color":"white"}
       items:
-      - TOKEN_MISION 15
+      - mm:TOKEN_MISION 15
       money: 300
       quest-points: 15
       permission: habilidades.velocidad.3
-    objectives:
       meta_carrera:
         type: collect
         item: META_CARRERA
@@ -120,7 +119,7 @@ quests:
           display-name: '&bMeta de Carrera'
       kill_skeletons:
         type: kill
-        mob: SKELETON_TACTICO_V1
+        mob: Skeleton_Guerrero
         amount: 15
         data: []
       azucar:
@@ -135,11 +134,10 @@ quests:
         data: []
       tokens:
         type: collect
-        item: TOKEN_MISION
+        item: mm:TOKEN_MISION
         amount: 128
         data:
           display-name: '&eToken de Misión'
-    options:
       cooldown:
         enabled: true
         time: 86400
@@ -150,3 +148,7 @@ quests:
       category: mensajero
       requires:
       - mensajero_veloz
+
+
+
+

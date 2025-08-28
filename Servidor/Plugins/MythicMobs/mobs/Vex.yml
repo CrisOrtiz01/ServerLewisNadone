@@ -5,7 +5,7 @@ Vex_Fantasmal:
   Damage: 10
   Armor: 2
   Drops:
-    - TOKEN_MISION 1 100
+    - mm:TOKEN_MISION 1 100
   Skills:
     - effect:particles{p=soul;a=10;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
     - damage{d=8} @LivingEntitiesInRadius{r=2} ~onAttack

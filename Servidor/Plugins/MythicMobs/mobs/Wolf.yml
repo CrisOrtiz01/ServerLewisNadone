@@ -7,7 +7,7 @@ Wolf_Alfa:
   Drops:
     - minecraft:beef:1-2:100
     - minecraft:emerald:1:100
-    - TOKEN_MISION:1:100
+    - mm:TOKEN_MISION 1 100
   Skills:
     - effect:particles{p=block_dust;minecraft:bone_block;a=10;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
     - damage{d=7} @LivingEntitiesInRadius{r=2} ~onAttack

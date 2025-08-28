@@ -9,7 +9,7 @@ Zombie_Corrupto:
     - minecraft:carrot 1-2 25
     - minecraft:potato 1-2 25
     - minecraft:iron_ingot 1-2 10
-    - TOKEN_MISION 1 100
+    - mm:TOKEN_MISION 1 100
   Skills:
     - effect:particles{p=block_dust;minecraft:rotten_flesh;a=10;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
     - potion{type=POISON;duration=80;level=2} @LivingEntitiesInRadius{r=3} ~onAttack

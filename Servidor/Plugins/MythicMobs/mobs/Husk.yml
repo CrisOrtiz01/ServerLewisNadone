@@ -7,7 +7,7 @@ Husk_Desertico:
   Drops:
     - minecraft:rotten_flesh 3-5 100
     - minecraft:cactus 1-2 30
-    - TOKEN_MISION 2 100
+    - mm:TOKEN_MISION 2 100
   Skills:
     - effect:particles{p=block_dust;minecraft:sand;a=15;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
     - potion{type=HUNGER;duration=80;level=2} @LivingEntitiesInRadius{r=3} ~onAttack
