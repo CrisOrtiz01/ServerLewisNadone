@@ -5,8 +5,8 @@ Stray_Gelido:
   Damage: 8
   Armor: 4
   Drops:
-    - minecraft:arrow 1-8 100
-    - mm:TOKEN_MISION 1 100
+    - minecraft:arrow 1-8 1.0
+    - mm:TOKEN_MISION 1 1.0
   Skills:
     - effect:particles{p=snowball;a=10;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
     - potion{type=SLOWNESS;duration=80;level=2} @LivingEntitiesInRadius{r=3} ~onAttack

@@ -1,13 +1,13 @@
-Ghast_Fantasmal:
+  Ghast_Fantasmal:
   Type: GHAST
   Display: '§fGhast Griton'
   Health: 20
   Damage: 22
   Drops:
-    - minecraft:ghast_tear 2-3 100
-    - minecraft:gunpowder 2-12 100
-    - mm:TOKEN_MISION 24-32 100
-    - minecraft:tearsdisk 1 100
+    - minecraft:ghast_tear 2-3 1.0
+    - minecraft:gunpowder 2-12 1.0
+    - mm:TOKEN_MISION 24-32 1.0
+    - minecraft:tearsdisk 1 1.0
   Skills:
     - effect:particles{p=flame;a=20;hs=1;vs=1;s=0.3;y=2} @Self ~onTimer:20
     - shoot{type=FIREBALL;d=15} @LivingEntitiesInRadius{r=15}

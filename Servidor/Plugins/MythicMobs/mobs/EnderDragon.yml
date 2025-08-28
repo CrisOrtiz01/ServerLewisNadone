@@ -1,4 +1,4 @@
-EnderDragon_JefeFinal:
+  EnderDragon_JefeFinal:
   Type: ENDER_DRAGON
   Display: '§5Dragón Final del Fin'
   Health: 1000
@@ -10,9 +10,9 @@ EnderDragon_JefeFinal:
     Color: PURPLE
     Style: SEGMENTED_10
   Drops:
-    - minecraft:dragon_breath 8-16 100
-    - mm:TOKEN_MISION 250 100
-    - minecraft:nether_star 1 100
+    - minecraft:dragon_breath 8-16 1.0
+    - mm:TOKEN_MISION 250 1.0
+    - minecraft:nether_star 1 1.0
   Skills:
     - effect:particles{p=dragon_breath;a=80;hs=2;vs=3;s=1;y=3} @Self ~onTimer:20
     - potion{type=LEVITATION;duration=120;level=2} @LivingEntitiesInRadius{r=12} ~onAttack
@@ -21,8 +21,7 @@ EnderDragon_JefeFinal:
     - summon{type=ENDERMITE;amount=5} @Self ~onTimer:600
     - potion{type=STRENGTH;duration=200;level=2} @Self ~onTimer:100
     - effect:particles{p=portal;a=40;hs=2;vs=2;s=0.5;y=2} @Self ~onTimer:40
-    - skill{s=EnderDragon_SummonWithers} @Self ~onSignal:LowHealth
-  Options:
+    - skill{s=EnderDragon_SummonWithers} @Self ~onSignal:LowHealth  Options:
     PreventOtherDrops: true
     AlwaysShowName: true
     Despawn: false
@@ -33,8 +32,7 @@ EnderDragon_JefeFinal:
     ReplaceType: true
     Conditions:
       - always
-
-EnderDragon_SummonWithers:
+  EnderDragon_SummonWithers:
   Skills:
     - summon{type=WITHER;amount=3} @Self
   Conditions:

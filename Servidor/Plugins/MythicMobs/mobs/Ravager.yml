@@ -10,13 +10,10 @@ Ravager_JefeMenor:
     Color: ORANGE
     Style: SEGMENTED_10
   Drops:
-    - minecraft:saddle:1:100
-    - minecraft:emerald:1-8:50
-    - mm:TOKEN_MISION 16 100
+    - minecraft:saddle:1:100    - minecraft:emerald:1-8:50    - mm:TOKEN_MISION 16 1.0
   Skills:
     - effect:particles{p=block_dust;minecraft:dirt;a=30;hs=1;vs=1;s=0.3;y=1} @Self ~onTimer:20
-    - knockback{strength=6} @LivingEntitiesInRadius{r=4} ~onAttack
-    - potion{type=STRENGTH;duration=120;level=2} @Self ~onTimer:100
+    - knockback{strength=6} @LivingEntitiesInRadius{r=4} ~onAttack    - potion{type=STRENGTH;duration=120;level=2} @Self ~onTimer:100
     - damage{d=20} @LivingEntitiesInRadius{r=3} ~onAttack
   Options:
     PreventOtherDrops: true

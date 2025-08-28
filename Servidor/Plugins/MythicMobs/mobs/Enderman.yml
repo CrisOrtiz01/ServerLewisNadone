@@ -5,9 +5,9 @@ Enderman_Sombrio:
   Damage: 20
   Armor: 5
   Drops:
-    - minecraft:ender_pearl 2-4 100
-    - minecraft:ender_eye 1 20
-    - mm:TOKEN_MISION 8 100
+    - minecraft:ender_pearl 2-4 1.0
+    - minecraft:ender_eye 1 0.2
+    - mm:TOKEN_MISION 8 1.0
   Skills:
     - effect:particles{p=portal;a=20;hs=0.7;vs=1;s=0.2;y=1} @Self ~onTimer:20
     - potion{type=CONFUSION;duration=60;level=1} @LivingEntitiesInRadius{r=3} ~onAttack

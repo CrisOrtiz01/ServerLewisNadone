@@ -5,9 +5,9 @@ PolarBear_Gigante:
   Damage: 15
   Armor: 5
   Drops:
-    - minecraft:fish 3-5 100
-    - minecraft:ice 2-40 100
-    - mm:TOKEN_MISION 2 100
+    - minecraft:fish 3-5 1.0
+    - minecraft:ice 2-40 1.0
+    - mm:TOKEN_MISION 2 1.0
   Skills:
     - effect:particles{p=snowball;a=15;hs=0.7;vs=1;s=0.2;y=1} @Self ~onTimer:20
     - knockback{strength=2} @LivingEntitiesInRadius{r=2} ~onAttack

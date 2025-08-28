@@ -5,9 +5,9 @@ Drowned_Ahogado:
   Damage: 10
   Armor: 2
   Drops:
-    - minecraft:trident 0-1 30
-    - minecraft:nautilus_shell 0-1 80
-    - mm:TOKEN_MISION 3 100
+    - minecraft:trident 0-1 0.3
+    - minecraft:nautilus_shell 0-1 0.8
+    - mm:TOKEN_MISION 3 1.0
   Skills:
     - effect:particles{p=bubble;a=20;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
     - potion{type=SLOWNESS;duration=60;level=1} @LivingEntitiesInRadius{r=3} ~onAttack
