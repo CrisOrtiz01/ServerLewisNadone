@@ -1,45 +1,38 @@
 quests:
+quests:
   cazador_iniciado:
     name: '&6Cazador Iniciado'
     ask-message: '&6[Erika]: &7Los no-muertos se han vuelto más fuertes y organizados. Demuéstrame que puedes enfrentarte a ellos y te enseñaré a canalizar tu fuerza interior.'
     finish-message: '&6[Erika]: &7¡Impresionante! Has demostrado valor. Te otorgo el poder de la Fuerza I.'
     requirements:
       level: 0
+    stages:
+      ordered:
+        1:
+          mobs-to-kill:
+            - Zombie_Corrupto
+            - Skeleton_Guerrero
+          mob-amounts:
+            - 20
+            - 20
+          items-to-collect:
+            - ROTTEN_FLESH
+            - BONE
+            - mm:TOKEN_MISION
+          amounts-to-collect:
+            - 32
+            - 32
+            - 50
     rewards:
       commands:
-      - effect give %player% strength 999999 0 true
-      - tellraw %player% {"text":"Has obtenido Fuerza I de forma permanente","color":"gold"}
+        - effect give %player% strength 999999 0 true
+        - tellraw %player% {"text":"Has obtenido Fuerza I de forma permanente","color":"gold"}
       items:
-      - mm:TOKEN_MISION 5
+        - mm:TOKEN_MISION 5
       money: 100
       quest-points: 5
       permission: habilidades.fuerza.1
-      kill_zombies:
-        type: kill
-        mob: Zombie_Corrupto
-        amount: 20
-        data: []
-      kill_skeletons:
-        type: kill
-        mob: Skeleton_Guerrero
-        amount: 20
-        data: []
-      carne:
-        type: collect
-        item: ROTTEN_FLESH
-        amount: 32
-        data: []
-      huesos:
-        type: collect
-        item: BONE
-        amount: 32
-        data: []
-      tokens:
-        type: collect
-        item: mm:TOKEN_MISION
-        amount: 50
-        data:
-          display-name: '&eToken de Misión'
+    options:
       cooldown:
         enabled: true
         time: 86400
@@ -47,7 +40,7 @@ quests:
         enabled: true
         infinite: false
         amount: 1
-      category: cazador
+    category: cazador
      
   cazador_experimentado:
     name: '&6Cazador Experimentado'

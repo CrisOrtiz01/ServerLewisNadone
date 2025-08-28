@@ -2,7 +2,7 @@ Configuration:
   Spawners:
     DisableCommandSaving: false
   RandomSpawning:
-    DisableVanillaSpawns: false
+    DisableVanillaSpawns: true
     GenerateSpawnPoints: false
     SpawnRadiusPerPlayer: 64
     SpawnRadiusPerPlayerMin: 12
