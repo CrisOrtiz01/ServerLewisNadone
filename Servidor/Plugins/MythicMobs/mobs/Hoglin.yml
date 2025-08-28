@@ -5,7 +5,8 @@ Hoglin_Salvaje:
   Damage: 6
   Armor: 0
   Drops:
-    - minecraft:spider_eye:1:100
+    - minecraft:spider_eye 1 100
+    - mm:TOKEN_MISION 1 100
   Skills:
     - effect:particles{p=reddust;a=15;hs=0.7;vs=1;s=0.2;y=1;color=FF0000} @Self ~onTimer:20
     - knockback{strength=2} @LivingEntitiesInRadius{r=2} ~onAttack
