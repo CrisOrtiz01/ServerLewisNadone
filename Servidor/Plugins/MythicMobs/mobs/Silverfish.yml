@@ -5,8 +5,8 @@ Silverfish_Infectado:
   Damage: 5
   Armor: 5
   Drops:
-    - minecraft:emerald 0-1 30
-    - mm:TOKEN_MISION 1 100
+    - minecraft:emerald 0-1 0.3
+    - mm:TOKEN_MISION 1 1.0
   Skills:
     - effect:particles{p=block_dust;minecraft:stone;a=10;hs=0.3;vs=0.5;s=0.1;y=0.5} @Self ~onTimer:20
     - potion{type=POISON;duration=60;level=1} @LivingEntitiesInRadius{r=2} ~onAttack

@@ -10,23 +10,20 @@ Wither_Supremo:
     Color: RED
     Style: SEGMENTED_10
   Drops:
-    - minecraft:nether_star 3 100
-    - minecraft:wither_skeleton_skull 3 5
-    - mm:TOKEN_MISION 196 100
-    - minecraft:gold_block 8 100
-    - minecraft:netherite_ingot 4-9 100
-    - minecraft:coal_block 5-10 100
+    - minecraft:nether_star 3 1.0
+    - minecraft:wither_skeleton_skull 3 0.05
+    - mm:TOKEN_MISION 196 1.0
+    - minecraft:gold_block 8 1.0
+    - minecraft:netherite_ingot 4-9 1.0
+    - minecraft:coal_block 5-10 1.0
   Skills:
     - effect:particles{p=soul;a=40;hs=2;vs=2;s=0.5;y=2} @Self ~onTimer:20
-    - potion{type=WITHER;duration=160;level=3} @LivingEntitiesInRadius{r=8} ~onAttack
-    - damage{d=30} @LivingEntitiesInRadius{r=6} ~onAttack
-    - summon{type=WITHER_SKELETON;amount=2} @Self ~onTimer:400
+    - potion{type=WITHER;duration=160;level=3} @LivingEntitiesInRadius{r=8} ~onAttack    - damage{d=30} @LivingEntitiesInRadius{r=6} ~onAttack    - summon{type=WITHER_SKELETON;amount=2} @Self ~onTimer:400
     - summon{type=BLAZE;amount=2} @Self ~onTimer:400
     - summon{type=MAGMA_CUBE;amount=3} @Self ~onTimer:400
     - potion{type=RESISTANCE;duration=120;level=3} @Self ~onTimer:100
     - effect:particles{p=flame;a=30;hs=1;vs=2;s=0.5;y=2} @Self ~onTimer:40
-    - effect:particles{p=ash;a=20;hs=1;vs=1;s=0.3;y=2} @Self ~onTimer:60
-  Options:
+    - effect:particles{p=ash;a=20;hs=1;vs=1;s=0.3;y=2} @Self ~onTimer:60  Options:
     PreventOtherDrops: true
     AlwaysShowName: true
     Despawn: false

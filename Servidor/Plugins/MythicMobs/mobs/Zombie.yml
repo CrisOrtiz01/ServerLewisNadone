@@ -5,11 +5,11 @@ Zombie_Corrupto:
   Damage: 9
   Armor: 4
   Drops:
-    - minecraft:rotten_flesh 3-6 100
-    - minecraft:carrot 1-2 25
-    - minecraft:potato 1-2 25
-    - minecraft:iron_ingot 1-2 10
-    - mm:TOKEN_MISION 1 100
+    - minecraft:rotten_flesh 3-6 1.0
+    - minecraft:carrot 1-2 0.25
+    - minecraft:potato 1-2 0.25
+    - minecraft:iron_ingot 1-2 0.1
+    - mm:TOKEN_MISION 1 1.0
   Skills:
     - effect:particles{p=block_dust;minecraft:rotten_flesh;a=10;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
     - potion{type=POISON;duration=80;level=2} @LivingEntitiesInRadius{r=3} ~onAttack
