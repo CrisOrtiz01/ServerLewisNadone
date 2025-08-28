@@ -1,4 +1,4 @@
-Pillager_Asaltante:
+  Pillager_Asaltante:
   Type: PILLAGER
   Display: '§7Pillager Asaltante'
   Health: 40
@@ -8,7 +8,8 @@ Pillager_Asaltante:
     - mm:TOKEN_MISION 2 0.2
   Skills:
     - effect:particles{p=crit;a=10;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
-    - shoot{type=ARROW;d=10} @LivingEntitiesInRadius{r=10}  Options:
+    - shoot{type=ARROW;d=10} @LivingEntitiesInRadius{r=10}
+  Options:
     PreventOtherDrops: true
     AlwaysShowName: true
     Despawn: false

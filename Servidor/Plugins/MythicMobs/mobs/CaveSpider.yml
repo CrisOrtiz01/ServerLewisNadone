@@ -9,7 +9,10 @@ CaveSpider_Toxica:
     - mm:TOKEN_MISION 2 1.0
   Skills:
     - effect:particles{p=spell_mob;a=20;hs=0.5;vs=1;s=0.2;y=1;color=00FF00} @Self ~onTimer:20
-    - potion{type=POISON;duration=100;level=2} @LivingEntitiesInRadius{r=3} ~onAttack    - summon{type=WEB;amount=1;chance=100} @PlayersInRadius{r=2} ~onAttack    - message{m="¡El veneno de la cueva te consume!"} @PlayersInRadius{r=10} ~onDeath  Options:
+    - potion{type=POISON;duration=100;level=2} @LivingEntitiesInRadius{r=3} ~onAttack
+    - summon{type=WEB;amount=1;chance=100} @PlayersInRadius{r=2} ~onAttack
+    - message{m="¡El veneno de la cueva te consume!"} @PlayersInRadius{r=10} ~onDeath
+  Options:
     PreventOtherDrops: true
     AlwaysShowName: true
     Despawn: false

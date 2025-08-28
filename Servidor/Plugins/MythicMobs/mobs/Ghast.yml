@@ -1,4 +1,4 @@
-Ghast_Fantasmal:
+  Ghast_Fantasmal:
   Type: GHAST
   Display: '§fGhast Griton'
   Health: 20
@@ -10,7 +10,8 @@ Ghast_Fantasmal:
     - minecraft:tearsdisk 1 1.0
   Skills:
     - effect:particles{p=flame;a=20;hs=1;vs=1;s=0.3;y=2} @Self ~onTimer:20
-    - shoot{type=FIREBALL;d=15} @LivingEntitiesInRadius{r=15}  Options:
+    - shoot{type=FIREBALL;d=15} @LivingEntitiesInRadius{r=15}
+  Options:
     PreventOtherDrops: true
     AlwaysShowName: true
     Despawn: false

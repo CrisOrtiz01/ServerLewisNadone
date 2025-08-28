@@ -1,4 +1,4 @@
-Evoker_Arcano:
+  Evoker_Arcano:
   Type: EVOKER
   Display: '§5Mago del Vacio'
   Health: 40
@@ -8,7 +8,8 @@ Evoker_Arcano:
     - minecraft:potion{Potion=bad_omen;level=3} 1 100    - mm:TOKEN_MISION 6 1.0
   Skills:
     - effect:particles{p=witch;a=15;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
-    - potion{type=WEAKNESS;duration=60;level=1} @LivingEntitiesInRadius{r=3} ~onAttack    - summon{type=Vex_Fantasmal;amount=2} @Self ~onTimer:400  Options:
+    - potion{type=WEAKNESS;duration=60;level=1} @LivingEntitiesInRadius{r=3} ~onAttack
+    - summon{type=Vex_Fantasmal;amount=2} @Self ~onTimer:400  Options:
     PreventOtherDrops: true
     AlwaysShowName: true
     Despawn: false

@@ -1,4 +1,4 @@
-ElectricCreeper_JefeMenor:
+  ElectricCreeper_JefeMenor:
   Type: CREEPER
   Display: '§bCreeper Eléctrico'
   Health: 40
@@ -15,8 +15,12 @@ ElectricCreeper_JefeMenor:
     - minecraft:charged_creeper_head 1 1.0
   Skills:
     - effect:particles{p=electrical_spark;a=30;hs=1;vs=1;s=0.3;y=1} @Self ~onTimer:20
-    - potion{type=BLINDNESS;duration=80;level=2} @LivingEntitiesInRadius{r=4} ~onAttack    - explode{power=6}    - damage{d=20} @LivingEntitiesInRadius{r=4} ~onAttack    - potion{type=SPEED;duration=60;level=2} @Self ~onTimer:100
-    - summon{type=SLIME;amount=1;chance=20} @Self ~onDamaged  Options:
+    - potion{type=BLINDNESS;duration=80;level=2} @LivingEntitiesInRadius{r=4} ~onAttack
+    - explode{power=6}
+    - damage{d=20} @LivingEntitiesInRadius{r=4} ~onAttack
+    - potion{type=SPEED;duration=60;level=2} @Self ~onTimer:100
+    - summon{type=SLIME;amount=1;chance=20} @Self ~onDamaged
+  Options:
     PreventOtherDrops: true
     AlwaysShowName: true
     Despawn: false

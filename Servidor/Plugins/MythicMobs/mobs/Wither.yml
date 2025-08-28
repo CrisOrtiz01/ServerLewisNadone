@@ -1,4 +1,4 @@
-Wither_Supremo:
+  Wither_Supremo:
   Type: WITHER
   Display: '§8Wither Supremo'
   Health: 700
@@ -18,7 +18,9 @@ Wither_Supremo:
     - minecraft:coal_block 5-10 1.0
   Skills:
     - effect:particles{p=soul;a=40;hs=2;vs=2;s=0.5;y=2} @Self ~onTimer:20
-    - potion{type=WITHER;duration=160;level=3} @LivingEntitiesInRadius{r=8} ~onAttack    - damage{d=30} @LivingEntitiesInRadius{r=6} ~onAttack    - summon{type=WITHER_SKELETON;amount=2} @Self ~onTimer:400
+    - potion{type=WITHER;duration=160;level=3} @LivingEntitiesInRadius{r=8} ~onAttack
+    - damage{d=30} @LivingEntitiesInRadius{r=6} ~onAttack
+    - summon{type=WITHER_SKELETON;amount=2} @Self ~onTimer:400
     - summon{type=BLAZE;amount=2} @Self ~onTimer:400
     - summon{type=MAGMA_CUBE;amount=3} @Self ~onTimer:400
     - potion{type=RESISTANCE;duration=120;level=3} @Self ~onTimer:100

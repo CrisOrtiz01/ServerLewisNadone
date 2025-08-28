@@ -1,4 +1,4 @@
-Skeleton_Guerrero:
+  Skeleton_Guerrero:
   Type: SKELETON
   Display: '§fEsqueleto'
   Health: 40
@@ -10,7 +10,8 @@ Skeleton_Guerrero:
     - mm:TOKEN_MISION 1 1.0
   Skills:
     - effect:particles{p=block_dust;minecraft:bone_block;a=10;hs=0.5;vs=1;s=0.2;y=1} @Self ~onTimer:20
-    - shoot{type=ARROW;d=9} @LivingEntitiesInRadius{r=10}  Options:
+    - shoot{type=ARROW;d=9} @LivingEntitiesInRadius{r=10}
+  Options:
     PreventOtherDrops: true
     AlwaysShowName: true
     Despawn: false

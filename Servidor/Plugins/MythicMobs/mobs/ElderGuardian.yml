@@ -1,4 +1,4 @@
-ElderGuardian_Titan:
+  ElderGuardian_Titan:
   Type: ELDER_GUARDIAN
   Display: '§bPez Antiguo'
   Health: 400
@@ -16,7 +16,9 @@ ElderGuardian_Titan:
     - minecraft:trident 1 0.5
   Skills:
     - effect:particles{p=water_splash;a=40;hs=1;vs=2;s=0.5;y=2} @Self ~onTimer:20
-    - potion{type=MINING_FATIGUE;duration=200;level=5} @LivingEntitiesInRadius{r=8} ~onAttack    - damage{d=20} @LivingEntitiesInRadius{r=6} ~onAttack    - summon{type=DROWNED;amount=3;baby=true} @Self ~onTimer:400
+    - potion{type=MINING_FATIGUE;duration=200;level=5} @LivingEntitiesInRadius{r=8} ~onAttack
+    - damage{d=20} @LivingEntitiesInRadius{r=6} ~onAttack
+    - summon{type=DROWNED;amount=3;baby=true} @Self ~onTimer:400
     - potion{type=RESISTANCE;duration=100;level=2} @Self ~onTimer:100
     - effect:particles{p=nautilus;a=20;hs=1;vs=1;s=0.3;y=2} @Self ~onTimer:40  Options:
     PreventOtherDrops: true
@@ -28,10 +30,13 @@ ElderGuardian_Titan:
     Priority: 2
     ReplaceType: true
     Conditions:
-      - biome{o=OCEAN,DEEP_OCEAN,WARM_OCEAN,FROZEN_OCEAN,COLD_OCEAN,LUKEWARM_OCEAN,DEEP_LUKEWARM_OCEAN,DEEP_WARM_OCEAN,DEEP_COLD_OCEAN,DEEP_FROZEN_OCEAN}      - structure{o=OCEAN_MONUMENT}    Chance: 100
+    - biome{o=OCEAN,DEEP_OCEAN,WARM_OCEAN,FROZEN_OCEAN,COLD_OCEAN,LUKEWARM_OCEAN,DEEP_LUKEWARM_OCEAN,DEEP_WARM_OCEAN,DEEP_COLD_OCEAN,DEEP_FROZEN_OCEAN}
+    - structure{o=OCEAN_MONUMENT}
+  Chance:
   SpawnOverride2:
     Type: ELDER_GUARDIAN
     Priority: 1
     ReplaceType: true
     Conditions:
-      - biome{o=OCEAN,DEEP_OCEAN,WARM_OCEAN,FROZEN_OCEAN,COLD_OCEAN,LUKEWARM_OCEAN,DEEP_LUKEWARM_OCEAN,DEEP_WARM_OCEAN,DEEP_COLD_OCEAN,DEEP_FROZEN_OCEAN}    Chance: 10
+    - biome{o=OCEAN,DEEP_OCEAN,WARM_OCEAN,FROZEN_OCEAN,COLD_OCEAN,LUKEWARM_OCEAN,DEEP_LUKEWARM_OCEAN,DEEP_WARM_OCEAN,DEEP_COLD_OCEAN,DEEP_FROZEN_OCEAN}
+  Chance:

@@ -1,4 +1,4 @@
-EnderDragon_JefeFinal:
+  EnderDragon_JefeFinal:
   Type: ENDER_DRAGON
   Display: '§5Dragón Final del Fin'
   Health: 1000
@@ -15,7 +15,9 @@ EnderDragon_JefeFinal:
     - minecraft:nether_star 1 1.0
   Skills:
     - effect:particles{p=dragon_breath;a=80;hs=2;vs=3;s=1;y=3} @Self ~onTimer:20
-    - potion{type=LEVITATION;duration=120;level=2} @LivingEntitiesInRadius{r=12} ~onAttack    - damage{d=40} @LivingEntitiesInRadius{r=10} ~onAttack    - summon{type=PHANTOM;amount=3} @Self ~onTimer:600
+    - potion{type=LEVITATION;duration=120;level=2} @LivingEntitiesInRadius{r=12} ~onAttack
+    - damage{d=40} @LivingEntitiesInRadius{r=10} ~onAttack
+    - summon{type=PHANTOM;amount=3} @Self ~onTimer:600
     - summon{type=ENDERMITE;amount=5} @Self ~onTimer:600
     - potion{type=STRENGTH;duration=200;level=2} @Self ~onTimer:100
     - effect:particles{p=portal;a=40;hs=2;vs=2;s=0.5;y=2} @Self ~onTimer:40
@@ -30,7 +32,7 @@ EnderDragon_JefeFinal:
     ReplaceType: true
     Conditions:
       - always
-EnderDragon_SummonWithers:
+  EnderDragon_SummonWithers:
   Skills:
     - summon{type=WITHER;amount=3} @Self
   Conditions:
