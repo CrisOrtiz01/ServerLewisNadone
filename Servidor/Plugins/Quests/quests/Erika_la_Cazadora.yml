@@ -1,34 +1,36 @@
 quests:
-quests:
   cazador_iniciado:
     name: '&6Cazador Iniciado'
-    ask-message: '&6[Erika]: &7Los no-muertos se han vuelto más fuertes y organizados. Demuéstrame que puedes enfrentarte a ellos y te enseñaré a canalizar tu fuerza interior.'
-    finish-message: '&6[Erika]: &7¡Impresionante! Has demostrado valor. Te otorgo el poder de la Fuerza I.'
+    ask-message: '&6[Erika]: &7Los no-muertos se han vuelto más fuertes y organizados.
+      Demuéstrame que puedes enfrentarte a ellos y te enseñaré a canalizar tu fuerza
+      interior.'
+    finish-message: '&6[Erika]: &7¡Impresionante! Has demostrado valor. Te otorgo
+      el poder de la Fuerza I.'
     requirements:
       level: 0
     stages:
       ordered:
         1:
           mobs-to-kill:
-            - Zombie_Corrupto
-            - Skeleton_Guerrero
+          - Zombie_Corrupto
+          - Skeleton_Guerrero
           mob-amounts:
-            - 20
-            - 20
+          - 20
+          - 20
           items-to-collect:
-            - ROTTEN_FLESH
-            - BONE
-            - mm:TOKEN_MISION
+          - ROTTEN_FLESH
+          - BONE
+          - mm:TOKEN_MISION
           amounts-to-collect:
-            - 32
-            - 32
-            - 50
+          - 32
+          - 32
+          - 50
     rewards:
       commands:
-        - effect give %player% strength 999999 0 true
-        - tellraw %player% {"text":"Has obtenido Fuerza I de forma permanente","color":"gold"}
+      - effect give %player% strength 999999 0 true
+      - tellraw %player% {"text":"Has obtenido Fuerza I de forma permanente","color":"gold"}
       items:
-        - mm:TOKEN_MISION 5
+      - mm:TOKEN_MISION 5
       money: 100
       quest-points: 5
       permission: habilidades.fuerza.1
@@ -41,11 +43,13 @@ quests:
         infinite: false
         amount: 1
     category: cazador
-     
   cazador_experimentado:
     name: '&6Cazador Experimentado'
-    ask-message: '&6[Erika]: &7Los pillagers han formado una alianza con magos oscuros. Elimínalos y trae pruebas de tu incursión al Nether. Tu fuerza crecerá con cada enemigo que superes.'
-    finish-message: '&6[Erika]: &7Tu habilidad crece cada día. Ahora posees Fuerza II.'
+    ask-message: '&6[Erika]: &7Los pillagers han formado una alianza con magos oscuros.
+      Elimínalos y trae pruebas de tu incursión al Nether. Tu fuerza crecerá con cada
+      enemigo que superes.'
+    finish-message: '&6[Erika]: &7Tu habilidad crece cada día. Ahora posees Fuerza
+      II.'
     requirements:
       quest-points: 5
       permission: habilidades.fuerza.1
@@ -60,27 +64,22 @@ quests:
       money: 200
       quest-points: 10
       permission: habilidades.fuerza.2
-      kill_vindicators:
-        type: kill
-        mob: Vindicator_Feroz
-        amount: 10
-        data: []
-      kill_evokers:
-        type: kill
-        mob: Evoker_Arcano
-        amount: 10
-        data: []
-      blaze_rods:
-        type: collect
-        item: BLAZE_ROD
-        amount: 8
-        data: []
-      tokens:
-        type: collect
-        item: mm:TOKEN_MISION
-        amount: 70
-        data:
-          display-name: '&eToken de Misión'
+    stages:
+      ordered:
+        1:
+          mobs-to-kill:
+          - Vindicator_Feroz
+          - Evoker_Arcano
+          mob-amounts:
+          - 10
+          - 10
+          items-to-collect:
+          - BLAZE_ROD
+          - mm:TOKEN_MISION
+          amounts-to-collect:
+          - 8
+          - 70
+    options:
       cooldown:
         enabled: true
         time: 86400
@@ -88,14 +87,12 @@ quests:
         enabled: true
         infinite: false
         amount: 1
-      category: cazador
-      requires:
-      - cazador_iniciado
-     
   cazador_veterano:
     name: '&6Cazador Veterano'
-    ask-message: '&6[Erika]: &7El Nether se agita. Sus criaturas más poderosas deben ser controladas. Enfréntalas y forja tu cuerpo en el fuego eterno de esa dimensión.'
-    finish-message: '&6[Erika]: &7Has superado pruebas que harían temblar a guerreros experimentados. Tu fuerza aumenta notablemente.'
+    ask-message: '&6[Erika]: &7El Nether se agita. Sus criaturas más poderosas deben
+      ser controladas. Enfréntalas y forja tu cuerpo en el fuego eterno de esa dimensión.'
+    finish-message: '&6[Erika]: &7Has superado pruebas que harían temblar a guerreros
+      experimentados. Tu fuerza aumenta notablemente.'
     requirements:
       quest-points: 15
       permission: habilidades.fuerza.2
@@ -110,27 +107,22 @@ quests:
       money: 300
       quest-points: 15
       permission: habilidades.fuerza.3
-      kill_wither_skeletons:
-        type: kill
-        mob: WitherSkeleton_Miniboss
-        amount: 5
-        data: []
-      kill_blazes:
-        type: kill
-        mob: GuardianDeLasCenizas
-        amount: 5
-        data: []
-      iron_blocks:
-        type: collect
-        item: IRON_BLOCK
-        amount: 4
-        data: []
-      tokens:
-        type: collect
-        item: mm:TOKEN_MISION
-        amount: 80
-        data:
-          display-name: '&eToken de Misión'
+    stages:
+      ordered:
+        1:
+          mobs-to-kill:
+          - WitherSkeleton_Miniboss
+          - GuardianDeLasCenizas
+          mob-amounts:
+          - 5
+          - 5
+          items-to-collect:
+          - IRON_BLOCK
+          - mm:TOKEN_MISION
+          amounts-to-collect:
+          - 4
+          - 80
+    options:
       cooldown:
         enabled: true
         time: 86400
@@ -138,14 +130,13 @@ quests:
         enabled: true
         infinite: false
         amount: 1
-      category: cazador
-      requires:
-      - cazador_experimentado
-      
   cazador_elite:
     name: '&6Cazador de Élite'
-    ask-message: '&6[Erika]: &7Los líderes de las incursiones deben ser eliminados. Son astutos y poderosos, pero confío en que podrás vencerlos. Los diamantes fortalecerán el vínculo con tu nueva habilidad.'
-    finish-message: '&6[Erika]: &7Tu nombre comienza a ser susurrado con temor entre nuestros enemigos. Tu fuerza ha alcanzado un nivel extraordinario.'
+    ask-message: '&6[Erika]: &7Los líderes de las incursiones deben ser eliminados.
+      Son astutos y poderosos, pero confío en que podrás vencerlos. Los diamantes
+      fortalecerán el vínculo con tu nueva habilidad.'
+    finish-message: '&6[Erika]: &7Tu nombre comienza a ser susurrado con temor entre
+      nuestros enemigos. Tu fuerza ha alcanzado un nivel extraordinario.'
     requirements:
       quest-points: 30
       permission: habilidades.fuerza.3
@@ -160,27 +151,22 @@ quests:
       money: 400
       quest-points: 20
       permission: habilidades.fuerza.4
-      kill_pillagers:
-        type: kill
-        mob: Pillager_Asaltante
-        amount: 3
-        data: []
-      kill_vindicators:
-        type: kill
-        mob: Vindicator_Feroz
-        amount: 3
-        data: []
-      diamond_blocks:
-        type: collect
-        item: DIAMOND_BLOCK
-        amount: 2
-        data: []
-      tokens:
-        type: collect
-        item: mm:TOKEN_MISION
-        amount: 100
-        data:
-          display-name: '&eToken de Misión'
+    stages:
+      ordered:
+        1:
+          mobs-to-kill:
+          - Pillager_Asaltante
+          - Vindicator_Feroz
+          mob-amounts:
+          - 3
+          - 3
+          items-to-collect:
+          - DIAMOND_BLOCK
+          - mm:TOKEN_MISION
+          amounts-to-collect:
+          - 2
+          - 100
+    options:
       cooldown:
         enabled: true
         time: 86400
@@ -188,14 +174,13 @@ quests:
         enabled: true
         infinite: false
         amount: 1
-      category: cazador
-      requires:
-      - cazador_veterano
-      
   maestro_cazador:
     name: '&6Maestro Cazador'
-    ask-message: '&6[Erika]: &7El Nether debe ser purgado de sus líderes más poderosos. Esto requerirá toda tu habilidad y determinación, pero la recompensa valdrá la pena.'
-    finish-message: '&6[Erika]: &7Has limpiado el Nether de amenazas importantes. Tu fuerza ha crecido hasta niveles que pocos pueden alcanzar.'
+    ask-message: '&6[Erika]: &7El Nether debe ser purgado de sus líderes más poderosos.
+      Esto requerirá toda tu habilidad y determinación, pero la recompensa valdrá
+      la pena.'
+    finish-message: '&6[Erika]: &7Has limpiado el Nether de amenazas importantes.
+      Tu fuerza ha crecido hasta niveles que pocos pueden alcanzar.'
     requirements:
       quest-points: 50
       permission: habilidades.fuerza.4
@@ -210,37 +195,26 @@ quests:
       money: 500
       quest-points: 25
       permission: habilidades.fuerza.5
-      kill_wither_skeletons:
-        type: kill
-        mob: WitherSkeleton_Miniboss
-        amount: 10
-        data: []
-      kill_magma_cubes:
-        type: kill
-        mob: MAGMA_CUBE
-        amount: 10
-        data: []
-      kill_blazes:
-        type: kill
-        mob: BLAZE
-        amount: 10
-        data: []
-      emerald_block:
-        type: collect
-        item: EMERALD_BLOCK
-        amount: 1
-        data: []
-      nether_star:
-        type: collect
-        item: NETHER_STAR
-        amount: 1
-        data: []
-      tokens:
-        type: collect
-        item: mm:TOKEN_MISION
-        amount: 120
-        data:
-          display-name: '&eToken de Misión'
+    stages:
+      ordered:
+        1:
+          mobs-to-kill:
+          - WitherSkeleton_Miniboss
+          - MAGMA_CUBE
+          - BLAZE
+          mob-amounts:
+          - 10
+          - 10
+          - 10
+          items-to-collect:
+          - EMERALD_BLOCK
+          - NETHER_STAR
+          - mm:TOKEN_MISION
+          amounts-to-collect:
+          - 1
+          - 1
+          - 120
+    options:
       cooldown:
         enabled: true
         time: 86400
@@ -248,14 +222,12 @@ quests:
         enabled: true
         infinite: false
         amount: 1
-      category: cazador
-      requires:
-      - cazador_elite
-      
   cazador_legendario:
     name: '&6Cazador Legendario'
-    ask-message: '&6[Erika]: &7El Wither, una abominación de pura maldad. Demuestra que puedes derrotar a semejante criatura y tu fuerza se volverá casi sobrenatural.'
-    finish-message: '&6[Erika]: &7¡Lo has conseguido! Has derrotado a una de las criaturas más temibles conocidas. Tu fuerza ahora es casi sobrenatural.'
+    ask-message: '&6[Erika]: &7El Wither, una abominación de pura maldad. Demuestra
+      que puedes derrotar a semejante criatura y tu fuerza se volverá casi sobrenatural.'
+    finish-message: '&6[Erika]: &7¡Lo has conseguido! Has derrotado a una de las criaturas
+      más temibles conocidas. Tu fuerza ahora es casi sobrenatural.'
     requirements:
       quest-points: 75
       permission: habilidades.fuerza.5
@@ -270,27 +242,22 @@ quests:
       money: 600
       quest-points: 30
       permission: habilidades.fuerza.6
-      kill_wither:
-        type: kill
-        mob: Wither_Supremo
-        amount: 1
-        data: []
-      emerald_block:
-        type: collect
-        item: EMERALD_BLOCK
-        amount: 1
-        data: []
-      nether_star:
-        type: collect
-        item: NETHER_STAR
-        amount: 1
-        data: []
-      tokens:
-        type: collect
-        item: mm:TOKEN_MISION
-        amount: 150
-        data:
-          display-name: '&eToken de Misión'
+    stages:
+      ordered:
+        1:
+          mobs-to-kill:
+          - Wither_Supremo
+          mob-amounts:
+          - 1
+          items-to-collect:
+          - EMERALD_BLOCK
+          - NETHER_STAR
+          - mm:TOKEN_MISION
+          amounts-to-collect:
+          - 1
+          - 1
+          - 150
+    options:
       cooldown:
         enabled: true
         time: 86400
@@ -298,14 +265,12 @@ quests:
         enabled: true
         infinite: false
         amount: 1
-      category: cazador
-      requires:
-      - maestro_cazador
-     
   cazador_bestias_mitologicas:
     name: '&6Cazador de Bestias Mitológicas'
-    ask-message: '&6[Erika]: &7Pocos han visto a los guardianes del dragón y vivido para contarlo. Demuéstrame que eres digno de cantar la hazaña.'
-    finish-message: '&6[Erika]: &7Has enfrentado criaturas cuya existencia muchos consideran mera leyenda. Tu fuerza ha alcanzado niveles casi divinos.'
+    ask-message: '&6[Erika]: &7Pocos han visto a los guardianes del dragón y vivido
+      para contarlo. Demuéstrame que eres digno de cantar la hazaña.'
+    finish-message: '&6[Erika]: &7Has enfrentado criaturas cuya existencia muchos
+      consideran mera leyenda. Tu fuerza ha alcanzado niveles casi divinos.'
     requirements:
       quest-points: 105
       permission: habilidades.fuerza.6
@@ -320,32 +285,24 @@ quests:
       money: 700
       quest-points: 35
       permission: habilidades.fuerza.7
-      kill_wither:
-        type: kill
-        mob: Wither_Supremo
-        amount: 2
-        data: []
-      kill_dragon_guardians:
-        type: kill
-        mob: EnderDragon_JefeFinal
-        amount: 5
-        data: []
-      emerald_blocks:
-        type: collect
-        item: EMERALD_BLOCK
-        amount: 2
-        data: []
-      nether_stars:
-        type: collect
-        item: NETHER_STAR
-        amount: 2
-        data: []
-      tokens:
-        type: collect
-        item: mm:TOKEN_MISION
-        amount: 180
-        data:
-          display-name: '&eToken de Misión'
+    stages:
+      ordered:
+        1:
+          mobs-to-kill:
+          - Wither_Supremo
+          - EnderDragon_JefeFinal
+          mob-amounts:
+          - 2
+          - 5
+          items-to-collect:
+          - EMERALD_BLOCK
+          - NETHER_STAR
+          - mm:TOKEN_MISION
+          amounts-to-collect:
+          - 2
+          - 2
+          - 180
+    options:
       cooldown:
         enabled: true
         time: 86400
@@ -353,14 +310,12 @@ quests:
         enabled: true
         infinite: false
         amount: 1
-      category: cazador
-      requires:
-      - cazador_legendario
-      
   cazador_imposible:
     name: '&6Cazador de lo Imposible'
-    ask-message: '&6[Erika]: &7Tu nombre ya se susurra con admiración. Conviértelo en leyenda enfrentando a los seres más poderosos de este mundo.'
-    finish-message: '&6[Erika]: &7Las leyendas sobre ti se extienden por todas las tierras. Tu fuerza ahora rivaliza con la de los antiguos héroes.'
+    ask-message: '&6[Erika]: &7Tu nombre ya se susurra con admiración. Conviértelo
+      en leyenda enfrentando a los seres más poderosos de este mundo.'
+    finish-message: '&6[Erika]: &7Las leyendas sobre ti se extienden por todas las
+      tierras. Tu fuerza ahora rivaliza con la de los antiguos héroes.'
     requirements:
       quest-points: 140
       permission: habilidades.fuerza.7
@@ -375,32 +330,24 @@ quests:
       money: 800
       quest-points: 40
       permission: habilidades.fuerza.8
-      kill_wither:
-        type: kill
-        mob: Wither_Supremo
-        amount: 3
-        data: []
-      kill_dragon_guardians:
-        type: kill
-        mob: EnderDragon_JefeFinal
-        amount: 3
-        data: []
-      emerald_blocks:
-        type: collect
-        item: EMERALD_BLOCK
-        amount: 3
-        data: []
-      nether_stars:
-        type: collect
-        item: NETHER_STAR
-        amount: 3
-        data: []
-      tokens:
-        type: collect
-        item: mm:TOKEN_MISION
-        amount: 210
-        data:
-          display-name: '&eToken de Misión'
+    stages:
+      ordered:
+        1:
+          mobs-to-kill:
+          - Wither_Supremo
+          - EnderDragon_JefeFinal
+          mob-amounts:
+          - 3
+          - 3
+          items-to-collect:
+          - EMERALD_BLOCK
+          - NETHER_STAR
+          - mm:TOKEN_MISION
+          amounts-to-collect:
+          - 3
+          - 3
+          - 210
+    options:
       cooldown:
         enabled: true
         time: 86400
@@ -408,14 +355,13 @@ quests:
         enabled: true
         infinite: false
         amount: 1
-      category: cazador
-      requires:
-      - cazador_bestias_mitologicas
-      
   cazador_divino:
     name: '&6Cazador Divino'
-    ask-message: '&6[Erika]: &7El dragón ancestral... Dicen que es inmortal, pero quizás tú puedas probar lo contrario. Este desafío te llevará más allá de los límites mortales.'
-    finish-message: '&6[Erika]: &7¡Has derrotado al dragón ancestral! Tu fuerza ahora es prácticamente divina.'
+    ask-message: '&6[Erika]: &7El dragón ancestral... Dicen que es inmortal, pero
+      quizás tú puedas probar lo contrario. Este desafío te llevará más allá de los
+      límites mortales.'
+    finish-message: '&6[Erika]: &7¡Has derrotado al dragón ancestral! Tu fuerza ahora
+      es prácticamente divina.'
     requirements:
       quest-points: 180
       permission: habilidades.fuerza.8
@@ -430,32 +376,24 @@ quests:
       money: 900
       quest-points: 45
       permission: habilidades.fuerza.9
-      kill_dragon:
-        type: kill
-        mob: EnderDragon_JefeFinal
-        amount: 1
-        data: []
-      kill_withers:
-        type: kill
-        mob: Wither_Supremo
-        amount: 5
-        data: []
-      emerald_blocks:
-        type: collect
-        item: EMERALD_BLOCK
-        amount: 5
-        data: []
-      nether_stars:
-        type: collect
-        item: NETHER_STAR
-        amount: 5
-        data: []
-      tokens:
-        type: collect
-        item: mm:TOKEN_MISION
-        amount: 240
-        data:
-          display-name: '&eToken de Misión'
+    stages:
+      ordered:
+        1:
+          mobs-to-kill:
+          - EnderDragon_JefeFinal
+          - Wither_Supremo
+          mob-amounts:
+          - 1
+          - 5
+          items-to-collect:
+          - EMERALD_BLOCK
+          - NETHER_STAR
+          - mm:TOKEN_MISION
+          amounts-to-collect:
+          - 5
+          - 5
+          - 240
+    options:
       cooldown:
         enabled: true
         time: 86400
@@ -463,14 +401,13 @@ quests:
         enabled: true
         infinite: false
         amount: 1
-      category: cazador
-      requires:
-      - cazador_imposible
-      
   cazador_dioses:
     name: '&6Cazador de Dioses'
-    ask-message: '&6[Erika]: &7Los tres reyes primordiales deben caer ante ti. Ningún mortal lo ha logrado jamás, pero tú no eres un simple mortal, ¿verdad? Completa esta prueba y tu fuerza rivalizará con la de los dioses antiguos.'
-    finish-message: '&6[Erika]: &7¡Has logrado lo imposible! Has derrotado a los tres reyes primordiales. Tu fuerza ahora es legendaria, digna de los dioses mismos.'
+    ask-message: '&6[Erika]: &7Los tres reyes primordiales deben caer ante ti. Ningún
+      mortal lo ha logrado jamás, pero tú no eres un simple mortal, ¿verdad? Completa
+      esta prueba y tu fuerza rivalizará con la de los dioses antiguos.'
+    finish-message: '&6[Erika]: &7¡Has logrado lo imposible! Has derrotado a los tres
+      reyes primordiales. Tu fuerza ahora es legendaria, digna de los dioses mismos.'
     requirements:
       quest-points: 225
       permission: habilidades.fuerza.9
@@ -487,37 +424,26 @@ quests:
       money: 1000
       quest-points: 50
       permission: habilidades.fuerza.
-      kill_dragon:
-        type: kill
-        mob: EnderDragon_JefeFinal
-        amount: 1
-        data: []
-      kill_wither:
-        type: kill
-        mob: Wither_Supremo
-        amount: 1
-        data: []
-      kill_guardian:
-        type: kill
-        mob: ElderGuardian_Titan
-        amount: 1
-        data: []
-      emerald_blocks:
-        type: collect
-        item: EMERALD_BLOCK
-        amount: 10
-        data: []
-      nether_stars:
-        type: collect
-        item: NETHER_STAR
-        amount: 10
-        data: []
-      tokens:
-        type: collect
-        item: mm:TOKEN_MISION
-        amount: 300
-        data:
-          display-name: '&eToken de Misión'
+    stages:
+      ordered:
+        1:
+          mobs-to-kill:
+          - EnderDragon_JefeFinal
+          - Wither_Supremo
+          - ElderGuardian_Titan
+          mob-amounts:
+          - 1
+          - 1
+          - 1
+          items-to-collect:
+          - EMERALD_BLOCK
+          - NETHER_STAR
+          - mm:TOKEN_MISION
+          amounts-to-collect:
+          - 10
+          - 10
+          - 300
+    options:
       cooldown:
         enabled: true
         time: 86400
@@ -525,8 +451,3 @@ quests:
         enabled: true
         infinite: false
         amount: 1
-      category: cazador
-      requires:
-      - cazador_divino
-
-
