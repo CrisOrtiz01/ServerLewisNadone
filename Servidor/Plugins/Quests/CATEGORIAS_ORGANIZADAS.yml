@@ -1,0 +1,274 @@
+# CATEGORÍAS DE MISIONES - Organización según los NPCs y sus especialidades
+
+categories:
+  caza: # Categoría: Caza (Erika la Cazadora)
+    name: "Caza"
+    npc: "Erika la Cazadora"
+    habilidad: "Fuerza I-X"
+    missions:
+      - id: "cazador_iniciado"
+        title: "Cazador Iniciado"
+        description: "Los no-muertos se han vuelto más fuertes. Demuestra tu valor enfrentándolos."
+        rewards:
+          - "Fuerza I permanente"
+          - "5 TOKEN_MISION"
+        requirements:
+          - "none" # Primera misión, no tiene requisitos
+      - id: "cazador_experimentado"
+        title: "Cazador Experimentado"
+        description: "Elimina pillagers y magos oscuros del Nether."
+        rewards:
+          - "Fuerza II permanente"
+          - "10 TOKEN_MISION"
+        requirements:
+          - "cazador_iniciado"
+      - id: "cazador_veterano"
+        title: "Cazador Veterano"
+        description: "El Nether se agita. Enfrenta sus criaturas más poderosas."
+        rewards:
+          - "Fuerza III permanente"
+          - "15 TOKEN_MISION"
+        requirements:
+          - "cazador_experimentado"
+      - id: "cazador_elite"
+        title: "Cazador de Élite"
+        description: "Los líderes de las incursiones deben ser eliminados."
+        rewards:
+          - "Fuerza IV permanente"
+          - "20 TOKEN_MISION"
+        requirements:
+          - "cazador_veterano"
+      - id: "maestro_cazador"
+        title: "Maestro Cazador"
+        description: "Purga el Nether de sus líderes más poderosos."
+        rewards:
+          - "Fuerza V permanente"
+          - "25 TOKEN_MISION"
+        requirements:
+          - "cazador_elite"
+      - id: "cazador_legendario"
+        title: "Cazador Legendario"
+        description: "Derrota al Wither, una abominación de pura maldad."
+        rewards:
+          - "Fuerza VI permanente"
+          - "30 TOKEN_MISION"
+        requirements:
+          - "maestro_cazador"
+      - id: "cazador_bestias_mitologicas"
+        title: "Cazador de Bestias Mitológicas"
+        description: "Enfrenta criaturas cuya existencia muchos consideran leyenda."
+        rewards:
+          - "Fuerza VII permanente"
+          - "35 TOKEN_MISION"
+        requirements:
+          - "cazador_legendario"
+      - id: "cazador_imposible"
+        title: "Cazador de lo Imposible"
+        description: "Convierte tu nombre en leyenda enfrentando lo imposible."
+        rewards:
+          - "Fuerza VIII permanente"
+          - "40 TOKEN_MISION"
+        requirements:
+          - "cazador_bestias_mitologicas"
+      - id: "cazador_divino"
+        title: "Cazador Divino"
+        description: "Derrota al dragón ancestral y alcanza poder divino."
+        rewards:
+          - "Fuerza IX permanente"
+          - "45 TOKEN_MISION"
+        requirements:
+          - "cazador_imposible"
+      - id: "cazador_dioses"
+        title: "Cazador de Dioses"
+        description: "Derrota a los tres reyes primordiales y rivaliza con los dioses."
+        rewards:
+          - "Fuerza X permanente"
+          - "50 TOKEN_MISION"
+        requirements:
+          - "cazador_divino"
+
+  defensa: # Categoría: Defensa (Alcalde Tomás + Marta la Guardiana)
+    name: "Defensa"
+    npcs: ["Alcalde Tomás", "Marta la Guardiana"]
+    habilidades: ["Héroe de Villa I-V", "Resistencia I-III"]
+    missions:
+      # Misiones del Alcalde Tomás (Héroe de Villa)
+      - id: "defensor_nivel1"
+        title: "Defensor del Pueblo I"
+        description: "Los pillagers amenazan nuestra paz. Demuestra tu valentía."
+        rewards:
+          - "Héroe de Villa I permanente"
+          - "5 TOKEN_MISION"
+        requirements:
+          - "none"
+      - id: "defensor_nivel2"
+        title: "Defensor del Pueblo II"
+        description: "Tu dedicación al pueblo merece mayor reconocimiento."
+        rewards:
+          - "Héroe de Villa II permanente"
+          - "6 TOKEN_MISION"
+        requirements:
+          - "defensor_nivel1"
+      # ... hasta defensor_nivel10
+      
+      # Misiones de Marta la Guardiana (Resistencia)
+      - id: "escudo_pueblo"
+        title: "Escudo del Pueblo"
+        description: "Los creepers se han vuelto más resistentes y devastadores."
+        rewards:
+          - "Resistencia I permanente"
+          - "5 TOKEN_MISION"
+        requirements:
+          - "none"
+      - id: "muro_impenetrable"
+        title: "Muro Impenetrable"
+        description: "Tu cuerpo debe convertirse en un escudo viviente."
+        rewards:
+          - "Resistencia II permanente"
+          - "10 TOKEN_MISION"
+        requirements:
+          - "escudo_pueblo"
+      - id: "guardian_eterno"
+        title: "Guardián Eterno"
+        description: "Alcanza el máximo nivel de resistencia física."
+        rewards:
+          - "Resistencia III permanente"
+          - "15 TOKEN_MISION"
+        requirements:
+          - "muro_impenetrable"
+
+  curandera: # Categoría: Curación (Helena la Curandera + Sae la Sanadora)
+    name: "Curación"
+    npcs: ["Helena la Curandera", "Sae la Sanadora"]
+    habilidades: ["Regeneración I-III", "Salud Extra I-V"]
+    missions:
+      # Misiones de Helena (Regeneración)
+      - id: "sanador_principiante"
+        title: "Sanador Principiante"
+        description: "La curación comienza con la compasión hacia los aldeanos."
+        rewards:
+          - "Regeneración I permanente"
+          - "5 TOKEN_MISION"
+        requirements:
+          - "none"
+      - id: "medico_experimentado"
+        title: "Médico Experimentado"
+        description: "Las lágrimas de ghast contienen propiedades regenerativas excepcionales."
+        rewards:
+          - "Regeneración II permanente"
+          - "10 TOKEN_MISION"
+        requirements:
+          - "sanador_principiante"
+      - id: "maestro_sanador"
+        title: "Maestro Sanador"
+        description: "Domina el arte ancestral de la regeneración completa."
+        rewards:
+          - "Regeneración III permanente"
+          - "15 TOKEN_MISION"
+        requirements:
+          - "medico_experimentado"
+      
+      # Misiones de Sae (Salud Extra)
+      - id: "aprendiz_sanacion"
+        title: "Aprendiz de Sanación"
+        description: "Los aldeanos merecen nuestra protección. Demuestra que valoras la vida."
+        rewards:
+          - "Salud Extra I permanente"
+          - "5 TOKEN_MISION"
+        requirements:
+          - "none"
+      # ... hasta sanador_divino (Salud Extra V)
+
+  agilidad: # Categoría: Agilidad (Lia la Mensajera + Ícaro el Acrobata)
+    name: "Agilidad"
+    npcs: ["Lia la Mensajera", "Ícaro el Acrobata"]
+    habilidades: ["Velocidad I-III", "Salto Aumentado I-IV"]
+    missions:
+      # Misiones de Lia (Velocidad)
+      - id: "mensajero_principiante"
+        title: "Mensajero Principiante"
+        description: "Demuestra que tienes velocidad básica en esta carrera sencilla."
+        rewards:
+          - "Velocidad I permanente"
+          - "5 TOKEN_MISION"
+        requirements:
+          - "none"
+      - id: "mensajero_veloz"
+        title: "Mensajero Veloz"
+        description: "Supera obstáculos y esqueletos que intentarán frenarte."
+        rewards:
+          - "Velocidad II permanente"
+          - "10 TOKEN_MISION"
+        requirements:
+          - "mensajero_principiante"
+      - id: "mensajero_relampago"
+        title: "Mensajero Relámpago"
+        description: "Alcanza la velocidad máxima superando el desafío final."
+        rewards:
+          - "Velocidad III permanente"
+          - "15 TOKEN_MISION"
+        requirements:
+          - "mensajero_veloz"
+      
+      # Misiones de Ícaro (Salto Aumentado)
+      - id: "acrobata_novato"
+        title: "Acróbata Novato"
+        description: "El primer paso hacia las estrellas con parkour básico."
+        rewards:
+          - "Salto Aumentado I permanente"
+          - "5 TOKEN_MISION"
+        requirements:
+          - "none"
+      # ... hasta acrobata_divino (Salto Aumentado IV)
+
+  mineria: # Categoría: Minería (Paúl el Minero)
+    name: "Minería"
+    npc: "Paúl el Minero"
+    habilidad: "Prisa Minera I-X"
+    missions:
+      - id: "aprendiz_minero"
+        title: "Aprendiz de Minero"
+        description: "Empecemos con lo básico. La redstone y el diamante serán tu recompensa."
+        rewards:
+          - "Prisa Minera I permanente"
+          - "5 TOKEN_MISION"
+        requirements:
+          - "none"
+      # ... hasta titan_mineria (Prisa Minera X)
+
+  gastronomia: # Categoría: Gastronomía (Bruno el Chef)
+    name: "Gastronomía"
+    npc: "Bruno el Chef"
+    habilidad: "Saturación I-III"
+    missions:
+      - id: "cocinero_aficionado"
+        title: "Cocinero Aficionado"
+        description: "La variedad es el secreto de una buena nutrición."
+        rewards:
+          - "Saturación I permanente"
+          - "5 TOKEN_MISION"
+        requirements:
+          - "none"
+      - id: "chef_experimentado"
+        title: "Chef Experimentado"
+        description: "Técnicas más avanzadas con ingredientes selectos."
+        rewards:
+          - "Saturación II permanente"
+          - "10 TOKEN_MISION"
+        requirements:
+          - "cocinero_aficionado"
+      - id: "maestro_gastronomico"
+        title: "Maestro Gastronómico"
+        description: "El nivel máximo del arte culinario te espera."
+        rewards:
+          - "Saturación III permanente"
+          - "15 TOKEN_MISION"
+        requirements:
+          - "chef_experimentado"
+
+# RESUMEN TOTAL:
+# - 50 misiones organizadas en 6 categorías
+# - 9 NPCs cubriendo diferentes especialidades
+# - Sistema progresivo de habilidades permanentes
+# - Integración completa con TOKEN_MISION y mobs custom
+# - Sin misiones de ejemplo - solo las establecidas por el usuario
