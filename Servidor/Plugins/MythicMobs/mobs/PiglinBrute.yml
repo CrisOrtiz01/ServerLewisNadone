@@ -9,11 +9,13 @@
     - minecraft:netherite_scrap 4-8 0.7
     - mm:TOKEN_MISION 15 1.0
     - minecraft:golden_apple 1 0.5
-    - Hacha_Del_Carcinero 1 25  Skills:
+    - Hacha_Del_Carcinero 1 25
+  Skills:
     - effect:particles{p=reddust;a=25;hs=1;vs=1;s=0.3;y=1;color=FFD700} @Self ~onTimer:20
     - knockback{strength=4} @LivingEntitiesInRadius{r=3} ~onAttack
     - damage{d=18} @LivingEntitiesInRadius{r=2} ~onAttack
-    - potion{type=STRENGTH;duration=120;level=2} @Self ~onTimer:100  Options:
+    - potion{type=STRENGTH;duration=120;level=2} @Self ~onTimer:100
+  Options:
     PreventOtherDrops: true
     AlwaysShowName: true
     Despawn: false

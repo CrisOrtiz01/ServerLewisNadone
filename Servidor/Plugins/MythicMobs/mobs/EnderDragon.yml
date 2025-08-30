@@ -21,7 +21,8 @@
     - summon{type=ENDERMITE;amount=5} @Self ~onTimer:600
     - potion{type=STRENGTH;duration=200;level=2} @Self ~onTimer:100
     - effect:particles{p=portal;a=40;hs=2;vs=2;s=0.5;y=2} @Self ~onTimer:40
-    - skill{s=EnderDragon_SummonWithers} @Self ~onSignal:LowHealth  Options:
+    - summon{type=WITHER;amount=3} @Self ~onHealth:100
+  Options:
     PreventOtherDrops: true
     AlwaysShowName: true
     Despawn: false
@@ -32,9 +33,3 @@
     ReplaceType: true
     Conditions:
       - always
-  EnderDragon_SummonWithers:
-  Skills:
-    - summon{type=WITHER;amount=3} @Self
-  Conditions:
-    - health{h=<100}
-    - signal{n=LowHealth;once=true}

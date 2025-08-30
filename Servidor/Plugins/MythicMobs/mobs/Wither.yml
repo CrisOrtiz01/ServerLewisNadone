@@ -25,7 +25,8 @@
     - summon{type=MAGMA_CUBE;amount=3} @Self ~onTimer:400
     - potion{type=RESISTANCE;duration=120;level=3} @Self ~onTimer:100
     - effect:particles{p=flame;a=30;hs=1;vs=2;s=0.5;y=2} @Self ~onTimer:40
-    - effect:particles{p=ash;a=20;hs=1;vs=1;s=0.3;y=2} @Self ~onTimer:60  Options:
+    - effect:particles{p=ash;a=20;hs=1;vs=1;s=0.3;y=2} @Self ~onTimer:60
+  Options:
     PreventOtherDrops: true
     AlwaysShowName: true
     Despawn: false
