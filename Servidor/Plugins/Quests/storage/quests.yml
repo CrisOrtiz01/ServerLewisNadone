@@ -45,6 +45,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   cazador_experimentado:
     name: '&6Cazador Experimentado'
     ask-message: '&6[Erika]: &7Los pillagers han formado una alianza con magos oscuros.
@@ -56,15 +57,6 @@ quests:
         quest-points: 5
         quests-completed:
         - cazador_iniciado
-    rewards:
-        commands:
-        - effect give %player% strength 999999 1 true
-        - tellraw %player% {"text":"Has mejorado a Fuerza II de forma permanente","color":"gold"}
-        items:
-        - mm:TOKEN_MISION:10
-        money: 200
-        permission: habilidades.fuerza.2
-        quest-points: 10
     stages:
         ordered:
             1:
@@ -80,6 +72,15 @@ quests:
                 mobs-to-kill:
                 - Vindicator_Feroz
                 - Evoker_Arcano
+    rewards:
+        commands:
+        - effect give %player% strength 999999 1 true
+        - tellraw %player% {"text":"Has mejorado a Fuerza II de forma permanente","color":"gold"}
+        items:
+        - mm:TOKEN_MISION:10
+        money: 200
+        permission: habilidades.fuerza.2
+        quest-points: 10
     options:
         cooldown:
             enabled: true
@@ -88,6 +89,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   cazador_veterano:
     name: '&6Cazador Veterano'
     ask-message: '&6[Erika]: &7El Nether se agita. Sus criaturas más poderosas deben ser
@@ -99,15 +101,6 @@ quests:
         quest-points: 15
         quests-completed:
         - cazador_experimentado
-    rewards:
-        commands:
-        - effect give %player% strength 999999 2 true
-        - tellraw %player% {"text":"Has mejorado a Fuerza III de forma permanente","color":"gold"}
-        items:
-        - mm:TOKEN_MISION:15
-        money: 300
-        permission: habilidades.fuerza.3
-        quest-points: 15
     stages:
         ordered:
             1:
@@ -123,6 +116,15 @@ quests:
                 mobs-to-kill:
                 - WitherSkeleton_Miniboss
                 - GuardianDeLasCenizas
+    rewards:
+        commands:
+        - effect give %player% strength 999999 2 true
+        - tellraw %player% {"text":"Has mejorado a Fuerza III de forma permanente","color":"gold"}
+        items:
+        - mm:TOKEN_MISION:15
+        money: 300
+        permission: habilidades.fuerza.3
+        quest-points: 15
     options:
         cooldown:
             enabled: true
@@ -131,6 +133,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   cazador_elite:
     name: '&6Cazador de Élite'
     ask-message: '&6[Erika]: &7Los líderes de las incursiones deben ser eliminados. Son
@@ -143,15 +146,6 @@ quests:
         quest-points: 30
         quests-completed:
         - cazador_veterano
-    rewards:
-        commands:
-        - effect give %player% strength 999999 3 true
-        - tellraw %player% {"text":"Has mejorado a Fuerza IV de forma permanente","color":"gold"}
-        items:
-        - mm:TOKEN_MISION:20
-        money: 400
-        permission: habilidades.fuerza.4
-        quest-points: 20
     stages:
         ordered:
             1:
@@ -167,6 +161,15 @@ quests:
                 mobs-to-kill:
                 - Pillager_Asaltante
                 - Vindicator_Feroz
+    rewards:
+        commands:
+        - effect give %player% strength 999999 3 true
+        - tellraw %player% {"text":"Has mejorado a Fuerza IV de forma permanente","color":"gold"}
+        items:
+        - mm:TOKEN_MISION:20
+        money: 400
+        permission: habilidades.fuerza.4
+        quest-points: 20
     options:
         cooldown:
             enabled: true
@@ -175,6 +178,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   maestro_cazador:
     name: '&6Maestro Cazador'
     ask-message: '&6[Erika]: &7El Nether debe ser purgado de sus líderes más poderosos.
@@ -187,15 +191,6 @@ quests:
         quest-points: 50
         quests-completed:
         - cazador_elite
-    rewards:
-        commands:
-        - effect give %player% strength 999999 4 true
-        - tellraw %player% {"text":"Has mejorado a Fuerza V de forma permanente","color":"gold"}
-        items:
-        - mm:TOKEN_MISION:25
-        money: 500
-        permission: habilidades.fuerza.5
-        quest-points: 25
     stages:
         ordered:
             1:
@@ -215,6 +210,15 @@ quests:
                 - WitherSkeleton_Miniboss
                 - MAGMA_CUBE
                 - BLAZE
+    rewards:
+        commands:
+        - effect give %player% strength 999999 4 true
+        - tellraw %player% {"text":"Has mejorado a Fuerza V de forma permanente","color":"gold"}
+        items:
+        - mm:TOKEN_MISION:25
+        money: 500
+        permission: habilidades.fuerza.5
+        quest-points: 25
     options:
         cooldown:
             enabled: true
@@ -223,6 +227,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   cazador_legendario:
     name: '&6Cazador Legendario'
     ask-message: '&6[Erika]: &7El Wither, una abominación de pura maldad. Demuestra que
@@ -234,15 +239,6 @@ quests:
         quest-points: 75
         quests-completed:
         - maestro_cazador
-    rewards:
-        commands:
-        - effect give %player% strength 999999 5 true
-        - tellraw %player% {"text":"Has mejorado a Fuerza VI de forma permanente","color":"gold"}
-        items:
-        - mm:TOKEN_MISION:30
-        money: 600
-        permission: habilidades.fuerza.6
-        quest-points: 30
     stages:
         ordered:
             1:
@@ -258,6 +254,15 @@ quests:
                 - 1
                 mobs-to-kill:
                 - Wither_Supremo
+    rewards:
+        commands:
+        - effect give %player% strength 999999 5 true
+        - tellraw %player% {"text":"Has mejorado a Fuerza VI de forma permanente","color":"gold"}
+        items:
+        - mm:TOKEN_MISION:30
+        money: 600
+        permission: habilidades.fuerza.6
+        quest-points: 30
     options:
         cooldown:
             enabled: true
@@ -266,6 +271,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   cazador_bestias_mitologicas:
     name: '&6Cazador de Bestias Mitológicas'
     ask-message: '&6[Erika]: &7Pocos han visto a los guardianes del dragón y vivido para
@@ -277,15 +283,6 @@ quests:
         quest-points: 105
         quests-completed:
         - cazador_legendario
-    rewards:
-        commands:
-        - effect give %player% strength 999999 6 true
-        - tellraw %player% {"text":"Has mejorado a Fuerza VII de forma permanente","color":"gold"}
-        items:
-        - mm:TOKEN_MISION:35
-        money: 700
-        permission: habilidades.fuerza.7
-        quest-points: 35
     stages:
         ordered:
             1:
@@ -303,6 +300,15 @@ quests:
                 mobs-to-kill:
                 - Wither_Supremo
                 - EnderDragon_JefeFinal
+    rewards:
+        commands:
+        - effect give %player% strength 999999 6 true
+        - tellraw %player% {"text":"Has mejorado a Fuerza VII de forma permanente","color":"gold"}
+        items:
+        - mm:TOKEN_MISION:35
+        money: 700
+        permission: habilidades.fuerza.7
+        quest-points: 35
     options:
         cooldown:
             enabled: true
@@ -311,6 +317,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   cazador_imposible:
     name: '&6Cazador de lo Imposible'
     ask-message: '&6[Erika]: &7Tu nombre ya se susurra con admiración. Conviértelo en
@@ -322,15 +329,6 @@ quests:
         quest-points: 140
         quests-completed:
         - cazador_bestias_mitologicas
-    rewards:
-        commands:
-        - effect give %player% strength 999999 7 true
-        - tellraw %player% {"text":"Has mejorado a Fuerza VIII de forma permanente","color":"gold"}
-        items:
-        - mm:TOKEN_MISION:40
-        money: 800
-        permission: habilidades.fuerza.8
-        quest-points: 40
     stages:
         ordered:
             1:
@@ -348,6 +346,15 @@ quests:
                 mobs-to-kill:
                 - Wither_Supremo
                 - EnderDragon_JefeFinal
+    rewards:
+        commands:
+        - effect give %player% strength 999999 7 true
+        - tellraw %player% {"text":"Has mejorado a Fuerza VIII de forma permanente","color":"gold"}
+        items:
+        - mm:TOKEN_MISION:40
+        money: 800
+        permission: habilidades.fuerza.8
+        quest-points: 40
     options:
         cooldown:
             enabled: true
@@ -356,6 +363,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   cazador_divino:
     name: '&6Cazador Divino'
     ask-message: '&6[Erika]: &7El dragón ancestral... Dicen que es inmortal, pero quizás
@@ -368,15 +376,6 @@ quests:
         quest-points: 180
         quests-completed:
         - cazador_imposible
-    rewards:
-        commands:
-        - effect give %player% strength 999999 8 true
-        - tellraw %player% {"text":"Has mejorado a Fuerza IX de forma permanente","color":"gold"}
-        items:
-        - mm:TOKEN_MISION:45
-        money: 900
-        permission: habilidades.fuerza.9
-        quest-points: 45
     stages:
         ordered:
             1:
@@ -394,6 +393,15 @@ quests:
                 mobs-to-kill:
                 - EnderDragon_JefeFinal
                 - Wither_Supremo
+    rewards:
+        commands:
+        - effect give %player% strength 999999 8 true
+        - tellraw %player% {"text":"Has mejorado a Fuerza IX de forma permanente","color":"gold"}
+        items:
+        - mm:TOKEN_MISION:45
+        money: 900
+        permission: habilidades.fuerza.9
+        quest-points: 45
     options:
         cooldown:
             enabled: true
@@ -402,6 +410,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   cazador_dioses:
     name: '&6Cazador de Dioses'
     ask-message: '&6[Erika]: &7Los tres reyes primordiales deben caer ante ti. Ningún
@@ -414,22 +423,9 @@ quests:
         quest-points: 225
         quests-completed:
         - cazador_divino
-    rewards:
-        commands:
-        - effect give %player% strength 999999 9 true
-        - tellraw %player% {"text":"¡Has alcanzado Fuerza X, el poder máximo!","color":"gold","bold":true}
-        - title %player% title {"text":"¡Cazador de Dioses!","color":"gold","bold":true}
-        - title %player% subtitle {"text":"Has dominado el poder de la Fuerza","color":"white"}
-        items:
-        - mm:TOKEN_MISION:50
-        money: 1000
-    permission: habilidades.fuerza.10
-        quest-points: 50
     stages:
         ordered:
             1:
-                amounts-to-collect:
-                - Pillager_Asaltante
                 amounts-to-collect:
                 - 10
                 - 10
@@ -446,6 +442,17 @@ quests:
                 - EnderDragon_JefeFinal
                 - Wither_Supremo
                 - ElderGuardian_Titan
+    rewards:
+        commands:
+        - effect give %player% strength 999999 9 true
+        - tellraw %player% {"text":"¡Has alcanzado Fuerza X, el poder máximo!","color":"gold","bold":true}
+        - title %player% title {"text":"¡Cazador de Dioses!","color":"gold","bold":true}
+        - title %player% subtitle {"text":"Has dominado el poder de la Fuerza","color":"white"}
+        items:
+        - mm:TOKEN_MISION:50
+        money: 1000
+        permission: habilidades.fuerza.10
+        quest-points: 50
     options:
         cooldown:
             enabled: true
@@ -466,6 +473,17 @@ quests:
         rápido cuando sostengan un pico.'
     requirements:
         level: 0
+    stages:
+        ordered:
+            1:
+                amounts-to-collect:
+                - 5
+                - 1
+                - 40
+                items-to-collect:
+                - REDSTONE_BLOCK
+                - DIAMOND
+                - mm:TOKEN_MISION
     rewards:
         commands:
         - effect give %player% haste 999999 0 true
@@ -475,19 +493,6 @@ quests:
         money: 100
         permission: habilidades.prisaminera.1
         quest-points: 5
-    stages:
-        ordered:
-            1:
-                amounts-to-collect:
-                - Pillager_Asaltante
-                amounts-to-collect:
-                - 5
-                - 1
-                - 40
-                items-to-collect:
-                - REDSTONE_BLOCK
-                - DIAMOND
-                - mm:TOKEN_MISION
     options:
         cooldown:
             enabled: true
@@ -496,6 +501,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   minero_experimentado:
     name: '&8Minero Experimentado'
     ask-message: '&8[Paúl]: &7Estás progresando bien. Un bloque completo de diamante muestra
@@ -507,6 +513,17 @@ quests:
         quest-points: 5
         quests-completed:
         - aprendiz_minero
+    stages:
+        ordered:
+            1:
+                amounts-to-collect:
+                - 10
+                - 1
+                - 80
+                items-to-collect:
+                - REDSTONE_BLOCK
+                - DIAMOND_BLOCK
+                - mm:TOKEN_MISION
     rewards:
         commands:
         - effect give %player% haste 999999 1 true
@@ -516,19 +533,6 @@ quests:
         money: 200
         permission: habilidades.prisaminera.2
         quest-points: 10
-    stages:
-        ordered:
-            1:
-                amounts-to-collect:
-                - Pillager_Asaltante
-                amounts-to-collect:
-                - 10
-                - 1
-                - 80
-                items-to-collect:
-                - REDSTONE_BLOCK
-                - DIAMOND_BLOCK
-                - mm:TOKEN_MISION
     options:
         cooldown:
             enabled: true
@@ -537,6 +541,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   maestro_profundidades:
     name: '&8Maestro de las Profundidades'
     ask-message: '&8[Paúl]: &7El verdadero minero aprecia tanto el carbón como el diamante.
@@ -549,6 +554,17 @@ quests:
         quest-points: 15
         quests-completed:
         - minero_experimentado
+    stages:
+        ordered:
+            1:
+                amounts-to-collect:
+                - 15
+                - 5
+                - 120
+                items-to-collect:
+                - COAL_BLOCK
+                - IRON_BLOCK
+                - mm:TOKEN_MISION
     rewards:
         commands:
         - effect give %player% haste 999999 2 true
@@ -558,19 +574,6 @@ quests:
         money: 300
         permission: habilidades.prisaminera.3
         quest-points: 15
-    stages:
-        ordered:
-            1:
-                amounts-to-collect:
-                - Pillager_Asaltante
-                amounts-to-collect:
-                - 15
-                - 5
-                - 120
-                items-to-collect:
-                - COAL_BLOCK
-                - IRON_BLOCK
-                - mm:TOKEN_MISION
     options:
         cooldown:
             enabled: true
@@ -579,6 +582,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   buscador_tesoros:
     name: '&8Buscador de Tesoros'
     ask-message: '&8[Paúl]: &7Los cristales contienen secretos que las rocas ordinarias
@@ -591,6 +595,17 @@ quests:
         quest-points: 30
         quests-completed:
         - maestro_profundidades
+    stages:
+        ordered:
+            1:
+                amounts-to-collect:
+                - 20
+                - 10
+                - 192
+                items-to-collect:
+                - AMETHYST_BLOCK
+                - QUARTZ_BLOCK
+                - mm:TOKEN_MISION
     rewards:
         commands:
         - effect give %player% haste 999999 3 true
@@ -600,19 +615,6 @@ quests:
         money: 400
         permission: habilidades.prisaminera.4
         quest-points: 20
-    stages:
-        ordered:
-            1:
-                amounts-to-collect:
-                - Pillager_Asaltante
-                amounts-to-collect:
-                - 20
-                - 10
-                - 192
-                items-to-collect:
-                - AMETHYST_BLOCK
-                - QUARTZ_BLOCK
-                - mm:TOKEN_MISION
     options:
         cooldown:
             enabled: true
@@ -621,6 +623,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   minero_abismo:
     name: '&8Minero del Abismo'
     ask-message: '&8[Paúl]: &7Las profundidades más oscuras contienen las mayores riquezas.
@@ -633,6 +636,17 @@ quests:
         quest-points: 50
         quests-completed:
         - buscador_tesoros
+    stages:
+        ordered:
+            1:
+                amounts-to-collect:
+                - 320
+                - 192
+                - 192
+                items-to-collect:
+                - DEEPSLATE
+                - BASALT
+                - mm:TOKEN_MISION
     rewards:
         commands:
         - effect give %player% haste 999999 4 true
@@ -642,19 +656,6 @@ quests:
         money: 500
         permission: habilidades.prisaminera.5
         quest-points: 25
-    stages:
-        ordered:
-            1:
-                amounts-to-collect:
-                - Pillager_Asaltante
-                amounts-to-collect:
-                - 320
-                - 192
-                - 192
-                items-to-collect:
-                - DEEPSLATE
-                - BASALT
-                - mm:TOKEN_MISION
     options:
         cooldown:
             enabled: true
@@ -663,6 +664,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   buscador_netherita:
     name: '&8Buscador de Netherita'
     ask-message: '&8[Paúl]: &7La netherita es el desafío final de todo minero. Forjada
@@ -675,6 +677,17 @@ quests:
         quest-points: 75
         quests-completed:
         - minero_abismo
+    stages:
+        ordered:
+            1:
+                amounts-to-collect:
+                - 1
+                - 1
+                - 192
+                items-to-collect:
+                - EMERALD_BLOCK
+                - NETHERITE_INGOT
+                - mm:TOKEN_MISION
     rewards:
         commands:
         - effect give %player% haste 999999 5 true
@@ -684,19 +697,6 @@ quests:
         money: 600
         permission: habilidades.prisaminera.6
         quest-points: 30
-    stages:
-        ordered:
-            1:
-                amounts-to-collect:
-                - Pillager_Asaltante
-                amounts-to-collect:
-                - 1
-                - 1
-                - 192
-                items-to-collect:
-                - EMERALD_BLOCK
-                - NETHERITE_INGOT
-                - mm:TOKEN_MISION
     options:
         cooldown:
             enabled: true
@@ -705,6 +705,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   magnate_mineral:
     name: '&8Magnate Mineral'
     ask-message: '&8[Paúl]: &7Hierro y oro, los pilares de la civilización. Domina su
@@ -716,6 +717,17 @@ quests:
         quest-points: 105
         quests-completed:
         - buscador_netherita
+    stages:
+        ordered:
+            1:
+                amounts-to-collect:
+                - 25
+                - 15
+                - 192
+                items-to-collect:
+                - IRON_BLOCK
+                - GOLD_BLOCK
+                - mm:TOKEN_MISION
     rewards:
         commands:
         - effect give %player% haste 999999 6 true
@@ -725,19 +737,6 @@ quests:
         money: 700
         permission: habilidades.prisaminera.7
         quest-points: 35
-    stages:
-        ordered:
-            1:
-                amounts-to-collect:
-                - Pillager_Asaltante
-                amounts-to-collect:
-                - 25
-                - 15
-                - 192
-                items-to-collect:
-                - IRON_BLOCK
-                - GOLD_BLOCK
-                - mm:TOKEN_MISION
     options:
         cooldown:
             enabled: true
@@ -746,6 +745,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   senor_sombras:
     name: '&8Señor de las Sombras'
     ask-message: '&8[Paúl]: &7La oscuridad y la resistencia son dos caras de la misma
@@ -758,6 +758,17 @@ quests:
         quest-points: 140
         quests-completed:
         - magnate_mineral
+    stages:
+        ordered:
+            1:
+                amounts-to-collect:
+                - 64
+                - 64
+                - 192
+                items-to-collect:
+                - COAL_BLOCK
+                - OBSIDIAN
+                - mm:TOKEN_MISION
     rewards:
         commands:
         - effect give %player% haste 999999 7 true
@@ -767,19 +778,6 @@ quests:
         money: 800
         permission: habilidades.prisaminera.8
         quest-points: 40
-    stages:
-        ordered:
-            1:
-                amounts-to-collect:
-                - Pillager_Asaltante
-                amounts-to-collect:
-                - 64
-                - 64
-                - 192
-                items-to-collect:
-                - COAL_BLOCK
-                - OBSIDIAN
-                - mm:TOKEN_MISION
     options:
         cooldown:
             enabled: true
@@ -788,6 +786,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   excavador_lagrimas:
     name: '&8Excavador de Lágrimas'
     ask-message: '&8[Paúl]: &7Las lágrimas de la tierra contienen poder ancestral. La
@@ -799,6 +798,17 @@ quests:
         quest-points: 180
         quests-completed:
         - senor_sombras
+    stages:
+        ordered:
+            1:
+                amounts-to-collect:
+                - 16
+                - 64
+                - 192
+                items-to-collect:
+                - CRYING_OBSIDIAN
+                - GOLD_BLOCK
+                - mm:TOKEN_MISION
     rewards:
         commands:
         - effect give %player% haste 999999 8 true
@@ -808,19 +818,6 @@ quests:
         money: 900
         permission: habilidades.prisaminera.9
         quest-points: 45
-    stages:
-        ordered:
-            1:
-                amounts-to-collect:
-                - Pillager_Asaltante
-                amounts-to-collect:
-                - 16
-                - 64
-                - 192
-                items-to-collect:
-                - CRYING_OBSIDIAN
-                - GOLD_BLOCK
-                - mm:TOKEN_MISION
     options:
         cooldown:
             enabled: true
@@ -829,6 +826,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   titan_mineria:
     name: '&8Titán de la Minería'
     ask-message: '&8[Paúl]: &7Esta prueba final representa todo lo que significa ser un
@@ -842,17 +840,6 @@ quests:
         quest-points: 225
         quests-completed:
         - excavador_lagrimas
-    rewards:
-        commands:
-        - effect give %player% haste 999999 9 true
-        - tellraw %player% {"text":"¡Has alcanzado Prisa Minera X, el poder máximo!","color":"dark_gray","bold":true}
-        - title %player% title {"text":"¡Titán de la Minería!","color":"dark_gray","bold":true}
-        - title %player% subtitle {"text":"Has dominado el poder de la Prisa Minera","color":"gray"}
-        items:
-        - mm:TOKEN_MISION:50
-        money: 1000
-        permission: habilidades.prisaminera.10
-        quest-points: 50
     stages:
         ordered:
             1:
@@ -868,6 +855,17 @@ quests:
                 - DIAMOND_BLOCK
                 - IRON_BLOCK
                 - mm:TOKEN_MISION
+    rewards:
+        commands:
+        - effect give %player% haste 999999 9 true
+        - tellraw %player% {"text":"¡Has alcanzado Prisa Minera X, el poder máximo!","color":"dark_gray","bold":true}
+        - title %player% title {"text":"¡Titán de la Minería!","color":"dark_gray","bold":true}
+        - title %player% subtitle {"text":"Has dominado el poder de la Prisa Minera","color":"gray"}
+        items:
+        - mm:TOKEN_MISION:50
+        money: 1000
+        permission: habilidades.prisaminera.10
+        quest-points: 50
     options:
         cooldown:
             enabled: true
@@ -887,15 +885,6 @@ quests:
         podrá mantener la energía por más tiempo.'
     requirements:
         level: 0
-    rewards:
-        commands:
-        - effect give %player% saturation 999999 0 true
-        - tellraw %player% {"text":"Has obtenido Saturación I de forma permanente","color":"gold"}
-        items:
-        - mm:TOKEN_MISION:5
-        money: 100
-        permission: habilidades.saturacion.1
-        quest-points: 5
     stages:
         ordered:
             1:
@@ -939,6 +928,15 @@ quests:
                 - SWEET_BERRIES
                 - ROTTEN_FLESH
                 - mm:TOKEN_MISION
+    rewards:
+        commands:
+        - effect give %player% saturation 999999 0 true
+        - tellraw %player% {"text":"Has obtenido Saturación I de forma permanente","color":"gold"}
+        items:
+        - mm:TOKEN_MISION:5
+        money: 100
+        permission: habilidades.saturacion.1
+        quest-points: 5
     options:
         cooldown:
             enabled: true
@@ -947,6 +945,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   chef_experimentado:
     name: '&6Chef Experimentado'
     ask-message: '&6[Bruno]: &7¡Ahora hablamos el mismo idioma! Con estos ingredientes
@@ -960,15 +959,6 @@ quests:
         quest-points: 5
         quests-completed:
         - cocinero_aficionado
-    rewards:
-        commands:
-        - effect give %player% saturation 999999 1 true
-        - tellraw %player% {"text":"Has mejorado a Saturación II de forma permanente","color":"gold"}
-        items:
-        - mm:TOKEN_MISION:10
-        money: 200
-        permission: habilidades.saturacion.2
-        quest-points: 10
     stages:
         ordered:
             1:
@@ -1012,6 +1002,15 @@ quests:
                 - SWEET_BERRIES
                 - ROTTEN_FLESH
                 - mm:TOKEN_MISION
+    rewards:
+        commands:
+        - effect give %player% saturation 999999 1 true
+        - tellraw %player% {"text":"Has mejorado a Saturación II de forma permanente","color":"gold"}
+        items:
+        - mm:TOKEN_MISION:10
+        money: 200
+        permission: habilidades.saturacion.2
+        quest-points: 10
     options:
         cooldown:
             enabled: true
@@ -1020,6 +1019,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   maestro_gastronomico:
     name: '&6Maestro Gastronómico'
     ask-message: '&6[Bruno]: &7¡Este es el nivel máximo del arte culinario! Con estos
@@ -1032,17 +1032,6 @@ quests:
         quest-points: 15
         quests-completed:
         - chef_experimentado
-    rewards:
-        commands:
-        - effect give %player% saturation 999999 2 true
-        - tellraw %player% {"text":"¡Has alcanzado Saturación III, el poder máximo!","color":"gold","bold":true}
-        - title %player% title {"text":"¡Maestro Gastronómico!","color":"gold","bold":true}
-        - title %player% subtitle {"text":"Has dominado el poder de la Saturación","color":"white"}
-        items:
-        - mm:TOKEN_MISION:15
-        money: 300
-        permission: habilidades.saturacion.3
-        quest-points: 15
     stages:
         ordered:
             1:
@@ -1086,6 +1075,17 @@ quests:
                 - SWEET_BERRIES
                 - ROTTEN_FLESH
                 - mm:TOKEN_MISION
+    rewards:
+        commands:
+        - effect give %player% saturation 999999 2 true
+        - tellraw %player% {"text":"¡Has alcanzado Saturación III, el poder máximo!","color":"gold","bold":true}
+        - title %player% title {"text":"¡Maestro Gastronómico!","color":"gold","bold":true}
+        - title %player% subtitle {"text":"Has dominado el poder de la Saturación","color":"white"}
+        items:
+        - mm:TOKEN_MISION:15
+        money: 300
+        permission: habilidades.saturacion.3
+        quest-points: 15
     options:
         cooldown:
             enabled: true
@@ -1104,15 +1104,6 @@ quests:
         un verdadero héroe del pueblo. Los aldeanos comienzan a reconocer tu dedicación.'
     requirements:
         level: 0
-    rewards:
-        commands:
-        - effect give %player% hero_of_the_village 999999 0 true
-        - tellraw %player% {"text":"Has obtenido Héroe de Villa I de forma permanente","color":"yellow"}
-        items:
-        - mm:TOKEN_MISION:5
-        money: 50
-        permission: habilidades.heroevilla.1
-        quest-points: 5
     stages:
         ordered:
             1:
@@ -1126,6 +1117,15 @@ quests:
                 - 1
                 mobs-to-kill:
                 - Pillager_Asaltante
+    rewards:
+        commands:
+        - effect give %player% hero_of_the_village 999999 0 true
+        - tellraw %player% {"text":"Has obtenido Héroe de Villa I de forma permanente","color":"yellow"}
+        items:
+        - mm:TOKEN_MISION:5
+        money: 50
+        permission: habilidades.heroevilla.1
+        quest-points: 5
     options:
         cooldown:
             enabled: true
@@ -1134,6 +1134,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   defensor_nivel2:
     name: '&eDefensor del Pueblo II'
     ask-message: '&e[Alcalde Tomás]: &7Tu dedicación a nuestro pueblo merece mayor reconocimiento.
@@ -1146,15 +1147,6 @@ quests:
         quest-points: 5
         quests-completed:
         - defensor_nivel1
-    rewards:
-        commands:
-        - effect give %player% hero_of_the_village 999999 1 true
-        - tellraw %player% {"text":"Has mejorado a Héroe de Villa II de forma permanente","color":"yellow"}
-        items:
-        - mm:TOKEN_MISION:6
-        money: 60
-        permission: habilidades.heroevilla.2
-        quest-points: 6
     stages:
         ordered:
             1:
@@ -1168,6 +1160,15 @@ quests:
                 - 2
                 mobs-to-kill:
                 - Pillager_Asaltante
+    rewards:
+        commands:
+        - effect give %player% hero_of_the_village 999999 1 true
+        - tellraw %player% {"text":"Has mejorado a Héroe de Villa II de forma permanente","color":"yellow"}
+        items:
+        - mm:TOKEN_MISION:6
+        money: 60
+        permission: habilidades.heroevilla.2
+        quest-points: 6
     options:
         cooldown:
             enabled: true
@@ -1176,6 +1177,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   defensor_nivel3:
     name: '&eDefensor del Pueblo III'
     ask-message: '&e[Alcalde Tomás]: &7Los saqueadores regresan con más fuerza. Necesitamos
@@ -1187,15 +1189,6 @@ quests:
         quest-points: 11
         quests-completed:
         - defensor_nivel2
-    rewards:
-        commands:
-        - effect give %player% hero_of_the_village 999999 2 true
-        - tellraw %player% {"text":"Has mejorado a Héroe de Villa III de forma permanente","color":"yellow"}
-        items:
-        - mm:TOKEN_MISION:7
-        money: 70
-        permission: habilidades.heroevilla.3
-        quest-points: 7
     stages:
         ordered:
             1:
@@ -1209,6 +1202,15 @@ quests:
                 - 3
                 mobs-to-kill:
                 - Pillager_Asaltante
+    rewards:
+        commands:
+        - effect give %player% hero_of_the_village 999999 2 true
+        - tellraw %player% {"text":"Has mejorado a Héroe de Villa III de forma permanente","color":"yellow"}
+        items:
+        - mm:TOKEN_MISION:7
+        money: 70
+        permission: habilidades.heroevilla.3
+        quest-points: 7
     options:
         cooldown:
             enabled: true
@@ -1217,6 +1219,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   defensor_nivel4:
     name: '&eDefensor del Pueblo IV'
     ask-message: '&e[Alcalde Tomás]: &7Tu valor inspira a otros. Esta nueva ola de saqueadores
@@ -1228,15 +1231,6 @@ quests:
         quest-points: 18
         quests-completed:
         - defensor_nivel3
-    rewards:
-        commands:
-        - effect give %player% hero_of_the_village 999999 3 true
-        - tellraw %player% {"text":"Has mejorado a Héroe de Villa IV de forma permanente","color":"yellow"}
-        items:
-        - mm:TOKEN_MISION:8
-        money: 80
-        permission: habilidades.heroevilla.4
-        quest-points: 8
     stages:
         ordered:
             1:
@@ -1250,6 +1244,15 @@ quests:
                 - 4
                 mobs-to-kill:
                 - Pillager_Asaltante
+    rewards:
+        commands:
+        - effect give %player% hero_of_the_village 999999 3 true
+        - tellraw %player% {"text":"Has mejorado a Héroe de Villa IV de forma permanente","color":"yellow"}
+        items:
+        - mm:TOKEN_MISION:8
+        money: 80
+        permission: habilidades.heroevilla.4
+        quest-points: 8
     options:
         cooldown:
             enabled: true
@@ -1258,6 +1261,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   defensor_nivel5:
     name: '&eDefensor del Pueblo V'
     ask-message: '&e[Alcalde Tomás]: &7Los pillagers han enviado un grupo más grande y
@@ -1269,15 +1273,6 @@ quests:
         quest-points: 26
         quests-completed:
         - defensor_nivel4
-    rewards:
-        commands:
-        - effect give %player% hero_of_the_village 999999 4 true
-        - tellraw %player% {"text":"Has mejorado a Héroe de Villa V de forma permanente","color":"yellow"}
-        items:
-        - mm:TOKEN_MISION:9
-        money: 90
-        permission: habilidades.heroevilla.5
-        quest-points: 9
     stages:
         ordered:
             1:
@@ -1291,6 +1286,15 @@ quests:
                 - 5
                 mobs-to-kill:
                 - Pillager_Asaltante
+    rewards:
+        commands:
+        - effect give %player% hero_of_the_village 999999 4 true
+        - tellraw %player% {"text":"Has mejorado a Héroe de Villa V de forma permanente","color":"yellow"}
+        items:
+        - mm:TOKEN_MISION:9
+        money: 90
+        permission: habilidades.heroevilla.5
+        quest-points: 9
     options:
         cooldown:
             enabled: true
@@ -1299,6 +1303,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   defensor_nivel6:
     name: '&eDefensor del Pueblo VI'
     ask-message: '&e[Alcalde Tomás]: &7Los pillagers no se rinden. Esta vez han enviado
@@ -1310,15 +1315,6 @@ quests:
         quest-points: 35
         quests-completed:
         - defensor_nivel5
-    rewards:
-        commands:
-        - effect give %player% hero_of_the_village 999999 5 true
-        - tellraw %player% {"text":"Has mejorado a Héroe de Villa VI de forma permanente","color":"yellow"}
-        items:
-        - mm:TOKEN_MISION:10
-        money: 100
-        permission: habilidades.heroevilla.6
-        quest-points: 10
     stages:
         ordered:
             1:
@@ -1332,6 +1328,15 @@ quests:
                 - 6
                 mobs-to-kill:
                 - Pillager_Asaltante
+    rewards:
+        commands:
+        - effect give %player% hero_of_the_village 999999 5 true
+        - tellraw %player% {"text":"Has mejorado a Héroe de Villa VI de forma permanente","color":"yellow"}
+        items:
+        - mm:TOKEN_MISION:10
+        money: 100
+        permission: habilidades.heroevilla.6
+        quest-points: 10
     options:
         cooldown:
             enabled: true
@@ -1340,6 +1345,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   defensor_nivel7:
     name: '&eDefensor del Pueblo VII'
     ask-message: '&e[Alcalde Tomás]: &7Informes indican que un capitán pillager lidera
@@ -1351,15 +1357,6 @@ quests:
         quest-points: 45
         quests-completed:
         - defensor_nivel6
-    rewards:
-        commands:
-        - effect give %player% hero_of_the_village 999999 6 true
-        - tellraw %player% {"text":"Has mejorado a Héroe de Villa VII de forma permanente","color":"yellow"}
-        items:
-        - mm:TOKEN_MISION:11
-        money: 110
-        permission: habilidades.heroevilla.7
-        quest-points: 11
     stages:
         ordered:
             1:
@@ -1373,6 +1370,15 @@ quests:
                 - 7
                 mobs-to-kill:
                 - Pillager_Asaltante
+    rewards:
+        commands:
+        - effect give %player% hero_of_the_village 999999 6 true
+        - tellraw %player% {"text":"Has mejorado a Héroe de Villa VII de forma permanente","color":"yellow"}
+        items:
+        - mm:TOKEN_MISION:11
+        money: 110
+        permission: habilidades.heroevilla.7
+        quest-points: 11
     options:
         cooldown:
             enabled: true
@@ -1381,6 +1387,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   defensor_nivel8:
     name: '&eDefensor del Pueblo VIII'
     ask-message: '&e[Alcalde Tomás]: &7Los pillagers han jurado venganza por sus derrotas
@@ -1392,15 +1399,6 @@ quests:
         quest-points: 56
         quests-completed:
         - defensor_nivel7
-    rewards:
-        commands:
-        - effect give %player% hero_of_the_village 999999 7 true
-        - tellraw %player% {"text":"Has mejorado a Héroe de Villa VIII de forma permanente","color":"yellow"}
-        items:
-        - mm:TOKEN_MISION:12
-        money: 120
-        permission: habilidades.heroevilla.8
-        quest-points: 12
     stages:
         ordered:
             1:
@@ -1414,6 +1412,15 @@ quests:
                 - 8
                 mobs-to-kill:
                 - Pillager_Asaltante
+    rewards:
+        commands:
+        - effect give %player% hero_of_the_village 999999 7 true
+        - tellraw %player% {"text":"Has mejorado a Héroe de Villa VIII de forma permanente","color":"yellow"}
+        items:
+        - mm:TOKEN_MISION:12
+        money: 120
+        permission: habilidades.heroevilla.8
+        quest-points: 12
     options:
         cooldown:
             enabled: true
@@ -1422,6 +1429,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   defensor_nivel9:
     name: '&eDefensor del Pueblo IX'
     ask-message: '&e[Alcalde Tomás]: &7Noticias alarmantes llegan desde la frontera. Los
@@ -1434,15 +1442,6 @@ quests:
         quest-points: 68
         quests-completed:
         - defensor_nivel8
-    rewards:
-        commands:
-        - effect give %player% hero_of_the_village 999999 8 true
-        - tellraw %player% {"text":"Has mejorado a Héroe de Villa IX de forma permanente","color":"yellow"}
-        items:
-        - mm:TOKEN_MISION:13
-        money: 130
-        permission: habilidades.heroevilla.9
-        quest-points: 13
     stages:
         ordered:
             1:
@@ -1456,6 +1455,15 @@ quests:
                 - 9
                 mobs-to-kill:
                 - Pillager_Asaltante
+    rewards:
+        commands:
+        - effect give %player% hero_of_the_village 999999 8 true
+        - tellraw %player% {"text":"Has mejorado a Héroe de Villa IX de forma permanente","color":"yellow"}
+        items:
+        - mm:TOKEN_MISION:13
+        money: 130
+        permission: habilidades.heroevilla.9
+        quest-points: 13
     options:
         cooldown:
             enabled: true
@@ -1464,6 +1472,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   defensor_nivel10:
     name: '&eDefensor del Pueblo X'
     ask-message: '&e[Alcalde Tomás]: &7Los pillagers han formado una coalición con otras
@@ -1477,15 +1486,6 @@ quests:
         quest-points: 81
         quests-completed:
         - defensor_nivel9
-    rewards:
-        commands:
-        - effect give %player% hero_of_the_village 999999 9 true
-        - tellraw %player% {"text":"Has mejorado a Héroe de Villa X de forma permanente","color":"yellow"}
-        items:
-        - mm:TOKEN_MISION:14
-        money: 140
-        permission: habilidades.heroevilla.10
-        quest-points: 14
     stages:
         ordered:
             1:
@@ -1499,6 +1499,15 @@ quests:
                 - 10
                 mobs-to-kill:
                 - Pillager_Asaltante
+    rewards:
+        commands:
+        - effect give %player% hero_of_the_village 999999 9 true
+        - tellraw %player% {"text":"Has mejorado a Héroe de Villa X de forma permanente","color":"yellow"}
+        items:
+        - mm:TOKEN_MISION:14
+        money: 140
+        permission: habilidades.heroevilla.10
+        quest-points: 14
     options:
         cooldown:
             enabled: true
@@ -1518,15 +1527,6 @@ quests:
         más rápido de lo que creías posible.'
     requirements:
         level: 0
-    rewards:
-        commands:
-        - effect give %player% speed 999999 0 true
-        - tellraw %player% {"text":"Has obtenido Velocidad I de forma permanente","color":"aqua"}
-        items:
-        - mm:TOKEN_MISION:5
-        money: 100
-        permission: habilidades.velocidad.1
-        quest-points: 5
     stages:
         ordered:
             1:
@@ -1538,6 +1538,15 @@ quests:
                 - META_CARRERA
                 - SUGAR
                 - mm:TOKEN_MISION
+    rewards:
+        commands:
+        - effect give %player% speed 999999 0 true
+        - tellraw %player% {"text":"Has obtenido Velocidad I de forma permanente","color":"aqua"}
+        items:
+        - mm:TOKEN_MISION:5
+        money: 100
+        permission: habilidades.velocidad.1
+        quest-points: 5
     options:
         cooldown:
             enabled: true
@@ -1546,6 +1555,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   mensajero_veloz:
     name: '&bMensajero Veloz'
     ask-message: '&b[Lia]: &7¡Ahora viene lo divertido! Esta ruta tiene obstáculos y peligros.
@@ -1558,15 +1568,6 @@ quests:
         quest-points: 5
         quests-completed:
         - mensajero_principiante
-    rewards:
-        commands:
-        - effect give %player% speed 999999 1 true
-        - tellraw %player% {"text":"Has mejorado a Velocidad II de forma permanente","color":"aqua"}
-        items:
-        - mm:TOKEN_MISION:10
-        money: 200
-        permission: habilidades.velocidad.2
-        quest-points: 10
     stages:
         ordered:
             1:
@@ -1582,6 +1583,15 @@ quests:
                 - 10
                 mobs-to-kill:
                 - Skeleton_Guerrero
+    rewards:
+        commands:
+        - effect give %player% speed 999999 1 true
+        - tellraw %player% {"text":"Has mejorado a Velocidad II de forma permanente","color":"aqua"}
+        items:
+        - mm:TOKEN_MISION:10
+        money: 200
+        permission: habilidades.velocidad.2
+        quest-points: 10
     options:
         cooldown:
             enabled: true
@@ -1590,6 +1600,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   mensajero_relampago:
     name: '&bMensajero Relámpago'
     ask-message: '&b[Lia]: &7Esta es la prueba definitiva. Solo otro mensajero además
@@ -1603,17 +1614,6 @@ quests:
         quest-points: 15
         quests-completed:
         - mensajero_veloz
-    rewards:
-        commands:
-        - effect give %player% speed 999999 2 true
-        - tellraw %player% {"text":"¡Has alcanzado Velocidad III, el poder máximo!","color":"aqua","bold":true}
-        - title %player% title {"text":"¡Mensajero Relámpago!","color":"aqua","bold":true}
-        - title %player% subtitle {"text":"Has dominado el poder de la Velocidad","color":"white"}
-        items:
-        - mm:TOKEN_MISION:15
-        money: 300
-        permission: habilidades.velocidad.3
-        quest-points: 15
     stages:
         ordered:
             1:
@@ -1631,6 +1631,17 @@ quests:
                 - 15
                 mobs-to-kill:
                 - Skeleton_Guerrero
+    rewards:
+        commands:
+        - effect give %player% speed 999999 2 true
+        - tellraw %player% {"text":"¡Has alcanzado Velocidad III, el poder máximo!","color":"aqua","bold":true}
+        - title %player% title {"text":"¡Mensajero Relámpago!","color":"aqua","bold":true}
+        - title %player% subtitle {"text":"Has dominado el poder de la Velocidad","color":"white"}
+        items:
+        - mm:TOKEN_MISION:15
+        money: 300
+        permission: habilidades.velocidad.3
+        quest-points: 15
     options:
         cooldown:
             enabled: true
@@ -1650,15 +1661,6 @@ quests:
         se fortalecerá como el escudo que protege nuestro pueblo.'
     requirements:
         level: 0
-    rewards:
-        commands:
-        - effect give %player% resistance 999999 0 true
-        - tellraw %player% {"text":"Has obtenido Resistencia I de forma permanente","color":"red"}
-        items:
-        - mm:TOKEN_MISION:5
-        money: 100
-        permission: habilidades.resistencia.1
-        quest-points: 5
     stages:
         ordered:
             1:
@@ -1674,6 +1676,15 @@ quests:
                 - 15
                 mobs-to-kill:
                 - Creeper_Explosivo
+    rewards:
+        commands:
+        - effect give %player% resistance 999999 0 true
+        - tellraw %player% {"text":"Has obtenido Resistencia I de forma permanente","color":"red"}
+        items:
+        - mm:TOKEN_MISION:5
+        money: 100
+        permission: habilidades.resistencia.1
+        quest-points: 5
     options:
         cooldown:
             enabled: true
@@ -1682,6 +1693,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   muro_impenetrable:
     name: '&cMuro Impenetrable'
     ask-message: '&c[Marta]: &7Tu cuerpo debe convertirse en un escudo viviente. Estas
@@ -1694,15 +1706,6 @@ quests:
         quest-points: 5
         quests-completed:
         - escudo_pueblo
-    rewards:
-        commands:
-        - effect give %player% resistance 999999 1 true
-        - tellraw %player% {"text":"Has mejorado a Resistencia II de forma permanente","color":"red"}
-        items:
-        - mm:TOKEN_MISION:10
-        money: 200
-        permission: habilidades.resistencia.2
-        quest-points: 10
     stages:
         ordered:
             1:
@@ -1718,6 +1721,15 @@ quests:
                 - 20
                 mobs-to-kill:
                 - Creeper_Explosivo
+    rewards:
+        commands:
+        - effect give %player% resistance 999999 1 true
+        - tellraw %player% {"text":"Has mejorado a Resistencia II de forma permanente","color":"red"}
+        items:
+        - mm:TOKEN_MISION:10
+        money: 200
+        permission: habilidades.resistencia.2
+        quest-points: 10
     options:
         cooldown:
             enabled: true
@@ -1726,6 +1738,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   guardian_eterno:
     name: '&cGuardián Eterno'
     ask-message: '&c[Marta]: &7Los antiguos guardianes podían resistir el impacto directo
@@ -1739,17 +1752,6 @@ quests:
         quest-points: 15
         quests-completed:
         - muro_impenetrable
-    rewards:
-        commands:
-        - effect give %player% resistance 999999 2 true
-        - tellraw %player% {"text":"¡Has alcanzado Resistencia III, el poder máximo!","color":"red","bold":true}
-        - title %player% title {"text":"¡Guardián Eterno!","color":"red","bold":true}
-        - title %player% subtitle {"text":"Has dominado el poder de la Resistencia","color":"white"}
-        items:
-        - mm:TOKEN_MISION:15
-        money: 300
-        permission: habilidades.resistencia.3
-        quest-points: 15
     stages:
         ordered:
             1:
@@ -1765,6 +1767,17 @@ quests:
                 - 25
                 mobs-to-kill:
                 - Creeper_Explosivo
+    rewards:
+        commands:
+        - effect give %player% resistance 999999 2 true
+        - tellraw %player% {"text":"¡Has alcanzado Resistencia III, el poder máximo!","color":"red","bold":true}
+        - title %player% title {"text":"¡Guardián Eterno!","color":"red","bold":true}
+        - title %player% subtitle {"text":"Has dominado el poder de la Resistencia","color":"white"}
+        items:
+        - mm:TOKEN_MISION:15
+        money: 300
+        permission: habilidades.resistencia.3
+        quest-points: 15
     options:
         cooldown:
             enabled: true
@@ -1784,15 +1797,6 @@ quests:
         como si la gravedad tuviera menos efecto sobre ti.'
     requirements:
         level: 0
-    rewards:
-        commands:
-        - effect give %player% jump_boost 999999 0 true
-        - tellraw %player% {"text":"Has obtenido Salto Aumentado I de forma permanente","color":"light_purple"}
-        items:
-        - mm:TOKEN_MISION:5
-        money: 100
-        permission: habilidades.saltoaumentado.1
-        quest-points: 5
     stages:
         ordered:
             1:
@@ -1806,6 +1810,15 @@ quests:
                 - SLIME_BLOCK
                 - FEATHER
                 - mm:TOKEN_MISION
+    rewards:
+        commands:
+        - effect give %player% jump_boost 999999 0 true
+        - tellraw %player% {"text":"Has obtenido Salto Aumentado I de forma permanente","color":"light_purple"}
+        items:
+        - mm:TOKEN_MISION:5
+        money: 100
+        permission: habilidades.saltoaumentado.1
+        quest-points: 5
     options:
         cooldown:
             enabled: true
@@ -1814,6 +1827,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   acrobata_experimentado:
     name: '&dAcróbata Experimentado'
     ask-message: '&d[Ícaro]: &7¡Ahora las cosas se ponen interesantes! Los saltos son
@@ -1826,15 +1840,6 @@ quests:
         quest-points: 5
         quests-completed:
         - acrobata_novato
-    rewards:
-        commands:
-        - effect give %player% jump_boost 999999 1 true
-        - tellraw %player% {"text":"Has mejorado a Salto Aumentado II de forma permanente","color":"light_purple"}
-        items:
-        - mm:TOKEN_MISION:10
-        money: 200
-        permission: habilidades.saltoaumentado.2
-        quest-points: 10
     stages:
         ordered:
             1:
@@ -1852,6 +1857,15 @@ quests:
                 - 5
                 mobs-to-kill:
                 - Spider_Mutante
+    rewards:
+        commands:
+        - effect give %player% jump_boost 999999 1 true
+        - tellraw %player% {"text":"Has mejorado a Salto Aumentado II de forma permanente","color":"light_purple"}
+        items:
+        - mm:TOKEN_MISION:10
+        money: 200
+        permission: habilidades.saltoaumentado.2
+        quest-points: 10
     options:
         cooldown:
             enabled: true
@@ -1860,6 +1874,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   maestro_acrobata:
     name: '&dMaestro Acróbata'
     ask-message: '&d[Ícaro]: &7Pocos llegan hasta aquí. Este parkour requiere precisión
@@ -1872,15 +1887,6 @@ quests:
         quest-points: 15
         quests-completed:
         - acrobata_experimentado
-    rewards:
-        commands:
-        - effect give %player% jump_boost 999999 2 true
-        - tellraw %player% {"text":"Has mejorado a Salto Aumentado III de forma permanente","color":"light_purple"}
-        items:
-        - mm:TOKEN_MISION:15
-        money: 300
-        permission: habilidades.saltoaumentado.3
-        quest-points: 15
     stages:
         ordered:
             1:
@@ -1898,6 +1904,15 @@ quests:
                 - 10
                 mobs-to-kill:
                 - Spider_Mutante
+    rewards:
+        commands:
+        - effect give %player% jump_boost 999999 2 true
+        - tellraw %player% {"text":"Has mejorado a Salto Aumentado III de forma permanente","color":"light_purple"}
+        items:
+        - mm:TOKEN_MISION:15
+        money: 300
+        permission: habilidades.saltoaumentado.3
+        quest-points: 15
     options:
         cooldown:
             enabled: true
@@ -1906,6 +1921,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   acrobata_divino:
     name: '&dAcróbata Divino'
     ask-message: '&d[Ícaro]: &7¡La prueba definitiva! Ni siquiera yo completo este parkour
@@ -1918,17 +1934,6 @@ quests:
         quest-points: 30
         quests-completed:
         - maestro_acrobata
-    rewards:
-        commands:
-        - effect give %player% jump_boost 999999 3 true
-        - tellraw %player% {"text":"¡Has alcanzado Salto Aumentado IV, el poder máximo!","color":"light_purple","bold":true}
-        - title %player% title {"text":"¡Acróbata Divino!","color":"light_purple","bold":true}
-        - title %player% subtitle {"text":"Has dominado el poder del Salto","color":"white"}
-        items:
-        - mm:TOKEN_MISION:20
-        money: 400
-        permission: habilidades.saltoaumentado.4
-        quest-points: 20
     stages:
         ordered:
             1:
@@ -1946,6 +1951,17 @@ quests:
                 - 15
                 mobs-to-kill:
                 - Spider_Mutante
+    rewards:
+        commands:
+        - effect give %player% jump_boost 999999 3 true
+        - tellraw %player% {"text":"¡Has alcanzado Salto Aumentado IV, el poder máximo!","color":"light_purple","bold":true}
+        - title %player% title {"text":"¡Acróbata Divino!","color":"light_purple","bold":true}
+        - title %player% subtitle {"text":"Has dominado el poder del Salto","color":"white"}
+        items:
+        - mm:TOKEN_MISION:20
+        money: 400
+        permission: habilidades.saltoaumentado.4
+        quest-points: 20
     options:
         cooldown:
             enabled: true
@@ -1965,16 +1981,6 @@ quests:
         enseñaré los secretos básicos de la regeneración.'
     requirements:
         level: 0
-    rewards:
-        commands:
-        - effect give %player% regeneration 999999 0 true
-        - tellraw %player% {"text":"Has obtenido Regeneración I de forma permanente","color":"white"}
-        items:
-        - mm:TOKEN_MISION:5
-        money: 100
-        permission: habilidades.regeneracion.1
-        quest-points: 5
-    redo-delay: 86400
     stages:
         ordered:
             1:
@@ -1988,6 +1994,17 @@ quests:
                 - HONEY_BOTTLE
                 - POTION
                 - mm:TOKEN_MISION
+    rewards:
+        commands:
+        - effect give %player% regeneration 999999 0 true
+        - tellraw %player% {"text":"Has obtenido Regeneración I de forma permanente","color":"white"}
+        items:
+        - mm:TOKEN_MISION:5
+        money: 100
+        permission: habilidades.regeneracion.1
+        quest-points: 5
+    redo-delay: 86400
+
   medico_experimentado:
     name: '&fMédico Experimentado'
     ask-message: '&f[Helena]: &7Las lágrimas de ghast contienen propiedades regenerativas
@@ -2000,16 +2017,6 @@ quests:
         quest-points: 5
         quests-completed:
         - sanador_principiante
-    rewards:
-        commands:
-        - effect give %player% regeneration 999999 1 true
-        - tellraw %player% {"text":"Has mejorado a Regeneración II de forma permanente","color":"white"}
-        items:
-        - mm:TOKEN_MISION:10
-        money: 200
-        permission: habilidades.regeneracion.2
-        quest-points: 10
-    redo-delay: 86400
     stages:
         ordered:
             1:
@@ -2021,51 +2028,18 @@ quests:
                 - META_CURACION
                 - GHAST_TEAR
                 - mm:TOKEN_MISION
-
-  # === SANADOR QUESTS ===
-  maestro_sanador:
-    name: '&aMaestro Sanador'
-    ask-message: '&a[Sae]: &7Las energías curativas fluyen a través de ti. Siento que
-        estás listo para ascender en el camino de la sanación.'
-    finish-message: '&a[Sae]: &7Has alcanzado un nivel superior de maestría sobre tu vitalidad.
-        Tu esencia vital se ha expandido considerablemente.'
-    requirements:
-        permission: habilidades.saludextra.2
-        quest-points: 15
-        quests-completed:
-        - sanador_experimentado
     rewards:
         commands:
-        - effect give %player% health_boost 999999 2 true
-        - tellraw %player% {"text":"Has mejorado a Salud Extra III de forma permanente","color":"green"}
+        - effect give %player% regeneration 999999 1 true
+        - tellraw %player% {"text":"Has mejorado a Regeneración II de forma permanente","color":"white"}
         items:
-        - mm:TOKEN_MISION:15
-        money: 300
-        permission: habilidades.saludextra.3
-        quest-points: 15
-    stages:
-        ordered:
-            1:
-                amounts-to-collect:
-                - 8
-                - 14
-                - 100
-                items-to-collect:
-                - GOLDEN_APPLE
-                - HONEY_BOTTLE
-                - mm:TOKEN_MISION
-                mob-amounts:
-                - 15
-                mobs-to-kill:
-                - Pillager_Asaltante
-    options:
-        cooldown:
-            enabled: true
-            time: 86400
-        repeat:
-            amount: 1
-            enabled: true
-            infinite: false
+        - mm:TOKEN_MISION:10
+        money: 200
+        permission: habilidades.regeneracion.2
+        quest-points: 10
+    redo-delay: 86400
+
+  # === SANADOR QUESTS ===
   aprendiz_sanacion:
     name: '&aAprendiz de Sanación'
     ask-message: '&a[Sae]: &7Los aldeanos son inocentes y merecen nuestra protección.
@@ -2074,15 +2048,6 @@ quests:
         a aumentar tu salud vital.'
     requirements:
         level: 0
-    rewards:
-        commands:
-        - effect give %player% health_boost 999999 0 true
-        - tellraw %player% {"text":"Has obtenido Salud Extra I de forma permanente","color":"green"}
-        items:
-        - mm:TOKEN_MISION:5
-        money: 100
-        permission: habilidades.saludextra.1
-        quest-points: 5
     stages:
         ordered:
             1:
@@ -2098,6 +2063,15 @@ quests:
                 - 5
                 mobs-to-kill:
                 - Pillager_Asaltante
+    rewards:
+        commands:
+        - effect give %player% health_boost 999999 0 true
+        - tellraw %player% {"text":"Has obtenido Salud Extra I de forma permanente","color":"green"}
+        items:
+        - mm:TOKEN_MISION:5
+        money: 100
+        permission: habilidades.saludextra.1
+        quest-points: 5
     options:
         cooldown:
             enabled: true
@@ -2106,6 +2080,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   sanador_experimentado:
     name: '&aSanador Experimentado'
     ask-message: '&a[Sae]: &7Tu dedicación es admirable. La verdadera fuerza reside en
@@ -2118,15 +2093,6 @@ quests:
         quest-points: 5
         quests-completed:
         - aprendiz_sanacion
-    rewards:
-        commands:
-        - effect give %player% health_boost 999999 1 true
-        - tellraw %player% {"text":"Has mejorado a Salud Extra II de forma permanente","color":"green"}
-        items:
-        - mm:TOKEN_MISION:10
-        money: 200
-        permission: habilidades.saludextra.2
-        quest-points: 10
     stages:
         ordered:
             1:
@@ -2142,6 +2108,15 @@ quests:
                 - 10
                 mobs-to-kill:
                 - Pillager_Asaltante
+    rewards:
+        commands:
+        - effect give %player% health_boost 999999 1 true
+        - tellraw %player% {"text":"Has mejorado a Salud Extra II de forma permanente","color":"green"}
+        items:
+        - mm:TOKEN_MISION:10
+        money: 200
+        permission: habilidades.saludextra.2
+        quest-points: 10
     options:
         cooldown:
             enabled: true
@@ -2150,6 +2125,51 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
+  maestro_sanador:
+    name: '&aMaestro Sanador'
+    ask-message: '&a[Sae]: &7Las energías curativas fluyen a través de ti. Siento que
+        estás listo para ascender en el camino de la sanación.'
+    finish-message: '&a[Sae]: &7Has alcanzado un nivel superior de maestría sobre tu vitalidad.
+        Tu esencia vital se ha expandido considerablemente.'
+    requirements:
+        permission: habilidades.saludextra.2
+        quest-points: 15
+        quests-completed:
+        - sanador_experimentado
+    stages:
+        ordered:
+            1:
+                amounts-to-collect:
+                - 8
+                - 14
+                - 100
+                items-to-collect:
+                - GOLDEN_APPLE
+                - HONEY_BOTTLE
+                - mm:TOKEN_MISION
+                mob-amounts:
+                - 15
+                mobs-to-kill:
+                - Pillager_Asaltante
+    rewards:
+        commands:
+        - effect give %player% health_boost 999999 2 true
+        - tellraw %player% {"text":"Has mejorado a Salud Extra III de forma permanente","color":"green"}
+        items:
+        - mm:TOKEN_MISION:15
+        money: 300
+        permission: habilidades.saludextra.3
+        quest-points: 15
+    options:
+        cooldown:
+            enabled: true
+            time: 86400
+        repeat:
+            amount: 1
+            enabled: true
+            infinite: false
+
   medico_batalla:
     name: '&aMédico de Batalla'
     ask-message: '&a[Sae]: &7En el fragor de la batalla, la capacidad de resistir es tan
@@ -2161,15 +2181,6 @@ quests:
         quest-points: 30
         quests-completed:
         - maestro_sanador
-    rewards:
-        commands:
-        - effect give %player% health_boost 999999 3 true
-        - tellraw %player% {"text":"Has mejorado a Salud Extra IV de forma permanente","color":"green"}
-        items:
-        - mm:TOKEN_MISION:20
-        money: 400
-        permission: habilidades.saludextra.4
-        quest-points: 20
     stages:
         ordered:
             1:
@@ -2185,6 +2196,15 @@ quests:
                 - 20
                 mobs-to-kill:
                 - Pillager_Asaltante
+    rewards:
+        commands:
+        - effect give %player% health_boost 999999 3 true
+        - tellraw %player% {"text":"Has mejorado a Salud Extra IV de forma permanente","color":"green"}
+        items:
+        - mm:TOKEN_MISION:20
+        money: 400
+        permission: habilidades.saludextra.4
+        quest-points: 20
     options:
         cooldown:
             enabled: true
@@ -2193,6 +2213,7 @@ quests:
             amount: 1
             enabled: true
             infinite: false
+
   sanador_divino:
     name: '&aSanador Divino'
     ask-message: '&a[Sae]: &7Los antiguos textos hablan de sanadores que podían soportar
@@ -2205,17 +2226,6 @@ quests:
         quest-points: 50
         quests-completed:
         - medico_batalla
-    rewards:
-        commands:
-        - effect give %player% health_boost 999999 4 true
-        - tellraw %player% {"text":"¡Has alcanzado Salud Extra V, el poder máximo!","color":"green","bold":true}
-        - title %player% title {"text":"¡Sanador Divino!","color":"green","bold":true}
-        - title %player% subtitle {"text":"Has dominado el poder de la Vitalidad","color":"white"}
-        items:
-        - mm:TOKEN_MISION:25
-        money: 500
-        permission: habilidades.saludextra.5
-        quest-points: 25
     stages:
         ordered:
             1:
@@ -2231,6 +2241,17 @@ quests:
                 - 25
                 mobs-to-kill:
                 - Pillager_Asaltante
+    rewards:
+        commands:
+        - effect give %player% health_boost 999999 4 true
+        - tellraw %player% {"text":"¡Has alcanzado Salud Extra V, el poder máximo!","color":"green","bold":true}
+        - title %player% title {"text":"¡Sanador Divino!","color":"green","bold":true}
+        - title %player% subtitle {"text":"Has dominado el poder de la Vitalidad","color":"white"}
+        items:
+        - mm:TOKEN_MISION:25
+        money: 500
+        permission: habilidades.saludextra.5
+        quest-points: 25
     options:
         cooldown:
             enabled: true
