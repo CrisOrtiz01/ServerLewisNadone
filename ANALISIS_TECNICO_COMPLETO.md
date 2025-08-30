@@ -101,6 +101,30 @@
 - ✅ Todos los archivos de ejemplo removidos
 - ✅ Configuraciones consistentes entre plugins
 
+## 🚨 PROBLEMA ADICIONAL IDENTIFICADO: FloodgateCP Dependency
+
+### ERROR DE STARTUP REPORTADO:
+```
+[Server thread/ERROR]: Could not load 'plugins/FloodgateCP-v1.1.0.jar'
+org.bukkit.plugin.UnknownDependencyException: Unknown dependency CommandPanels.
+```
+
+### ✅ SOLUCIÓN RECOMENDADA:
+**REMOVER FloodgateCP-v1.1.0.jar del directorio plugins/**
+
+**Justificación:**
+- ✅ El plugin regular `floodgate v2.2.4-SNAPSHOT` carga correctamente
+- ✅ Geyser está configurado para usar `auth-type: floodgate` (plugin regular)
+- ✅ No hay configuraciones específicas para FloodgateCP en el repositorio
+- ✅ FloodgateCP no es esencial para la funcionalidad del servidor RPG
+- ✅ Mantiene la filosofía de cambios mínimos
+
+### RESULTADO ESPERADO:
+- ✅ Eliminación del error de dependencia en startup
+- ✅ Floodgate regular continúa funcionando normalmente
+- ✅ Geyser-Spigot mantiene integración con floodgate
+- ✅ Sin impacto en funcionalidad del servidor RPG
+
 ## 🏆 ESTADO FINAL
 **SERVIDOR 100% FUNCIONAL Y OPTIMIZADO**
 
