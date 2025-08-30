@@ -1,0 +1,85 @@
+categories:
+  cazador:
+    name: "Misiones de Cazador"
+    missions:
+      - cazador_iniciado
+      - cazador_experimentado
+      - cazador_veterano
+      - cazador_elite
+      - maestro_cazador
+      - cazador_legendario
+      - cazador_bestias_mitologicas
+      - cazador_imposible
+      - cazador_divino
+
+  minero:
+    name: "Misiones de Minero"
+    missions:
+      - aprendiz_minero
+      - minero_experimentado
+      - maestro_profundidades
+      - buscador_tesoros
+      - minero_abismo
+      - buscador_netherita
+      - magnate_mineral
+      - senor_sombras
+      - excavador_lagrimas
+      - titan_mineria
+
+  cocinero:
+    name: "Misiones de Cocinero"
+    missions:
+      - cocinero_aficionado
+      - chef_experimentado
+      - maestro_gastronomico
+
+  alcalde:
+    name: "Misiones de Alcalde"
+    missions:
+      - defensor_nivel1
+      - defensor_nivel2
+      - defensor_nivel3
+      - defensor_nivel4
+      - defensor_nivel5
+      - defensor_nivel6
+      - defensor_nivel7
+      - defensor_nivel8
+      - defensor_nivel9
+      - defensor_nivel10
+
+  mensajero:
+    name: "Misiones de Mensajero"
+    missions:
+      - mensajero_principiante
+      - mensajero_veloz
+      - mensajero_relampago
+
+  guardian:
+    name: "Misiones de Guardián"
+    missions:
+      - escudo_pueblo
+      - muro_impenetrable
+      - guardian_eterno
+
+  acrobata:
+    name: "Misiones de Acróbata"
+    missions:
+      - acrobata_novato
+      - acrobata_experimentado
+      - maestro_acrobata
+      - acrobata_divino
+
+  curandera:
+    name: "Misiones de Curandera"
+    missions:
+      - sanador_principiante
+      - medico_experimentado
+
+  sanador:
+    name: "Misiones de Sanador"
+    missions:
+      - aprendiz_sanacion
+      - sanador_experimentado
+      - maestro_sanador
+      - medico_batalla
+      - sanador_divino

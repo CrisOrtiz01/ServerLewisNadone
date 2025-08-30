@@ -423,11 +423,13 @@ quests:
         items:
         - mm:TOKEN_MISION 50
         money: 1000
-        permission: habilidades.fuerza.
+    permission: habilidades.fuerza.10
         quest-points: 50
     stages:
         ordered:
             1:
+                amounts-to-collect:
+                - Pillager_Asaltante
                 amounts-to-collect:
                 - 10
                 - 10
@@ -477,6 +479,8 @@ quests:
         ordered:
             1:
                 amounts-to-collect:
+                - Pillager_Asaltante
+                amounts-to-collect:
                 - 5
                 - 1
                 - 40
@@ -515,6 +519,8 @@ quests:
     stages:
         ordered:
             1:
+                amounts-to-collect:
+                - Pillager_Asaltante
                 amounts-to-collect:
                 - 10
                 - 1
@@ -556,6 +562,8 @@ quests:
         ordered:
             1:
                 amounts-to-collect:
+                - Pillager_Asaltante
+                amounts-to-collect:
                 - 15
                 - 5
                 - 120
@@ -595,6 +603,8 @@ quests:
     stages:
         ordered:
             1:
+                amounts-to-collect:
+                - Pillager_Asaltante
                 amounts-to-collect:
                 - 20
                 - 10
@@ -636,6 +646,8 @@ quests:
         ordered:
             1:
                 amounts-to-collect:
+                - Pillager_Asaltante
+                amounts-to-collect:
                 - 320
                 - 192
                 - 192
@@ -676,6 +688,8 @@ quests:
         ordered:
             1:
                 amounts-to-collect:
+                - Pillager_Asaltante
+                amounts-to-collect:
                 - 1
                 - 1
                 - 192
@@ -714,6 +728,8 @@ quests:
     stages:
         ordered:
             1:
+                amounts-to-collect:
+                - Pillager_Asaltante
                 amounts-to-collect:
                 - 25
                 - 15
@@ -755,6 +771,8 @@ quests:
         ordered:
             1:
                 amounts-to-collect:
+                - Pillager_Asaltante
+                amounts-to-collect:
                 - 64
                 - 64
                 - 192
@@ -793,6 +811,8 @@ quests:
     stages:
         ordered:
             1:
+                amounts-to-collect:
+                - Pillager_Asaltante
                 amounts-to-collect:
                 - 16
                 - 64
