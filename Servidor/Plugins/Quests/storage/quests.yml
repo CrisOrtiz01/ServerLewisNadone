@@ -33,7 +33,7 @@ quests:
         - effect give %player% strength 999999 0 true
         - tellraw %player% {"text":"Has obtenido Fuerza I de forma permanente","color":"gold"}
         items:
-        - mm:TOKEN_MISION 5
+        - mm:TOKEN_MISION:5
         money: 100
         permission: habilidades.fuerza.1
         quest-points: 5
@@ -61,7 +61,7 @@ quests:
         - effect give %player% strength 999999 1 true
         - tellraw %player% {"text":"Has mejorado a Fuerza II de forma permanente","color":"gold"}
         items:
-        - mm:TOKEN_MISION 10
+        - mm:TOKEN_MISION:10
         money: 200
         permission: habilidades.fuerza.2
         quest-points: 10
@@ -104,7 +104,7 @@ quests:
         - effect give %player% strength 999999 2 true
         - tellraw %player% {"text":"Has mejorado a Fuerza III de forma permanente","color":"gold"}
         items:
-        - mm:TOKEN_MISION 15
+        - mm:TOKEN_MISION:15
         money: 300
         permission: habilidades.fuerza.3
         quest-points: 15
@@ -148,7 +148,7 @@ quests:
         - effect give %player% strength 999999 3 true
         - tellraw %player% {"text":"Has mejorado a Fuerza IV de forma permanente","color":"gold"}
         items:
-        - mm:TOKEN_MISION 20
+        - mm:TOKEN_MISION:20
         money: 400
         permission: habilidades.fuerza.4
         quest-points: 20
@@ -192,7 +192,7 @@ quests:
         - effect give %player% strength 999999 4 true
         - tellraw %player% {"text":"Has mejorado a Fuerza V de forma permanente","color":"gold"}
         items:
-        - mm:TOKEN_MISION 25
+        - mm:TOKEN_MISION:25
         money: 500
         permission: habilidades.fuerza.5
         quest-points: 25
@@ -239,7 +239,7 @@ quests:
         - effect give %player% strength 999999 5 true
         - tellraw %player% {"text":"Has mejorado a Fuerza VI de forma permanente","color":"gold"}
         items:
-        - mm:TOKEN_MISION 30
+        - mm:TOKEN_MISION:30
         money: 600
         permission: habilidades.fuerza.6
         quest-points: 30
@@ -282,7 +282,7 @@ quests:
         - effect give %player% strength 999999 6 true
         - tellraw %player% {"text":"Has mejorado a Fuerza VII de forma permanente","color":"gold"}
         items:
-        - mm:TOKEN_MISION 35
+        - mm:TOKEN_MISION:35
         money: 700
         permission: habilidades.fuerza.7
         quest-points: 35
@@ -327,7 +327,7 @@ quests:
         - effect give %player% strength 999999 7 true
         - tellraw %player% {"text":"Has mejorado a Fuerza VIII de forma permanente","color":"gold"}
         items:
-        - mm:TOKEN_MISION 40
+        - mm:TOKEN_MISION:40
         money: 800
         permission: habilidades.fuerza.8
         quest-points: 40
@@ -373,7 +373,7 @@ quests:
         - effect give %player% strength 999999 8 true
         - tellraw %player% {"text":"Has mejorado a Fuerza IX de forma permanente","color":"gold"}
         items:
-        - mm:TOKEN_MISION 45
+        - mm:TOKEN_MISION:45
         money: 900
         permission: habilidades.fuerza.9
         quest-points: 45
@@ -421,7 +421,7 @@ quests:
         - title %player% title {"text":"¡Cazador de Dioses!","color":"gold","bold":true}
         - title %player% subtitle {"text":"Has dominado el poder de la Fuerza","color":"white"}
         items:
-        - mm:TOKEN_MISION 50
+        - mm:TOKEN_MISION:50
         money: 1000
     permission: habilidades.fuerza.10
         quest-points: 50
@@ -471,7 +471,7 @@ quests:
         - effect give %player% haste 999999 0 true
         - tellraw %player% {"text":"Has obtenido Prisa Minera I de forma permanente","color":"dark_gray"}
         items:
-        - mm:TOKEN_MISION 5
+        - mm:TOKEN_MISION:5
         money: 100
         permission: habilidades.prisaminera.1
         quest-points: 5
@@ -512,7 +512,7 @@ quests:
         - effect give %player% haste 999999 1 true
         - tellraw %player% {"text":"Has mejorado a Prisa Minera II de forma permanente","color":"dark_gray"}
         items:
-        - mm:TOKEN_MISION 10
+        - mm:TOKEN_MISION:10
         money: 200
         permission: habilidades.prisaminera.2
         quest-points: 10
@@ -554,7 +554,7 @@ quests:
         - effect give %player% haste 999999 2 true
         - tellraw %player% {"text":"Has mejorado a Prisa Minera III de forma permanente","color":"dark_gray"}
         items:
-        - mm:TOKEN_MISION 15
+        - mm:TOKEN_MISION:15
         money: 300
         permission: habilidades.prisaminera.3
         quest-points: 15
@@ -596,7 +596,7 @@ quests:
         - effect give %player% haste 999999 3 true
         - tellraw %player% {"text":"Has mejorado a Prisa Minera IV de forma permanente","color":"dark_gray"}
         items:
-        - mm:TOKEN_MISION 20
+        - mm:TOKEN_MISION:20
         money: 400
         permission: habilidades.prisaminera.4
         quest-points: 20
@@ -638,7 +638,7 @@ quests:
         - effect give %player% haste 999999 4 true
         - tellraw %player% {"text":"Has mejorado a Prisa Minera V de forma permanente","color":"dark_gray"}
         items:
-        - mm:TOKEN_MISION 25
+        - mm:TOKEN_MISION:25
         money: 500
         permission: habilidades.prisaminera.5
         quest-points: 25
@@ -680,7 +680,7 @@ quests:
         - effect give %player% haste 999999 5 true
         - tellraw %player% {"text":"Has mejorado a Prisa Minera VI de forma permanente","color":"dark_gray"}
         items:
-        - mm:TOKEN_MISION 30
+        - mm:TOKEN_MISION:30
         money: 600
         permission: habilidades.prisaminera.6
         quest-points: 30
@@ -721,7 +721,7 @@ quests:
         - effect give %player% haste 999999 6 true
         - tellraw %player% {"text":"Has mejorado a Prisa Minera VII de forma permanente","color":"dark_gray"}
         items:
-        - mm:TOKEN_MISION 35
+        - mm:TOKEN_MISION:35
         money: 700
         permission: habilidades.prisaminera.7
         quest-points: 35
@@ -763,7 +763,7 @@ quests:
         - effect give %player% haste 999999 7 true
         - tellraw %player% {"text":"Has mejorado a Prisa Minera VIII de forma permanente","color":"dark_gray"}
         items:
-        - mm:TOKEN_MISION 40
+        - mm:TOKEN_MISION:40
         money: 800
         permission: habilidades.prisaminera.8
         quest-points: 40
@@ -804,7 +804,7 @@ quests:
         - effect give %player% haste 999999 8 true
         - tellraw %player% {"text":"Has mejorado a Prisa Minera IX de forma permanente","color":"dark_gray"}
         items:
-        - mm:TOKEN_MISION 45
+        - mm:TOKEN_MISION:45
         money: 900
         permission: habilidades.prisaminera.9
         quest-points: 45
@@ -849,7 +849,7 @@ quests:
         - title %player% title {"text":"¡Titán de la Minería!","color":"dark_gray","bold":true}
         - title %player% subtitle {"text":"Has dominado el poder de la Prisa Minera","color":"gray"}
         items:
-        - mm:TOKEN_MISION 50
+        - mm:TOKEN_MISION:50
         money: 1000
         permission: habilidades.prisaminera.10
         quest-points: 50
@@ -892,7 +892,7 @@ quests:
         - effect give %player% saturation 999999 0 true
         - tellraw %player% {"text":"Has obtenido Saturación I de forma permanente","color":"gold"}
         items:
-        - mm:TOKEN_MISION 5
+        - mm:TOKEN_MISION:5
         money: 100
         permission: habilidades.saturacion.1
         quest-points: 5
@@ -965,7 +965,7 @@ quests:
         - effect give %player% saturation 999999 1 true
         - tellraw %player% {"text":"Has mejorado a Saturación II de forma permanente","color":"gold"}
         items:
-        - mm:TOKEN_MISION 10
+        - mm:TOKEN_MISION:10
         money: 200
         permission: habilidades.saturacion.2
         quest-points: 10
@@ -1039,7 +1039,7 @@ quests:
         - title %player% title {"text":"¡Maestro Gastronómico!","color":"gold","bold":true}
         - title %player% subtitle {"text":"Has dominado el poder de la Saturación","color":"white"}
         items:
-        - mm:TOKEN_MISION 15
+        - mm:TOKEN_MISION:15
         money: 300
         permission: habilidades.saturacion.3
         quest-points: 15
@@ -1109,7 +1109,7 @@ quests:
         - effect give %player% hero_of_the_village 999999 0 true
         - tellraw %player% {"text":"Has obtenido Héroe de Villa I de forma permanente","color":"yellow"}
         items:
-        - mm:TOKEN_MISION 5
+        - mm:TOKEN_MISION:5
         money: 50
         permission: habilidades.heroevilla.1
         quest-points: 5
@@ -1151,7 +1151,7 @@ quests:
         - effect give %player% hero_of_the_village 999999 1 true
         - tellraw %player% {"text":"Has mejorado a Héroe de Villa II de forma permanente","color":"yellow"}
         items:
-        - mm:TOKEN_MISION 6
+        - mm:TOKEN_MISION:6
         money: 60
         permission: habilidades.heroevilla.2
         quest-points: 6
@@ -1192,7 +1192,7 @@ quests:
         - effect give %player% hero_of_the_village 999999 2 true
         - tellraw %player% {"text":"Has mejorado a Héroe de Villa III de forma permanente","color":"yellow"}
         items:
-        - mm:TOKEN_MISION 7
+        - mm:TOKEN_MISION:7
         money: 70
         permission: habilidades.heroevilla.3
         quest-points: 7
@@ -1233,7 +1233,7 @@ quests:
         - effect give %player% hero_of_the_village 999999 3 true
         - tellraw %player% {"text":"Has mejorado a Héroe de Villa IV de forma permanente","color":"yellow"}
         items:
-        - mm:TOKEN_MISION 8
+        - mm:TOKEN_MISION:8
         money: 80
         permission: habilidades.heroevilla.4
         quest-points: 8
@@ -1274,7 +1274,7 @@ quests:
         - effect give %player% hero_of_the_village 999999 4 true
         - tellraw %player% {"text":"Has mejorado a Héroe de Villa V de forma permanente","color":"yellow"}
         items:
-        - mm:TOKEN_MISION 9
+        - mm:TOKEN_MISION:9
         money: 90
         permission: habilidades.heroevilla.5
         quest-points: 9
@@ -1315,7 +1315,7 @@ quests:
         - effect give %player% hero_of_the_village 999999 5 true
         - tellraw %player% {"text":"Has mejorado a Héroe de Villa VI de forma permanente","color":"yellow"}
         items:
-        - mm:TOKEN_MISION 10
+        - mm:TOKEN_MISION:10
         money: 100
         permission: habilidades.heroevilla.6
         quest-points: 10
@@ -1356,7 +1356,7 @@ quests:
         - effect give %player% hero_of_the_village 999999 6 true
         - tellraw %player% {"text":"Has mejorado a Héroe de Villa VII de forma permanente","color":"yellow"}
         items:
-        - mm:TOKEN_MISION 11
+        - mm:TOKEN_MISION:11
         money: 110
         permission: habilidades.heroevilla.7
         quest-points: 11
@@ -1397,7 +1397,7 @@ quests:
         - effect give %player% hero_of_the_village 999999 7 true
         - tellraw %player% {"text":"Has mejorado a Héroe de Villa VIII de forma permanente","color":"yellow"}
         items:
-        - mm:TOKEN_MISION 12
+        - mm:TOKEN_MISION:12
         money: 120
         permission: habilidades.heroevilla.8
         quest-points: 12
@@ -1439,7 +1439,7 @@ quests:
         - effect give %player% hero_of_the_village 999999 8 true
         - tellraw %player% {"text":"Has mejorado a Héroe de Villa IX de forma permanente","color":"yellow"}
         items:
-        - mm:TOKEN_MISION 13
+        - mm:TOKEN_MISION:13
         money: 130
         permission: habilidades.heroevilla.9
         quest-points: 13
@@ -1482,7 +1482,7 @@ quests:
         - effect give %player% hero_of_the_village 999999 9 true
         - tellraw %player% {"text":"Has mejorado a Héroe de Villa X de forma permanente","color":"yellow"}
         items:
-        - mm:TOKEN_MISION 14
+        - mm:TOKEN_MISION:14
         money: 140
         permission: habilidades.heroevilla.10
         quest-points: 14
@@ -1523,7 +1523,7 @@ quests:
         - effect give %player% speed 999999 0 true
         - tellraw %player% {"text":"Has obtenido Velocidad I de forma permanente","color":"aqua"}
         items:
-        - mm:TOKEN_MISION 5
+        - mm:TOKEN_MISION:5
         money: 100
         permission: habilidades.velocidad.1
         quest-points: 5
@@ -1563,7 +1563,7 @@ quests:
         - effect give %player% speed 999999 1 true
         - tellraw %player% {"text":"Has mejorado a Velocidad II de forma permanente","color":"aqua"}
         items:
-        - mm:TOKEN_MISION 10
+        - mm:TOKEN_MISION:10
         money: 200
         permission: habilidades.velocidad.2
         quest-points: 10
@@ -1610,7 +1610,7 @@ quests:
         - title %player% title {"text":"¡Mensajero Relámpago!","color":"aqua","bold":true}
         - title %player% subtitle {"text":"Has dominado el poder de la Velocidad","color":"white"}
         items:
-        - mm:TOKEN_MISION 15
+        - mm:TOKEN_MISION:15
         money: 300
         permission: habilidades.velocidad.3
         quest-points: 15
@@ -1655,7 +1655,7 @@ quests:
         - effect give %player% resistance 999999 0 true
         - tellraw %player% {"text":"Has obtenido Resistencia I de forma permanente","color":"red"}
         items:
-        - mm:TOKEN_MISION 5
+        - mm:TOKEN_MISION:5
         money: 100
         permission: habilidades.resistencia.1
         quest-points: 5
@@ -1699,7 +1699,7 @@ quests:
         - effect give %player% resistance 999999 1 true
         - tellraw %player% {"text":"Has mejorado a Resistencia II de forma permanente","color":"red"}
         items:
-        - mm:TOKEN_MISION 10
+        - mm:TOKEN_MISION:10
         money: 200
         permission: habilidades.resistencia.2
         quest-points: 10
@@ -1746,7 +1746,7 @@ quests:
         - title %player% title {"text":"¡Guardián Eterno!","color":"red","bold":true}
         - title %player% subtitle {"text":"Has dominado el poder de la Resistencia","color":"white"}
         items:
-        - mm:TOKEN_MISION 15
+        - mm:TOKEN_MISION:15
         money: 300
         permission: habilidades.resistencia.3
         quest-points: 15
@@ -1789,7 +1789,7 @@ quests:
         - effect give %player% jump_boost 999999 0 true
         - tellraw %player% {"text":"Has obtenido Salto Aumentado I de forma permanente","color":"light_purple"}
         items:
-        - mm:TOKEN_MISION 5
+        - mm:TOKEN_MISION:5
         money: 100
         permission: habilidades.saltoaumentado.1
         quest-points: 5
@@ -1831,7 +1831,7 @@ quests:
         - effect give %player% jump_boost 999999 1 true
         - tellraw %player% {"text":"Has mejorado a Salto Aumentado II de forma permanente","color":"light_purple"}
         items:
-        - mm:TOKEN_MISION 10
+        - mm:TOKEN_MISION:10
         money: 200
         permission: habilidades.saltoaumentado.2
         quest-points: 10
@@ -1877,7 +1877,7 @@ quests:
         - effect give %player% jump_boost 999999 2 true
         - tellraw %player% {"text":"Has mejorado a Salto Aumentado III de forma permanente","color":"light_purple"}
         items:
-        - mm:TOKEN_MISION 15
+        - mm:TOKEN_MISION:15
         money: 300
         permission: habilidades.saltoaumentado.3
         quest-points: 15
@@ -1925,7 +1925,7 @@ quests:
         - title %player% title {"text":"¡Acróbata Divino!","color":"light_purple","bold":true}
         - title %player% subtitle {"text":"Has dominado el poder del Salto","color":"white"}
         items:
-        - mm:TOKEN_MISION 20
+        - mm:TOKEN_MISION:20
         money: 400
         permission: habilidades.saltoaumentado.4
         quest-points: 20
@@ -1970,7 +1970,7 @@ quests:
         - effect give %player% regeneration 999999 0 true
         - tellraw %player% {"text":"Has obtenido Regeneración I de forma permanente","color":"white"}
         items:
-        - mm:TOKEN_MISION 5
+        - mm:TOKEN_MISION:5
         money: 100
         permission: habilidades.regeneracion.1
         quest-points: 5
@@ -2005,7 +2005,7 @@ quests:
         - effect give %player% regeneration 999999 1 true
         - tellraw %player% {"text":"Has mejorado a Regeneración II de forma permanente","color":"white"}
         items:
-        - mm:TOKEN_MISION 10
+        - mm:TOKEN_MISION:10
         money: 200
         permission: habilidades.regeneracion.2
         quest-points: 10
@@ -2039,7 +2039,7 @@ quests:
         - effect give %player% health_boost 999999 2 true
         - tellraw %player% {"text":"Has mejorado a Salud Extra III de forma permanente","color":"green"}
         items:
-        - mm:TOKEN_MISION 15
+        - mm:TOKEN_MISION:15
         money: 300
         permission: habilidades.saludextra.3
         quest-points: 15
@@ -2079,7 +2079,7 @@ quests:
         - effect give %player% health_boost 999999 0 true
         - tellraw %player% {"text":"Has obtenido Salud Extra I de forma permanente","color":"green"}
         items:
-        - mm:TOKEN_MISION 5
+        - mm:TOKEN_MISION:5
         money: 100
         permission: habilidades.saludextra.1
         quest-points: 5
@@ -2123,7 +2123,7 @@ quests:
         - effect give %player% health_boost 999999 1 true
         - tellraw %player% {"text":"Has mejorado a Salud Extra II de forma permanente","color":"green"}
         items:
-        - mm:TOKEN_MISION 10
+        - mm:TOKEN_MISION:10
         money: 200
         permission: habilidades.saludextra.2
         quest-points: 10
@@ -2166,7 +2166,7 @@ quests:
         - effect give %player% health_boost 999999 3 true
         - tellraw %player% {"text":"Has mejorado a Salud Extra IV de forma permanente","color":"green"}
         items:
-        - mm:TOKEN_MISION 20
+        - mm:TOKEN_MISION:20
         money: 400
         permission: habilidades.saludextra.4
         quest-points: 20
@@ -2212,7 +2212,7 @@ quests:
         - title %player% title {"text":"¡Sanador Divino!","color":"green","bold":true}
         - title %player% subtitle {"text":"Has dominado el poder de la Vitalidad","color":"white"}
         items:
-        - mm:TOKEN_MISION 25
+        - mm:TOKEN_MISION:25
         money: 500
         permission: habilidades.saludextra.5
         quest-points: 25
