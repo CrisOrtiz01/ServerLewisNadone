@@ -1115,3 +1115,467 @@ SpawnOverride:
 - **Mobs Raros**: 8-16 TOKEN_MISION
 - **Jefes Menores**: 16-50 TOKEN_MISION
 - **Jefes Supremos**: 100-500 TOKEN_MISION
+
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+# ███╗   ██╗██████╗  ██████╗███████╗    ██╗   ██╗    ██████╗ ██╗   ██╗███████╗███████╗████████╗███████╗
+# ████╗  ██║██╔══██╗██╔════╝██╔════╝    ╚██╗ ██╔╝    ██╔═══██╗██║   ██║██╔════╝██╔════╝╚══██╔══╝██╔════╝
+# ██╔██╗ ██║██████╔╝██║     ███████╗     ╚████╔╝     ██║   ██║██║   ██║█████╗  ███████╗   ██║   ███████╗
+# ██║╚██╗██║██╔═══╝ ██║     ╚════██║      ╚██╔╝      ██║▄▄ ██║██║   ██║██╔══╝  ╚════██║   ██║   ╚════██║
+# ██║ ╚████║██║     ╚██████╗███████║       ██║       ╚██████╔╝╚██████╔╝███████╗███████║   ██║   ███████║
+# ╚═╝  ╚═══╝╚═╝      ╚═════╝╚══════╝       ╚═╝        ╚══▀▀═╝  ╚═════╝ ╚══════╝╚══════╝   ╚═╝   ╚══════╝
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+
+## 🏛️ SISTEMA COMPLETO DE NPCs (9 PRINCIPALES)
+
+### CONFIGURACIÓN CRÍTICA DE ZNPCs:
+
+```yaml
+# config.yml ZNPCs
+lookAtPlayer: true          # NPCs miran al jugador
+interactCooldown: 2000-4000 # Cooldown entre interacciones
+hologram.enabled: true      # Hologramas informativos
+```
+
+### UBICACIONES Y DISTRIBUCIÓN:
+```
+Coordenadas recomendadas en el mundo "MundoNalgon":
+- X: 100-180 (separados cada 10 bloques)
+- Y: 64 (nivel del mar)
+- Z: 100 (línea central)
+- Yaw: 0 (mirando al norte)
+```
+
+---
+
+### 1. 🏹 **ERIKA LA CAZADORA** (Maestra de la Fuerza)
+
+```yaml
+NPC ID: Erika
+Display: '§6§lErika_la_Cazadora'
+Ubicación: X:100, Y:64, Z:100
+
+Hologram:
+  - '§6§lErika la Cazadora'
+  - '§7Maestra de la Fuerza'
+  - '§7"La fuerza se forja en la caza"'
+
+Equipment:
+  HAND: BOW              # Arco como símbolo
+  
+Skin: Cazadora (textura custom de arquera)
+
+Diálogos:
+  1. "¡Saludos, aventurero! Soy la maestra cazadora de este pueblo."
+  2. "Si buscas dominar el arte del combate y la fuerza, has venido al lugar indicado."
+  3. "Tengo 10 niveles de misiones para ti, desde principiante hasta legendario."
+
+Comando de interacción: /q category cazador
+```
+
+**ESPECIALIDAD**: Habilidades de **Fuerza I-X** (10 niveles)
+
+**MISIONES OFRECIDAS** (10 niveles progresivos):
+1. **Cazador Iniciado** → Fuerza I
+2. **Cazador Experimentado** → Fuerza II  
+3. **Cazador Veterano** → Fuerza III
+4. **Cazador de Élite** → Fuerza IV
+5. **Maestro Cazador** → Fuerza V
+6. **Cazador Legendario** → Fuerza VI
+7. **Cazador de Bestias Mitológicas** → Fuerza VII
+8. **Cazador de lo Imposible** → Fuerza VIII
+9. **Cazador Divino** → Fuerza IX
+10. **Cazador de Dioses** → Fuerza X
+
+**EJEMPLO DE MISIÓN - Cazador Iniciado**:
+```yaml
+Objetivo: 
+  - Recolectar: 32 Rotten Flesh + 32 Bone + 50 TOKEN_MISION
+  - Matar: 20 Zombie_Corrupto + 20 Skeleton_Guerrero
+
+Recompensa:
+  - Efecto: Fuerza I permanente (999999 segundos)
+  - Items: 5 TOKEN_MISION
+  - Quest Points: 5
+  - Permiso: habilidades.fuerza.1
+```
+
+---
+
+### 2. 🛡️ **MARTA LA GUARDIANA** (Maestra de la Resistencia)
+
+```yaml
+NPC ID: Marta
+Display: '§c§lMarta_la_Guardiana'
+Ubicación: X:110, Y:64, Z:100
+
+Hologram:
+  - '§c§lMarta la Guardiana'
+  - '§7Maestra de la Resistencia'
+  - '§7"Mi escudo nunca falla"'
+
+Equipment:
+  HAND: IRON_SWORD       # Espada de hierro
+  OFFHAND: SHIELD        # Escudo
+  HELMET: IRON_HELMET    # Casco de hierro
+
+Skin: Guardiana (textura de caballero femenino)
+
+Diálogos:
+  1. "La seguridad del pueblo es mi responsabilidad."
+  2. "Si quieres aprender a resistir los ataques más poderosos, puedo entrenarte."
+  3. "Mis 3 niveles de misiones te convertirán en un muro impenetrable."
+
+Comando de interacción: /q category guardian
+```
+
+**ESPECIALIDAD**: Habilidades de **Resistencia I-III** (3 niveles)
+
+**MISIONES OFRECIDAS**:
+1. **Guardian Novato** → Resistencia I
+2. **Guardian Veterano** → Resistencia II
+3. **Guardian Maestro** → Resistencia III
+
+---
+
+### 3. 💚 **SAE LA SANADORA** (Maestra de la Salud)
+
+```yaml
+NPC ID: Sae
+Display: '§a§lSae_la_Sanadora'
+Ubicación: X:120, Y:64, Z:100
+
+Hologram:
+  - '§a§lSae la Sanadora'
+  - '§7Maestra de la Salud'
+  - '§7"La salud es el mayor tesoro"'
+
+Equipment:
+  HAND: POTION           # Poción de curación
+
+Skin: Sanadora (textura de curandera con túnica verde)
+
+Diálogos:
+  1. "Bienvenido a mi santuario de curación."
+  2. "El arte de fortalecer tu propia vida es tan importante como el de sanar a otros."
+  3. "Mis 5 niveles de misiones te enseñarán a expandir tu vitalidad."
+
+Comando de interacción: /q category sanador
+```
+
+**ESPECIALIDAD**: Habilidades de **Salud Extra I-V** (5 niveles)
+
+**MISIONES OFRECIDAS**:
+1. **Aprendiz de Sanación** → Salud Extra I (+2 corazones)
+2. **Sanador Experimentado** → Salud Extra II (+4 corazones)
+3. **Sanador Avanzado** → Salud Extra III (+6 corazones)
+4. **Maestro Sanador** → Salud Extra IV (+8 corazones)
+5. **Gran Sanador** → Salud Extra V (+10 corazones)
+
+**EJEMPLO DE MISIÓN - Aprendiz de Sanación**:
+```yaml
+Objetivo:
+  - Recolectar: 4 Golden Apple + 7 Honey Bottle + 60 TOKEN_MISION
+  - Matar: 5 Pillager_Asaltante
+
+Recompensa:
+  - Efecto: Salud Extra I permanente (+2 corazones)
+  - Items: 5 TOKEN_MISION
+  - Quest Points: 5
+  - Permiso: habilidades.saludextra.1
+```
+
+---
+
+### 4. 💨 **LIA LA MENSAJERA** (Maestra de la Velocidad)
+
+```yaml
+NPC ID: Lia
+Display: '§b§lLia_la_Mensajera'
+Ubicación: X:130, Y:64, Z:100
+
+Hologram:
+  - '§b§lLia la Mensajera'
+  - '§7Maestra de la Velocidad'
+  - '§3Mensajera Rebelde'
+
+Equipment:
+  HAND: PAPER            # Mensaje en papel
+
+Skin: Mensajera (textura dinámica de corredora)
+
+Diálogos:
+  1. "¡Hey! ¿Te gustaría ser tan rápido como el viento?"
+  2. "¡No tengo todo el día! Hay mensajes que entregar y carreras que ganar."
+  3. "Mis 3 niveles de misiones pondrán a prueba tu velocidad y agilidad."
+
+Comando de interacción: /q category mensajero
+Cooldown: 2 segundos (más rápido por su personalidad)
+```
+
+**ESPECIALIDAD**: Habilidades de **Velocidad I-III** (3 niveles)
+
+**MISIONES OFRECIDAS**:
+1. **Mensajero Principiante** → Velocidad I
+2. **Mensajero Veloz** → Velocidad II
+3. **Velocista Supremo** → Velocidad III
+
+**MISIÓN ESPECIAL**: Requiere items **META_CARRERA** obtenidos completando carreras específicas
+
+---
+
+### 5. 🎪 **ÍCARO EL ACRÓBATA** (Maestro del Salto)
+
+```yaml
+NPC ID: Icaro
+Display: '§d§lIcaro_el_Acrobata'
+Ubicación: X:140, Y:64, Z:100
+
+Hologram:
+  - '§d§lÍcaro el Acróbata'
+  - '§7Maestro del Salto'
+  - '§5Maestro del Circo'
+
+Equipment:
+  HAND: STICK            # Bastón de acróbata
+
+Skin: Acróbata (textura de artista circense)
+
+Diálogos:
+  1. "¡Saludos desde las alturas, amigo!"
+  2. "El arte del parkour y el salto es mi especialidad."
+  3. "Mis 4 niveles de misiones te llevarán a alcanzar alturas que jamás imaginaste."
+
+Comando de interacción: /q category acrobata
+```
+
+**ESPECIALIDAD**: Habilidades de **Salto Aumentado I-IV** (4 niveles)
+
+**MISIONES OFRECIDAS**:
+1. **Saltador Principiante** → Salto Aumentado I
+2. **Acróbata en Entrenamiento** → Salto Aumentado II
+3. **Maestro del Parkour** → Salto Aumentado III
+4. **Acróbata Legendario** → Salto Aumentado IV
+
+**MISIÓN ESPECIAL**: Requiere items **META_PARKOUR** obtenidos completando parkours específicos
+
+---
+
+### 6. ⛏️ **PAÚL EL MINERO** (Maestro de la Minería)
+
+```yaml
+NPC ID: Paul
+Display: '§8§lPaul_el_Minero'
+Ubicación: X:150, Y:64, Z:100
+
+Hologram:
+  - '§8§lPaúl el Minero'
+  - '§7Maestro de la Minería'
+  - '§7Anciano Minero'
+
+Equipment:
+  HAND: IRON_PICKAXE     # Pico de hierro
+  HELMET: IRON_HELMET    # Casco de seguridad
+
+Skin: Minero (textura de minero veterano con barba)
+
+Diálogos:
+  1. "*tose* Las profundidades guardan secretos y tesoros, joven."
+  2. "Después de 50 años bajo tierra, he aprendido un par de cosas sobre minería."
+  3. "Mis 10 niveles de misiones te convertirán en un verdadero titán de la minería."
+
+Comando de interacción: /q category minero
+```
+
+**ESPECIALIDAD**: Habilidades de **Prisa Minera I-X** (10 niveles)
+
+**MISIONES OFRECIDAS**:
+1. **Aprendiz de Minero** → Prisa Minera I
+2. **Minero Experimentado** → Prisa Minera II
+3. **Maestro de las Profundidades** → Prisa Minera III
+4. **Buscador de Tesoros** → Prisa Minera IV
+5. **Minero del Abismo** → Prisa Minera V
+6. **Buscador de Netherita** → Prisa Minera VI
+7. **Magnate Mineral** → Prisa Minera VII
+8. **Señor de las Sombras** → Prisa Minera VIII
+9. **Excavador de Lágrimas** → Prisa Minera IX
+10. **Titán de la Minería** → Prisa Minera X
+
+**EJEMPLO DE MISIÓN - Aprendiz de Minero**:
+```yaml
+Objetivo:
+  - Recolectar: 5 Redstone Block + 1 Diamond + 40 TOKEN_MISION
+
+Recompensa:
+  - Efecto: Prisa Minera I permanente
+  - Items: 5 TOKEN_MISION
+  - Quest Points: 5
+  - Permiso: habilidades.prisaminera.1
+```
+
+---
+
+### 7. ✨ **HELENA LA CURANDERA** (Maestra de la Regeneración)
+
+```yaml
+NPC ID: Helena
+Display: '§f§lHelena_la_Curandera'
+Ubicación: X:160, Y:64, Z:100
+
+Hologram:
+  - '§f§lHelena la Curandera'
+  - '§7Maestra de la Regeneración'
+  - '§7Bendecidora de Guerreros'
+
+Equipment:
+  HAND: GOLDEN_HOE       # Azada dorada (símbolo de curación)
+
+Skin: Curandera (textura de sacerdotisa con túnica blanca)
+
+Diálogos:
+  1. "La verdadera curación viene de dentro, querido."
+  2. "Mis conocimientos ancestrales pueden enseñarte a regenerar tu cuerpo."
+  3. "Tengo 3 niveles de misiones para compartir con almas bondadosas como tú."
+
+Comando de interacción: /q category curandera
+```
+
+**ESPECIALIDAD**: Habilidades de **Regeneración I-III** (3 niveles)
+
+**MISIONES OFRECIDAS**:
+1. **Aprendiz de Curación** → Regeneración I
+2. **Curandera Experimentada** → Regeneración II
+3. **Maestra Curandera** → Regeneración III
+
+**MISIÓN ESPECIAL**: Requiere items **META_CURACION** obtenidos completando retos de curación
+
+---
+
+### 8. 👑 **ALCALDE TOMÁS** (Maestro de la Villa)
+
+```yaml
+NPC ID: Alcalde
+Display: '§e§lAlcalde_Tomas'
+Ubicación: X:170, Y:64, Z:100
+
+Hologram:
+  - '§e§lAlcalde Tomás'
+  - '§7Maestro de la Villa'
+  - '§6Héroe de Guerra'
+
+Equipment:
+  HAND: GOLDEN_SWORD     # Espada dorada
+  CHESTPLATE: GOLDEN_CHESTPLATE # Pectoral dorado
+
+Skin: Alcalde (textura de líder con túnica elegante)
+
+Diálogos:
+  1. "¡Bienvenido a nuestro humilde pueblo, forastero!"
+  2. "Como alcalde, mi deber es proteger a nuestra gente de las amenazas exteriores."
+  3. "Tengo 20 niveles de misiones que te convertirán en un verdadero héroe para nuestro pueblo."
+
+Comando de interacción: /q category alcalde
+Cooldown: 4 segundos (personalidad más formal)
+```
+
+**ESPECIALIDAD**: Habilidades de **Héroe de Villa I-V** (5 niveles)
+
+**MISIONES OFRECIDAS**:
+1. **Defensor del Pueblo I** → Héroe de Villa I
+2. **Defensor del Pueblo II** → Héroe de Villa II
+3. **Defensor del Pueblo III** → Héroe de Villa III
+4. **Defensor del Pueblo IV** → Héroe de Villa IV
+5. **Defensor del Pueblo V** → Héroe de Villa V
+
+**MÁS 15 MISIONES ADICIONALES** de progresión épica hasta nivel 20
+
+**EJEMPLO DE MISIÓN - Defensor del Pueblo I**:
+```yaml
+Objetivo:
+  - Recolectar: 1 Emerald + 16 TOKEN_MISION
+  - Matar: 1 Pillager_Asaltante
+
+Recompensa:
+  - Efecto: Héroe de Villa I permanente
+  - Items: 5 TOKEN_MISION
+  - Quest Points: 5
+  - Permiso: habilidades.heroevilla.1
+```
+
+---
+
+### 9. 👨‍🍳 **BRUNO EL CHEF** (Maestro de la Saturación)
+
+```yaml
+NPC ID: Bruno
+Display: '§6§lBruno_el_Chef'
+Ubicación: X:180, Y:64, Z:100
+
+Hologram:
+  - '§6§lBruno el Chef'
+  - '§7Maestro de la Saturación'
+  - '§4Maestro Culinario'
+
+Equipment:
+  HAND: WOODEN_SWORD     # Cuchillo de cocina (espada de madera)
+  HELMET: WHITE_LEATHER_HELMET # Gorro de chef
+
+Skin: Chef (textura de cocinero con delantal)
+
+Diálogos:
+  1. "¡Ah! ¡Un nuevo rostro en mi cocina! Bienvenido, bienvenido."
+  2. "La buena comida no solo alimenta el cuerpo, sino también el espíritu."
+  3. "Mis 3 niveles de misiones te enseñarán el arte de la verdadera nutrición."
+
+Comando de interacción: /q category cocinero
+```
+
+**ESPECIALIDAD**: Habilidades de **Saturación I-III** (3 niveles)
+
+**MISIONES OFRECIDAS**:
+1. **Cocinero Aficionado** → Saturación I
+2. **Chef Profesional** → Saturación II
+3. **Maestro Culinario** → Saturación III
+
+**MISIÓN ESPECIAL**: Enfoque en recolección de ingredientes variados para cocina
+
+---
+
+## 🎯 MECÁNICAS DE INTERACCIÓN DE NPCs
+
+### SISTEMA DE COMANDOS AUTOMÁTICOS:
+```yaml
+Cada NPC ejecuta automáticamente:
+1. Mensaje de saludo personalizado
+2. Explicación de su especialidad
+3. Descripción de niveles de misión disponibles
+4. Comando: /q category [categoria]
+5. Cooldown para evitar spam
+```
+
+### SISTEMA DE HOLOGRAMAS:
+- **Línea 1**: Nombre del NPC (coloreado por especialidad)
+- **Línea 2**: Título descriptivo de su maestría
+- **Línea 3**: Frase característica o especialidad
+
+### EQUIPAMIENTO TEMÁTICO:
+Cada NPC porta equipment relacionado con su especialidad:
+- **Erika**: Arco (caza)
+- **Marta**: Espada + Escudo + Casco (defensa)
+- **Sae**: Poción (curación)
+- **Lia**: Papel (mensajería)
+- **Ícaro**: Bastón (acrobacia)
+- **Paúl**: Pico + Casco (minería)
+- **Helena**: Azada dorada (curación)
+- **Tomás**: Espada + Pectoral dorado (liderazgo)
+- **Bruno**: Espada de madera + Gorro (cocina)
+
+### PERSONALIDADES DIFERENCIADAS:
+- **Erika**: Directa y orientada al combate
+- **Marta**: Protectora y seria
+- **Sae**: Gentil y sabia
+- **Lia**: Energética y apresurada (cooldown menor)
+- **Ícaro**: Alegre y aventurera
+- **Paúl**: Veterano y tosco (menciona edad)
+- **Helena**: Espiritual y maternal
+- **Tomás**: Formal y heroico (cooldown mayor)
+- **Bruno**: Acogedor y entusiasta por la comida
