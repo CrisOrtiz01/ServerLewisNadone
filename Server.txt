@@ -1,0 +1,1117 @@
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+# ██████╗ ███████╗██████╗ ██╗   ██╗██╗██████╗  ██████╗ ██████╗       ██╗     ███████╗██╗    ██╗██╗███████╗███╗   ██╗ █████╗ ██████╗  ██████╗ ███╗   ██╗███████╗
+# ██╔══██╗██╔════╝██╔══██╗██║   ██║██║██╔══██╗██╔═══██╗██╔══██╗      ██║     ██╔════╝██║    ██║██║██╔════╝████╗  ██║██╔══██╗██╔══██╗██╔═══██╗████╗  ██║██╔════╝
+# ███████║█████╗  ██████╔╝██║   ██║██║██║  ██║██║   ██║██████╔╝█████╗██║     █████╗  ██║ █╗ ██║██║███████╗██╔██╗ ██║███████║██║  ██║██║   ██║██╔██╗ ██║█████╗  
+# ██╔══██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██║██║  ██║██║   ██║██╔══██╗╚════╝██║     ██╔══╝  ██║███╗██║██║╚════██║██║╚██╗██║██╔══██║██║  ██║██║   ██║██║╚██╗██║██╔══╝  
+# ██║  ██║███████╗██║  ██║ ╚████╔╝ ██║██████╔╝╚██████╔╝██║  ██║      ███████╗███████╗╚███╔███╔╝██║███████║██║ ╚████║██║  ██║██████╔╝╚██████╔╝██║ ╚████║███████╗
+# ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚═╝╚═════╝  ╚═════╝ ╚═╝  ╚═╝      ╚══════╝╚══════╝ ╚══╝╚══╝ ╚═╝╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+
+# █████████████████████████████████████████████████████████████████████████████████████████████████
+# █                                                                                                █
+# █                  DOCUMENTACIÓN COMPLETA Y INSTRUCCIONES DETALLADAS                            █
+# █                                SERVER RPG LEWIS-NADONE                                         █
+# █                                                                                                █
+# █                                VERSION FINAL: 100% FUNCIONAL                                  █
+# █                                                                                                █
+# █████████████████████████████████████████████████████████████████████████████████████████████████
+
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+# ██╗███╗   ██╗████████╗██████╗  ██████╗ ██████╗ ██╗   ██╗ ██████╗ ██████╗██╗ ██████╗ ███╗   ██╗
+# ██║████╗  ██║╚══██╔══╝██╔══██╗██╔═══██╗██╔══██╗██║   ██║██╔════╝██╔════╝██║██╔═══██╗████╗  ██║
+# ██║██╔██╗ ██║   ██║   ██████╔╝██║   ██║██║  ██║██║   ██║██║     ██║     ██║██║   ██║██╔██╗ ██║
+# ██║██║╚██╗██║   ██║   ██╔══██╗██║   ██║██║  ██║██║   ██║██║     ██║     ██║██║   ██║██║╚██╗██║
+# ██║██║ ╚████║   ██║   ██║  ██║╚██████╔╝██████╔╝╚██████╔╝╚██████╗╚██████╗██║╚██████╔╝██║ ╚████║
+# ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝  ╚═════╝ ╚═════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+
+## 🎯 CONCEPTO DEL SERVIDOR
+
+Este servidor es un RPG inmersivo y desafiante llamado "ServerLewisNadone" que está centrado en:
+
+### CARACTERÍSTICAS PRINCIPALES:
+- **Sistema de Misiones Progresivo**: 61+ misiones organizadas en 9 categorías temáticas
+- **Mobs Custom Exclusivos**: 35+ mobs custom que reemplazan COMPLETAMENTE a los mobs vanilla
+- **9 NPCs Principales**: Cada uno con personalidad única y habilidades específicas
+- **Habilidades Permanentes**: Sistema de poderes por niveles (Fuerza I-X, Resistencia I-III, etc.)
+- **Economía Física**: Basada en TOKEN_MISION e intercambio de items, sin dinero virtual
+- **Sistema de Clanes**: Protecciones y comunidades usando ProtectionStones
+- **Crossplay**: Soporte para Java y Bedrock Edition via Geyser + Floodgate
+
+### FILOSOFÍA DE JUEGO:
+- **Desafío Extremo**: Desde el primer día el mundo es hostil y desafiante
+- **Cooperación**: Los nuevos jugadores NECESITAN formar grupos para sobrevivir
+- **Progresión Inmersiva**: Cada habilidad se gana a través de misiones temáticas
+- **Historia Profunda**: Lore de dioses antiguos, campeones y la maldición de los monstruos
+
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+# ███████╗███████╗████████╗██████╗ ██╗   ██╗ ██████╗████████╗██╗   ██╗██████╗  █████╗ 
+# ██╔════╝██╔════╝╚══██╔══╝██╔══██╗██║   ██║██╔════╝╚══██╔══╝██║   ██║██╔══██╗██╔══██╗
+# █████╗  ███████╗   ██║   ██████╔╝██║   ██║██║        ██║   ██║   ██║██████╔╝███████║
+# ██╔══╝  ╚════██║   ██║   ██╔══██╗██║   ██║██║        ██║   ██║   ██║██╔══██╗██╔══██║
+# ███████╗███████║   ██║   ██║  ██║╚██████╔╝╚██████╗   ██║   ╚██████╔╝██║  ██║██║  ██║
+# ╚══════╝╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝  ╚═════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+
+## 📁 ESTRUCTURA COMPLETA DE CARPETAS
+
+```
+ServerLewisNadone/
+├── Servidor/
+│   ├── MundoNalgon/                    [MUNDO PRINCIPAL]
+│   │   ├── data/                       [Datos del mundo]
+│   │   ├── datapacks/                  [Datapacks custom]
+│   │   ├── region/                     [Archivos de región]
+│   │   ├── level.dat                   [Datos principales del mundo]
+│   │   └── playerdata/                 [Datos de jugadores]
+│   │
+│   ├── Plugins/                        [DIRECTORIO DE PLUGINS]
+│   │   ├── ClearLag/                   [Anti-lag y optimización]
+│   │   ├── CoreProtect/                [Sistema de logs y rollback]
+│   │   ├── DecentHolograms/            [Hologramas decorativos]
+│   │   ├── DeluxeMenus/                [Menús GUI custom]
+│   │   ├── Essentials/                 [Comandos básicos del servidor]
+│   │   ├── ExecutableItems/            [Items con acciones custom]
+│   │   ├── Geyser-Spigot/              [Crossplay Java-Bedrock]
+│   │   ├── Illusion/                   [Efectos visuales avanzados]
+│   │   ├── ItemsAdderUploadPlus/       [Items custom adicionales]
+│   │   ├── LoginSecurity/              [Seguridad de cuentas]
+│   │   ├── LuckPerms/                  [Sistema de permisos]
+│   │   ├── MythicMobs/                 [MOBS CUSTOM - NÚCLEO DEL SERVIDOR]
+│   │   │   ├── config/                 [Configuraciones principales]
+│   │   │   │   ├── config-general.yml  [Configuración general]
+│   │   │   │   ├── config-spawning.yml [Control de spawns]
+│   │   │   │   ├── config-items.yml    [Configuración de items]
+│   │   │   │   ├── config-mobs.yml     [Configuración de mobs]
+│   │   │   │   └── config-skills.yml   [Configuración de habilidades]
+│   │   │   ├── items/                  [Items custom]
+│   │   │   │   └── ServerItems.yml     [TOKEN_MISION y items especiales]
+│   │   │   ├── mobs/                   [35+ ARCHIVOS DE MOBS CUSTOM]
+│   │   │   │   ├── Zombie.yml          [Zombie_Corrupto]
+│   │   │   │   ├── Skeleton.yml        [Skeleton_Guerrero]
+│   │   │   │   ├── Creeper.yml         [Creeper_Explosivo]
+│   │   │   │   ├── ElectricCreeper.yml [ElectricCreeper_JefeMenor]
+│   │   │   │   ├── Spider.yml          [Spider_Venenosa]
+│   │   │   │   ├── Enderman.yml        [Enderman_Sombrio]
+│   │   │   │   ├── Witch.yml           [Witch_Maldita]
+│   │   │   │   ├── Pillager.yml        [Pillager_Asaltante]
+│   │   │   │   ├── Vindicator.yml      [Vindicator_Feroz]
+│   │   │   │   ├── Evoker.yml          [Evoker_Corrupto]
+│   │   │   │   ├── Ravager.yml         [Ravager_Destructor]
+│   │   │   │   ├── WitherSkeleton.yml  [WitherSkeleton_Miniboss]
+│   │   │   │   ├── Blaze.yml           [Blaze_Infernal]
+│   │   │   │   ├── Ghast.yml           [Ghast_Espectral]
+│   │   │   │   ├── MagmaCube.yml       [MagmaCube_Ardiente]
+│   │   │   │   ├── PiglinBrute.yml     [PiglinBrute_Guerrero]
+│   │   │   │   ├── Hoglin.yml          [Hoglin_Salvaje]
+│   │   │   │   ├── Wither.yml          [Wither_Jefe]
+│   │   │   │   ├── EnderDragon.yml     [EnderDragon_Supremo]
+│   │   │   │   ├── Guardian.yml        [Guardian_Acuatico]
+│   │   │   │   ├── ElderGuardian.yml   [ElderGuardian_Jefe]
+│   │   │   │   ├── Shulker.yml         [Shulker_Teletransportador]
+│   │   │   │   ├── Vex.yml             [Vex_Espiritu]
+│   │   │   │   ├── Silverfish.yml      [Silverfish_Minero]
+│   │   │   │   ├── Endermite.yml       [Endermite_Dimensional]
+│   │   │   │   ├── CaveSpider.yml      [CaveSpider_Toxica]
+│   │   │   │   ├── Slime.yml           [Slime_Elastico]
+│   │   │   │   ├── PolarBear.yml       [PolarBear_Territorial]
+│   │   │   │   ├── Wolf.yml            [Wolf_Feroz]
+│   │   │   │   ├── Husk.yml            [Husk_Desértico]
+│   │   │   │   ├── Stray.yml           [Stray_Helado]
+│   │   │   │   ├── Drowed.yml          [Drowned_Marino]
+│   │   │   │   └── Piglin.yml          [Piglin_Comerciante]
+│   │   │   ├── data/                   [Datos y estadísticas]
+│   │   │   └── stats.yml               [Estadísticas del plugin]
+│   │   ├── PlaceholderAPI/             [API para placeholders]
+│   │   ├── PlayerVaults/               [Bóvedas de jugadores]
+│   │   ├── PluginMetrics/              [Métricas de plugins]
+│   │   ├── ProtectionStones/           [SISTEMA DE CLANES Y PROTECCIONES]
+│   │   │   ├── config.toml            [Configuración principal]
+│   │   │   ├── blocks/                [Configuración de bloques de protección]
+│   │   │   └── messages.yml           [Mensajes del sistema]
+│   │   ├── ProtocolLib/                [Manipulación de paquetes]
+│   │   ├── Quests/                     [SISTEMA DE MISIONES - NÚCLEO DEL SERVIDOR]
+│   │   │   ├── config.yml              [Configuración principal]
+│   │   │   ├── categories/             [9 CATEGORÍAS DE MISIONES]
+│   │   │   │   ├── cazador.yml         [Misiones de Erika - Fuerza I-X]
+│   │   │   │   ├── guardian.yml        [Misiones de Marta - Resistencia I-III]
+│   │   │   │   ├── sanador.yml         [Misiones de Sae - Salud Extra I-V]
+│   │   │   │   ├── mensajero.yml       [Misiones de Lia - Velocidad I-III]
+│   │   │   │   ├── acrobata.yml        [Misiones de Ícaro - Salto I-IV]
+│   │   │   │   ├── minero.yml          [Misiones de Paúl - Prisa Minera I-X]
+│   │   │   │   ├── curandera.yml       [Misiones de Helena - Regeneración I-III]
+│   │   │   │   ├── alcalde.yml         [Misiones de Tomás - Héroe de Villa I-V]
+│   │   │   │   └── cocinero.yml        [Misiones de Bruno - Saturación I-III]
+│   │   │   ├── storage/                [Almacenamiento de datos]
+│   │   │   │   ├── quests.yml          [61+ MISIONES COMPLETAS]
+│   │   │   │   ├── conditions.yml      [Condiciones de misiones]
+│   │   │   │   └── actions.yml         [Acciones de misiones]
+│   │   │   ├── lang/                   [Idiomas y traducciones]
+│   │   │   │   └── es-MX/              [Español mexicano]
+│   │   │   └── scripts/                [Scripts personalizados]
+│   │   ├── SCore/                      [Núcleo para otros plugins]
+│   │   ├── Shopkeepers/                [NPCs comerciantes]
+│   │   ├── SkinsRestorer/              [Restaurador de skins]
+│   │   ├── SuperLobby/                 [Sistema de lobby]
+│   │   ├── TAB/                        [Scoreboard y listas]
+│   │   ├── UltimateTeams/              [Sistema de equipos]
+│   │   ├── Updater/                    [Actualizador de plugins]
+│   │   ├── ViaVersion/                 [Compatibilidad entre versiones]
+│   │   ├── WorldEdit/                  [Editor de mundos]
+│   │   ├── WorldGuard/                 [Protección de regiones]
+│   │   ├── ZNPCs/                      [SISTEMA DE NPCS - NÚCLEO DEL SERVIDOR]
+│   │   │   ├── config.yml              [Configuración general]
+│   │   │   └── npcs.yml                [9 NPCS PRINCIPALES]
+│   │   ├── bStats/                     [Estadísticas de plugins]
+│   │   └── floodgate/                  [Crossplay Bedrock]
+│   │
+│   ├── ARCHIVOS DE CONFIGURACIÓN DEL SERVIDOR:
+│   ├── bukkit.yml.txt                  [Configuración de Bukkit]
+│   ├── spigot.yml.txt                  [Configuración de Spigot]
+│   ├── paper.yml                       [Configuración de Paper]
+│   ├── commands.yml.txt                [Configuración de comandos]
+│   ├── help.yml.txt                    [Configuración de ayuda]
+│   ├── ops.json.txt                    [Lista de operadores]
+│   ├── whitelist.json.txt              [Lista blanca]
+│   ├── banned-ips.json.txt             [IPs baneadas]
+│   └── banned-players.json.txt         [Jugadores baneados]
+│
+├── DOCUMENTACIÓN:
+├── InstruccionesBasicas.txt            [Especificaciones originales]
+├── ANALISIS_FINAL.md                   [Análisis técnico final]
+├── ANALISIS_TECNICO_COMPLETO.md        [Análisis técnico completo]
+├── FIX_FLOODGATECP_DEPENDENCY.md       [Fix de dependencia FloodgateCP]
+└── Server.txt                          [ESTE DOCUMENTO]
+```
+
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+# ██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗███████╗
+# ██╔══██╗██║     ██║   ██║██╔════╝ ██║████╗  ██║██╔════╝
+# ██████╔╝██║     ██║   ██║██║  ███╗██║██╔██╗ ██║███████╗
+# ██╔═══╝ ██║     ██║   ██║██║   ██║██║██║╚██╗██║╚════██║
+# ██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║███████║
+# ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+
+## 🔌 LISTA COMPLETA DE PLUGINS INSTALADOS
+
+### PLUGINS PRINCIPALES (NÚCLEO DEL SERVIDOR):
+
+1. **MythicMobs v5.6.2**
+   - **Función**: Sistema de mobs custom que reemplaza COMPLETAMENTE a los mobs vanilla
+   - **Configuración crítica**: `DisableVanillaSpawns: true`
+   - **35+ mobs custom configurados** con habilidades únicas, stats balanceados y drops de TOKEN_MISION
+
+2. **Quests v4.7.1**
+   - **Función**: Sistema de misiones progresivo con 61+ misiones organizadas
+   - **9 categorías temáticas** vinculadas a cada NPC principal
+   - **Recompensas**: Habilidades permanentes (efectos de poción infinitos)
+
+3. **ZNPCs v6.0.0**
+   - **Función**: Sistema de NPCs interactivos con personalidades únicas
+   - **9 NPCs principales** cada uno con diálogos específicos y vínculos a categorías de quest
+   - **Hologramas descriptivos** y equipamiento temático
+
+### PLUGINS DE INFRAESTRUCTURA:
+
+4. **EssentialsX v2.20.1**
+   - **Función**: Comandos básicos del servidor, teletransportes, homes, warps
+   - **Configuración temática** para el servidor RPG
+   - **Mensajes personalizados** en español
+
+5. **LuckPerms v5.4.137**
+   - **Función**: Sistema avanzado de permisos y grupos
+   - **Configuración**: Permisos específicos para habilidades por niveles
+   - **Storage**: H2 Database local
+
+6. **ProtectionStones v2.10.4**
+   - **Función**: Sistema de clanes, pueblos, municipios y ciudades
+   - **Bloques de protección** configurables para diferentes tamaños
+   - **Roles**: Alcalde, constructor, explorador, guardia, granjero
+
+### PLUGINS DE CROSSPLAY:
+
+7. **Geyser-Spigot v2.4.0**
+   - **Función**: Permite jugadores de Bedrock Edition
+   - **Configuración**: `auth-type: floodgate`
+   - **Puerto**: 19132 para Bedrock
+
+8. **Floodgate v2.2.4-SNAPSHOT**
+   - **Función**: Autenticación de jugadores Bedrock sin cuenta Java
+   - **Integración**: Completa con Geyser
+   - **Prefijos**: Distingue jugadores Bedrock
+
+### PLUGINS DE OPTIMIZACIÓN:
+
+9. **ClearLag v3.2.3**
+   - **Función**: Limpieza automática de entidades y optimización
+   - **Configuración**: Especial para mobs custom
+
+10. **CoreProtect v22.4**
+    - **Función**: Logs completos y rollback de cambios
+    - **Base de datos**: SQLite local
+
+### PLUGINS DE COMPATIBILIDAD:
+
+11. **ViaVersion v5.0.3**
+    - **Función**: Soporte para múltiples versiones de Minecraft
+    - **Rango**: 1.8 a 1.21+
+
+12. **ProtocolLib v5.2.0**
+    - **Función**: Manipulación de paquetes de red
+    - **Dependencia**: Requerido por varios plugins
+
+### PLUGINS DE EXPERIENCIA:
+
+13. **DecentHolograms v2.8.11**
+    - **Función**: Hologramas decorativos e informativos
+    - **Uso**: Información de NPCs y lugares importantes
+
+14. **DeluxeMenus v1.13.7**
+    - **Función**: Menús GUI personalizados
+    - **Configuración**: Menús temáticos del servidor
+
+15. **ExecutableItems v5.1.0**
+    - **Función**: Items con acciones y comandos personalizados
+    - **Uso**: Items especiales y rewards de misiones
+
+### PLUGINS DE CONSTRUCCIÓN:
+
+16. **WorldEdit v7.3.6**
+    - **Función**: Editor de mundos y construcción masiva
+    - **Permisos**: Solo para staff
+
+17. **WorldGuard v7.1.0**
+    - **Función**: Protección de regiones del spawn
+    - **Configuración**: Minimal, no interfiere con ProtectionStones
+
+### PLUGINS DE COSMÉTICA:
+
+18. **SkinsRestorer v14.2.17**
+    - **Función**: Restaura skins de jugadores
+    - **Compatible**: Con Floodgate
+
+19. **TAB v4.1.7**
+    - **Función**: Scoreboard personalizado y listas de jugadores
+    - **Información**: Stats de jugadores y servidor
+
+### PLUGINS DE EQUIPOS:
+
+20. **UltimateTeams v1.0.0**
+    - **Función**: Sistema avanzado de equipos
+    - **Integración**: Con sistema de clanes
+
+### PLUGINS DE UTILIDADES:
+
+21. **PlaceholderAPI v2.11.6**
+    - **Función**: API para placeholders dinámicos
+    - **Expansiones**: Multiple para diferentes plugins
+
+22. **PlayerVaults v4.1.5**
+    - **Función**: Bóvedas privadas para jugadores
+    - **Capacidad**: Configurable por permisos
+
+23. **LoginSecurity v3.1.1**
+    - **Función**: Seguridad adicional para cuentas
+    - **Métodos**: Contraseñas y autenticación
+
+24. **Illusion v1.5.8**
+    - **Función**: Efectos visuales avanzados
+    - **Uso**: Efectos en habilidades y mobs
+
+25. **ItemsAdderUploadPlus v3.6.3**
+    - **Función**: Items custom adicionales
+    - **Recursos**: Texturas y modelos personalizados
+
+### PLUGINS DE MÉTRICAS:
+
+26. **PluginMetrics v3.0.2**
+    - **Función**: Métricas y estadísticas de plugins
+    - **Privacidad**: Datos anónimos
+
+27. **bStats v3.0.2**
+    - **Función**: Estadísticas globales de plugins
+    - **Uso**: Desarrollo y mejora de plugins
+
+### PLUGINS DE ACTUALIZACIONES:
+
+28. **Updater v2.0.0**
+    - **Función**: Actualizador automático de plugins
+    - **Configuración**: Manual para control
+
+### PLUGINS DE LOBBY:
+
+29. **SuperLobby v1.2.1**
+    - **Función**: Sistema de lobby avanzado
+    - **Funciones**: Selector de mundo, información
+
+### PLUGINS DE COMERCIO:
+
+30. **Shopkeepers v2.19.1**
+    - **Función**: NPCs comerciantes para el mercado
+    - **Configuración**: Comercio con Esmeraldas Reales
+
+### PLUGINS DE SISTEMAS:
+
+31. **SCore v8.39.11**
+    - **Función**: Núcleo para otros plugins de S-Series
+    - **Dependencias**: Requerido por otros plugins del ecosistema
+
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+# ███╗   ███╗ ██████╗ ██████╗ ███████╗     ██████╗██╗   ██╗███████╗████████╗ ██████╗ ███╗   ███╗
+# ████╗ ████║██╔═══██╗██╔══██╗██╔════╝    ██╔════╝██║   ██║██╔════╝╚══██╔══╝██╔═══██╗████╗ ████║
+# ██╔████╔██║██║   ██║██████╔╝███████╗    ██║     ██║   ██║███████╗   ██║   ██║   ██║██╔████╔██║
+# ██║╚██╔╝██║██║   ██║██╔══██╗╚════██║    ██║     ██║   ██║╚════██║   ██║   ██║   ██║██║╚██╔╝██║
+# ██║ ╚═╝ ██║╚██████╔╝██████╔╝███████║    ╚██████╗╚██████╔╝███████║   ██║   ╚██████╔╝██║ ╚═╝ ██║
+# ╚═╝     ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝     ╚═════╝ ╚═════╝ ╚══════╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+
+## 👹 SISTEMA COMPLETO DE MOBS CUSTOM (35+ MOBS)
+
+### CONFIGURACIÓN CRÍTICA DE MYTHICMOBS:
+
+```yaml
+# config-spawning.yml
+DisableVanillaSpawns: true    # ✅ CRÍTICO: Solo aparecen mobs custom
+GenerateSpawnPoints: false    # ✅ Control total de spawns
+ReplaceObeysCap: false        # ✅ Sin límites de reemplazo
+
+# config-general.yml
+Language: es-MX               # ✅ Unificado con Quests plugin
+ThreadPoolSize: -1            # ✅ Optimización automática
+```
+
+### CARACTERÍSTICAS UNIVERSALES DE TODOS LOS MOBS:
+
+1. **Reemplazo Completo**: `SpawnOverride` con `ReplaceType: true`
+2. **Drop TOKEN_MISION**: 34/35 mobs dropean TOKEN_MISION (moneda del servidor)
+3. **Sin Drops Vanilla**: `PreventOtherDrops: true`
+4. **Nombres Visibles**: `AlwaysShowName: true`
+5. **No Despawn**: `Despawn: false`
+6. **Habilidades Únicas**: Cada mob tiene skills personalizadas
+
+---
+
+### 🧟 MOBS TERRESTRES COMUNES
+
+#### 1. **Zombie_Corrupto** (Reemplaza: ZOMBIE)
+```yaml
+Display: '§2Zombie Corrupto'
+Health: 40        # Vanilla: 20 (+100%)
+Damage: 9         # Vanilla: 3 (+200%)
+Armor: 4          # Vanilla: 0 (+400%)
+
+Drops:
+  - rotten_flesh 3-6    # Mejorado de vanilla
+  - carrot 1-2 (25%)    # Chance de comida
+  - potato 1-2 (25%)    # Chance de comida
+  - iron_ingot 1-2 (10%) # Material raro
+  - TOKEN_MISION 1      # 100% garantizado
+
+Skills:
+  - Partículas de carne putrefacta cada 20 ticks
+  - Veneno nivel 2 por 4 segundos en radio de 3 bloques al atacar
+```
+
+#### 2. **Skeleton_Guerrero** (Reemplaza: SKELETON)
+```yaml
+Display: '§fEsqueleto'
+Health: 40        # Vanilla: 20 (+100%)
+Damage: 10        # Vanilla: 4 (+150%)
+Armor: 4          # Vanilla: 0 (+400%)
+
+Drops:
+  - bone 3-6           # Mejorado de vanilla
+  - arrow 8-16         # Muchas más flechas
+  - TOKEN_MISION 1     # 100% garantizado
+
+Skills:
+  - Partículas de hueso cada 20 ticks
+  - Disparo especial con daño 9 en radio de 10 bloques
+```
+
+#### 3. **Creeper_Explosivo** (Reemplaza: CREEPER)
+```yaml
+Display: '§aCarga Ambulante'
+Health: 30        # Vanilla: 20 (+50%)
+Damage: 22        # Vanilla: Variable (+Alta)
+Armor: 5          # Vanilla: 0 (+500%)
+
+Drops:
+  - gunpowder 4-8      # Mucho más que vanilla
+  - TOKEN_MISION 2     # Doble reward por peligrosidad
+
+Skills:
+  - Partículas de explosión constantes
+  - Ceguera nivel 1 por 3 segundos al atacar
+  - Explosión potencia 4 (mayor que vanilla)
+```
+
+#### 4. **Spider_Mutante** (Reemplaza: SPIDER)
+```yaml
+Display: '§cAraña'
+Health: 32        # Vanilla: 16 (+100%)
+Damage: 6         # Vanilla: 2 (+200%)
+Armor: 4          # Vanilla: 0 (+400%)
+
+Drops:
+  - string 0-2         # Vanilla similar
+  - spider_eye 0-1 (50%) # Menor chance que vanilla
+  - TOKEN_MISION 1     # 100% garantizado
+
+Skills:
+  - Partículas de telaraña cada 20 ticks
+  - Ceguera nivel 1 por 5 segundos en radio de 3 bloques
+```
+
+#### 5. **Enderman_Sombrio** (Reemplaza: ENDERMAN)
+```yaml
+Display: '§dEnderman Sombrío'
+Health: 60        # Vanilla: 40 (+50%)
+Damage: 20        # Vanilla: 7 (+186%)
+Armor: 5          # Vanilla: 0 (+500%)
+
+Drops:
+  - ender_pearl 2-4    # Vanilla: 0-1 (400% mejor)
+  - ender_eye 1 (20%)  # Item raro especial
+  - TOKEN_MISION 8     # 800% más por rareza
+
+Skills:
+  - Partículas de portal constantes
+  - Confusión nivel 1 por 3 segundos al atacar
+  - Teletransporte en radio de 10 bloques
+  - Partículas de aliento de dragón al teletransportarse
+```
+
+---
+
+### 🏹 MOBS DE PILLAGER OUTPOSTS
+
+#### 6. **Pillager_Asaltante** (Reemplaza: PILLAGER)
+```yaml
+Display: '§6Pillager Asaltante'
+Health: 35
+Damage: 12
+Armor: 6
+
+Drops:
+  - crossbow 1 (15%)
+  - arrow 5-12
+  - emerald 1-3 (25%)
+  - TOKEN_MISION 3
+
+Skills:
+  - Partículas de humo cada 20 ticks
+  - Disparo de ballesta mejorado
+  - Velocidad nivel 1 cada 5 segundos
+```
+
+#### 7. **Vindicator_Feroz** (Reemplaza: VINDICATOR)
+```yaml
+Display: '§4Vindicator Feroz'
+Health: 45
+Damage: 15
+Armor: 8
+
+Drops:
+  - iron_axe 1 (25%)
+  - emerald 2-4 (30%)
+  - TOKEN_MISION 4
+
+Skills:
+  - Partículas de sangre cada 20 ticks
+  - Fuerza nivel 2 cada 100 ticks
+  - Resistencia al knockback 50%
+```
+
+#### 8. **Evoker_Corrupto** (Reemplaza: EVOKER)
+```yaml
+Display: '§5Evoker Corrupto'
+Health: 50
+Damage: 18
+Armor: 10
+
+Drops:
+  - totem_of_undying 1 (100%)
+  - emerald 3-6
+  - TOKEN_MISION 8
+
+Skills:
+  - Partículas mágicas constantes
+  - Invocación de Vex cada 200 ticks
+  - Ataque de colmillos mágicos
+  - Levitación nivel 1 a enemigos
+```
+
+#### 9. **Ravager_Destructor** (Reemplaza: RAVAGER)
+```yaml
+Display: '§8Ravager Destructor'
+Health: 150       # Boss menor
+Damage: 25
+Armor: 15
+
+BossBar: 
+  Title: '§8Jefe Menor: Ravager Destructor'
+  Color: RED
+
+Drops:
+  - saddle 1 (100%)
+  - leather 8-16
+  - TOKEN_MISION 16
+
+Skills:
+  - Partículas de tierra cada 20 ticks
+  - Ataque de embestida
+  - Rugido que da miedo nivel 2
+  - Resistencia al knockback 80%
+```
+
+---
+
+### 🔥 MOBS DEL NETHER
+
+#### 10. **WitherSkeleton_Miniboss** (Reemplaza: WITHER_SKELETON)
+```yaml
+Display: '§8Esqueleto del Wither'
+Health: 80        # Vanilla: 20 (+300%)
+Damage: 25        # Vanilla: 8 (+213%)
+Armor: 12         # Vanilla: 2 (+500%)
+
+BossBar:
+  Title: '§8Jefe Menor: Esqueleto del Wither'
+  Color: BLUE
+
+Drops:
+  - wither_skeleton_skull 1 (10%) # Vanilla: 2.5%
+  - bone 4-8
+  - coal 2-4
+  - TOKEN_MISION 12
+
+Skills:
+  - Partículas de alma cada 20 ticks
+  - Wither nivel 2 por 8 segundos al atacar
+  - Invocación de esqueletos normales (25% chance)
+  - Inmunidad al fuego
+```
+
+#### 11. **Blaze_Infernal** (Reemplaza: BLAZE)
+```yaml
+Display: '§6Blaze Infernal'
+Health: 45        # Vanilla: 20 (+125%)
+Damage: 15        # Vanilla: 6 (+150%)
+Armor: 8          # Vanilla: 0 (+800%)
+
+Drops:
+  - blaze_rod 1-3      # Vanilla: 0-1
+  - blaze_powder 2-5   # Bonus
+  - TOKEN_MISION 6
+
+Skills:
+  - Partículas de llama constantes
+  - Bolas de fuego cada 60 ticks
+  - Inmunidad al fuego
+  - Quemadura en area 3x3
+```
+
+#### 12. **Ghast_Espectral** (Reemplaza: GHAST)
+```yaml
+Display: '§fGhast Espectral'
+Health: 70        # Vanilla: 10 (+600%)
+Damage: 30        # Variable por fireball
+Armor: 5          # Vanilla: 0
+
+Drops:
+  - ghast_tear 1-2     # Vanilla: 0-1
+  - gunpowder 2-4      # Vanilla: 0-2
+  - TOKEN_MISION 10
+
+Skills:
+  - Bolas de fuego mejoradas cada 40 ticks
+  - Levitación constante
+  - Partículas espectrales
+  - Llorar cada 100 ticks (sonido terrorífico)
+```
+
+#### 13. **MagmaCube_Ardiente** (Reemplaza: MAGMA_CUBE)
+```yaml
+Display: '§cCubo de Magma Ardiente'
+Health: 35        # Vanilla: 16 (+119%)
+Damage: 12        # Vanilla: 6 (+100%)
+Armor: 6          # Vanilla: 0
+
+Drops:
+  - magma_cream 1-3    # Vanilla: 0-1
+  - TOKEN_MISION 4
+
+Skills:
+  - Partículas de lava cada 20 ticks
+  - Quemadura al tocar
+  - División en slimes menores al morir
+  - Inmunidad al fuego
+```
+
+#### 14. **PiglinBrute_Guerrero** (Reemplaza: PIGLIN_BRUTE)
+```yaml
+Display: '§4Piglin Bruto Guerrero'
+Health: 70        # Vanilla: 50 (+40%)
+Damage: 20        # Vanilla: 13 (+54%)
+Armor: 12         # Vanilla: 0
+
+Drops:
+  - golden_axe 1 (40%)
+  - gold_ingot 2-5
+  - TOKEN_MISION 8
+
+Skills:
+  - Fuerza nivel 2 permanente
+  - Resistencia al knockback 70%
+  - Berserker: +50% velocidad ataque cuando <50% vida
+  - Inmunidad a zombificación
+```
+
+#### 15. **Hoglin_Salvaje** (Reemplaza: HOGLIN)
+```yaml
+Display: '§4Hoglin Salvaje'
+Health: 55        # Vanilla: 40 (+38%)
+Damage: 18        # Vanilla: 5-8 (+125%)
+Armor: 8          # Vanilla: 0
+
+Drops:
+  - porkchop 2-4
+  - leather 1-3
+  - TOKEN_MISION 6
+
+Skills:
+  - Embestida cada 80 ticks
+  - Knockback aumentado x2
+  - Velocidad nivel 1 cuando está herido
+  - Resistencia al fuego
+```
+
+---
+
+### 👑 JEFES SUPREMOS
+
+#### 16. **Wither_Supremo** (Reemplaza: WITHER)
+```yaml
+Display: '§8Wither Supremo'
+Health: 700       # Vanilla: 300 (+133%)
+Damage: 40        # Vanilla: 5-8 (+400%)
+Armor: 20         # Vanilla: 4 (+400%)
+
+BossBar:
+  Title: '§8Jefe Supremo: Wither del Nether'
+  Color: RED
+  Style: SEGMENTED_10
+
+Drops:
+  - nether_star 3          # Vanilla: 1 (300%)
+  - wither_skeleton_skull 3 (5%) # Vanilla: 0%
+  - TOKEN_MISION 196       # Recompensa máxima
+  - gold_block 8
+  - netherite_ingot 4-9
+  - coal_block 5-10
+
+Skills:
+  - Partículas de alma cada 20 ticks
+  - Wither nivel 3 por 8 segundos en radio 8
+  - Daño 30 en radio 6 al atacar
+  - Invoca 2 wither skeletons cada 400 ticks
+  - Invoca 2 blazes cada 400 ticks
+  - Invoca 3 magma cubes cada 400 ticks
+  - Resistencia nivel 3 cada 100 ticks
+  - Knockback resistance 100%
+```
+
+#### 17. **EnderDragon_Supremo** (Reemplaza: ENDER_DRAGON)
+```yaml
+Display: '§5Dragón del End Supremo'
+Health: 1000      # Vanilla: 200 (+400%)
+Damage: 50        # Vanilla: 10 (+400%)
+Armor: 25         # Vanilla: 0
+
+BossBar:
+  Title: '§5Jefe Final: Dragón del End'
+  Color: PURPLE
+  Style: SEGMENTED_20
+
+Drops:
+  - dragon_egg 1           # Garantizado
+  - elytra 1 (100%)        # Bonus especial
+  - TOKEN_MISION 500       # Recompensa épica
+  - dragon_head 1
+  - experience_bottle 64
+
+Skills:
+  - Aliento de dragón mejorado
+  - Vuelo y ataques aéreos
+  - Invocación de endermen cada 300 ticks
+  - Regeneración cuando cerca de cristales
+  - Ataques de área masivos
+```
+
+---
+
+### 🌊 MOBS ACUÁTICOS
+
+#### 18. **Guardian_Acuatico** (Reemplaza: GUARDIAN)
+```yaml
+Display: '§bGuardián Acuático'
+Health: 50        # Vanilla: 30 (+67%)
+Damage: 15        # Vanilla: 6 (+150%)
+Armor: 8          # Vanilla: 2 (+300%)
+
+Drops:
+  - prismarine_shard 1-3
+  - prismarine_crystals 0-2 (40%)
+  - TOKEN_MISION 6
+
+Skills:
+  - Láser de guardián mejorado
+  - Partículas acuáticas
+  - Respiración acuática
+  - Velocidad en agua +100%
+```
+
+#### 19. **ElderGuardian_Jefe** (Reemplaza: ELDER_GUARDIAN)
+```yaml
+Display: '§3Guardián Anciano'
+Health: 200       # Vanilla: 80 (+150%)
+Damage: 35        # Vanilla: 8 (+338%)
+Armor: 15         # Vanilla: 2 (+650%)
+
+BossBar:
+  Title: '§3Jefe Oceánico: Guardián Anciano'
+  Color: BLUE
+
+Drops:
+  - wet_sponge 1-3
+  - prismarine_crystals 8-16
+  - TOKEN_MISION 50
+
+Skills:
+  - Fatiga minera masiva a 50 bloques
+  - Láser letal mejorado
+  - Invocación de guardianes menores
+  - Tsunami en área local
+```
+
+#### 20. **Drowned_Marino** (Reemplaza: DROWNED)
+```yaml
+Display: '§3Ahogado Marino'
+Health: 45        # Vanilla: 20 (+125%)
+Damage: 12        # Vanilla: 3 (+300%)
+Armor: 6          # Vanilla: 2 (+200%)
+
+Drops:
+  - trident 1 (15%)        # Vanilla: 8.5%
+  - nautilus_shell 1 (25%) # Vanilla: 3%
+  - TOKEN_MISION 5
+
+Skills:
+  - Ataque con tridente mejorado
+  - Respiración acuática infinita
+  - Velocidad en agua
+  - Invocación de ahogados menores (10% chance)
+```
+
+---
+
+### 🌙 MOBS DEL END
+
+#### 21. **Shulker_Teletransportador** (Reemplaza: SHULKER)
+```yaml
+Display: '§eShulker Dimensional'
+Health: 60        # Vanilla: 30 (+100%)
+Damage: 20        # Vanilla: 4 (+400%)
+Armor: 10         # Vanilla: 0
+
+Drops:
+  - shulker_shell 1 (75%)  # Vanilla: 50%
+  - TOKEN_MISION 12
+
+Skills:
+  - Proyectiles de levitación mejorados
+  - Teletransporte cada 100 ticks
+  - Invulnerabilidad cuando cerrado
+  - Partículas dimensionales
+```
+
+#### 22. **Endermite_Dimensional** (Reemplaza: ENDERMITE)
+```yaml
+Display: '§5Endermite Dimensional'
+Health: 25        # Vanilla: 8 (+213%)
+Damage: 8         # Vanilla: 2 (+300%)
+Armor: 3          # Vanilla: 0
+
+Drops:
+  - ender_pearl 1 (25%)
+  - TOKEN_MISION 2
+
+Skills:
+  - Teletransporte corto cada 60 ticks
+  - Velocidad nivel 2 permanente
+  - Atrae endermen cercanos
+```
+
+---
+
+### 👻 MOBS ESPECIALES Y DE MANSIÓN
+
+#### 23. **Vex_Espiritu** (Reemplaza: VEX)
+```yaml
+Display: '§7Vex Espíritu'
+Health: 20        # Vanilla: 14 (+43%)
+Damage: 10        # Vanilla: 5 (+100%)
+Armor: 2          # Vanilla: 0
+
+Drops:
+  - TOKEN_MISION 3
+
+Skills:
+  - Vuelo fantasmal
+  - Atraviesa bloques
+  - Velocidad nivel 3
+  - Partículas espectrales
+```
+
+#### 24. **Witch_Maldita** (Reemplaza: WITCH)
+```yaml
+Display: '§5Bruja Maldita'
+Health: 50        # Vanilla: 26 (+92%)
+Damage: 15        # Vanilla: Variable
+Armor: 8          # Vanilla: 0
+
+Drops:
+  - glass_bottle 0-2
+  - glowstone_dust 0-2
+  - sugar 0-2
+  - spider_eye 0-2
+  - TOKEN_MISION 8
+
+Skills:
+  - Pociones de daño mejoradas
+  - Autocuración con pociones
+  - Velocidad y resistencia al fuego
+  - Partículas mágicas malévolas
+```
+
+---
+
+### 🐺 MOBS NEUTRALES MODIFICADOS
+
+#### 25. **PolarBear_Territorial** (Reemplaza: POLAR_BEAR)
+```yaml
+Display: '§fOso Polar Territorial'
+Health: 60        # Vanilla: 30 (+100%)
+Damage: 18        # Vanilla: 6 (+200%)
+Armor: 6          # Vanilla: 0
+
+Drops:
+  - cod 1-3
+  - salmon 1-2
+  - TOKEN_MISION 4
+
+Skills:
+  - Velocidad en hielo +50%
+  - Ataque de embestida
+  - Protección de crías agresiva
+```
+
+#### 26. **Wolf_Feroz** (Reemplaza: WOLF cuando hostil)
+```yaml
+Display: '§4Lobo Feroz'
+Health: 35        # Vanilla: 20 (+75%)
+Damage: 12        # Vanilla: 4 (+200%)
+Armor: 4          # Vanilla: 0
+
+Drops:
+  - TOKEN_MISION 2
+
+Skills:
+  - Velocidad nivel 2 en pack
+  - Ataque en grupo coordinado
+  - Howl que atrae más lobos
+```
+
+---
+
+### 🏺 MOBS DE CUEVAS Y RAREZA
+
+#### 27. **CaveSpider_Toxica** (Reemplaza: CAVE_SPIDER)
+```yaml
+Display: '§2Araña de Cueva Tóxica'
+Health: 25        # Vanilla: 12 (+108%)
+Damage: 8         # Vanilla: 2 (+300%)
+Armor: 4          # Vanilla: 0
+
+Drops:
+  - string 0-2
+  - spider_eye 1 (75%)
+  - TOKEN_MISION 3
+
+Skills:
+  - Veneno nivel 3 por 7 segundos
+  - Velocidad en telarañas
+  - Escalada mejorada
+```
+
+#### 28. **Silverfish_Minero** (Reemplaza: SILVERFISH)
+```yaml
+Display: '§8Lepisma Minero'
+Health: 15        # Vanilla: 8 (+88%)
+Damage: 6         # Vanilla: 1 (+500%)
+Armor: 2          # Vanilla: 0
+
+Drops:
+  - TOKEN_MISION 1
+
+Skills:
+  - Velocidad nivel 3 extrema
+  - Invoca más silverfish de bloques
+  - Ataque en enjambre
+```
+
+#### 29. **Slime_Elastico** (Reemplaza: SLIME)
+```yaml
+Display: '§aSlime Elástico'
+Health: 30        # Vanilla: 16 (+88%)
+Damage: 10        # Vanilla: 4 (+150%)
+Armor: 4          # Vanilla: 0
+
+Drops:
+  - slimeball 1-4
+  - TOKEN_MISION 3
+
+Skills:
+  - Saltos aumentados x3
+  - División en slimes menores
+  - Knockback reducido 50%
+```
+
+---
+
+### ❄️ MOBS DE BIOMAS ESPECÍFICOS
+
+#### 30. **Husk_Desertico** (Reemplaza: HUSK)
+```yaml
+Display: '§6Husk Desértico'
+Health: 45        # Vanilla: 20 (+125%)
+Damage: 11        # Vanilla: 3 (+267%)
+Armor: 5          # Vanilla: 2 (+150%)
+
+Drops:
+  - rotten_flesh 2-5
+  - sand 1-3
+  - TOKEN_MISION 2
+
+Skills:
+  - Inmunidad al fuego del sol
+  - Hambre nivel 2 al atacar
+  - Velocidad en arena +25%
+```
+
+#### 31. **Stray_Helado** (Reemplaza: STRAY)
+```yaml
+Display: '§bStray Helado'
+Health: 42        # Vanilla: 20 (+110%)
+Damage: 11        # Vanilla: 4 (+175%)
+Armor: 5          # Vanilla: 2 (+150%)
+
+Drops:
+  - bone 2-5
+  - arrow 6-12
+  - TOKEN_MISION 3
+
+Skills:
+  - Flechas de lentitud nivel 2
+  - Inmunidad al frío
+  - Partículas de nieve
+```
+
+---
+
+### 🐷 MOBS DE COMERCIO Y NEUTRALES
+
+#### 32. **Piglin_Comerciante** (Reemplaza: PIGLIN neutral)
+```yaml
+Display: '§6Piglin Comerciante'
+Health: 35        # Vanilla: 16 (+119%)
+Damage: 8         # Vanilla: 5 (+60%)
+Armor: 4          # Vanilla: 0
+
+Drops:
+  - gold_nugget 2-6
+  - TOKEN_MISION 2
+
+Skills:
+  - Comercio mejorado con oro
+  - No se zombifica
+  - Atrae otros piglins
+```
+
+---
+
+### ⚡ MOBS JEFE ESPECIALES
+
+#### 33. **ElectricCreeper_JefeMenor** (Mob único especial)
+```yaml
+Display: '§bCreeper Eléctrico'
+Health: 40        # Boss menor eléctrico
+Damage: 40        # Daño extremo
+Armor: 10         # Alta defensa
+
+BossBar:
+  Title: '§bJefe Menor: Creeper Eléctrico'
+  Color: GREEN
+  Style: SEGMENTED_10
+
+Drops:
+  - gunpowder 8-12 (10%)
+  - TOKEN_MISION 8         # Recompensa de jefe menor
+  - charged_creeper_head 1 # Item especial único
+
+Skills:
+  - Partículas eléctricas constantes
+  - Ceguera nivel 2 por 4 segundos en radio 4
+  - Explosión potencia 6 (devastadora)
+  - Daño eléctrico 20 en radio 4
+  - Velocidad nivel 2 cada 100 ticks
+  - 20% chance de invocar slime al recibir daño
+  - Knockback resistance 70%
+```
+
+---
+
+## 🎯 MECÁNICAS ESPECIALES DE SPAWNING
+
+### SISTEMA DE REEMPLAZO TOTAL:
+```yaml
+SpawnOverride:
+  Type: [MOB_VANILLA]     # Tipo de mob a reemplazar
+  Priority: 1-2           # Prioridad (2 para jefes especiales)
+  ReplaceType: true       # Reemplazo completo
+  Conditions:
+    - always              # Siempre activo
+```
+
+### DISTRIBUCIÓN POR ALTURA:
+- **Y >= 64 (Superficie)**: Zombies, Skeletons, Creepers, Spiders, Endermen, Pillagers
+- **Y <= 64 (Cuevas)**: Cave Spiders, Silverfish, Slimes, Witches
+- **Nether**: Wither Skeletons, Blazes, Ghasts, Magma Cubes, Piglins, Hoglins
+- **End**: Endermen (mejorados), Shulkers, Endermites
+- **Océanos**: Guardians, Elder Guardians, Drowned
+- **Spawners**: TODOS los mobs custom aparecen en spawners
+
+### BALANCE DE DIFICULTAD:
+- **Mobs Comunes**: 2-4x vida vanilla, 2-3x daño vanilla
+- **Mobs Raros**: 3-5x vida vanilla, 3-4x daño vanilla  
+- **Jefes Menores**: 5-8x vida vanilla, 4-6x daño vanilla
+- **Jefes Supremos**: 8-10x vida vanilla, 6-8x daño vanilla
+
+### ECONOMÍA TOKEN_MISION:
+- **Mobs Comunes**: 1-3 TOKEN_MISION
+- **Mobs Intermedios**: 4-8 TOKEN_MISION
+- **Mobs Raros**: 8-16 TOKEN_MISION
+- **Jefes Menores**: 16-50 TOKEN_MISION
+- **Jefes Supremos**: 100-500 TOKEN_MISION
