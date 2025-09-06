@@ -1,3 +1,5 @@
+# For non-English characters, this file MUST stay encoded in UTF-8
+
 # ═══════════════════════════════════════════════════════════════════════════════════════════════
 # ██████╗ ███████╗██████╗ ██╗   ██╗██╗██████╗  ██████╗ ██████╗       ██╗     ███████╗██╗    ██╗██╗███████╗███╗   ██╗ █████╗ ██████╗  ██████╗ ███╗   ██╗███████╗
 # ██╔══██╗██╔════╝██╔══██╗██║   ██║██║██╔══██╗██╔═══██╗██╔══██╗      ██║     ██╔════╝██║    ██║██║██╔════╝████╗  ██║██╔══██╗██╔══██╗██╔═══██╗████╗  ██║██╔════╝
@@ -9,51 +11,115 @@
 
 # █████████████████████████████████████████████████████████████████████████████████████████████████
 # █                                                                                                █
-# █                  DOCUMENTACIÓN COMPLETA Y INSTRUCCIONES DETALLADAS                            █
+# █                     GUÍA DE PROGRAMACIÓN Y DESARROLLO                                          █
 # █                                SERVER RPG LEWIS-NADONE                                         █
 # █                                                                                                █
-# █                                VERSION FINAL: 100% FUNCIONAL                                  █
+# █                           ARQUITECTURA Y METAS DEL SERVIDOR                                   █
 # █                                                                                                █
 # █████████████████████████████████████████████████████████████████████████████████████████████████
 
 # ═══════════════════════════════════════════════════════════════════════════════════════════════
-# ██╗███╗   ██╗████████╗██████╗  ██████╗ ██████╗ ██╗   ██╗ ██████╗ ██████╗██╗ ██████╗ ███╗   ██╗
-# ██║████╗  ██║╚══██╔══╝██╔══██╗██╔═══██╗██╔══██╗██║   ██║██╔════╝██╔════╝██║██╔═══██╗████╗  ██║
-# ██║██╔██╗ ██║   ██║   ██████╔╝██║   ██║██║  ██║██║   ██║██║     ██║     ██║██║   ██║██╔██╗ ██║
-# ██║██║╚██╗██║   ██║   ██╔══██╗██║   ██║██║  ██║██║   ██║██║     ██║     ██║██║   ██║██║╚██╗██║
-# ██║██║ ╚████║   ██║   ██║  ██║╚██████╔╝██████╔╝╚██████╔╝╚██████╗╚██████╗██║╚██████╔╝██║ ╚████║
-# ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝  ╚═════╝ ╚═════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+# ███╗   ███╗███████╗████████╗ █████╗ ███████╗    ██╗   ██╗     ██████╗ ██████╗      ██╗███████╗████████╗██╗██╗   ██╗ ██████╗ ███████╗
+# ████╗ ████║██╔════╝╚══██╔══╝██╔══██╗██╔════╝    ╚██╗ ██╔╝    ██╔═══██╗██╔══██╗     ██║██╔════╝╚══██╔══╝██║██║   ██║██╔═══██╗██╔════╝
+# ██╔████╔██║█████╗     ██║   ███████║███████╗     ╚████╔╝     ██║   ██║██████╔╝     ██║█████╗     ██║   ██║██║   ██║██║   ██║███████╗
+# ██║╚██╔╝██║██╔══╝     ██║   ██╔══██║╚════██║      ╚██╔╝      ██║   ██║██╔══██╗██   ██║██╔══╝     ██║   ██║╚██╗ ██╔╝██║   ██║╚════██║
+# ██║ ╚═╝ ██║███████╗   ██║   ██║  ██║███████║       ██║       ╚██████╔╝██████╔╝╚█████╔╝███████╗   ██║   ██║ ╚████╔╝ ╚██████╔╝███████║
+# ╚═╝     ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝       ╚═╝        ╚═════╝ ╚═════╝  ╚════╝ ╚══════╝   ╚═╝   ╚═╝  ╚═══╝   ╚═════╝ ╚══════╝
 # ═══════════════════════════════════════════════════════════════════════════════════════════════
 
-## 🎯 CONCEPTO DEL SERVIDOR
+## 🎯 METAS Y OBJETIVOS DEL SERVIDOR
 
-Este servidor es un RPG inmersivo y desafiante llamado "ServerLewisNadone" que está centrado en:
+Este servidor RPG llamado "ServerLewisNadone" tiene como objetivo crear una experiencia inmersiva y desafiante mediante:
 
-### CARACTERÍSTICAS PRINCIPALES:
-- **Sistema de Misiones Progresivo**: 61+ misiones organizadas en 9 categorías temáticas
-- **Mobs Custom Exclusivos**: 35+ mobs custom que reemplazan COMPLETAMENTE a los mobs vanilla
-- **9 NPCs Principales**: Cada uno con personalidad única y habilidades específicas
-- **Habilidades Permanentes**: Sistema de poderes por niveles (Fuerza I-X, Resistencia I-III, etc.)
-- **Economía Física**: Basada en TOKEN_MISION e intercambio de items, sin dinero virtual
-- **Sistema de Clanes**: Protecciones y comunidades usando ProtectionStones
-- **Crossplay**: Soporte para Java y Bedrock Edition via Geyser + Floodgate
+### METAS PRINCIPALES DE PROGRAMACIÓN:
+- **Sistema de Progresión Revolucionario**: Programar 61+ misiones que otorguen habilidades permanentes como recompensa
+- **Reemplazo Completo de Mobs**: Desarrollar 35+ mobs custom que sustituyan TOTALMENTE el sistema vanilla
+- **NPCs Interactivos Complejos**: Crear 9 NPCs principales con personalidades únicas y sistemas de diálogo
+- **Economía Física Innovadora**: Programar un sistema económico basado en items físicos sin dinero virtual
+- **Sistema de Comunidades**: Implementar clanes, pueblos, municipios y ciudades con roles funcionales
+- **Crossplay Avanzado**: Integrar soporte nativo para Java y Bedrock Edition
 
-### FILOSOFÍA DE JUEGO:
-- **Desafío Extremo**: Desde el primer día el mundo es hostil y desafiante
-- **Cooperación**: Los nuevos jugadores NECESITAN formar grupos para sobrevivir
-- **Progresión Inmersiva**: Cada habilidad se gana a través de misiones temáticas
-- **Historia Profunda**: Lore de dioses antiguos, campeones y la maldición de los monstruos
+### FILOSOFÍA DE DESARROLLO:
+- **Desafío desde el Inicio**: Programar la dificultad para que requiera cooperación desde el primer día
+- **Progresión Narrativa**: Cada sistema debe contribuir a una historia cohesiva y envolvente
+- **Interconexión Total**: Todos los sistemas (mobs, quests, NPCs, economía) deben estar interrelacionados
+- **Escalabilidad**: Diseñar la arquitectura para permitir expansión futura del contenido
 
 # ═══════════════════════════════════════════════════════════════════════════════════════════════
-# ███████╗███████╗████████╗██████╗ ██╗   ██╗ ██████╗████████╗██╗   ██╗██████╗  █████╗ 
-# ██╔════╝██╔════╝╚══██╔══╝██╔══██╗██║   ██║██╔════╝╚══██╔══╝██║   ██║██╔══██╗██╔══██╗
-# █████╗  ███████╗   ██║   ██████╔╝██║   ██║██║        ██║   ██║   ██║██████╔╝███████║
-# ██╔══╝  ╚════██║   ██║   ██╔══██╗██║   ██║██║        ██║   ██║   ██║██╔══██╗██╔══██║
-# ███████╗███████║   ██║   ██║  ██║╚██████╔╝╚██████╗   ██║   ╚██████╔╝██║  ██║██║  ██║
-# ╚══════╝╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝  ╚═════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+# ██████╗ ██████╗  ██████╗  ██████╗ ██████╗  █████╗ ███╗   ███╗ █████╗  ██████╗██╗ ██████╗ ███╗   ██╗
+# ██╔══██╗██╔══██╗██╔═══██╗██╔════╝ ██╔══██╗██╔══██╗████╗ ████║██╔══██╗██╔════╝██║██╔═══██╗████╗  ██║
+# ██████╔╝██████╔╝██║   ██║██║  ███╗██████╔╝███████║██╔████╔██║███████║██║     ██║██║   ██║██╔██╗ ██║
+# ██╔═══╝ ██╔══██╗██║   ██║██║   ██║██╔══██╗██╔══██║██║╚██╔╝██║██╔══██║██║     ██║██║   ██║██║╚██╗██║
+# ██║     ██║  ██║╚██████╔╝╚██████╔╝██║  ██║██║  ██║██║ ╚═╝ ██║██║  ██║╚██████╗██║╚██████╔╝██║ ╚████║
+# ╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝
 # ═══════════════════════════════════════════════════════════════════════════════════════════════
 
-## 📁 ESTRUCTURA COMPLETA DE CARPETAS
+## 🏗️ ARQUITECTURA DE PROGRAMACIÓN DEL SERVIDOR
+
+### ESTRUCTURA TÉCNICA DE DESARROLLO:
+
+```
+ServerLewisNadone/
+├── Core Systems (Sistemas Centrales)
+│   ├── MythicMobs Integration (Mobs Customizados)
+│   ├── Quests System (Sistema de Misiones)
+│   ├── NPCs Management (Gestión de NPCs)
+│   └── Economy Framework (Marco Económico)
+│
+├── Plugin Integration Layer (Capa de Integración)
+│   ├── CrossPlay Support (Soporte Multiplataforma)
+│   ├── Permissions System (Sistema de Permisos)
+│   ├── World Protection (Protección del Mundo)
+│   └── Data Storage (Almacenamiento de Datos)
+│
+└── Content Development (Desarrollo de Contenido)
+    ├── Custom Mob Programming (35+ mobs únicos)
+    ├── Quest Line Development (61+ misiones)
+    ├── NPC Personality Systems (9 NPCs principales)
+    └── Economic Balance Programming (Sistema de TOKEN_MISION)
+```
+
+### PLUGINS REQUERIDOS PARA DESARROLLO:
+
+**NÚCLEO TÉCNICO:**
+1. **MythicMobs v5.6.2** - Motor de mobs customizados
+2. **Quests v4.7.1** - Sistema de misiones avanzado  
+3. **ZNPCs v6.0.0** - NPCs interactivos complejos
+
+**INFRAESTRUCTURA:**
+4. **LuckPerms v5.4.137** - Sistema de permisos escalable
+5. **ProtectionStones v2.10.4** - Sistema de clanes y protecciones
+6. **EssentialsX v2.20.1** - Comandos base del servidor
+
+**CROSSPLAY:**
+7. **Geyser-Spigot v2.4.0** - Compatibilidad Bedrock
+8. **Floodgate v2.2.4** - Autenticación cross-platform
+
+**SOPORTE:**
+9. **ProtocolLib v5.2.0** - Manipulación de paquetes
+10. **PlaceholderAPI v2.11.6** - Variables dinámicas
+
+### PRINCIPIOS DE PROGRAMACIÓN:
+
+**1. Modularidad Total:**
+- Cada sistema debe ser independiente pero interconectado
+- Configuraciones centralizadas para fácil mantenimiento
+- APIs internas para comunicación entre plugins
+
+**2. Escalabilidad:**
+- Sistema de quest categories extensible
+- Framework de mobs que permita agregar nuevos tipos
+- Economía balanceada para cualquier número de jugadores
+
+**3. Rendimiento:**
+- Spawning optimizado para 35+ mobs custom simultáneos
+- Caching inteligente de datos de misiones
+- Gestión eficiente de memoria para NPCs
+
+**4. Integración Seamless:**
+- Todos los plugins deben funcionar como un sistema unificado
+- UI/UX consistente a través de todos los componentes
+- Narrativa coherente en todos los elementos
 
 ```
 ServerLewisNadone/
@@ -1635,55 +1701,1432 @@ nombre_quest:
 
 ---
 
-## 🏹 CATEGORÍA CAZADOR (Erika) - 10 MISIONES
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+# 🏹 PROGRAMACIÓN COMPLETA DE MISIONES DEL CAZADOR (ERIKA) - FUERZA I-X
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
 
-### PROGRESIÓN DE FUERZA I-X:
+## CAZADOR QUESTS:
 
-| Nivel | Nombre | Efecto | TOKEN_MISION | Quest Points | Requisitos Principales |
-|-------|---------|---------|---------------|--------------|----------------------|
-| I | Cazador Iniciado | Fuerza I | 5 | 5 | 20 Zombie + 20 Skeleton + items básicos |
-| II | Cazador Experimentado | Fuerza II | 10 | 10 | 15 Spider + 15 Creeper + hierro |
-| III | Cazador Veterano | Fuerza III | 15 | 15 | 5 WitherSkeleton + 5 Guardian + hierro |
-| IV | Cazador de Élite | Fuerza IV | 20 | 20 | 3 Pillager + 3 Vindicator + diamante |
-| V | Maestro Cazador | Fuerza V | 25 | 25 | Mobs del Nether + netherita |
-| VI | Cazador Legendario | Fuerza VI | 30 | 30 | Jefes menores + materiales raros |
-| VII | Cazador de Bestias Mitológicas | Fuerza VII | 35 | 35 | Guardianes especiales |
-| VIII | Cazador de lo Imposible | Fuerza VIII | 40 | 40 | Enderman + End materials |
-| IX | Cazador Divino | Fuerza IX | 45 | 45 | Wither + Dragon preparation |
-| X | Cazador de Dioses | Fuerza X | 50 | 50 | EnderDragon + Wither + ElderGuardian |
-
-**MISIÓN ÉPICA FINAL - Cazador de Dioses**:
+### cazador_iniciado:
 ```yaml
-Objetivos:
-  - 10 Emerald Block (comercio supremo)
-  - 10 Nether Star (3+ Withers derrotados)
-  - 300 TOKEN_MISION (economía masiva)
-  - 1 EnderDragon_JefeFinal
-  - 1 Wither_Supremo  
-  - 1 ElderGuardian_Titan
+name: '&6Cazador Iniciado'
+ask-message: '&6[Erika]: &7Los no-muertos se han vuelto más fuertes y organizados.
+Demuéstrame que puedes enfrentarte a ellos y te enseñaré a canalizar tu fuerza
+interior.'
+finish-message: '&6[Erika]: &7¡Impresionante! Has demostrado valor. Te otorgo el poder
+de la Fuerza I.'
+requirements:
+  level: 0
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 32
+        - 32
+        - 50
+      items-to-collect:
+        - ROTTEN_FLESH
+        - BONE
+        - TOKEN_MISION
+      mob-amounts:
+        - 20
+        - 20
+      mobs-to-kill:
+        - Zombie_Corrupto
+        - Skeleton_Guerrero
+rewards:
+  commands:
+    - effect give %player% strength 999999 0 true
+    - tellraw %player% {"text":"Has obtenido Fuerza I de forma permanente","color":"gold"}
+  items:
+    - TOKEN_MISION:5
+  money: 100
+  permission: habilidades.fuerza.1
+  quest-points: 5
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
 
-Recompensas:
-  - Fuerza X permanente (máximo poder)
-  - 50 TOKEN_MISION
-  - Title: "¡Cazador de Dioses!"
-  - Subtitle: "Has dominado el poder de la Fuerza"
-  - 1000 money
-  - 50 quest points
+### cazador_experimentado:
+```yaml
+name: '&6Cazador Experimentado'
+ask-message: '&6[Erika]: &7Los pillagers han formado una alianza con magos oscuros.
+Elimínalos y trae pruebas de tu incursión al Nether. Tu fuerza crecerá con cada
+enemigo que superes.'
+finish-message: '&6[Erika]: &7Tu habilidad crece cada día. Ahora posees Fuerza II.'
+requirements:
+  permission: habilidades.fuerza.1
+  quest-points: 5
+  quests-completed:
+    - cazador_iniciado
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 8
+        - 70
+      items-to-collect:
+        - BLAZE_ROD
+        - TOKEN_MISION
+      mob-amounts:
+        - 10
+        - 10
+      mobs-to-kill:
+        - Vindicator_Feroz
+        - Evoker_Arcano
+rewards:
+  commands:
+    - effect give %player% strength 999999 1 true
+    - tellraw %player% {"text":"Has mejorado a Fuerza II de forma permanente","color":"gold"}
+  items:
+    - TOKEN_MISION:10
+  money: 200
+  permission: habilidades.fuerza.2
+  quest-points: 10
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### cazador_veterano:
+```yaml
+name: '&6Cazador Veterano'
+ask-message: '&6[Erika]: &7El Nether se agita. Sus criaturas más poderosas deben ser
+controladas. Enfréntalas y forja tu cuerpo en el fuego eterno de esa dimensión.'
+finish-message: '&6[Erika]: &7Has superado pruebas que harían temblar a guerreros
+experimentados. Tu fuerza aumenta notablemente.'
+requirements:
+  permission: habilidades.fuerza.2
+  quest-points: 15
+  quests-completed:
+    - cazador_experimentado
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 4
+        - 80
+      items-to-collect:
+        - IRON_BLOCK
+        - TOKEN_MISION
+      mob-amounts:
+        - 5
+        - 5
+      mobs-to-kill:
+        - WitherSkeleton_Miniboss
+        - GuardianDeLasCenizas
+rewards:
+  commands:
+    - effect give %player% strength 999999 2 true
+    - tellraw %player% {"text":"Has mejorado a Fuerza III de forma permanente","color":"gold"}
+  items:
+    - TOKEN_MISION:15
+  money: 300
+  permission: habilidades.fuerza.3
+  quest-points: 15
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### cazador_elite:
+```yaml
+name: '&6Cazador de Élite'
+ask-message: '&6[Erika]: &7Los líderes de las incursiones deben ser eliminados. Son
+astutos y poderosos, pero confío en que podrás vencerlos. Los diamantes fortalecerán
+el vínculo con tu nueva habilidad.'
+finish-message: '&6[Erika]: &7Tu nombre comienza a ser susurrado con temor entre nuestros
+enemigos. Tu fuerza ha alcanzado un nivel extraordinario.'
+requirements:
+  permission: habilidades.fuerza.3
+  quest-points: 30
+  quests-completed:
+    - cazador_veterano
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 2
+        - 100
+      items-to-collect:
+        - DIAMOND_BLOCK
+        - TOKEN_MISION
+      mob-amounts:
+        - 3
+        - 3
+      mobs-to-kill:
+        - Pillager_Asaltante
+        - Vindicator_Feroz
+rewards:
+  commands:
+    - effect give %player% strength 999999 3 true
+    - tellraw %player% {"text":"Has mejorado a Fuerza IV de forma permanente","color":"gold"}
+  items:
+    - TOKEN_MISION:20
+  money: 400
+  permission: habilidades.fuerza.4
+  quest-points: 20
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### maestro_cazador:
+```yaml
+name: '&6Maestro Cazador'
+ask-message: '&6[Erika]: &7El Nether debe ser purgado de sus líderes más poderosos.
+Esto requerirá toda tu habilidad y determinación, pero la recompensa valdrá la
+pena.'
+finish-message: '&6[Erika]: &7Has limpiado el Nether de amenazas importantes. Tu fuerza
+ha crecido hasta niveles que pocos pueden alcanzar.'
+requirements:
+  permission: habilidades.fuerza.4
+  quest-points: 50
+  quests-completed:
+    - cazador_elite
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 1
+        - 1
+        - 120
+      items-to-collect:
+        - EMERALD_BLOCK
+        - NETHER_STAR
+        - TOKEN_MISION
+      mob-amounts:
+        - 10
+        - 10
+        - 10
+      mobs-to-kill:
+        - WitherSkeleton_Miniboss
+        - MAGMA_CUBE
+        - BLAZE
+rewards:
+  commands:
+    - effect give %player% strength 999999 4 true
+    - tellraw %player% {"text":"Has mejorado a Fuerza V de forma permanente","color":"gold"}
+  items:
+    - TOKEN_MISION:25
+  money: 500
+  permission: habilidades.fuerza.5
+  quest-points: 25
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### cazador_legendario:
+```yaml
+name: '&6Cazador Legendario'
+ask-message: '&6[Erika]: &7El Wither, una abominación de pura maldad. Demuestra que
+puedes derrotar a semejante criatura y tu fuerza se volverá casi sobrenatural.'
+finish-message: '&6[Erika]: &7¡Lo has conseguido! Has derrotado a una de las criaturas
+más temibles conocidas. Tu fuerza ahora es casi sobrenatural.'
+requirements:
+  permission: habilidades.fuerza.5
+  quest-points: 75
+  quests-completed:
+    - maestro_cazador
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 1
+        - 1
+        - 150
+      items-to-collect:
+        - EMERALD_BLOCK
+        - NETHER_STAR
+        - TOKEN_MISION
+      mob-amounts:
+        - 1
+      mobs-to-kill:
+        - Wither_Supremo
+rewards:
+  commands:
+    - effect give %player% strength 999999 5 true
+    - tellraw %player% {"text":"Has mejorado a Fuerza VI de forma permanente","color":"gold"}
+  items:
+    - TOKEN_MISION:30
+  money: 600
+  permission: habilidades.fuerza.6
+  quest-points: 30
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### cazador_bestias_mitologicas:
+```yaml
+name: '&6Cazador de Bestias Mitológicas'
+ask-message: '&6[Erika]: &7Pocos han visto a los guardianes del dragón y vivido para
+contarlo. Demuéstrame que eres digno de cantar la hazaña.'
+finish-message: '&6[Erika]: &7Has enfrentado criaturas cuya existencia muchos consideran
+mera leyenda. Tu fuerza ha alcanzado niveles casi divinos.'
+requirements:
+  permission: habilidades.fuerza.6
+  quest-points: 105
+  quests-completed:
+    - cazador_legendario
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 2
+        - 2
+        - 180
+      items-to-collect:
+        - EMERALD_BLOCK
+        - NETHER_STAR
+        - TOKEN_MISION
+      mob-amounts:
+        - 2
+        - 5
+      mobs-to-kill:
+        - Wither_Supremo
+        - EnderDragon_JefeFinal
+rewards:
+  commands:
+    - effect give %player% strength 999999 6 true
+    - tellraw %player% {"text":"Has mejorado a Fuerza VII de forma permanente","color":"gold"}
+  items:
+    - TOKEN_MISION:35
+  money: 700
+  permission: habilidades.fuerza.7
+  quest-points: 35
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### cazador_imposible:
+```yaml
+name: '&6Cazador de lo Imposible'
+ask-message: '&6[Erika]: &7Tu nombre ya se susurra con admiración. Conviértelo en
+leyenda enfrentando a los seres más poderosos de este mundo.'
+finish-message: '&6[Erika]: &7Las leyendas sobre ti se extienden por todas las tierras.
+Tu fuerza ahora rivaliza con la de los antiguos héroes.'
+requirements:
+  permission: habilidades.fuerza.7
+  quest-points: 140
+  quests-completed:
+    - cazador_bestias_mitologicas
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 3
+        - 3
+        - 210
+      items-to-collect:
+        - EMERALD_BLOCK
+        - NETHER_STAR
+        - TOKEN_MISION
+      mob-amounts:
+        - 3
+        - 3
+      mobs-to-kill:
+        - Wither_Supremo
+        - EnderDragon_JefeFinal
+rewards:
+  commands:
+    - effect give %player% strength 999999 7 true
+    - tellraw %player% {"text":"Has mejorado a Fuerza VIII de forma permanente","color":"gold"}
+  items:
+    - TOKEN_MISION:40
+  money: 800
+  permission: habilidades.fuerza.8
+  quest-points: 40
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### cazador_divino:
+```yaml
+name: '&6Cazador Divino'
+ask-message: '&6[Erika]: &7El dragón ancestral... Dicen que es inmortal, pero quizás
+tú puedas probar lo contrario. Este desafío te llevará más allá de los límites
+mortales.'
+finish-message: '&6[Erika]: &7¡Has derrotado al dragón ancestral! Tu fuerza ahora
+es prácticamente divina.'
+requirements:
+  permission: habilidades.fuerza.8
+  quest-points: 180
+  quests-completed:
+    - cazador_imposible
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 5
+        - 5
+        - 240
+      items-to-collect:
+        - EMERALD_BLOCK
+        - NETHER_STAR
+        - TOKEN_MISION
+      mob-amounts:
+        - 1
+        - 5
+      mobs-to-kill:
+        - EnderDragon_JefeFinal
+        - Wither_Supremo
+rewards:
+  commands:
+    - effect give %player% strength 999999 8 true
+    - tellraw %player% {"text":"Has mejorado a Fuerza IX de forma permanente","color":"gold"}
+  items:
+    - TOKEN_MISION:45
+  money: 900
+  permission: habilidades.fuerza.9
+  quest-points: 45
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### cazador_dioses:
+```yaml
+name: '&6Cazador de Dioses'
+ask-message: '&6[Erika]: &7Los tres reyes primordiales deben caer ante ti. Ningún
+mortal lo ha logrado jamás, pero tú no eres un simple mortal, ¿verdad? Completa
+esta prueba y tu fuerza rivalizará con la de los dioses antiguos.'
+finish-message: '&6[Erika]: &7¡Has logrado lo imposible! Has derrotado a los tres
+reyes primordiales. Tu fuerza ahora es legendaria, digna de los dioses mismos.'
+requirements:
+  permission: habilidades.fuerza.9
+  quest-points: 225
+  quests-completed:
+    - cazador_divino
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 10
+        - 10
+        - 300
+      items-to-collect:
+        - EMERALD_BLOCK
+        - NETHER_STAR
+        - TOKEN_MISION
+      mob-amounts:
+        - 1
+        - 1
+        - 1
+      mobs-to-kill:
+        - EnderDragon_JefeFinal
+        - Wither_Supremo
+        - ElderGuardian_Titan
+rewards:
+  commands:
+    - effect give %player% strength 999999 9 true
+    - tellraw %player% {"text":"¡Has alcanzado Fuerza X, el poder máximo!","color":"gold","bold":true}
+    - title %player% title {"text":"¡Cazador de Dioses!","color":"gold","bold":true}
+    - title %player% subtitle {"text":"Has dominado el poder de la Fuerza","color":"white"}
+  items:
+    - TOKEN_MISION:50
+  money: 1000
+  permission: habilidades.fuerza.10
+  quest-points: 50
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+# ⛏️ PROGRAMACIÓN COMPLETA DE MISIONES DEL MINERO (PAÚL) - PRISA MINERA I-X
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+
+## MINERO QUESTS:
+
+### aprendiz_minero:
+```yaml
+name: '&8Aprendiz de Minero'
+ask-message: '&8[Paúl]: &7¡Así que quieres ser minero! Empecemos con lo básico. La
+redstone te enseñará sobre la energía que necesitas canalizar, y el diamante será
+tu primera recompensa verdadera. Te enseñaré a extraer más rápido de lo que creías
+posible.'
+finish-message: '&8[Paúl]: &7¡Bien hecho, chico! Tus manos comenzarán a moverse más
+rápido cuando sostengan un pico.'
+requirements:
+  level: 0
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 5
+        - 1
+        - 40
+      items-to-collect:
+        - REDSTONE_BLOCK
+        - DIAMOND
+        - TOKEN_MISION
+rewards:
+  commands:
+    - effect give %player% haste 999999 0 true
+    - tellraw %player% {"text":"Has obtenido Prisa Minera I de forma permanente","color":"dark_gray"}
+  items:
+    - TOKEN_MISION:5
+  money: 100
+  permission: habilidades.prisaminera.1
+  quest-points: 5
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### minero_experimentado:
+```yaml
+name: '&8Minero Experimentado'
+ask-message: '&8[Paúl]: &7Estás progresando bien. Un bloque completo de diamante muestra
+tu dedicación. Ahora te revelaré técnicas que me tomó años perfeccionar.'
+finish-message: '&8[Paúl]: &7Tus manos se han vuelto más hábiles con el pico. Ahora
+puedes extraer minerales con mayor velocidad.'
+requirements:
+  permission: habilidades.prisaminera.1
+  quest-points: 5
+  quests-completed:
+    - aprendiz_minero
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 10
+        - 1
+        - 80
+      items-to-collect:
+        - REDSTONE_BLOCK
+        - DIAMOND_BLOCK
+        - TOKEN_MISION
+rewards:
+  commands:
+    - effect give %player% haste 999999 1 true
+    - tellraw %player% {"text":"Has mejorado a Prisa Minera II de forma permanente","color":"dark_gray"}
+  items:
+    - TOKEN_MISION:10
+  money: 200
+  permission: habilidades.prisaminera.2
+  quest-points: 10
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### maestro_profundidades:
+```yaml
+name: '&8Maestro de las Profundidades'
+ask-message: '&8[Paúl]: &7El verdadero minero aprecia tanto el carbón como el diamante.
+Cada mineral tiene su propósito y valor. Esta lección te llevará más allá de la
+superficie.'
+finish-message: '&8[Paúl]: &7Tus brazos se han vuelto tan fuertes como el hierro que
+recolectas. La tierra cede más fácilmente ante tu pico.'
+requirements:
+  permission: habilidades.prisaminera.2
+  quest-points: 15
+  quests-completed:
+    - minero_experimentado
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 15
+        - 5
+        - 120
+      items-to-collect:
+        - COAL_BLOCK
+        - IRON_BLOCK
+        - TOKEN_MISION
+rewards:
+  commands:
+    - effect give %player% haste 999999 2 true
+    - tellraw %player% {"text":"Has mejorado a Prisa Minera III de forma permanente","color":"dark_gray"}
+  items:
+    - TOKEN_MISION:15
+  money: 300
+  permission: habilidades.prisaminera.3
+  quest-points: 15
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### buscador_tesoros:
+```yaml
+name: '&8Buscador de Tesoros'
+ask-message: '&8[Paúl]: &7Los cristales contienen secretos que las rocas ordinarias
+no. Su estructura nos enseña sobre la perfección y la paciencia. Con este conocimiento,
+tus manos se moverán más rápido que el pensamiento.'
+finish-message: '&8[Paúl]: &7Has aprendido a apreciar la belleza oculta en las profundidades.
+Tu habilidad minera se ha expandido aún más.'
+requirements:
+  permission: habilidades.prisaminera.3
+  quest-points: 30
+  quests-completed:
+    - maestro_profundidades
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 20
+        - 10
+        - 192
+      items-to-collect:
+        - AMETHYST_BLOCK
+        - QUARTZ_BLOCK
+        - TOKEN_MISION
+rewards:
+  commands:
+    - effect give %player% haste 999999 3 true
+    - tellraw %player% {"text":"Has mejorado a Prisa Minera IV de forma permanente","color":"dark_gray"}
+  items:
+    - TOKEN_MISION:20
+  money: 400
+  permission: habilidades.prisaminera.4
+  quest-points: 20
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### minero_abismo:
+```yaml
+name: '&8Minero del Abismo'
+ask-message: '&8[Paúl]: &7Las profundidades más oscuras contienen las mayores riquezas.
+La pizarra profunda y el basalto te conectarán con los ritmos primigenios de la
+tierra.'
+finish-message: '&8[Paúl]: &7Has desafiado al abismo y has regresado con sus secretos.
+Tu habilidad minera alcanza nuevas profundidades.'
+requirements:
+  permission: habilidades.prisaminera.4
+  quest-points: 50
+  quests-completed:
+    - buscador_tesoros
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 320
+        - 192
+        - 192
+      items-to-collect:
+        - DEEPSLATE
+        - BASALT
+        - TOKEN_MISION
+rewards:
+  commands:
+    - effect give %player% haste 999999 4 true
+    - tellraw %player% {"text":"Has mejorado a Prisa Minera V de forma permanente","color":"dark_gray"}
+  items:
+    - TOKEN_MISION:25
+  money: 500
+  permission: habilidades.prisaminera.5
+  quest-points: 25
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### buscador_netherita:
+```yaml
+name: '&8Buscador de Netherita'
+ask-message: '&8[Paúl]: &7La netherita es el desafío final de todo minero. Forjada
+en los fuegos primordiales, representa la culminación de la búsqueda mineral.
+La esmeralda representa la riqueza que puedes alcanzar con estos conocimientos.'
+finish-message: '&8[Paúl]: &7Has dominado los secretos del mineral más codiciado.
+Tu velocidad minera se ha vuelto extraordinaria.'
+requirements:
+  permission: habilidades.prisaminera.5
+  quest-points: 75
+  quests-completed:
+    - minero_abismo
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 1
+        - 1
+        - 192
+      items-to-collect:
+        - EMERALD_BLOCK
+        - NETHERITE_INGOT
+        - TOKEN_MISION
+rewards:
+  commands:
+    - effect give %player% haste 999999 5 true
+    - tellraw %player% {"text":"Has mejorado a Prisa Minera VI de forma permanente","color":"dark_gray"}
+  items:
+    - TOKEN_MISION:30
+  money: 600
+  permission: habilidades.prisaminera.6
+  quest-points: 30
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### magnate_mineral:
+```yaml
+name: '&8Magnate Mineral'
+ask-message: '&8[Paúl]: &7Hierro y oro, los pilares de la civilización. Domina su
+extracción y dominarás el arte de la prosperidad.'
+finish-message: '&8[Paúl]: &7Tus técnicas de minería han llegado a un nivel casi sobrenatural.
+Los minerales parecen saltar a tus manos.'
+requirements:
+  permission: habilidades.prisaminera.6
+  quest-points: 105
+  quests-completed:
+    - buscador_netherita
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 25
+        - 15
+        - 192
+      items-to-collect:
+        - IRON_BLOCK
+        - GOLD_BLOCK
+        - TOKEN_MISION
+rewards:
+  commands:
+    - effect give %player% haste 999999 6 true
+    - tellraw %player% {"text":"Has mejorado a Prisa Minera VII de forma permanente","color":"dark_gray"}
+  items:
+    - TOKEN_MISION:35
+  money: 700
+  permission: habilidades.prisaminera.7
+  quest-points: 35
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### senor_sombras:
+```yaml
+name: '&8Señor de las Sombras'
+ask-message: '&8[Paúl]: &7La oscuridad y la resistencia son dos caras de la misma
+moneda. El carbón alimenta nuestros hornos, la obsidiana protege nuestros tesoros.
+Domina ambos y serás imparable bajo tierra.'
+finish-message: '&8[Paúl]: &7La oscuridad ya no es tu enemiga, sino tu aliada. Tu
+pico parece moverse con voluntad propia, atravesando la piedra como si fuera mantequilla.'
+requirements:
+  permission: habilidades.prisaminera.7
+  quest-points: 140
+  quests-completed:
+    - magnate_mineral
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 64
+        - 64
+        - 192
+      items-to-collect:
+        - COAL_BLOCK
+        - OBSIDIAN
+        - TOKEN_MISION
+rewards:
+  commands:
+    - effect give %player% haste 999999 7 true
+    - tellraw %player% {"text":"Has mejorado a Prisa Minera VIII de forma permanente","color":"dark_gray"}
+  items:
+    - TOKEN_MISION:40
+  money: 800
+  permission: habilidades.prisaminera.8
+  quest-points: 40
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### excavador_lagrimas:
+```yaml
+name: '&8Excavador de Lágrimas'
+ask-message: '&8[Paúl]: &7Las lágrimas de la tierra contienen poder ancestral. La
+obsidiana llorosa es rara y preciosa, casi tanto como el conocimiento que te otorgará.'
+finish-message: '&8[Paúl]: &7Has dominado el arte de extraer los minerales más esquivos
+y poderosos. Tu habilidad minera es casi divina.'
+requirements:
+  permission: habilidades.prisaminera.8
+  quest-points: 180
+  quests-completed:
+    - senor_sombras
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 16
+        - 64
+        - 192
+      items-to-collect:
+        - CRYING_OBSIDIAN
+        - GOLD_BLOCK
+        - TOKEN_MISION
+rewards:
+  commands:
+    - effect give %player% haste 999999 8 true
+    - tellraw %player% {"text":"Has mejorado a Prisa Minera IX de forma permanente","color":"dark_gray"}
+  items:
+    - TOKEN_MISION:45
+  money: 900
+  permission: habilidades.prisaminera.9
+  quest-points: 45
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### titan_mineria:
+```yaml
+name: '&8Titán de la Minería'
+ask-message: '&8[Paúl]: &7Esta prueba final representa todo lo que significa ser un
+verdadero minero. Cantidad, calidad, variedad y dedicación. Complétala y tu pico
+se moverá tan rápido que apenas será visible para el ojo humano.'
+finish-message: '&8[Paúl]: &7Has superado todas mis expectativas. Tu habilidad minera
+ha alcanzado el máximo nivel posible. Las montañas tiemblan ante tu aproximación
+y las piedras se apartan voluntariamente de tu camino.'
+requirements:
+  permission: habilidades.prisaminera.9
+  quest-points: 225
+  quests-completed:
+    - excavador_lagrimas
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 128
+        - 128
+        - 32
+        - 32
+        - 192
+      items-to-collect:
+        - COAL_BLOCK
+        - OBSIDIAN
+        - DIAMOND_BLOCK
+        - IRON_BLOCK
+        - TOKEN_MISION
+rewards:
+  commands:
+    - effect give %player% haste 999999 9 true
+    - tellraw %player% {"text":"¡Has alcanzado Prisa Minera X, el poder máximo!","color":"dark_gray","bold":true}
+    - title %player% title {"text":"¡Titán de la Minería!","color":"dark_gray","bold":true}
+    - title %player% subtitle {"text":"Has dominado el poder de la Prisa Minera","color":"gray"}
+  items:
+    - TOKEN_MISION:50
+  money: 1000
+  permission: habilidades.prisaminera.10
+  quest-points: 50
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+# 🍳 PROGRAMACIÓN COMPLETA DE MISIONES DEL COCINERO (BRUNO) - SATURACIÓN I-III
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+
+## COCINERO QUESTS:
+
+### cocinero_aficionado:
+```yaml
+name: '&6Cocinero Aficionado'
+ask-message: '&6[Bruno]: &7¡La variedad es el secreto de una buena nutrición! Tráeme
+un poco de todo y te enseñaré a preparar comidas que te mantendrán satisfecho
+por más tiempo del que crees posible.'
+finish-message: '&6[Bruno]: &7¡Excelente selección de ingredientes! Ahora tu cuerpo
+podrá mantener la energía por más tiempo.'
+requirements:
+  level: 0
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 32
+        - 32
+        - 32
+        - 32
+        - 32
+        - 32
+        - 32
+        - 32
+        - 32
+        - 32
+        - 32
+        - 32
+        - 32
+        - 32
+        - 32
+        - 32
+        - 32
+        - 32
+        - 32
+      items-to-collect:
+        - GOLDEN_APPLE
+        - GOLDEN_CARROT
+        - COOKED_PORKCHOP
+        - COOKED_BEEF
+        - COOKED_MUTTON
+        - COOKED_SALMON
+        - COOKED_COD
+        - COOKED_CHICKEN
+        - BAKED_POTATO
+        - BREAD
+        - COOKED_RABBIT
+        - APPLE
+        - MELON_SLICE
+        - CARROT
+        - PUMPKIN_PIE
+        - COOKIE
+        - SWEET_BERRIES
+        - ROTTEN_FLESH
+        - TOKEN_MISION
+rewards:
+  commands:
+    - effect give %player% saturation 999999 0 true
+    - tellraw %player% {"text":"Has obtenido Saturación I de forma permanente","color":"gold"}
+  items:
+    - TOKEN_MISION:5
+  money: 100
+  permission: habilidades.saturacion.1
+  quest-points: 5
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### chef_experimentado:
+```yaml
+name: '&6Chef Experimentado'
+ask-message: '&6[Bruno]: &7¡Ahora hablamos el mismo idioma! Con estos ingredientes
+podré enseñarte técnicas más avanzadas. La saturación que sentirás será tan profunda
+que olvidarás lo que es tener hambre.'
+finish-message: '&6[Bruno]: &7¡Magnífico! Estos ingredientes me permitirán mostrarte
+secretos culinarios ancestrales. Tu cuerpo ahora mantendrá la energía por mucho
+más tiempo.'
+requirements:
+  permission: habilidades.saturacion.1
+  quest-points: 5
+  quests-completed:
+    - cocinero_aficionado
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 48
+        - 48
+        - 48
+        - 48
+        - 48
+        - 48
+        - 48
+        - 48
+        - 48
+        - 48
+        - 48
+        - 48
+        - 48
+        - 48
+        - 48
+        - 48
+        - 48
+        - 48
+        - 48
+      items-to-collect:
+        - GOLDEN_APPLE
+        - GOLDEN_CARROT
+        - COOKED_PORKCHOP
+        - COOKED_BEEF
+        - COOKED_MUTTON
+        - COOKED_SALMON
+        - COOKED_COD
+        - COOKED_CHICKEN
+        - BAKED_POTATO
+        - BREAD
+        - COOKED_RABBIT
+        - APPLE
+        - MELON_SLICE
+        - CARROT
+        - PUMPKIN_PIE
+        - COOKIE
+        - SWEET_BERRIES
+        - ROTTEN_FLESH
+        - TOKEN_MISION
+rewards:
+  commands:
+    - effect give %player% saturation 999999 1 true
+    - tellraw %player% {"text":"Has mejorado a Saturación II de forma permanente","color":"gold"}
+  items:
+    - TOKEN_MISION:10
+  money: 200
+  permission: habilidades.saturacion.2
+  quest-points: 10
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### maestro_gastronomico:
+```yaml
+name: '&6Maestro Gastronómico'
+ask-message: '&6[Bruno]: &7¡Este es el nivel máximo del arte culinario! Con estos
+ingredientes prepararemos un festín que cambiará tu vida para siempre. Tu cuerpo
+recordará esta nutrición y la mantendrá por tiempos increíbles.'
+finish-message: '&6[Bruno]: &7¡Espectacular! Has alcanzado la cima del arte culinario.
+Las comidas que prepares ahora mantendrán satisfecho a cualquiera por días enteros.'
+requirements:
+  permission: habilidades.saturacion.2
+  quest-points: 15
+  quests-completed:
+    - chef_experimentado
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 64
+        - 64
+        - 64
+        - 64
+        - 64
+        - 64
+        - 64
+        - 64
+        - 64
+        - 64
+        - 64
+        - 64
+        - 64
+        - 64
+        - 64
+        - 64
+        - 64
+        - 64
+        - 64
+      items-to-collect:
+        - GOLDEN_APPLE
+        - GOLDEN_CARROT
+        - COOKED_PORKCHOP
+        - COOKED_BEEF
+        - COOKED_MUTTON
+        - COOKED_SALMON
+        - COOKED_COD
+        - COOKED_CHICKEN
+        - BAKED_POTATO
+        - BREAD
+        - COOKED_RABBIT
+        - APPLE
+        - MELON_SLICE
+        - CARROT
+        - PUMPKIN_PIE
+        - COOKIE
+        - SWEET_BERRIES
+        - ROTTEN_FLESH
+        - TOKEN_MISION
+rewards:
+  commands:
+    - effect give %player% saturation 999999 2 true
+    - tellraw %player% {"text":"¡Has alcanzado Saturación III, el poder máximo!","color":"gold","bold":true}
+    - title %player% title {"text":"¡Maestro Gastronómico!","color":"gold","bold":true}
+    - title %player% subtitle {"text":"Has dominado el poder de la Saturación","color":"white"}
+  items:
+    - TOKEN_MISION:15
+  money: 300
+  permission: habilidades.saturacion.3
+  quest-points: 15
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+# 👑 PROGRAMACIÓN COMPLETA DE MISIONES DEL ALCALDE (TOMÁS) - HÉROE DE VILLA I-VI
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+
+## ALCALDE QUESTS:
+
+### defensor_nivel1:
+```yaml
+name: '&eDefensor del Pueblo I'
+ask-message: '&e[Alcalde Tomás]: &7Los pillagers amenazan nuestra paz. Demuestra tu
+valentía defendiendo nuestro hogar y te recompensaré con el respeto de los aldeanos.'
+finish-message: '&e[Alcalde Tomás]: &7Has dado el primer paso para convertirte en
+un verdadero héroe del pueblo. Los aldeanos comienzan a reconocer tu dedicación.'
+requirements:
+  level: 0
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 1
+        - 16
+      items-to-collect:
+        - EMERALD
+        - TOKEN_MISION
+      mob-amounts:
+        - 1
+      mobs-to-kill:
+        - Pillager_Asaltante
+rewards:
+  commands:
+    - effect give %player% hero_of_the_village 999999 0 true
+    - tellraw %player% {"text":"Has obtenido Héroe de Villa I de forma permanente","color":"yellow"}
+  items:
+    - TOKEN_MISION:5
+  money: 50
+  permission: habilidades.heroevilla.1
+  quest-points: 5
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### defensor_nivel2:
+```yaml
+name: '&eDefensor del Pueblo II'
+ask-message: '&e[Alcalde Tomás]: &7Tu dedicación a nuestro pueblo merece mayor reconocimiento.
+Esta nueva amenaza requerirá más de tu habilidad, pero sé que estás a la altura
+del desafío.'
+finish-message: '&e[Alcalde Tomás]: &7Los aldeanos comienzan a contar historias sobre
+ti. Tu reputación como defensor del pueblo crece cada día.'
+requirements:
+  permission: habilidades.heroevilla.1
+  quest-points: 5
+  quests-completed:
+    - defensor_nivel1
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 2
+        - 32
+      items-to-collect:
+        - EMERALD
+        - TOKEN_MISION
+      mob-amounts:
+        - 2
+      mobs-to-kill:
+        - Pillager_Asaltante
+rewards:
+  commands:
+    - effect give %player% hero_of_the_village 999999 1 true
+    - tellraw %player% {"text":"Has mejorado a Héroe de Villa II de forma permanente","color":"yellow"}
+  items:
+    - TOKEN_MISION:6
+  money: 60
+  permission: habilidades.heroevilla.2
+  quest-points: 6
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### defensor_nivel3:
+```yaml
+name: '&eDefensor del Pueblo III'
+ask-message: '&e[Alcalde Tomás]: &7Los saqueadores regresan con más fuerza. Necesitamos
+tu experiencia y valentía para rechazarlos nuevamente.'
+finish-message: '&e[Alcalde Tomás]: &7Tu nombre se está convirtiendo en sinónimo de
+protección. Los aldeanos se sienten más seguros sabiendo que estás cerca.'
+requirements:
+  permission: habilidades.heroevilla.2
+  quest-points: 11
+  quests-completed:
+    - defensor_nivel2
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 3
+        - 48
+      items-to-collect:
+        - EMERALD
+        - TOKEN_MISION
+      mob-amounts:
+        - 3
+      mobs-to-kill:
+        - Pillager_Asaltante
+rewards:
+  commands:
+    - effect give %player% hero_of_the_village 999999 2 true
+    - tellraw %player% {"text":"Has mejorado a Héroe de Villa III de forma permanente","color":"yellow"}
+  items:
+    - TOKEN_MISION:7
+  money: 70
+  permission: habilidades.heroevilla.3
+  quest-points: 7
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### defensor_nivel4:
+```yaml
+name: '&eDefensor del Pueblo IV'
+ask-message: '&e[Alcalde Tomás]: &7Tu valor inspira a otros. Esta nueva ola de saqueadores
+es más numerosa, pero confío en tu capacidad para protegernos.'
+finish-message: '&e[Alcalde Tomás]: &7Los aldeanos han comenzado a hacer ofrendas
+en tu nombre. Tu estatus como protector del pueblo crece cada día más.'
+requirements:
+  permission: habilidades.heroevilla.3
+  quest-points: 18
+  quests-completed:
+    - defensor_nivel3
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 4
+        - 64
+      items-to-collect:
+        - EMERALD
+        - TOKEN_MISION
+      mob-amounts:
+        - 4
+      mobs-to-kill:
+        - Pillager_Asaltante
+rewards:
+  commands:
+    - effect give %player% hero_of_the_village 999999 3 true
+    - tellraw %player% {"text":"Has mejorado a Héroe de Villa IV de forma permanente","color":"yellow"}
+  items:
+    - TOKEN_MISION:8
+  money: 80
+  permission: habilidades.heroevilla.4
+  quest-points: 8
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### defensor_nivel5:
+```yaml
+name: '&eDefensor del Pueblo V'
+ask-message: '&e[Alcalde Tomás]: &7Los pillagers han enviado un grupo más grande y
+peligroso. Tu experiencia será crucial para esta batalla.'
+finish-message: '&e[Alcalde Tomás]: &7Tu habilidad en combate se ha convertido en
+leyenda. Los aldeanos te reciben con regalos y reverencias cuando pasas.'
+requirements:
+  permission: habilidades.heroevilla.4
+  quest-points: 26
+  quests-completed:
+    - defensor_nivel4
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 5
+        - 80
+      items-to-collect:
+        - EMERALD
+        - TOKEN_MISION
+      mob-amounts:
+        - 5
+      mobs-to-kill:
+        - Pillager_Asaltante
+rewards:
+  commands:
+    - effect give %player% hero_of_the_village 999999 4 true
+    - tellraw %player% {"text":"Has mejorado a Héroe de Villa V de forma permanente","color":"yellow"}
+  items:
+    - TOKEN_MISION:9
+  money: 90
+  permission: habilidades.heroevilla.5
+  quest-points: 9
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
+```
+
+### defensor_nivel6:
+```yaml
+name: '&eDefensor del Pueblo VI'
+ask-message: '&e[Alcalde Tomás]: &7Los pillagers no se rinden. Esta vez han enviado
+soldados de élite. Necesitamos tu protección más que nunca.'
+finish-message: '&e[Alcalde Tomás]: &7Los aldeanos te consideran parte fundamental
+del pueblo. Tu presencia les da esperanza y seguridad.'
+requirements:
+  permission: habilidades.heroevilla.5
+  quest-points: 35
+  quests-completed:
+    - defensor_nivel5
+stages:
+  ordered:
+    1:
+      amounts-to-collect:
+        - 6
+        - 96
+      items-to-collect:
+        - EMERALD
+        - TOKEN_MISION
+      mob-amounts:
+        - 6
+      mobs-to-kill:
+        - Pillager_Asaltante
+rewards:
+  commands:
+    - effect give %player% hero_of_the_village 999999 5 true
+    - tellraw %player% {"text":"¡Has alcanzado Héroe de Villa VI, el máximo honor!","color":"yellow","bold":true}
+    - title %player% title {"text":"¡Héroe Supremo!","color":"yellow","bold":true}
+    - title %player% subtitle {"text":"Los aldeanos te veneran eternamente","color":"white"}
+  items:
+    - TOKEN_MISION:10
+  money: 100
+  permission: habilidades.heroevilla.6
+  quest-points: 10
+options:
+  cooldown:
+    enabled: true
+    time: 86400
+  repeat:
+    amount: 1
+    enabled: true
+    infinite: false
 ```
 
 ---
-
-## ⛏️ CATEGORÍA MINERO (Paúl) - 10 MISIONES
-
-### PROGRESIÓN DE PRISA MINERA I-X:
-
-| Nivel | Nombre | Efecto | Requisitos Principales |
-|-------|---------|---------|----------------------|
-| I | Aprendiz de Minero | Prisa Minera I | 5 Redstone Block + 1 Diamond + 40 TOKEN |
-| II | Minero Experimentado | Prisa Minera II | 3 Iron Block + 2 Gold Block + 50 TOKEN |
-| III | Maestro de las Profundidades | Prisa Minera III | 4 Lapis Block + 60 TOKEN |
-| IV | Buscador de Tesoros | Prisa Minera IV | 2 Diamond Block + 70 TOKEN |
-| V | Minero del Abismo | Prisa Minera V | 1 Emerald Block + Nether materials |
 | VI | Buscador de Netherita | Prisa Minera VI | 2 Netherite Ingot + 100 TOKEN |
 | VII | Magnate Mineral | Prisa Minera VII | Materiales raros + 120 TOKEN |
 | VIII | Señor de las Sombras | Prisa Minera VIII | End materials + 140 TOKEN |
@@ -2281,62 +3724,483 @@ Esta economía asegura que:
 # ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚══════╝
 # ═══════════════════════════════════════════════════════════════════════════════════════════════
 
-## 🔧 INSTRUCCIONES COMPLETAS DE INSTALACIÓN Y CONFIGURACIÓN
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
+# ██████╗ ██████╗  ██████╗  ██████╗ ██████╗  █████╗ ███╗   ███╗ █████╗  ██████╗██╗ ██████╗ ███╗   ██╗
+# ██╔══██╗██╔══██╗██╔═══██╗██╔════╝ ██╔══██╗██╔══██╗████╗ ████║██╔══██╗██╔════╝██║██╔═══██╗████╗  ██║
+# ██████╔╝██████╔╝██║   ██║██║  ███╗██████╔╝███████║██╔████╔██║███████║██║     ██║██║   ██║██╔██╗ ██║
+# ██╔═══╝ ██╔══██╗██║   ██║██║   ██║██╔══██╗██╔══██║██║╚██╔╝██║██╔══██║██║     ██║██║   ██║██║╚██╗██║
+# ██║     ██║  ██║╚██████╔╝╚██████╔╝██║  ██║██║  ██║██║ ╚═╝ ██║██║  ██║╚██████╗██║╚██████╔╝██║ ╚████║
+# ╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+# ═══════════════════════════════════════════════════════════════════════════════════════════════
 
-### REQUISITOS DEL SERVIDOR:
+## 🔧 GUÍA COMPLETA DE PROGRAMACIÓN Y DESARROLLO
+
+### REQUISITOS TÉCNICOS PARA DESARROLLO:
 
 ```yaml
-Hardware Mínimo:
-  CPU: 4 cores / 8 threads (Intel i5/AMD Ryzen 5)
-  RAM: 8 GB (mínimo 6 GB asignados a Java)
-  Storage: 10 GB SSD (almacenamiento rápido recomendado)
-  Network: 100 Mbps estable
+Hardware de Desarrollo:
+  CPU: 4+ cores para compilación eficiente  
+  RAM: 8+ GB para desarrollo y testing simultáneo
+  Storage: SSD para build times rápidos
+  Network: Estable para descargas de dependencias
 
-Software Requerido:
-  Java: OpenJDK 17+ o Oracle JDK 17+
-  Server JAR: Paper MC 1.20.1+ (recomendado)
-  Alternativas: Spigot 1.20.1+, Bukkit 1.20.1+
+Entorno de Desarrollo:
+  Java: OpenJDK 17+ para compatibilidad
+  IDE: IntelliJ IDEA / Eclipse / VSCode
+  Build Tools: Maven / Gradle
+  Version Control: Git
+  Testing: JUnit para unit tests
 ```
 
 ---
 
-## 📥 PASO 1: INSTALACIÓN BASE DEL SERVIDOR
+## 🛠️ ENFOQUE DE PROGRAMACIÓN DEL SERVIDOR
 
-### 1.1 PREPARACIÓN DEL ENTORNO:
-```bash
-# Crear directorio del servidor
-mkdir ServerLewisNadone
-cd ServerLewisNadone
+### METODOLOGÍA DE DESARROLLO:
 
-# Descargar Paper MC (recomendado)
-wget https://api.papermc.io/v2/projects/paper/versions/1.20.1/builds/latest/downloads/paper-1.20.1-latest.jar
+**1. DESARROLLO MODULAR:**
+```yaml
+Principios:
+  - Cada sistema (mobs, quests, NPCs) es un módulo independiente
+  - Interfaces claras entre módulos para comunicación
+  - Configuración centralizada para fácil mantenimiento
+  - Testing unitario de cada componente
 
-# Renombrar para simplicidad
-mv paper-1.20.1-latest.jar server.jar
+Arquitectura:
+  Core Layer: Funcionalidades base del servidor
+  Integration Layer: Comunicación entre plugins  
+  Content Layer: Mobs, quests, NPCs específicos
+  Configuration Layer: Archivos de configuración
 ```
 
-### 1.2 SCRIPT DE INICIO OPTIMIZADO:
-```bash
-# start.sh
-#!/bin/bash
-java -Xms6G -Xmx6G \
-     -XX:+UseG1GC \
-     -XX:+ParallelRefProcEnabled \
-     -XX:MaxGCPauseMillis=200 \
-     -XX:+UnlockExperimentalVMOptions \
-     -XX:+DisableExplicitGC \
-     -XX:+AlwaysPreTouch \
-     -XX:G1NewSizePercent=30 \
-     -XX:G1MaxNewSizePercent=40 \
-     -XX:G1HeapRegionSize=8M \
-     -XX:G1ReservePercent=20 \
-     -XX:G1HeapWastePercent=5 \
-     -XX:G1MixedGCCountTarget=4 \
-     -XX:InitiatingHeapOccupancyPercent=15 \
-     -XX:G1MixedGCLiveThresholdPercent=90 \
-     -XX:G1RSetUpdatingPauseTimePercent=5 \
-     -XX:SurvivorRatio=32 \
-     -XX:+PerfDisableSharedMem \
+**2. PROGRAMACIÓN DIRIGIDA POR CONFIGURACIÓN:**
+```yaml
+Ventajas:
+  - Cambios de contenido sin recompilación
+  - Balancing dinámico de difficulty/rewards
+  - Fácil adición de nuevo contenido
+  - Separación clara entre lógica y datos
+
+Implementación:
+  - YAML files para configuración de mobs
+  - JSON para quest definitions
+  - Properties files para valores numéricos
+  - Database para player progression data
+```
+
+**3. SISTEMA DE EVENTOS Y HOOKS:**
+```yaml
+Event-Driven Architecture:
+  - PlayerKillEntityEvent para TOKEN_MISION drops
+  - PlayerJoinEvent para quest assignment
+  - PlayerInteractEntityEvent para NPC dialogues
+  - Custom events para cross-plugin communication
+
+Hook System:
+  - PreQuestCompleteEvent para validaciones
+  - PostMobSpawnEvent para custom modifications
+  - EconomyTransactionEvent para tracking
+  - ProgressionUpdateEvent para player advancement
+```
+
+---
+
+## 💻 PROGRAMACIÓN DE SISTEMAS CORE
+
+### 1. SISTEMA DE MOBS CUSTOMIZADOS:
+
+**Arquitectura de MobFactory:**
+```java
+public class CustomMobManager {
+    // Registro de tipos de mob
+    private Map<String, MobTemplate> mobTemplates;
+    
+    // Sistema de spawn replacement
+    public void replaceVanillaSpawn(SpawnEvent event) {
+        EntityType vanilla = event.getEntityType();
+        MobTemplate custom = getCustomReplacement(vanilla);
+        if (custom != null) {
+            event.setCancelled(true);
+            spawnCustomMob(custom, event.getLocation());
+        }
+    }
+    
+    // Aplicación de stats custom
+    private void applyCustomStats(Entity entity, MobTemplate template) {
+        setHealth(entity, template.getHealth());
+        setDamage(entity, template.getDamage());
+        setArmor(entity, template.getArmor());
+        addCustomSkills(entity, template.getSkills());
+    }
+}
+```
+
+**Configuración Programática:**
+```yaml
+# Ejemplo de configuración de mob
+zombie_corrupto:
+  display_name: "§2Zombie Corrupto"
+  base_entity: ZOMBIE
+  health_multiplier: 2.0
+  damage_multiplier: 3.0
+  custom_drops:
+    - item: TOKEN_MISION
+      chance: 1.0
+      amount: 1
+  skills:
+    - type: POISON_AURA
+      radius: 3
+      level: 2
+      duration: 80
+```
+
+### 2. SISTEMA DE QUESTS PROGRESIVO:
+
+**QuestManager Architecture:**
+```java
+public class QuestSystem {
+    // Gestión de progresión
+    private Map<UUID, PlayerQuestData> playerProgress;
+    
+    // Validación de requisitos
+    public boolean canStartQuest(Player player, Quest quest) {
+        return hasRequiredLevel(player, quest) &&
+               hasRequiredPermissions(player, quest) &&
+               hasCompletedPrerequisites(player, quest) &&
+               hasRequiredQuestPoints(player, quest);
+    }
+    
+    // Sistema de recompensas
+    public void completeQuest(Player player, Quest quest) {
+        grantRewards(player, quest.getRewards());
+        updateQuestPoints(player, quest.getQuestPoints());
+        unlockNextQuests(player, quest.getUnlocks());
+        triggerProgressionEvent(player, quest);
+    }
+}
+```
+
+**Definición de Quest Template:**
+```yaml
+quest_template:
+  identification:
+    id: "cazador_iniciado"
+    category: "cazador"
+    npc_giver: "Erika"
+  
+  requirements:
+    level: 0
+    prerequisites: []
+    quest_points: 0
+    permissions: []
+  
+  objectives:
+    kill_objectives:
+      - mob: "Zombie_Corrupto"
+        amount: 20
+      - mob: "Skeleton_Guerrero"  
+        amount: 20
+    collect_objectives:
+      - item: "ROTTEN_FLESH"
+        amount: 32
+      - item: "BONE"
+        amount: 32
+      - item: "TOKEN_MISION"
+        amount: 50
+  
+  rewards:
+    permanent_effects:
+      - effect: "STRENGTH"
+        level: 1
+        duration: infinite
+    items:
+      - item: "TOKEN_MISION"
+        amount: 5
+    quest_points: 5
+    permissions:
+      - "habilidades.fuerza.1"
+```
+
+### 3. SISTEMA DE NPCs INTERACTIVOS:
+
+**NPC Behavior Programming:**
+```java
+public class NPCManager {
+    // Personalidades y diálogos
+    private Map<String, NPCPersonality> personalities;
+    
+    // Sistema de interacción
+    public void handleNPCInteraction(Player player, NPC npc) {
+        NPCPersonality personality = personalities.get(npc.getId());
+        
+        if (hasAvailableQuests(player, npc)) {
+            showQuestDialogue(player, npc, personality);
+        } else if (hasCompletableQuests(player, npc)) {
+            showCompletionDialogue(player, npc, personality);
+        } else {
+            showIdleDialogue(player, npc, personality);
+        }
+    }
+    
+    // Sistema de quest integration
+    private void showQuestDialogue(Player player, NPC npc, NPCPersonality personality) {
+        List<Quest> available = getAvailableQuests(player, npc);
+        String dialogue = personality.generateQuestOffering(available);
+        sendFormattedMessage(player, dialogue);
+        openQuestMenu(player, available);
+    }
+}
+```
+
+### 4. ECONOMÍA FÍSICA PROGRAMMING:
+
+**Token Economy System:**
+```java
+public class TokenEconomy {
+    // Gestión de TOKEN_MISION
+    private final String TOKEN_ITEM = "TOKEN_MISION";
+    private final int EXCHANGE_RATE = 8; // 8 TOKEN = 1 Esmeralda Real
+    
+    // Drop system para mobs
+    public void handleMobDeath(EntityDeathEvent event) {
+        if (isCustomMob(event.getEntity())) {
+            Player killer = event.getEntity().getKiller();
+            if (killer != null) {
+                dropTokenMision(event.getLocation(), getTokenAmount(event.getEntity()));
+                trackEconomicActivity(killer, "mob_kill", getTokenAmount(event.getEntity()));
+            }
+        }
+    }
+    
+    // Sistema de intercambio
+    public boolean exchangeTokens(Player player, int tokenAmount) {
+        int emeraldAmount = tokenAmount / EXCHANGE_RATE;
+        if (emeraldAmount > 0 && hasTokens(player, tokenAmount)) {
+            removeTokens(player, tokenAmount);
+            giveEmeralds(player, emeraldAmount);
+            logTransaction(player, tokenAmount, emeraldAmount);
+            return true;
+        }
+        return false;
+    }
+}
+```
+
+---
+
+## 🎯 METAS DE PROGRAMACIÓN POR FASES
+
+### FASE 1: CORE SYSTEMS (Fundamentos)
+```yaml
+Objetivos:
+  - Sistema de reemplazo de mobs vanilla funcional
+  - Framework básico de quests implementado
+  - NPCs básicos con interacciones simples
+  - TOKEN_MISION drop system operativo
+
+Tiempo Estimado: 2-3 meses
+Prioridad: CRÍTICA
+
+Entregables:
+  - MobManager con 10+ mobs básicos
+  - QuestSystem con 5 quests de prueba
+  - NPCManager con 3 NPCs funcionales  
+  - TokenEconomy con intercambio básico
+```
+
+### FASE 2: CONTENT EXPANSION (Contenido)
+```yaml
+Objetivos:
+  - 35+ mobs custom con skills únicas
+  - 61+ quests completas organizadas por categorías
+  - 9 NPCs con personalidades distintivas
+  - Sistema económico completo
+
+Tiempo Estimado: 3-4 meses  
+Prioridad: ALTA
+
+Entregables:
+  - Todos los mobs especificados programados
+  - Sistema completo de quest progression
+  - NPCs con diálogos immersivos
+  - Marketplace funcional con NPCs comerciantes
+```
+
+### FASE 3: INTEGRATION & POLISH (Integración)
+```yaml
+Objetivos:
+  - CrossPlay Java-Bedrock completamente funcional
+  - Sistema de clanes con ProtectionStones
+  - Optimizaciones de rendimiento
+  - Testing exhaustivo y balance
+
+Tiempo Estimado: 1-2 meses
+Prioridad: MEDIA
+
+Entregables:
+  - Geyser + Floodgate configurado
+  - Clan system operativo
+  - Performance optimizado para 50+ players
+  - Documentación completa de APIs
+```
+
+### FASE 4: ADVANCED FEATURES (Características Avanzadas)
+```yaml
+Objetivos:
+  - Sistema de eventos dinámicos
+  - Seasonal content framework
+  - Advanced player analytics
+  - Community features
+
+Tiempo Estimado: 2-3 meses
+Prioridad: BAJA
+
+Entregables:
+  - Event system para content temporal
+  - Analytics dashboard para admins
+  - Social features avanzadas
+  - Expansion framework para nuevo contenido
+```
+
+---
+
+## 📋 CHECKLIST DE DESARROLLO
+
+### PROGRAMACIÓN BASE:
+```yaml
+Core Systems:
+  ☐ MobManager framework implementado
+  ☐ QuestSystem foundation programado  
+  ☐ NPCManager base development
+  ☐ TokenEconomy core logic
+  ☐ Event system architecture
+  ☐ Configuration management system
+  ☐ Database integration layer
+  ☐ Permissions framework integration
+
+Plugin Integration:
+  ☐ MythicMobs configuration mastery
+  ☐ Quests plugin advanced setup
+  ☐ ZNPCs programming integration
+  ☐ LuckPerms custom permissions
+  ☐ ProtectionStones clan system
+  ☐ Geyser crossplay configuration
+  ☐ Cross-plugin communication APIs
+  ☐ Event listener optimization
+```
+
+### CONTENT DEVELOPMENT:
+```yaml
+Mob Programming:
+  ☐ 35+ custom mobs programmed
+  ☐ Spawn replacement system tested
+  ☐ Custom skills implementation
+  ☐ Drop rates balanced
+  ☐ Boss mechanics programmed
+  ☐ Performance optimization
+  ☐ Mob AI behavior testing
+  ☐ Integration with economy
+
+Quest Development:
+  ☐ 61+ quests fully programmed
+  ☐ Progression system implemented
+  ☐ Reward calculation logic
+  ☐ Quest validation system
+  ☐ NPC integration complete
+  ☐ Player tracking system
+  ☐ Quest balancing verified
+  ☐ Edge case handling
+
+NPC Programming:
+  ☐ 9 main NPCs programmed
+  ☐ Personality systems implemented
+  ☐ Dialogue generation system
+  ☐ Quest offering logic
+  ☐ Context-aware responses
+  ☐ Hologram integration
+  ☐ Interaction cooldowns
+  ☐ Animation and movement
+```
+
+### TESTING & OPTIMIZATION:
+```yaml
+Functionality Testing:
+  ☐ Mob spawn replacement verified
+  ☐ Quest progression thoroughly tested
+  ☐ NPC interactions functional
+  ☐ Economy balance validated
+  ☐ CrossPlay compatibility confirmed
+  ☐ Clan system operational
+  ☐ Performance benchmarks met
+  ☐ Security vulnerabilities addressed
+
+Player Experience:
+  ☐ New player onboarding smooth
+  ☐ Mid-game progression engaging
+  ☐ End-game content challenging
+  ☐ Social features encouraging cooperation
+  ☐ Economic incentives balanced
+  ☐ Narrative coherence maintained
+  ☐ UI/UX consistency verified
+  ☐ Accessibility features implemented
+```
+
+---
+
+## ⚠️ CONSIDERACIONES CRÍTICAS DE PROGRAMACIÓN
+
+### RENDIMIENTO Y ESCALABILIDAD:
+```yaml
+❌ AVOID:
+  - Spawning 35+ mobs simultáneamente sin optimización
+  - Quest checks en cada tick
+  - Database queries síncronas frecuentes
+  - Memory leaks en event listeners
+  - Blocking operations en main thread
+
+✅ IMPLEMENT:
+  - Asynchronous database operations
+  - Efficient caching strategies
+  - Batch processing para spawns
+  - Smart event listener management
+  - Memory-conscious object lifecycle
+```
+
+### INTEGRACIÓN ENTRE PLUGINS:
+```yaml
+❌ AVOID:
+  - Hard dependencies entre custom code y plugins
+  - Direct plugin internals access
+  - Configuration conflicts
+  - Event priority conflicts
+  - Namespace collisions
+
+✅ IMPLEMENT:  
+  - Soft dependencies con graceful fallbacks
+  - Public API usage only
+  - Centralized configuration management
+  - Proper event priority ordering
+  - Unique identifiers para custom content
+```
+
+### MANTENIBILIDAD DEL CÓDIGO:
+```yaml
+❌ AVOID:
+  - Hard-coded values dispersos
+  - Monolithic classes
+  - Poor documentation
+  - Inconsistent naming conventions
+  - No version control strategy
+
+✅ IMPLEMENT:
+  - Configuration-driven development
+  - Modular architecture
+  - Comprehensive documentation
+  - Consistent code style
+  - Git workflow con feature branches
+```
+
+Con esta guía de programación, el desarrollo del ServerLewisNadone se enfoca en crear un sistema robusto, escalable y mantenible que cumpla con todas las metas establecidas.
      -XX:MaxTenuringThreshold=1 \
      -Dusing.aikars.flags=https://mcflags.emc.gs \
      -Daikars.new.flags=true \
@@ -3283,33 +5147,34 @@ ESTADO: 100% FUNCIONAL y LISTO PARA JUGADORES
 
 ---
 
-## 🎉 CONCLUSIÓN FINAL
+## 🎉 CONCLUSIÓN DEL PROYECTO DE PROGRAMACIÓN
 
-**El ServerLewisNadone representa la culminación de meses de desarrollo especializado, análisis técnico profundo y diseño de experiencia de usuario meticuloso. Este proyecto demuestra que es posible crear experiencias de juego complejas, inmersivas y técnicamente robustas dentro del ecosistema de Minecraft.**
+**El ServerLewisNadone representa un blueprint completo para el desarrollo de un servidor RPG inmersivo de última generación. Esta documentación de programación proporciona todas las herramientas, metodologías y especificaciones necesarias para construir un sistema que transforme completamente la experiencia tradicional de Minecraft.**
 
-**Cada componente - desde los 35+ mobs custom hasta las 61+ misiones, desde los 9 NPCs únicos hasta la economía física completa - ha sido diseñado, implementado y documentado con precisión quirúrgica. El resultado es un servidor que no solo funciona, sino que proporciona una experiencia de juego transformativa.**
+**Cada sistema programático - desde la arquitectura de 35+ mobs custom hasta el framework de 61+ misiones interconectadas, desde el motor de 9 NPCs con personalidades únicas hasta la innovadora economía física - ha sido diseñado con precisión técnica y visión creativa. El resultado es más que un servidor: es una plataforma de experiencias.**
 
-**Esta documentación no es solo un manual: es un testamento al poder de la visión técnica combinada con creatividad narrativa. Establece un nuevo estándar para lo que es posible en el desarrollo de servidores de Minecraft y proporciona las herramientas necesarias para que otros puedan construir sobre esta base.**
+**Esta guía de programación no es solo documentación técnica: es un manifiesto sobre cómo combinar ingeniería de software sólida con diseño de experiencias inmersivas. Establece un nuevo paradigma para el desarrollo de servidores de Minecraft y proporciona el framework para que otros desarrolladores puedan crear experiencias igualmente transformativas.**
 
-**El ServerLewisNadone está listo. El mundo de Nápoles espera a sus nuevos héroes.**
+**Las metas de programación están claras. La arquitectura está definida. Los sistemas están especificados. Es hora de construir el futuro de los servidores RPG de Minecraft.**
 
 ---
 
-### 📞 INFORMACIÓN DE SOPORTE:
+### 📞 INFORMACIÓN DE DESARROLLO:
 
 ```yaml
-Documentación Completa: ✅ Server.txt (este archivo)
-Análisis Técnico: ✅ ANALISIS_FINAL.md
-Análisis Detallado: ✅ ANALISIS_TECNICO_COMPLETO.md
-Especificaciones Originales: ✅ InstruccionesBasicas.txt
+Guía de Programación: ✅ Server.txt (este archivo) 
+Especificaciones Técnicas: ✅ ANALISIS_FINAL.md
+Análisis de Sistemas: ✅ ANALISIS_TECNICO_COMPLETO.md
+Concepto Original: ✅ InstruccionesBasicas.txt
 
-Estado del Servidor: 100% FUNCIONAL
-Última Actualización: 2024
-Versión Documentada: FINAL - PRODUCCIÓN READY
+Estado del Proyecto: 📋 READY FOR DEVELOPMENT
+Metodología: 🏗️ MODULAR PROGRAMMING APPROACH  
+Enfoque: 🎯 PLAYER EXPERIENCE DRIVEN
+Framework: 🔧 CONFIGURATION-BASED ARCHITECTURE
 ```
 
-**¡Que comience la aventura en el mundo de ServerLewisNadone!**
+**¡Que comience el desarrollo del ServerLewisNadone!**
 
 ═══════════════════════════════════════════════════════════════════════════════════════════════
-                                    ¡DOCUMENTACIÓN COMPLETA!
+                               ¡GUÍA DE PROGRAMACIÓN COMPLETA!
 ═══════════════════════════════════════════════════════════════════════════════════════════════
