@@ -20,7 +20,8 @@
     - damage{d=20} @LivingEntitiesInRadius{r=6} ~onAttack
     - summon{type=DROWNED;amount=3;baby=true} @Self ~onTimer:400
     - potion{type=RESISTANCE;duration=100;level=2} @Self ~onTimer:100
-    - effect:particles{p=nautilus;a=20;hs=1;vs=1;s=0.3;y=2} @Self ~onTimer:40  Options:
+    - effect:particles{p=nautilus;a=20;hs=1;vs=1;s=0.3;y=2} @Self ~onTimer:40
+  Options:
     PreventOtherDrops: true
     AlwaysShowName: true
     Despawn: false
@@ -32,11 +33,11 @@
     Conditions:
     - biome{o=OCEAN,DEEP_OCEAN,WARM_OCEAN,FROZEN_OCEAN,COLD_OCEAN,LUKEWARM_OCEAN,DEEP_LUKEWARM_OCEAN,DEEP_WARM_OCEAN,DEEP_COLD_OCEAN,DEEP_FROZEN_OCEAN}
     - structure{o=OCEAN_MONUMENT}
-  Chance:
+    Chance: 0.1
   SpawnOverride2:
     Type: ELDER_GUARDIAN
     Priority: 1
     ReplaceType: true
     Conditions:
     - biome{o=OCEAN,DEEP_OCEAN,WARM_OCEAN,FROZEN_OCEAN,COLD_OCEAN,LUKEWARM_OCEAN,DEEP_LUKEWARM_OCEAN,DEEP_WARM_OCEAN,DEEP_COLD_OCEAN,DEEP_FROZEN_OCEAN}
-  Chance:
+    Chance: 0.05
